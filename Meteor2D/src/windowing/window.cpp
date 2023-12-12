@@ -1,19 +1,28 @@
 #include <Windowing/window.h>
+#include <meteorutils/logging.h>
 
 Window::Window(size_t width, size_t height,bool fullscreen, Color* background) {
 	backgroundColor = background;
 	SDL_WindowFlags windowFlag = fullscreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN;
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-		std::cout << "Could not initialise SDL " << SDL_GetError() << std::endl;
+		errorFormat("Could not initialise SDL! SDL Error: {}",SDL_GetError());
 		return;
 	}
 	window = SDL_CreateWindow("Meteor2D", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height,windowFlag);
 	if (window == NULL) {
-		std::cout << "Cannot create window" << SDL_GetError() << std::endl;
+		errorFormat("Cannot create window! SDL Error: {}",SDL_GetError());
 		return;
 	}
-	surface = SDL_GetWindowSurface(window);
 	quit = false;
+	sdlRenderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	SDL_SetRenderDrawColor(sdlRenderer, background->r, background->g, background->b, background->a);
+	if (sdlRenderer == NULL)
+	{
+		errorFormat("Renderer could not be created! SDL Error: {}", SDL_GetError());
+		return;
+	}
+	renderQueue = new RenderQueue();
+	renderer = new Renderer(renderQueue, sdlRenderer);
 }
 
 bool Window::hasQuit() {
@@ -26,7 +35,7 @@ void Window::close() {
 }
 
 void Window::clear() {
-	SDL_FillRect(surface, NULL,SDL_MapRGBA(surface->format,backgroundColor->r, backgroundColor->g, backgroundColor->b, backgroundColor->a));
+	SDL_RenderClear(sdlRenderer);
 }
 
 void Window::pollEvents() {
@@ -43,5 +52,6 @@ void Window::update() {
 }
 
 void Window::render() {
-	//todo: add render code here.
+	renderer->renderAll();
+	SDL_RenderPresent(sdlRenderer);
 }

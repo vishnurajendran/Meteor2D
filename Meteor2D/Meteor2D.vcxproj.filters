@@ -13,27 +13,60 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\meteorutils">
+      <UniqueIdentifier>{62a74b98-7c14-469a-b9d1-7096169b38ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\windowing">
+      <UniqueIdentifier>{962b15d7-883f-4934-a254-cb87ee82342b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\windowing">
+      <UniqueIdentifier>{97083046-64b8-462c-abed-b0de45169252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\rendering">
+      <UniqueIdentifier>{89a6d412-826d-4340-97fe-49bfc75397f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\rendering">
+      <UniqueIdentifier>{e37b9b54-e672-4e8c-82db-270462716ea7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Windowing\Window.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Windowing\window.cpp">
+      <Filter>Source Files\windowing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rendering\renderqueue.cpp">
+      <Filter>Source Files\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rendering\renderer.cpp">
+      <Filter>Source Files\rendering</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="color.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Windowing\window.h">
+    <ClInclude Include="include\meteor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\MeteorUtils\logging.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\meteorutils</Filter>
     </ClInclude>
-    <ClInclude Include="include\meteor.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="color.h">
+      <Filter>Header Files\meteorutils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Windowing\window.h">
+      <Filter>Header Files\windowing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rendering\renderer.h">
+      <Filter>Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rendering\rendercommand.h">
+      <Filter>Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rendering\renderlayer.h">
+      <Filter>Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rendering\renderqueue.h">
+      <Filter>Header Files\rendering</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

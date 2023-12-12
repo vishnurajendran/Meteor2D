@@ -152,12 +152,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Windowing\Window.cpp" />
+    <ClCompile Include="src\rendering\renderer.cpp" />
+    <ClCompile Include="src\rendering\renderqueue.cpp" />
+    <ClCompile Include="src\Windowing\window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="color.h" />
     <ClInclude Include="include\meteor.h" />
     <ClInclude Include="include\MeteorUtils\logging.h" />
+    <ClInclude Include="include\rendering\rendercommand.h" />
+    <ClInclude Include="include\rendering\renderer.h" />
+    <ClInclude Include="include\rendering\renderlayer.h" />
+    <ClInclude Include="include\rendering\renderqueue.h" />
     <ClInclude Include="include\Windowing\window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
