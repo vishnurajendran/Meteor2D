@@ -2,6 +2,18 @@
 #include<iostream>
 #include<algorithm>
 
+RenderQueue::~RenderQueue() {
+	for (auto cmd : worldQueue) {
+		delete cmd;
+	}
+	for (auto cmd : uiQueue) {
+		delete cmd;
+	}
+	for (auto cmd : debugQueue) {
+		delete cmd;
+	}
+}
+
 void RenderQueue::submit(RenderCommand* cmd) {
 	std::vector<RenderCommand*> queueToUse;
 	switch (cmd->getLayer()) {

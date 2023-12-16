@@ -6,6 +6,7 @@
 class RenderQueue {
 public:
 	RenderQueue() : worldQueue{}, uiQueue{}, debugQueue{} {}
+	~RenderQueue();
 	void submit(RenderCommand* cmd);
 	bool hasNext(RenderLayer layer);
 	void prepare();

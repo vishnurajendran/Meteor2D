@@ -1,72 +1,126 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\meteorutils">
+    <Filter Include="Engine">
+      <UniqueIdentifier>{b00e69df-cda1-4914-93af-4b6d7214ae53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Engine\Header Files\meteorutils">
       <UniqueIdentifier>{62a74b98-7c14-469a-b9d1-7096169b38ff}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\windowing">
+    <Filter Include="Engine\Header Files\windowing">
       <UniqueIdentifier>{962b15d7-883f-4934-a254-cb87ee82342b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\windowing">
-      <UniqueIdentifier>{97083046-64b8-462c-abed-b0de45169252}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\rendering">
+    <Filter Include="Engine\Header Files\rendering">
       <UniqueIdentifier>{89a6d412-826d-4340-97fe-49bfc75397f9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\rendering">
+    <Filter Include="Engine\Header Files\Application">
+      <UniqueIdentifier>{7aca2b46-9060-4699-8123-1a374c298884}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Engine\Source Files\windowing">
+      <UniqueIdentifier>{97083046-64b8-462c-abed-b0de45169252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files\rendering">
       <UniqueIdentifier>{e37b9b54-e672-4e8c-82db-270462716ea7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{a54e24c4-8daf-4f3b-81d2-4fed7e7d6190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\include">
+      <UniqueIdentifier>{75578f21-4b44-4a15-8a82-c1b0bb26b60c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\src">
+      <UniqueIdentifier>{aae216ce-9951-4394-bc8b-8529446eceb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Header Files\2D">
+      <UniqueIdentifier>{7e746bd3-b709-4850-b862-ea0bab45cacd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Header Files\entities">
+      <UniqueIdentifier>{88c94da0-fa57-4736-bc7b-6b665d440d7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files\entities">
+      <UniqueIdentifier>{54e22fce-e7e5-4e24-9a0b-1ff2a10eb460}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Windowing\window.cpp">
-      <Filter>Source Files\windowing</Filter>
-    </ClCompile>
-    <ClCompile Include="src\rendering\renderqueue.cpp">
-      <Filter>Source Files\rendering</Filter>
-    </ClCompile>
-    <ClCompile Include="src\rendering\renderer.cpp">
-      <Filter>Source Files\rendering</Filter>
-    </ClCompile>
+    <ClInclude Include="Engine\include\application\Application.h">
+      <Filter>Engine\Header Files\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\meteorutils\Color.h">
+      <Filter>Engine\Header Files\meteorutils</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\meteorutils\logging.h">
+      <Filter>Engine\Header Files\meteorutils</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\rendering\renderqueue.h">
+      <Filter>Engine\Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\rendering\rendercommand.h">
+      <Filter>Engine\Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\rendering\renderer.h">
+      <Filter>Engine\Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\rendering\renderlayer.h">
+      <Filter>Engine\Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\windowing\window.h">
+      <Filter>Engine\Header Files\windowing</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\meteor.h">
+      <Filter>Engine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\include\TestGame.h">
+      <Filter>Application\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\2d\sprite.h">
+      <Filter>Engine\Header Files\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\entities\entity.h">
+      <Filter>Engine\Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\entities\entitymanager.h">
+      <Filter>Engine\Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\entities\entitycontainer.h">
+      <Filter>Engine\Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\meteorcore.h">
+      <Filter>Engine\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\meteor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\MeteorUtils\logging.h">
-      <Filter>Header Files\meteorutils</Filter>
-    </ClInclude>
-    <ClInclude Include="color.h">
-      <Filter>Header Files\meteorutils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Windowing\window.h">
-      <Filter>Header Files\windowing</Filter>
-    </ClInclude>
-    <ClInclude Include="include\rendering\renderer.h">
-      <Filter>Header Files\rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="include\rendering\rendercommand.h">
-      <Filter>Header Files\rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="include\rendering\renderlayer.h">
-      <Filter>Header Files\rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="include\rendering\renderqueue.h">
-      <Filter>Header Files\rendering</Filter>
-    </ClInclude>
+    <ClCompile Include="Engine\src\rendering\renderer.cpp">
+      <Filter>Engine\Source Files\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\rendering\renderqueue.cpp">
+      <Filter>Engine\Source Files\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\windowing\window.cpp">
+      <Filter>Engine\Source Files\windowing</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\main.cpp">
+      <Filter>Engine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\src\TestGame.cpp">
+      <Filter>Application\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\entities\entitymanager.cpp">
+      <Filter>Engine\Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\entities\entity.cpp">
+      <Filter>Engine\Source Files\entities</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
