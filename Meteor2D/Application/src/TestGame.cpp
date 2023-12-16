@@ -1,5 +1,5 @@
 #include <TestGame.h>
-#include <meteorutils/logging.h>
+#include <meteor.h>
 
 std::string TestGame::getName() {
 	return "Test Game";
