@@ -29,13 +29,13 @@ void RenderQueue::submit(RenderCommand* cmd) {
 
 void RenderQueue::prepare() {
 	if(!worldQueue.empty())
-		std::sort(worldQueue.begin(), worldQueue.end(), [](RenderCommand* a, RenderCommand* b) { return a->getSortingOrder() > b->getSortingOrder(); });
+		std::sort(worldQueue.begin(), worldQueue.end(), [](RenderCommand* a, RenderCommand* b) { return a->getSortingOrder() < b->getSortingOrder(); });
 
 	if (!uiQueue.empty())
-		std::sort(uiQueue.begin(), uiQueue.end(), [](RenderCommand* a, RenderCommand* b) { return a->getSortingOrder() > b->getSortingOrder(); });
+		std::sort(uiQueue.begin(), uiQueue.end(), [](RenderCommand* a, RenderCommand* b) { return a->getSortingOrder() < b->getSortingOrder(); });
 
 	if (!debugQueue.empty())
-		std::sort(debugQueue.begin(), debugQueue.end(), [](RenderCommand* a, RenderCommand* b) { return a->getSortingOrder() > b->getSortingOrder(); });
+		std::sort(debugQueue.begin(), debugQueue.end(), [](RenderCommand* a, RenderCommand* b) { return a->getSortingOrder() < b->getSortingOrder(); });
 }
 
 bool RenderQueue::hasNext(RenderLayer layer) {

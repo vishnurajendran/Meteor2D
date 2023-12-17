@@ -14,10 +14,10 @@ int main(int argc, char* argv[]) {
 	app->setRenderQueue(window->getRenderQueue());
 	app->onStart();
 	while (!window->hasQuit()) {
-		float time = getDeltaTime();
 		window->clear();
+		float time = getDeltaTime();
+		SceneManager::updateScene(time);
 		window->pollEvents();
-		EntityManager::updateAll(time);
 		app->onUpdate(time);
 		window->update();
 	}

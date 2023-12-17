@@ -52,12 +52,18 @@
     <Filter Include="Engine\Source Files\entities">
       <UniqueIdentifier>{54e22fce-e7e5-4e24-9a0b-1ff2a10eb460}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Header Files\scenemanagement">
+      <UniqueIdentifier>{23665999-291a-420c-b2e1-52be7981a1c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files\scenemanagement">
+      <UniqueIdentifier>{2e62db5b-6198-4bba-8112-d5b2db5381c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine\include\application\Application.h">
+    <ClInclude Include="Engine\include\application\application.h">
       <Filter>Engine\Header Files\Application</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\include\meteorutils\Color.h">
+    <ClInclude Include="Engine\include\meteorutils\color.h">
       <Filter>Engine\Header Files\meteorutils</Filter>
     </ClInclude>
     <ClInclude Include="Engine\include\meteorutils\logging.h">
@@ -90,14 +96,20 @@
     <ClInclude Include="Engine\include\entities\entity.h">
       <Filter>Engine\Header Files\entities</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\include\entities\entitymanager.h">
-      <Filter>Engine\Header Files\entities</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\include\entities\entitycontainer.h">
-      <Filter>Engine\Header Files\entities</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\include\meteorcore.h">
       <Filter>Engine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\scenemanagement\scenemanager.h">
+      <Filter>Engine\Header Files\scenemanagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\scenemanagement\scene.h">
+      <Filter>Engine\Header Files\scenemanagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\entities\spatial.h">
+      <Filter>Engine\Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\meteorutils\vector2d.h">
+      <Filter>Engine\Header Files\meteorutils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -116,10 +128,16 @@
     <ClCompile Include="Application\src\TestGame.cpp">
       <Filter>Application\src</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\src\entities\entitymanager.cpp">
+    <ClCompile Include="Engine\src\entities\entity.cpp">
       <Filter>Engine\Source Files\entities</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\src\entities\entity.cpp">
+    <ClCompile Include="Engine\src\scenemanagement\scenemanager.cpp">
+      <Filter>Engine\Source Files\scenemanagement</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\scenemanagement\scene.cpp">
+      <Filter>Engine\Source Files\scenemanagement</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\scenemanagement\spatial.cpp">
       <Filter>Engine\Source Files\entities</Filter>
     </ClCompile>
   </ItemGroup>

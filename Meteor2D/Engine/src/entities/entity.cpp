@@ -1,8 +1,6 @@
 #include<entities/entity.h>
-#include<entities/entitymanager.h>
 
 unsigned int Entity::nextId = 0;
-
 void Entity::setId() {
 	this->id = nextId++;
 }
@@ -15,9 +13,7 @@ bool Entity::equals(Entity* other) {
 
 Entity::Entity() {
 	setId();
-	EntityManager::put(this);
 }
 
 Entity::~Entity() {
-	EntityManager::remove(this);
 }

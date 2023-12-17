@@ -21,27 +21,31 @@
   <ItemGroup>
     <ClInclude Include="Application\include\TestGame.h" />
     <ClInclude Include="Engine\include\2d\sprite.h" />
-    <ClInclude Include="Engine\include\application\Application.h" />
+    <ClInclude Include="Engine\include\application\application.h" />
     <ClInclude Include="Engine\include\entities\entity.h" />
-    <ClInclude Include="Engine\include\entities\entitycontainer.h" />
-    <ClInclude Include="Engine\include\entities\entitymanager.h" />
+    <ClInclude Include="Engine\include\entities\spatial.h" />
     <ClInclude Include="Engine\include\meteor.h" />
     <ClInclude Include="Engine\include\meteorcore.h" />
-    <ClInclude Include="Engine\include\meteorutils\Color.h" />
+    <ClInclude Include="Engine\include\meteorutils\color.h" />
     <ClInclude Include="Engine\include\meteorutils\logging.h" />
+    <ClInclude Include="Engine\include\meteorutils\vector2d.h" />
     <ClInclude Include="Engine\include\rendering\rendercommand.h" />
     <ClInclude Include="Engine\include\rendering\renderer.h" />
     <ClInclude Include="Engine\include\rendering\renderlayer.h" />
     <ClInclude Include="Engine\include\rendering\renderqueue.h" />
+    <ClInclude Include="Engine\include\scenemanagement\scene.h" />
+    <ClInclude Include="Engine\include\scenemanagement\scenemanager.h" />
     <ClInclude Include="Engine\include\windowing\window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application\src\TestGame.cpp" />
     <ClCompile Include="Engine\src\entities\entity.cpp" />
-    <ClCompile Include="Engine\src\entities\entitymanager.cpp" />
     <ClCompile Include="Engine\src\main.cpp" />
     <ClCompile Include="Engine\src\rendering\renderer.cpp" />
     <ClCompile Include="Engine\src\rendering\renderqueue.cpp" />
+    <ClCompile Include="Engine\src\scenemanagement\scene.cpp" />
+    <ClCompile Include="Engine\src\scenemanagement\scenemanager.cpp" />
+    <ClCompile Include="Engine\src\scenemanagement\spatial.cpp" />
     <ClCompile Include="Engine\src\windowing\window.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -126,6 +130,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)SDL2.dll" "$(TargetDir)SDL2.dll"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -157,6 +164,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)SDL2.dll" "$(TargetDir)SDL2.dll"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
