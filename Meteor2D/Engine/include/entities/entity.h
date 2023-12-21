@@ -4,9 +4,9 @@ class Entity {
 public:
 	Entity();
 	~Entity();
-	virtual void onStart()= 0;
-	virtual void onUpdate(float deltaTime) = 0;
-	virtual void onExit() = 0;
+	virtual void onStart() {};
+	virtual void onUpdate(float deltaTime) {};
+	virtual void onExit() {};
 	virtual inline bool equals(Entity* other);
 	inline unsigned int getId() { return id; }
 private:

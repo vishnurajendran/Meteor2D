@@ -1,6 +1,17 @@
-#include<rendering/renderqueue.h>
-#include<iostream>
-#include<algorithm>
+#pragma once
+#include <meteorutils/logging.h>
+#include <rendering/renderqueue.h>
+#include <iostream>
+#include <algorithm>
+
+RenderQueue* RenderQueue::activeQueue = NULL;
+
+RenderQueue* RenderQueue::getQueue() {
+	if (activeQueue == NULL)
+		activeQueue = new RenderQueue();
+
+	return activeQueue;
+}
 
 RenderQueue::~RenderQueue() {
 	for (auto cmd : worldQueue) {
@@ -15,16 +26,17 @@ RenderQueue::~RenderQueue() {
 }
 
 void RenderQueue::submit(RenderCommand* cmd) {
-	std::vector<RenderCommand*> queueToUse;
 	switch (cmd->getLayer()) {
-		case RenderLayer::World: queueToUse = worldQueue;
+	case RenderLayer::World:
+			worldQueue.push_back(cmd);
 			break;
-		case RenderLayer::UI: queueToUse = uiQueue;
+		case RenderLayer::UI:
+			uiQueue.push_back(cmd);
 			break;
-		case RenderLayer::Debug: queueToUse = debugQueue;
+		case RenderLayer::Debug:
+			debugQueue.push_back(cmd);
 			break;
 	}
-	queueToUse.push_back(cmd);
 }
 
 void RenderQueue::prepare() {
@@ -47,17 +59,17 @@ bool RenderQueue::hasNext(RenderLayer layer) {
 }
 
 RenderCommand* RenderQueue::next(RenderLayer layer) {
-	std::vector<RenderCommand*> queueToUse;
+	std::vector<RenderCommand*>* queueToUse = NULL;
 	switch (layer) {
-	case RenderLayer::World: queueToUse = worldQueue;
+	case RenderLayer::World: queueToUse = &worldQueue;
 		break;
-	case RenderLayer::UI: queueToUse = uiQueue;
+	case RenderLayer::UI: queueToUse = &uiQueue;
 		break;
-	case RenderLayer::Debug: queueToUse = debugQueue;
+	case RenderLayer::Debug: queueToUse = &debugQueue;
 		break;
 	}
 
-	RenderCommand* cmd = queueToUse.front();
-	queueToUse.erase(queueToUse.begin());
+	RenderCommand* cmd = queueToUse->front();
+	queueToUse->erase(queueToUse->begin());
 	return cmd;
 }

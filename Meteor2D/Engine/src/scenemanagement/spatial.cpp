@@ -10,6 +10,7 @@ void makeRootEntity(SpatialEntity* entity) {
 }
 
 SpatialEntity::SpatialEntity(SpatialEntity* parent) {
+	localScale.x = localScale.y = 1;
 	children = new std::vector<SpatialEntity*>();
 	if (parent == NULL)
 		makeRootEntity(this);
@@ -50,7 +51,7 @@ SpatialEntity::~SpatialEntity() {
 }
 
 void SpatialEntity::onStart() {
-	logFormat("started spatial {}", getId());
+	log("started spatial {}", getId());
 }
 
 void SpatialEntity::onUpdate(float deltaTime) {

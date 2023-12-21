@@ -1,35 +1,32 @@
 #include <meteorcore.h>
-
-const size_t SCREEN_WIDTH = 800;
-const size_t SCREEN_HEIGHT = 600;
+#include <constants.h>
 
 extern Application* getApp();
 
-float getDeltaTime();
-
 int main(int argc, char* argv[]) {
-	logNoFormat("booting up meteor");
+	log("booting up meteor");
+	if (!Texture::initialiseTextureLoader()) {
+		error("un-recoverable error, closing meteor instance");
+		return 0;
+	}
+
 	Application* app = getApp();
 	Window* window = new Window(app->getName(),SCREEN_WIDTH, SCREEN_HEIGHT, false, Color::black());
-	app->setRenderQueue(window->getRenderQueue());
+	window->setLogicalResolution(LOGICAL_WIDTH, LOGICAL_HEIGHT);
 	app->onStart();
 	while (!window->hasQuit()) {
 		window->clear();
-		float time = getDeltaTime();
-		SceneManager::updateScene(time);
 		window->pollEvents();
-		app->onUpdate(time);
+		Time::updateTime();
+		float deltaTime = Time::getDeltaTime();
+		SceneManager::updateScene(deltaTime);
+		app->onUpdate(deltaTime);
 		window->update();
 	}
 	app->onQuit();
 	delete app;
-	logNoFormat("Cleaning up...");
+	log("Cleaning up...");
 	window->close();
 	delete window;
-	return 0;
-}
-
-//todo: replace later
-float getDeltaTime() {
 	return 0;
 }

@@ -34,11 +34,11 @@ public:
 	void removeChild(SpatialEntity* entity);
 
 	// overrides
-	void onStart() override;
-	void onUpdate(float deltaTime) override;
-	void onExit() override;
+	virtual void onStart() override;
+	virtual void onUpdate(float deltaTime) override;
+	virtual void onExit() override;
 
-private:
+protected:
 	Vector2 localPosition;
 	Vector2 localRotation;
 	Vector2 localScale;
@@ -47,6 +47,7 @@ private:
 	SpatialEntity* parent = NULL;
 	std::vector<SpatialEntity*>* children = NULL;
 
+private:
 	void setParent(SpatialEntity* entity) { parent = entity; }
 	void updatePositions();
 	void updateRotations() {};

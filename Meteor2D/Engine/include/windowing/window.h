@@ -14,6 +14,7 @@ public:
 	void clear();
 	bool hasQuit();
 	void close();
+	void setLogicalResolution(size_t width, size_t height);
 	RenderQueue* getRenderQueue();
 private:
 	SDL_Window* window;

@@ -20,14 +20,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\include\TestGame.h" />
-    <ClInclude Include="Engine\include\2d\sprite.h" />
+    <ClInclude Include="Engine\include\2d\sprite2d.h" />
+    <ClInclude Include="Engine\include\2d\texrendercmd.h" />
+    <ClInclude Include="Engine\include\2d\texture.h" />
     <ClInclude Include="Engine\include\application\application.h" />
+    <ClInclude Include="Engine\include\assetmanagement\assetmanager.h" />
+    <ClInclude Include="Engine\include\constants.h" />
     <ClInclude Include="Engine\include\entities\entity.h" />
     <ClInclude Include="Engine\include\entities\spatial.h" />
+    <ClInclude Include="Engine\include\global\sdlcores.h" />
     <ClInclude Include="Engine\include\meteor.h" />
     <ClInclude Include="Engine\include\meteorcore.h" />
     <ClInclude Include="Engine\include\meteorutils\color.h" />
     <ClInclude Include="Engine\include\meteorutils\logging.h" />
+    <ClInclude Include="Engine\include\meteorutils\rect.h" />
+    <ClInclude Include="Engine\include\meteorutils\time.h" />
+    <ClInclude Include="Engine\include\meteorutils\transformhelper.h" />
     <ClInclude Include="Engine\include\meteorutils\vector2d.h" />
     <ClInclude Include="Engine\include\rendering\rendercommand.h" />
     <ClInclude Include="Engine\include\rendering\renderer.h" />
@@ -39,13 +47,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application\src\TestGame.cpp" />
+    <ClCompile Include="Engine\src\2d\sprite2d.cpp" />
+    <ClCompile Include="Engine\src\2d\texrendercmd.cpp" />
+    <ClCompile Include="Engine\src\2d\texture.cpp" />
+    <ClCompile Include="Engine\src\assetmanagement\assetmanager.cpp" />
     <ClCompile Include="Engine\src\entities\entity.cpp" />
+    <ClCompile Include="Engine\src\globals\sdlcores.cpp" />
     <ClCompile Include="Engine\src\main.cpp" />
     <ClCompile Include="Engine\src\rendering\renderer.cpp" />
     <ClCompile Include="Engine\src\rendering\renderqueue.cpp" />
     <ClCompile Include="Engine\src\scenemanagement\scene.cpp" />
     <ClCompile Include="Engine\src\scenemanagement\scenemanager.cpp" />
     <ClCompile Include="Engine\src\scenemanagement\spatial.cpp" />
+    <ClCompile Include="Engine\src\time\time.cpp" />
     <ClCompile Include="Engine\src\windowing\window.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -102,8 +116,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Engine\include\external\SDL2\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\include\external\Utils;$(SolutionDir)Application\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Engine\include\external\SDL2\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Engine\include\external\SDL2\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\include\external\Utils;$(SolutionDir)Application\include;D:\Github\Meteor2D\Meteor2D\Engine\include\external\SDL2_Image\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Engine\include\external\SDL2\x64;$(SolutionDir)Engine\include\external\SDL2_image\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -111,8 +125,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Engine\include\external\SDL2\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\include\external\Utils;$(SolutionDir)Application\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Engine\include\external\SDL2\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Engine\external\SDL2\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\external\Utils;$(SolutionDir)Application\include;D:\Github\Meteor2D\Meteor2D\Engine\external\SDL2_Image\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Engine\external\SDL2\x64;$(SolutionDir)Engine\external\SDL2_image\x64;$(LibraryPath)</LibraryPath>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -128,10 +143,10 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)SDL2.dll" "$(TargetDir)SDL2.dll"</Command>
+      <Command>copy "$(SolutionDir)SDL2.dll" "$(TargetDir)SDL2.dll";copy "$(SolutionDir)SDL2_image.dll" "$(TargetDir)SDL2_image.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -162,10 +177,11 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)SDL2.dll" "$(TargetDir)SDL2.dll"</Command>
+      <Command>copy "$(SolutionDir)SDL2.dll" "$(TargetDir)SDL2.dll"
+copy "$(SolutionDir)SDL2_image.dll" "$(TargetDir)SDL2_image.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

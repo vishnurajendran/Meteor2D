@@ -58,6 +58,27 @@
     <Filter Include="Engine\Source Files\scenemanagement">
       <UniqueIdentifier>{2e62db5b-6198-4bba-8112-d5b2db5381c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Source Files\meteorutils">
+      <UniqueIdentifier>{9bf443d3-2c54-4f16-af25-e4ba75d26a17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files\2D">
+      <UniqueIdentifier>{f90b51d6-0676-4e99-8bd3-cc3fc3633d4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Header Files\global">
+      <UniqueIdentifier>{67a5a5a4-3d33-4b3e-afdf-d97f759953bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files\global">
+      <UniqueIdentifier>{bc1cf9f9-afdd-4f67-8827-11554b6fc21a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Header Files\NewFilter1">
+      <UniqueIdentifier>{e25036b3-17ff-48e6-a0f8-533d1ce04654}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files\assetmanagement">
+      <UniqueIdentifier>{e59b4566-d417-4d5c-8fb3-ab492f6302da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Header Files\assetmanagement">
+      <UniqueIdentifier>{66cdf9c0-d36b-4fec-9a8a-25e82a2b8b0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\include\application\application.h">
@@ -90,7 +111,7 @@
     <ClInclude Include="Application\include\TestGame.h">
       <Filter>Application\include</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\include\2d\sprite.h">
+    <ClInclude Include="Engine\include\2d\sprite2d.h">
       <Filter>Engine\Header Files\2D</Filter>
     </ClInclude>
     <ClInclude Include="Engine\include\entities\entity.h">
@@ -110,6 +131,30 @@
     </ClInclude>
     <ClInclude Include="Engine\include\meteorutils\vector2d.h">
       <Filter>Engine\Header Files\meteorutils</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\meteorutils\time.h">
+      <Filter>Engine\Header Files\meteorutils</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\2d\texture.h">
+      <Filter>Engine\Header Files\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\2d\texrendercmd.h">
+      <Filter>Engine\Header Files\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\meteorutils\rect.h">
+      <Filter>Engine\Header Files\meteorutils</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\global\sdlcores.h">
+      <Filter>Engine\Header Files\global</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\meteorutils\transformhelper.h">
+      <Filter>Engine\Header Files\meteorutils</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\constants.h">
+      <Filter>Engine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\assetmanagement\assetmanager.h">
+      <Filter>Engine\Header Files\assetmanagement</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +184,24 @@
     </ClCompile>
     <ClCompile Include="Engine\src\scenemanagement\spatial.cpp">
       <Filter>Engine\Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\time\time.cpp">
+      <Filter>Engine\Source Files\meteorutils</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\2d\texture.cpp">
+      <Filter>Engine\Source Files\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\2d\texrendercmd.cpp">
+      <Filter>Engine\Source Files\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\2d\sprite2d.cpp">
+      <Filter>Engine\Source Files\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\globals\sdlcores.cpp">
+      <Filter>Engine\Source Files\global</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\assetmanagement\assetmanager.cpp">
+      <Filter>Engine\Source Files\assetmanagement</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

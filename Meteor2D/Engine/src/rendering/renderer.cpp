@@ -1,3 +1,5 @@
+#pragma once
+#include <meteorutils/logging.h>
 #include <rendering/renderer.h>
 
 Renderer::Renderer(RenderQueue* queue, SDL_Renderer* renderCore) {
@@ -10,11 +12,9 @@ void Renderer::renderAll() {
 	while (queue->hasNext(RenderLayer::World)) {
 		render(queue->next(RenderLayer::World));
 	}
-
 	while (queue->hasNext(RenderLayer::UI)) {
 		render(queue->next(RenderLayer::UI));
 	}
-
 	while (queue->hasNext(RenderLayer::Debug)) {
 		render(queue->next(RenderLayer::Debug));
 	}
@@ -23,4 +23,8 @@ void Renderer::renderAll() {
 void Renderer::render(RenderCommand* cmd) {
 	cmd->setRenderCore(renderCore);
 	cmd->render();
+}
+
+void Renderer::setLogicalSize(size_t width, size_t height) {
+	SDL_RenderSetLogicalSize(renderCore, width, height);
 }

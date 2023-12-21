@@ -2,9 +2,21 @@
 #include <iostream>
 struct Color {
 public:
+	/// <summary>
+	/// red channel
+	/// </summary>
 	uint8_t r;
+	/// <summary>
+	/// green channel
+	/// </summary>
 	uint8_t g;
+	/// <summary>
+	/// blue channel
+	/// </summary>
 	uint8_t b;
+	/// <summary>
+	/// alpha channel
+	/// </summary>
 	uint8_t a;
 
 	inline Color(uint8_t red, uint8_t green, uint8_t blue) {

@@ -1,32 +1,42 @@
+#pragma once
 #include <Windowing/window.h>
 #include <meteorutils/logging.h>
+#include <global/sdlcores.h>
 
 Window::Window(std::string name, size_t width, size_t height, bool fullscreen, Color* background) {
+	SDL_Point screenCentre;
+	screenCentre.x = width / 2;
+	screenCentre.y = height / 2;
+
 	backgroundColor = background;
 	SDL_WindowFlags windowFlag = fullscreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN;
-	logNoFormat("Initialising SDL");
+	log("Initialising SDL");
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-		errorFormat("Could not initialise SDL! SDL Error: {}",SDL_GetError());
+		error("Could not initialise SDL! SDL Error: {}",SDL_GetError());
 		return;
 	}
-	logNoFormat("Creating Window");
+	log("Creating Window");
 	window = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height,windowFlag);
 	if (window == NULL) {
-		errorFormat("Cannot create window! SDL Error: {}",SDL_GetError());
+		error("Cannot create window! SDL Error: {}",SDL_GetError());
 		return;
 	}
-	logNoFormat("Setting up renderer");
+	log("Setting up renderer");
 	quit = false;
 	sdlRenderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	
+	SdlCores::setActiveRenderer(sdlRenderer);
+	SdlCores::setScreenCentre(screenCentre);
+
 	SDL_SetRenderDrawColor(sdlRenderer, background->r, background->g, background->b, background->a);
 	if (sdlRenderer == NULL)
 	{
-		errorFormat("Renderer could not be created! SDL Error: {}", SDL_GetError());
+		error("Renderer could not be created! SDL Error: {}", SDL_GetError());
 		return;
 	}
-	renderQueue = new RenderQueue();
+	renderQueue = RenderQueue::getQueue();
 	renderer = new Renderer(renderQueue, sdlRenderer);
-	logNoFormat("Meteor Window ready");
+	log("Meteor Window ready");
 }
 
 RenderQueue* Window::getRenderQueue() {
@@ -38,6 +48,10 @@ bool Window::hasQuit() {
 }
 
 void Window::close() {
+
+	if (SdlCores::getActiveRenderer() == sdlRenderer)
+		SdlCores::setActiveRenderer(NULL);
+
 	delete renderer;
 	delete renderQueue;
 
@@ -65,4 +79,8 @@ void Window::update() {
 void Window::render() {
 	renderer->renderAll();
 	SDL_RenderPresent(sdlRenderer);
+}
+
+void Window::setLogicalResolution(size_t width, size_t height) {
+	renderer->setLogicalSize(width, height);
 }
