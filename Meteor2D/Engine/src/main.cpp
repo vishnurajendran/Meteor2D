@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	Application* app = getApp();
-	Window* window = new Window(app->getName(),SCREEN_WIDTH, SCREEN_HEIGHT, false, Color::black());
+	Window* window = new Window(app->getName(),SCREEN_WIDTH, SCREEN_HEIGHT, false, Color::white());
 	window->setLogicalResolution(LOGICAL_WIDTH, LOGICAL_HEIGHT);
 	app->onStart();
 	while (!window->hasQuit()) {
