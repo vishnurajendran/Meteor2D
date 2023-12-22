@@ -6,12 +6,12 @@ std::string TestGame::getName() {
 }
 
 void TestGame::onStart() {
-	SceneManager::loadEmptyScene();
-	SpatialEntity* p = new SpatialEntity();
+	meteor::SceneManager::loadEmptyScene();
+	meteor::SpatialEntity* p = new meteor::SpatialEntity();
 	p->setLocalPosition(10, 20);
-	SpatialEntity* c = new SpatialEntity(p);
+	meteor::SpatialEntity* c = new meteor::SpatialEntity(p);
 	c->setLocalPosition(5, 1);
-	sprite = new Sprite2D(AssetManager::getInstance()->getTexture("chars\\link.png"), RenderLayer::World, 1);
+	sprite = new meteor::Sprite2D(meteor::AssetManager::getInstance()->getTexture("chars\\link.png"), meteor::RenderLayer::World, 1);
 	/*Sprite2D* sp = new Sprite2D(AssetManager::getInstance()->getTexture("chars\\link.png"), RenderLayer::World, 0);
 	sp->setLocalPosition(10, 10);*/
 }
@@ -27,9 +27,9 @@ void TestGame::onUpdate(float deltaTime) {
 }
 
 void TestGame::onQuit() {
-	SceneManager::closeActiveScene();
+	meteor::SceneManager::closeActiveScene();
 }
 
-Application* getApp() {
+meteor::Application* getApp() {
 	return new TestGame();
 }

@@ -1,34 +1,36 @@
 #include <scenemanagement/scenemanager.h>
 
-Scene* SceneManager::activeScene = NULL;
+namespace meteor {
+	Scene* SceneManager::activeScene = NULL;
 
-bool SceneManager::closeActiveScene() {
-	if (activeScene == NULL)
-		return false;
+	bool SceneManager::closeActiveScene() {
+		if (activeScene == NULL)
+			return false;
 
-	activeScene->onExit();
-	activeScene = NULL;
-	return true;
-}
+		activeScene->onExit();
+		activeScene = NULL;
+		return true;
+	}
 
-bool SceneManager::loadEmptyScene() {
-	if (activeScene != NULL)
-		closeActiveScene();
-	activeScene = new Scene();
-	return true;
-}
+	bool SceneManager::loadEmptyScene() {
+		if (activeScene != NULL)
+			closeActiveScene();
+		activeScene = new Scene();
+		return true;
+	}
 
-bool SceneManager::loadScene(std::string path) {
-	if (path.empty())
-		return false;
-	
-	//todo add scene load logic here
-	return loadEmptyScene();
-}
+	bool SceneManager::loadScene(std::string path) {
+		if (path.empty())
+			return false;
 
-void SceneManager::updateScene(float deltaTime) {
-	if (activeScene == NULL)
-		return;
+		//todo add scene load logic here
+		return loadEmptyScene();
+	}
 
-	activeScene->onUpdate(deltaTime);
+	void SceneManager::updateScene(float deltaTime) {
+		if (activeScene == NULL)
+			return;
+
+		activeScene->onUpdate(deltaTime);
+	}
 }

@@ -1,6 +1,9 @@
 #pragma once
-enum RenderLayer {
-	World,
-	UI,
-	Debug
-};
+
+namespace meteor {
+	enum RenderLayer {
+		World,
+		UI,
+		Debug
+	};
+}

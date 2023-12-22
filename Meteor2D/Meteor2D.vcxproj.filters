@@ -70,9 +70,6 @@
     <Filter Include="Engine\Source Files\global">
       <UniqueIdentifier>{bc1cf9f9-afdd-4f67-8827-11554b6fc21a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Header Files\NewFilter1">
-      <UniqueIdentifier>{e25036b3-17ff-48e6-a0f8-533d1ce04654}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Source Files\assetmanagement">
       <UniqueIdentifier>{e59b4566-d417-4d5c-8fb3-ab492f6302da}</UniqueIdentifier>
     </Filter>

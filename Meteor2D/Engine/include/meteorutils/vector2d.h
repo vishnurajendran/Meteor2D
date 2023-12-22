@@ -1,6 +1,9 @@
 #pragma once
-struct Vector2 {
-public:
-	float x = 0;
-	float y = 0;
-};
+
+namespace meteor {
+	struct Vector2 {
+	public:
+		float x = 0;
+		float y = 0;
+	};
+}
