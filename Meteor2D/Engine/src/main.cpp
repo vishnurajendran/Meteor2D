@@ -11,7 +11,7 @@
 		}
 
 		meteor::Application* app = getApp();
-		meteor::Window* window = new meteor::Window(app->getName(), meteor::SCREEN_WIDTH, meteor::SCREEN_HEIGHT, false, meteor::Color::white());
+		meteor::Window* window = new meteor::Window(app->getName(), meteor::SCREEN_WIDTH, meteor::SCREEN_HEIGHT, meteor::FULLSCREEN, meteor::Color::white());
 		window->setLogicalResolution(meteor::LOGICAL_WIDTH, meteor::LOGICAL_HEIGHT);
 		app->onStart();
 		while (!window->hasQuit()) {

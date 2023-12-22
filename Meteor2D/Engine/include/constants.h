@@ -10,4 +10,6 @@ namespace meteor {
 	// move these project property file.
 	const size_t LOGICAL_WIDTH = 800;
 	const size_t LOGICAL_HEIGHT = 600;
+
+	const bool FULLSCREEN = false;
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include <meteor.h>
+
 class TestGame : public meteor::Application {
 public:
 	std::string getName() override;
