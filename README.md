@@ -23,7 +23,7 @@ Meteor is a lightweight 2D game engine designed for simplicity and flexibility i
 
 ## TODO
 
-- [ ] Implement SpriteSheet animation.
+- [x] Implement SpriteSheet animation.
 - [ ] Add Gizmos.
 - [ ] Implement physics engine.
 - [ ] Add support for audio.
