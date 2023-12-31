@@ -4,14 +4,15 @@
 	extern meteor::Application* getApp();
 
 	int main(int argc, char* argv[]) {
-		log("booting up meteor");
+		mLog("booting up meteor");
 		if (!meteor::Texture::initialiseTextureLoader()) {
-			error("un-recoverable error, closing meteor instance");
+			mError("un-recoverable error, closing meteor instance");
 			return 0;
 		}
 
 		meteor::Application* app = getApp();
-		meteor::Window* window = new meteor::Window(app->getName(), meteor::SCREEN_WIDTH, meteor::SCREEN_HEIGHT, meteor::FULLSCREEN, meteor::Color::white());
+		meteor::WindowProperties properties(app->getName(),meteor::Color::black());
+		meteor::Window* window = new meteor::Window(properties);
 		window->setLogicalResolution(meteor::LOGICAL_WIDTH, meteor::LOGICAL_HEIGHT);
 		app->onStart();
 		while (!window->hasQuit()) {
@@ -21,11 +22,13 @@
 			float deltaTime = meteor::Time::getDeltaTime();
 			meteor::SceneManager::updateScene(deltaTime);
 			app->onUpdate(deltaTime);
+			if (!meteor::CameraStack::hasActiveCamera())
+				mWarn("No active camera found!, Entities may not be correctly rendererd to the screen");
 			window->update();
 		}
 		app->onQuit();
 		delete app;
-		log("Cleaning up...");
+		mLog("Cleaning up...");
 		window->close();
 		delete window;
 		return 0;

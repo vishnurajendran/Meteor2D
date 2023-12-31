@@ -20,11 +20,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\include\TestGame.h" />
+    <ClInclude Include="Engine\include\2d\animation.h" />
+    <ClInclude Include="Engine\include\2d\animationmap.h" />
     <ClInclude Include="Engine\include\2d\sprite2d.h" />
+    <ClInclude Include="Engine\include\2d\spritesheet.h" />
     <ClInclude Include="Engine\include\2d\texrendercmd.h" />
     <ClInclude Include="Engine\include\2d\texture.h" />
     <ClInclude Include="Engine\include\application\application.h" />
     <ClInclude Include="Engine\include\assetmanagement\assetmanager.h" />
+    <ClInclude Include="Engine\include\camera\camera.h" />
+    <ClInclude Include="Engine\include\camera\camerastack.h" />
     <ClInclude Include="Engine\include\constants.h" />
     <ClInclude Include="Engine\include\entities\entity.h" />
     <ClInclude Include="Engine\include\entities\spatial.h" />
@@ -44,13 +49,19 @@
     <ClInclude Include="Engine\include\scenemanagement\scene.h" />
     <ClInclude Include="Engine\include\scenemanagement\scenemanager.h" />
     <ClInclude Include="Engine\include\windowing\window.h" />
+    <ClInclude Include="Engine\include\windowing\windowproperties.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application\src\TestGame.cpp" />
+    <ClCompile Include="Engine\src\2d\animation.cpp" />
+    <ClCompile Include="Engine\src\2d\animationmap.cpp" />
     <ClCompile Include="Engine\src\2d\sprite2d.cpp" />
+    <ClCompile Include="Engine\src\2d\spritesheet.cpp" />
     <ClCompile Include="Engine\src\2d\texrendercmd.cpp" />
     <ClCompile Include="Engine\src\2d\texture.cpp" />
     <ClCompile Include="Engine\src\assetmanagement\assetmanager.cpp" />
+    <ClCompile Include="Engine\src\camera\camera.cpp" />
+    <ClCompile Include="Engine\src\camera\camerastack.cpp" />
     <ClCompile Include="Engine\src\entities\entity.cpp" />
     <ClCompile Include="Engine\src\globals\sdlcores.cpp" />
     <ClCompile Include="Engine\src\main.cpp" />
@@ -173,6 +184,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

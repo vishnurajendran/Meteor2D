@@ -7,23 +7,14 @@ std::string TestGame::getName() {
 
 void TestGame::onStart() {
 	meteor::SceneManager::loadEmptyScene();
-	meteor::SpatialEntity* p = new meteor::SpatialEntity();
-	p->setLocalPosition(10, 20);
-	meteor::SpatialEntity* c = new meteor::SpatialEntity(p);
-	c->setLocalPosition(5, 1);
-	sprite = new meteor::Sprite2D(meteor::AssetManager::getInstance()->getTexture("chars\\link.png"), meteor::RenderLayer::World, 1);
-	/*Sprite2D* sp = new Sprite2D(AssetManager::getInstance()->getTexture("chars\\link.png"), RenderLayer::World, 0);
-	sp->setLocalPosition(10, 10);*/
+	gameCamera = new meteor::Camera();	
+	meteor::Animation* anim = new meteor::Animation("link.animap", 12,meteor::RenderLayer::World, 1);
+	anim->setLocalPosition(1500, 540);
+	anim->play("walk", true);
 }
 
 void TestGame::onUpdate(float deltaTime) {
-	auto pos = sprite->getLocalPosition();
-	auto scale = sprite->getLocalScale();
-	pos.y += 50 * deltaTime;
-	auto newScale = scale.x + (1 * deltaTime);
-	scale.x = scale.y = newScale;
-	//sprite->setLocalPosition(pos);
-	sprite->setLocalScale(scale);
+
 }
 
 void TestGame::onQuit() {

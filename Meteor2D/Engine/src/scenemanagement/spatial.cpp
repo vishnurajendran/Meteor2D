@@ -52,7 +52,7 @@ namespace meteor {
 	}
 
 	void SpatialEntity::onStart() {
-		log("started spatial {}", getId());
+		mLog("started spatial {}", getId());
 	}
 
 	void SpatialEntity::onUpdate(float deltaTime) {

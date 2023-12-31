@@ -21,6 +21,10 @@ namespace meteor {
 		/// </summary>
 		uint8_t a;
 
+		inline Color() {
+			r = g = b = a = 0;
+		}
+
 		inline Color(uint8_t red, uint8_t green, uint8_t blue) {
 			r = red;
 			b = blue;
@@ -35,10 +39,10 @@ namespace meteor {
 			a = alpha;
 		}
 
-		inline static Color* black() { return new Color(0, 0, 0); }
-		inline static Color* white() { return new Color(255, 255, 255); }
-		inline static Color* red() { return new Color(255, 0, 0); }
-		inline static Color* blue() { return new Color(0, 255, 0); }
-		inline static Color* green() { return new Color(0, 0, 255); }
+		inline static Color black() { return Color(0, 0, 0); }
+		inline static Color white() { return Color(255, 255, 255); }
+		inline static Color red() { return Color(255, 0, 0); }
+		inline static Color green() { return Color(0, 255, 0); }
+		inline static Color blue() { return Color(0, 0, 255); }
 	};
 }

@@ -5,11 +5,12 @@
 #include <SDL.h>
 #include <rendering/renderqueue.h>
 #include <rendering/renderer.h>
+#include <windowing/windowproperties.h>
 
 namespace meteor {
 	class Window {
 	public:
-		Window(std::string name, size_t height, size_t width, bool fullscreen, Color* background);
+		Window(WindowProperties properties);
 		void update();
 		void pollEvents();
 		void clear();
@@ -21,7 +22,7 @@ namespace meteor {
 		SDL_Window* window;
 		SDL_Renderer* sdlRenderer;
 		SDL_Event windowEvent;
-		Color* backgroundColor;
+		Color backgroundColor;
 		RenderQueue* renderQueue;
 		Renderer* renderer;
 		bool quit;

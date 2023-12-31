@@ -4,6 +4,7 @@
 
 namespace meteor {
 	const std::string IMG_PATH = "resS\\img\\";
+	const std::string ANIM_PATH = "resS\\anim\\";
 
 	AssetManager* AssetManager::instance = NULL;
 
@@ -16,15 +17,31 @@ namespace meteor {
 
 	Texture* AssetManager::getTexture(std::string path, bool relative) {
 		auto assetPath = relative ? IMG_PATH + path : path;
-		if (texMap.find(path) != texMap.end()) {
+		if (texMap.find(assetPath) != texMap.end()) {
 			return texMap.at(assetPath);
 		}
 
-		log("loading: {}", assetPath);
+		mLog("loading: {}", assetPath);
 		auto tex = new Texture(assetPath);
 		if (tex->valid()) {
 			texMap[assetPath] = tex;
 			return tex;
+		}
+
+		return NULL;
+	}
+
+	AnimationMap* AssetManager::getAnimationMap(std::string path, bool relative) {
+		auto assetPath = relative ? ANIM_PATH + path : path;
+		if (animMap.find(assetPath) != animMap.end()) {
+			return animMap.at(assetPath);
+		}
+
+		mLog("loading: {}", assetPath);
+		auto map = AnimationMap::loadMap(assetPath);
+		if (map != NULL) {
+			animMap[assetPath] = map;
+			return map;
 		}
 
 		return NULL;

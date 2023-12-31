@@ -8,7 +8,7 @@ namespace meteor {
         int imgFlags = IMG_INIT_PNG;
         if (!(IMG_Init(imgFlags) & imgFlags))
         {
-            error("SDL_image could not initialize! SDL_image Error: {}", IMG_GetError());
+            mError("SDL_image could not initialize! SDL_image Error: {}", IMG_GetError());
             return false;
         }
         return true;
@@ -17,12 +17,12 @@ namespace meteor {
     Texture::Texture(std::string path) {
         SDL_Surface* tempSurface = IMG_Load(path.c_str());
         if (tempSurface == NULL) {
-            error("Unable to load image {}!, Error {}", path, IMG_GetError());
+            mError("Unable to load image {}!, Error {}", path, IMG_GetError());
             isValid = false;
             return;
         }
         if (SdlCores::getActiveRenderer() == NULL) {
-            error("SDL renderer core missing, cannot generate texture");
+            mError("SDL renderer core missing, cannot generate texture");
             isValid = false;
             return;
         }

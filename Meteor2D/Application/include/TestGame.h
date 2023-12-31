@@ -9,4 +9,5 @@ public:
 	void onQuit() override;
 private:
 	meteor::Sprite2D* sprite;
+	meteor::Camera* gameCamera;
 };

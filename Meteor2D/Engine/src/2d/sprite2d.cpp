@@ -8,6 +8,7 @@ namespace meteor {
 		cmd = new TexRenderCmd(targetLayer, sortingOrder);
 		cmd->bindTexture(texture);
 		texSize = texture->getSize();
+		pivot = Vector2::make(0.5f,0.5f);
 	}
 
 	void Sprite2D::onUpdate(float deltaTime) {
@@ -20,6 +21,7 @@ namespace meteor {
 		rect.size.y = texSize.y;
 		cmd->updateRect(rect);
 		cmd->updateScale(localScale);
+		cmd->updatePivot(pivot);
 		RenderQueue::getQueue()->submit(cmd);
 	}
 

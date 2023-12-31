@@ -10,12 +10,18 @@ namespace meteor {
 		TexRenderCmd(RenderLayer layer, uint8_t sortingOrder);
 		inline void bindTexture(Texture* tex) { this->texture = tex; }
 		inline void updateRect(Rect rect) { targetRect = rect; }
+		inline void updateSrcRect(Rect rect) { this->srcRect = rect; }
 		inline void updateScale(Vector2 scale) { this->scale = scale; }
+		inline void updatePivot(Vector2 pivot) { this->pivot = pivot; }
+		inline void useSourceRect(bool useSrcRect) { this->useSrcRect = useSrcRect; }
 		void render() override;
 		bool isValid() override;
 	private:
 		Texture* texture;
 		Rect targetRect;
+		Rect srcRect;
 		Vector2 scale;
+		Vector2 pivot;
+		bool useSrcRect;
 	};
 }

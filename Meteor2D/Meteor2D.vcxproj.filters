@@ -76,6 +76,12 @@
     <Filter Include="Engine\Header Files\assetmanagement">
       <UniqueIdentifier>{66cdf9c0-d36b-4fec-9a8a-25e82a2b8b0f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Header Files\camera">
+      <UniqueIdentifier>{794220e9-430c-4599-b4d5-c54b7569cadb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files\camera">
+      <UniqueIdentifier>{8f218903-f357-496e-8f3e-1099bf16a718}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\include\application\application.h">
@@ -153,6 +159,24 @@
     <ClInclude Include="Engine\include\assetmanagement\assetmanager.h">
       <Filter>Engine\Header Files\assetmanagement</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\include\camera\camera.h">
+      <Filter>Engine\Header Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\camera\camerastack.h">
+      <Filter>Engine\Header Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\windowing\windowproperties.h">
+      <Filter>Engine\Header Files\windowing</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\2d\spritesheet.h">
+      <Filter>Engine\Header Files\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\2d\animationmap.h">
+      <Filter>Engine\Header Files\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\2d\animation.h">
+      <Filter>Engine\Header Files\2D</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\src\rendering\renderer.cpp">
@@ -199,6 +223,21 @@
     </ClCompile>
     <ClCompile Include="Engine\src\assetmanagement\assetmanager.cpp">
       <Filter>Engine\Source Files\assetmanagement</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\camera\camera.cpp">
+      <Filter>Engine\Source Files\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\camera\camerastack.cpp">
+      <Filter>Engine\Source Files\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\2d\spritesheet.cpp">
+      <Filter>Engine\Source Files\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\2d\animationmap.cpp">
+      <Filter>Engine\Source Files\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\2d\animation.cpp">
+      <Filter>Engine\Source Files\2D</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

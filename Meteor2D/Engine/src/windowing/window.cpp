@@ -4,40 +4,47 @@
 #include <global/sdlcores.h>
 
 namespace meteor {
-	Window::Window(std::string name, size_t width, size_t height, bool fullscreen, Color* background) {
+	Window::Window(WindowProperties properties) {
 		SDL_Point screenCentre;
-		screenCentre.x = width / 2;
-		screenCentre.y = height / 2;
+		screenCentre.x = properties.width / 2;
+		screenCentre.y = properties.height / 2;
 
-		backgroundColor = background;
-		SDL_WindowFlags windowFlag = fullscreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN;
-		log("Initialising SDL");
+		backgroundColor = properties.backgroundColor;
+		SDL_WindowFlags windowFlag = properties.fullscreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN;
+		mLog("Initialising SDL");
 		if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-			error("Could not initialise SDL! SDL Error: {}", SDL_GetError());
+			mError("Could not initialise SDL! SDL Error: {}", SDL_GetError());
 			return;
 		}
-		log("Creating Window");
-		window = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, windowFlag);
+
+		mLog("Creating Window");
+		window = SDL_CreateWindow(properties.name.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, properties.width, properties.height, windowFlag);
 		if (window == NULL) {
-			error("Cannot create window! SDL Error: {}", SDL_GetError());
+			mError("Cannot create window! SDL Error: {}", SDL_GetError());
 			return;
 		}
-		log("Setting up renderer");
+		mLog("Setting up renderer");
 		quit = false;
-		sdlRenderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+		auto windowFlags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE;
+		if (properties.vsync) {
+			windowFlags = windowFlags | SDL_RENDERER_PRESENTVSYNC;
+		}
+
+		sdlRenderer = SDL_CreateRenderer(window, -1, windowFlags);
 
 		SdlCores::setActiveRenderer(sdlRenderer);
 		SdlCores::setScreenCentre(screenCentre);
 
-		SDL_SetRenderDrawColor(sdlRenderer, background->r, background->g, background->b, background->a);
+		SDL_SetRenderDrawColor(sdlRenderer, backgroundColor.r, backgroundColor.g, backgroundColor.b, backgroundColor.a);
 		if (sdlRenderer == NULL)
 		{
-			error("Renderer could not be created! SDL Error: {}", SDL_GetError());
+			mError("Renderer could not be created! SDL Error: {}", SDL_GetError());
 			return;
 		}
 		renderQueue = RenderQueue::getQueue();
 		renderer = new Renderer(renderQueue, sdlRenderer);
-		log("Meteor Window ready");
+		mLog("Meteor Window ready");
 	}
 
 	RenderQueue* Window::getRenderQueue() {
