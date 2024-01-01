@@ -8,6 +8,8 @@ public:
 	void onUpdate(float deltaTime) override;
 	void onQuit() override;
 private:
+	float myTime=0;
 	meteor::Sprite2D* sprite;
+	meteor::Animation* anim;
 	meteor::Camera* gameCamera;
 };

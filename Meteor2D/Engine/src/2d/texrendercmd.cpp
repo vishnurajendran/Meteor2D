@@ -22,7 +22,7 @@ namespace meteor {
 		SDL_FRect tRect;
 		SDL_Rect src;
 		//subtract the positions, by half of x and y, to center the sprite.
-		Vector2 size = texture->getSize();
+		Vector2 size = targetRect.size;
 		size.x *= scale.x;
 		size.y *= scale.y;
 
@@ -34,6 +34,9 @@ namespace meteor {
 		tRect.w = (targetRect.size.x * scale.x);
 		tRect.h = (targetRect.size.y * scale.y);
 		transformRectInternalToScreen(tRect);
+
+
+		//mWarn("final Rect: {} {} {} {}", tRect.x, tRect.y, tRect.w, tRect.h);
 
 		if (useSrcRect) {
 			src.x = srcRect.position.x;

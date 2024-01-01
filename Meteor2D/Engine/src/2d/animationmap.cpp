@@ -18,10 +18,21 @@ namespace meteor {
 
 	SpriteSheet* parseSpriteSheet(nlohmann::json);
 
-	SpriteSheet* AnimationMap::getAnim(std::string name) {
+	SpriteSheet* AnimationMap::getAnim(std::string name){
+
+		if (animMapping.empty())
+			return NULL;
+
 		if (animMapping.contains(name))
-			return animMapping.at(name);	
+			return animMapping.at(name);
+
 		return NULL;
+	}
+
+	SpriteSheet* AnimationMap::getDefault() {
+		if (animMapping.empty())
+			return NULL;
+		return animMapping.begin()->second;
 	}
 
 	AnimationMap* AnimationMap::loadMap(std::string filename) {

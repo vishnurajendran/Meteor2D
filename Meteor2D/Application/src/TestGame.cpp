@@ -1,6 +1,5 @@
 #include <TestGame.h>
 
-
 std::string TestGame::getName() {
 	return "Test Game";
 }
@@ -8,13 +7,15 @@ std::string TestGame::getName() {
 void TestGame::onStart() {
 	meteor::SceneManager::loadEmptyScene();
 	gameCamera = new meteor::Camera();	
-	meteor::Animation* anim = new meteor::Animation("link.animap", 12,meteor::RenderLayer::World, 1);
-	anim->setLocalPosition(1500, 540);
+	anim = new meteor::Animation("link.anim", 12,meteor::RenderLayer::World, 1);
+	anim->setLocalPosition(960, 1200);
 	anim->play("walk", true);
 }
 
 void TestGame::onUpdate(float deltaTime) {
-
+	auto pos = anim->getLocalPosition();
+	auto newPos = meteor::Vector2::make(pos.x, pos.y - (50 * deltaTime));
+	anim->setLocalPosition(newPos);
 }
 
 void TestGame::onQuit() {

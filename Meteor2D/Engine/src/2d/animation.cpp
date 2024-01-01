@@ -6,9 +6,15 @@ namespace meteor {
 
 	Animation::Animation(std::string mapFile, int fps, RenderLayer layer, uint8_t sortingOrder) {
 		this->animationMap = AssetManager::getInstance()->getAnimationMap(mapFile);
+		this->currAnimSheet = animationMap->getDefault();
 		this->fps = fps;
 		pivot = Vector2::make(0.5f, 0.5f);
 		cmd = new TexRenderCmd(layer, sortingOrder);
+		cmd->useSourceRect(true);
+
+		//bind default texture
+		if(currAnimSheet != NULL)
+			cmd->bindTexture(currAnimSheet == NULL ? NULL : currAnimSheet->getTexture());
 	}
 
 	void Animation::setFPS(int fps) {
@@ -23,10 +29,14 @@ namespace meteor {
 		isPlaying = true;
 	}
 
-	void Animation::play(std::string name, bool looped) {
+	void Animation::play(std::string name, bool looped=true) {
 		this->isLooping = looped;
+
+		//reset previous sprite sheet
+		if (currAnimSheet != NULL)
+			currAnimSheet->reset();
+
 		currAnimSheet = animationMap->getAnim(name);
-		cmd->useSourceRect(true);
 		cmd->bindTexture(currAnimSheet == NULL ? NULL : currAnimSheet->getTexture());
 		isPlaying = true;
 	}
@@ -37,34 +47,47 @@ namespace meteor {
 	}
 
 	void Animation::updateAnimation(float deltaTime) {
-		// exit conditions
-		if (!isPlaying)
-			return;
+		
+		cmd->updateScale(localScale);
+		cmd->updatePivot(pivot);
+		
 		if (currAnimSheet == NULL)
 			return;
 
-		cmd->updateScale(localScale);
-		cmd->updatePivot(pivot);
+		if (!isPlaying && renderOnce) {
+			renderOnce = false;
+			spriteSrcRect = currAnimSheet->getNext(isLooping);
+			submitFrameRenderRequest();
+			return;
+		}
 
 		// update animations
 		animTime += deltaTime;
 		if (animTime < (1.0f / fps)) {
-			RenderQueue::getQueue()->submit(cmd);
+			submitFrameRenderRequest();
 			return;
 		}
 		
 		//reset timer
 		animTime = 0;
 
-		Rect src = currAnimSheet->getNext(isLooping);
-		Rect myRect;
+		if (isPlaying)
+			spriteSrcRect = currAnimSheet->getNext(isLooping);
 
-		myRect.position = position;
-		myRect.size.x = src.size.x;
-		myRect.size.y = src.size.y;
+		submitFrameRenderRequest();
+	}
 
-		cmd->updateSrcRect(src);
-		cmd->updateRect(myRect);
+	void Animation::submitFrameRenderRequest() {
+		updateRect();
 		RenderQueue::getQueue()->submit(cmd);
+	}
+
+	void Animation::updateRect() {
+		Rect myRect;
+		myRect.position = position;
+		myRect.size.x = spriteSrcRect.size.x;
+		myRect.size.y = spriteSrcRect.size.y;
+		cmd->updateSrcRect(spriteSrcRect);
+		cmd->updateRect(myRect);
 	}
 };

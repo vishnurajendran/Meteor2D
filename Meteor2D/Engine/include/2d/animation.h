@@ -17,12 +17,16 @@ namespace meteor {
 	private:
 		bool isPlaying = false;
 		bool isLooping = false;
+		bool renderOnce = true;
 		int fps=30;
 		float animTime;
 		AnimationMap* animationMap;
 		SpriteSheet* currAnimSheet;
 		TexRenderCmd* cmd;
-		void updateAnimation(float deltaTime);
 		Vector2 pivot;
+		Rect spriteSrcRect;
+		void updateAnimation(float deltaTime);
+		void submitFrameRenderRequest();
+		void updateRect();
 	};
 }

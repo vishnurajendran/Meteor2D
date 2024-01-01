@@ -11,7 +11,7 @@
 		}
 
 		meteor::Application* app = getApp();
-		meteor::WindowProperties properties(app->getName(),meteor::Color::black());
+		meteor::WindowProperties properties(app->getName(),meteor::BG_COLOR);
 		meteor::Window* window = new meteor::Window(properties);
 		window->setLogicalResolution(meteor::LOGICAL_WIDTH, meteor::LOGICAL_HEIGHT);
 		app->onStart();
