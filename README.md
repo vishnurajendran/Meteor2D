@@ -22,14 +22,25 @@ Meteor is a lightweight 2D game engine designed for simplicity and flexibility i
 3. Implement your application class by inheriting from `meteor::Application` and defining the necessary methods.
 
 ## TODO
+### Core 
+- [x] Application and Engine Loop.
+- [x] Basic Logging.
+- [x] Entities.
+- [x] Spatial Entity.
+- [x] Renderer and RenderCommands.
+- [x] Sprites.
+- [x] SpriteSheet Animation.
+- [ ] Input System.
+- [ ] Gizmos.
+- [ ] 2D Physics.
+- [ ] Audio.
+- [ ] UI System.
 
-- [x] Implement SpriteSheet animation.
-- [ ] Add Gizmos.
-- [ ] Implement physics engine.
-- [ ] Add support for audio.
-- [ ] Add UI system.
+### QoL 
 - [ ] Create a sample game using Meteor.
 - [ ] Improve documentation on advanced features.
+
+### Planned 
 - [ ] Meteorite Editor.
 
 ## License
