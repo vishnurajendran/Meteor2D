@@ -15,16 +15,23 @@
 		meteor::Window* window = new meteor::Window(properties);
 		window->setLogicalResolution(meteor::LOGICAL_WIDTH, meteor::LOGICAL_HEIGHT);
 		app->onStart();
+		float timer = 0;
+		int targetFrameTime = 1000 / meteor::TARGET_FPS;
 		while (!window->hasQuit()) {
 			window->clear();
 			window->pollEvents();
 			meteor::Time::updateTime();
 			float deltaTime = meteor::Time::getDeltaTime();
+			int frameTime = meteor::Time::getFrameTime();
 			meteor::SceneManager::updateScene(deltaTime);
 			app->onUpdate(deltaTime);
 			if (!meteor::CameraStack::hasActiveCamera())
 				mWarn("No active camera found!, Entities may not be correctly rendererd to the screen");
 			window->update();
+			
+			if (frameTime < targetFrameTime) {
+				window->delay(targetFrameTime - frameTime);
+			}
 		}
 		app->onQuit();
 		delete app;

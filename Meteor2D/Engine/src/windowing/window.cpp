@@ -10,7 +10,7 @@ namespace meteor {
 		screenCentre.y = properties.height / 2;
 
 		backgroundColor = properties.backgroundColor;
-		SDL_WindowFlags windowFlag = properties.fullscreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN;
+		auto windowFlag = properties.fullscreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN;
 		mLog("Initialising SDL");
 		if (SDL_Init(SDL_INIT_VIDEO) < 0) {
 			mError("Could not initialise SDL! SDL Error: {}", SDL_GetError());
@@ -26,12 +26,12 @@ namespace meteor {
 		mLog("Setting up renderer");
 		quit = false;
 
-		auto windowFlags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE;
+		auto rendererFlags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE;
 		if (properties.vsync) {
-			windowFlags = windowFlags | SDL_RENDERER_PRESENTVSYNC;
+			rendererFlags = rendererFlags | SDL_RENDERER_PRESENTVSYNC;
 		}
 
-		sdlRenderer = SDL_CreateRenderer(window, -1, windowFlags);
+		sdlRenderer = SDL_CreateRenderer(window, -1, rendererFlags);
 
 		SdlCores::setActiveRenderer(sdlRenderer);
 		SdlCores::setScreenCentre(screenCentre);
@@ -91,5 +91,9 @@ namespace meteor {
 
 	void Window::setLogicalResolution(size_t width, size_t height) {
 		renderer->setLogicalSize(width, height);
+	}
+
+	void Window::delay(int delay) {
+		SDL_Delay(delay);
 	}
 }

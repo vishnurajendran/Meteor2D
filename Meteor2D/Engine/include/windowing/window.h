@@ -18,6 +18,7 @@ namespace meteor {
 		void close();
 		void setLogicalResolution(size_t width, size_t height);
 		RenderQueue* getRenderQueue();
+		void delay(int delay);
 	private:
 		SDL_Window* window;
 		SDL_Renderer* sdlRenderer;

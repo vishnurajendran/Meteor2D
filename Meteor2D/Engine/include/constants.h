@@ -12,8 +12,10 @@ namespace meteor {
 	const size_t SCREEN_WIDTH = 1280;
 	const size_t SCREEN_HEIGHT = 720;
 
-	const bool FULLSCREEN = false;
+	const bool FULLSCREEN = true;
 	const bool USE_VSYNC = true;
 
 	const Color BG_COLOR = Color::black();
+
+	const int TARGET_FPS = 144;
 }

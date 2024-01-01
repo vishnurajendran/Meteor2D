@@ -15,11 +15,17 @@ namespace meteor {
 		/// in seconds
 		/// </summary>
 		/// <returns></returns>
-		static inline double getDeltaTime() { return deltaTime; }
+		static double getDeltaTime() { return deltaTime; }
+
+		static int getFrameTime() {
+			return SDL_GetTicks() - currFrameTime;
+		}
 	private:
 		static uint64_t timeNow;
 		static uint64_t timeLast;
 		static double deltaTime;
+
+		static uint64_t currFrameTime;
 	};
 
 }
