@@ -1,6 +1,13 @@
+#pragma once
 #include <2d/sprite2d.h>
+#include <assetmanagement/assetmanager.h>
 
 namespace meteor {
+
+	Sprite2D::Sprite2D(std::string texPath, RenderLayer targetLayer, uint8_t sortingOrder) {
+		Sprite2D::Sprite2D(AssetManager::getInstance()->getTexture(texPath), targetLayer, sortingOrder);
+	}
+
 	Sprite2D::Sprite2D(Texture* texture, RenderLayer targetLayer, uint8_t sortingOrder) {
 		if (texture == NULL)
 			return;

@@ -7,11 +7,9 @@ namespace meteor {
 	public:
 		SpriteSheet(std::string texturePath, std::vector<Rect> rects);
 		Texture* getTexture();
-		Rect getNext(bool loop);
-		void reset();
+		Rect sample(int& index, bool loop);
 	private:
 		Texture* spriteTex;
 		std::vector<Rect> spriteRects;
-		int index=0;
 	};
 }

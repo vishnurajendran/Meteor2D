@@ -15,6 +15,7 @@ namespace meteor {
 		void resume();
 		void stop();
 	private:
+		int index = 0;
 		bool isPlaying = false;
 		bool isLooping = false;
 		bool renderOnce = true;

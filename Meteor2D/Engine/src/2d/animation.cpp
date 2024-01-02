@@ -32,9 +32,8 @@ namespace meteor {
 	void Animation::play(std::string name, bool looped=true) {
 		this->isLooping = looped;
 
-		//reset previous sprite sheet
-		if (currAnimSheet != NULL)
-			currAnimSheet->reset();
+		//reset animation rect index.
+		index = 0;
 
 		currAnimSheet = animationMap->getAnim(name);
 		cmd->bindTexture(currAnimSheet == NULL ? NULL : currAnimSheet->getTexture());
@@ -56,7 +55,7 @@ namespace meteor {
 
 		if (!isPlaying && renderOnce) {
 			renderOnce = false;
-			spriteSrcRect = currAnimSheet->getNext(isLooping);
+			spriteSrcRect = currAnimSheet->sample(index, isLooping);
 			submitFrameRenderRequest();
 			return;
 		}
@@ -72,7 +71,7 @@ namespace meteor {
 		animTime = 0;
 
 		if (isPlaying)
-			spriteSrcRect = currAnimSheet->getNext(isLooping);
+			spriteSrcRect = currAnimSheet->sample(index, isLooping);
 
 		submitFrameRenderRequest();
 	}

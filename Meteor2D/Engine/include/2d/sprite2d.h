@@ -7,6 +7,7 @@
 namespace meteor {
 	class Sprite2D : public SpatialEntity {
 	public:
+		Sprite2D(std::string texPath, RenderLayer layer, uint8_t sortingOrder);
 		Sprite2D(Texture* texture, RenderLayer layer, uint8_t sortingOrder);
 		void onUpdate(float deltaTime) override;
 		void onExit() override;

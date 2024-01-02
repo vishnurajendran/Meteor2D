@@ -14,7 +14,7 @@ namespace meteor {
 		return spriteTex;
 	}
 
-	Rect SpriteSheet::getNext(bool looping) {
+	Rect SpriteSheet::sample(int& index, bool looping) {
 		Rect rectToUse = spriteRects[index];
 		if (looping) {
 			index = (index + 1) % spriteRects.size();
@@ -25,7 +25,4 @@ namespace meteor {
 		return spriteRects[index];
 	}
 
-	void SpriteSheet::reset() {
-		index = 0;
-	}
 }
