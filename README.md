@@ -56,3 +56,5 @@ Please note that while efforts are made to maintain cross-platform compatibility
 ## License
 
 Meteor is released under the [MIT License](LICENSE).
+
+![Meteor in action](https://github.com/vishnurajendran/Meteor2D/blob/main/meteor_in_action.png)
