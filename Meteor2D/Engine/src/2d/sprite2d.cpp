@@ -26,6 +26,7 @@ namespace meteor {
 		rect.position = position;
 		rect.size.x = texSize.x;
 		rect.size.y = texSize.y;
+		cmd->updateRotation(rotation);
 		cmd->updateRect(rect);
 		cmd->updateScale(localScale);
 		cmd->updatePivot(pivot);

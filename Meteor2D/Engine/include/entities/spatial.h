@@ -18,11 +18,9 @@ namespace meteor {
 		inline void setLocalPosition(Vector2 pos) { localPosition.x = pos.x; localPosition.y = pos.y; updatePositions(); }
 
 		//local rotation
-		inline Vector2 getRotation() { return rotation; }
-		inline Vector2 getLocalRotation() { return localRotation; }
-		inline void setLocalRotation(float x, float y) { localRotation.x = x; localRotation.y = y; }
-		inline void setLocalRotation(Vector2 rot) { localRotation.x = rot.x; localRotation.y = rot.y; }
-
+		inline float getRotation() { return rotation; }
+		inline float getLocalRotation() { return localRotation; }
+		inline void setLocalRotation(float localRotation) { this->localRotation = localRotation; }
 		//local scale
 		Vector2 getLocalScale() { return localScale; };
 		inline void setLocalScale(float x, float y) { localScale.x = x; localScale.y = y; }
@@ -42,17 +40,17 @@ namespace meteor {
 
 	protected:
 		Vector2 localPosition;
-		Vector2 localRotation;
 		Vector2 localScale;
 		Vector2 position;
-		Vector2 rotation;
+		float rotation;
+		float localRotation;
 		SpatialEntity* parent = NULL;
 		std::vector<SpatialEntity*>* children = NULL;
 
 	private:
 		void setParent(SpatialEntity* entity) { parent = entity; }
 		void updatePositions();
-		void updateRotations() {};
+		void updateRotations();
 		void updateScale() {};
 	};
 }

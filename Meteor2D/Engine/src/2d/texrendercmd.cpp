@@ -28,6 +28,7 @@ namespace meteor {
 
 		float pivotedSizeX = size.x * pivot.x;
 		float pivotedSizeY = size.y - (size.y * pivot.y);
+		SDL_FPoint sdlPivot(pivotedSizeX, pivotedSizeY);
 
 		tRect.x = (targetRect.position.x - pivotedSizeX) - cam->getPosition().x;
 		tRect.y = (targetRect.position.y + pivotedSizeY) - cam->getPosition().y;
@@ -44,10 +45,10 @@ namespace meteor {
 			src.w = srcRect.size.x;
 			src.h = srcRect.size.y;
 
-			SDL_RenderCopyF(renderCore, texture->getCoreTexture(), &src, &tRect);
+			SDL_RenderCopyExF(renderCore, texture->getCoreTexture(), &src, &tRect, rotation, &sdlPivot, SDL_FLIP_NONE);
 		}
 		else
-			SDL_RenderCopyF(renderCore, texture->getCoreTexture(), NULL, &tRect);
+			SDL_RenderCopyExF(renderCore, texture->getCoreTexture(), NULL, &tRect, rotation, &sdlPivot, SDL_FLIP_NONE);
 	}
 
 	bool TexRenderCmd::isValid() {

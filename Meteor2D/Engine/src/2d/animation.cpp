@@ -47,6 +47,7 @@ namespace meteor {
 
 	void Animation::updateAnimation(float deltaTime) {
 		
+		cmd->updateRotation(rotation);
 		cmd->updateScale(localScale);
 		cmd->updatePivot(pivot);
 		

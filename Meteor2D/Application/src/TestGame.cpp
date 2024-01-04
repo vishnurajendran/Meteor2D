@@ -6,20 +6,20 @@ std::string TestGame::getName() {
 
 void TestGame::onStart() {
 	meteor::SceneManager::loadEmptyScene();
-	gameCamera = new meteor::Camera();	
+	gameCamera = new meteor::Camera();
+	scp = new meteor::SpatialEntity();
+	scp->setLocalPosition(meteor::Vector2(960, 540));
 	anim = new meteor::Animation("link.anim", 12,meteor::RenderLayer::World, 1);
-	anim->setLocalPosition(960, 1200);
+	//anim->setLocalPosition(250, 0);
+	scp->setChild(anim);
 	anim->play("walk", true);
-	
-	meteor::Animation* anim2 = new meteor::Animation("link.anim", 12, meteor::RenderLayer::World, 0);
-	anim2->setLocalPosition(960, 540);
-	anim2->play("walk", true);
 }
 
 void TestGame::onUpdate(float deltaTime) {
-	auto pos = anim->getLocalPosition();
-	auto newPos = meteor::Vector2::make(pos.x, pos.y - (50 * deltaTime));
-	anim->setLocalPosition(newPos);
+	auto rot = scp->getLocalRotation();
+	rot += 100 * deltaTime;
+	scp->setLocalRotation(rot);
+	//anim->setLocalPosition(newPos);
 }
 
 void TestGame::onQuit() {

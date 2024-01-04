@@ -4,6 +4,10 @@
 #include <scenemanagement/scene.h>
 
 namespace meteor {
+
+	const float PI = 3.1515926535898f;
+	const float DEG_TO_RAD = PI / 180.0f;
+
 	void makeRootEntity(SpatialEntity* entity) {
 		if (entity->getParent() != NULL)
 			return;
@@ -56,6 +60,7 @@ namespace meteor {
 	}
 
 	void SpatialEntity::onUpdate(float deltaTime) {
+		updateRotations();
 		updatePositions();
 
 		//update the children
@@ -65,14 +70,39 @@ namespace meteor {
 	}
 
 	void SpatialEntity::updatePositions() {
-		Vector2 parentDelta;
-		if (parent != NULL) {
-			parentDelta.x = parent->position.x;
-			parentDelta.y = parent->position.y;
+		Vector2 fixedPoint;
+		float parentRot=0;
+		
+		if (parent == NULL) {
+			//if this is not parented, 
+			//local and global positions are the same
+			position = localPosition;
+			return;
 		}
 
-		position.x = parentDelta.x + localPosition.x;
-		position.y = parentDelta.y + localPosition.y;
+		fixedPoint = parent->position;
+		parentRot = parent->rotation;
+		// compute position without rotation
+		Vector2 posWitoutRot;
+		posWitoutRot.x = fixedPoint.x + localPosition.x;
+		posWitoutRot.y = fixedPoint.y + localPosition.y;
+
+		float dist = Vector2::dist(posWitoutRot, fixedPoint);
+		Vector2 posDelta = Vector2::make(sin(parentRot* DEG_TO_RAD), cos(parentRot* DEG_TO_RAD));
+		Vector2 deltaWithRFactored = posDelta * dist;
+		
+		// set final position
+		position = fixedPoint + deltaWithRFactored;
+		//rotation = 
+	}
+
+	void SpatialEntity::updateRotations() {
+		float parentRotDelta=0;
+		if (parent != NULL) {
+			parentRotDelta = parent->rotation;
+		}
+		
+		rotation = fmod((parentRotDelta + localRotation),360.0f);
 	}
 
 	void SpatialEntity::onExit() {
