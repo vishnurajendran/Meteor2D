@@ -21,6 +21,14 @@ Meteor is a lightweight 2D game engine designed for simplicity and flexibility i
 
 3. Implement your application class by inheriting from `meteor::Application` and defining the necessary methods.
 
+## Disclaimer
+
+- C++20 features are utilized in the development of this project.
+- This project is developed using Visual Studio 2019.
+- The Meteor 2D Game Engine has been primarily developed and tested on the Windows operating system.
+
+Please note that while efforts are made to maintain cross-platform compatibility, the current focus and testing have been on the Windows platform.
+
 ## TODO
 ### Core 
 - [x] Application and Engine Loop.
