@@ -34,6 +34,8 @@
     <ClInclude Include="Engine\include\entities\entity.h" />
     <ClInclude Include="Engine\include\entities\spatial.h" />
     <ClInclude Include="Engine\include\global\sdlcores.h" />
+    <ClInclude Include="Engine\include\input\inputmanagement.h" />
+    <ClInclude Include="Engine\include\input\keycodes.h" />
     <ClInclude Include="Engine\include\meteor.h" />
     <ClInclude Include="Engine\include\meteorcore.h" />
     <ClInclude Include="Engine\include\meteorutils\color.h" />
@@ -64,6 +66,7 @@
     <ClCompile Include="Engine\src\camera\camerastack.cpp" />
     <ClCompile Include="Engine\src\entities\entity.cpp" />
     <ClCompile Include="Engine\src\globals\sdlcores.cpp" />
+    <ClCompile Include="Engine\src\input\inputmanagement.cpp" />
     <ClCompile Include="Engine\src\main.cpp" />
     <ClCompile Include="Engine\src\rendering\renderer.cpp" />
     <ClCompile Include="Engine\src\rendering\renderqueue.cpp" />

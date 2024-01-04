@@ -14,6 +14,16 @@ namespace meteor {
 		SceneManager::getActiveScene()->addToRoot(entity);
 	}
 
+	void removeFromRoot(SpatialEntity* entity, Scene* scene) {
+		auto rootEntities = scene->getRootEntities();
+		std::vector<SpatialEntity*>::iterator it = std::find(rootEntities->begin(), rootEntities->end(), entity);
+		if (it == rootEntities->end())
+			return;
+
+		int diff = it - rootEntities->begin();
+		rootEntities->erase(rootEntities->begin() + diff);
+	}
+
 	SpatialEntity::SpatialEntity(SpatialEntity* parent) {
 		localScale.x = localScale.y = 1;
 		children = new std::vector<SpatialEntity*>();
@@ -33,6 +43,12 @@ namespace meteor {
 
 		this->children->push_back(entity);
 		entity->setParent(this);
+
+		// remove from root
+		// this is a by-product of un-parenting an entity using removeChild.
+		// since the entity becomes a independant, it will be considered as a root entity
+		// and appended to the scene root list.
+		removeFromRoot(entity, SceneManager::getActiveScene());
 	}
 
 	void SpatialEntity::removeChild(SpatialEntity* entity) {

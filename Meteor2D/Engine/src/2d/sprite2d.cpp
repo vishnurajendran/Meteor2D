@@ -4,8 +4,7 @@
 
 namespace meteor {
 
-	Sprite2D::Sprite2D(std::string texPath, RenderLayer targetLayer, uint8_t sortingOrder) {
-		Sprite2D::Sprite2D(AssetManager::getInstance()->getTexture(texPath), targetLayer, sortingOrder);
+	Sprite2D::Sprite2D(std::string texPath, RenderLayer targetLayer, uint8_t sortingOrder) : Sprite2D(AssetManager::getInstance()->getTexture(texPath), targetLayer, sortingOrder) {
 	}
 
 	Sprite2D::Sprite2D(Texture* texture, RenderLayer targetLayer, uint8_t sortingOrder) {

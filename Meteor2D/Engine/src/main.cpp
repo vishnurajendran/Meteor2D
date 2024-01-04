@@ -14,6 +14,7 @@
 		meteor::WindowProperties properties(app->getName(),meteor::BG_COLOR);
 		meteor::Window* window = new meteor::Window(properties);
 		window->setLogicalResolution(meteor::LOGICAL_WIDTH, meteor::LOGICAL_HEIGHT);
+		meteor::InputManager::Initialise();
 		app->onStart();
 		float timer = 0;
 		int targetFrameTime = 1000 / meteor::TARGET_FPS;

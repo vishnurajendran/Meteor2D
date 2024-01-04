@@ -15,6 +15,7 @@ namespace meteor {
 		void resume();
 		void stop();
 	private:
+		std::string currAnim;
 		int index = 0;
 		bool isPlaying = false;
 		bool isLooping = false;

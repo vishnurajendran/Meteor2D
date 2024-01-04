@@ -30,14 +30,18 @@ namespace meteor {
 	}
 
 	void Animation::play(std::string name, bool looped=true) {
-		this->isLooping = looped;
+		//if in same anim, we ignore
+		if (currAnim == name)
+			return;
 
+		this->isLooping = looped;
 		//reset animation rect index.
 		index = 0;
 
 		currAnimSheet = animationMap->getAnim(name);
 		cmd->bindTexture(currAnimSheet == NULL ? NULL : currAnimSheet->getTexture());
 		isPlaying = true;
+		currAnim = name;
 	}
 
 	void Animation::onUpdate(float deltaTime) {

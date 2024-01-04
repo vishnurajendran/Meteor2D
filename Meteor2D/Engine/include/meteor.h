@@ -11,3 +11,4 @@
 #include <2d/spritesheet.h>
 #include <2d/animationmap.h>
 #include <2d/animation.h>
+#include <input/inputmanagement.h>
