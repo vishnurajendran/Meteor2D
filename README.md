@@ -3,6 +3,8 @@
 
 Meteor is a lightweight 2D game engine designed for simplicity and flexibility in C++. Built on top of SDL (Simple DirectMedia Layer), it provides a clean and intuitive API for game development.
 
+![Meteor wip](https://github.com/vishnurajendran/Meteor2D/blob/main/meteor_in_action.png)
+
 ## Features
 
 - **Simple API:** Get started quickly with an easy-to-use C++ API.
@@ -56,5 +58,3 @@ Please note that while efforts are made to maintain cross-platform compatibility
 ## License
 
 Meteor is released under the [MIT License](LICENSE).
-
-![Meteor in action](https://github.com/vishnurajendran/Meteor2D/blob/main/meteor_in_action.png)
