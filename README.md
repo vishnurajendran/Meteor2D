@@ -42,7 +42,8 @@ Please note that while efforts are made to maintain cross-platform compatibility
 - [x] SpriteSheet Animation.
 - [ ] Input System.
     - [x] Keyboard Inputs.
-    - [ ] Mouse Inputs. 
+    - [ ] Mouse Inputs.
+- [ ] Scene Serialization.
 - [ ] Gizmos.
 - [ ] 2D Physics.
 - [ ] Audio.
