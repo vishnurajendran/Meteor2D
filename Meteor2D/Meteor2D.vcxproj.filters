@@ -213,6 +213,9 @@
     <ClInclude Include="Engine\include\sceneserialization\deserializers\spatialdeserializer.h">
       <Filter>Engine\Header Files\sceneserialization\deserializers</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\include\sceneserialization\deserializers\animationdeserializer.h">
+      <Filter>Engine\Header Files\sceneserialization\deserializers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\src\rendering\renderer.cpp">
@@ -282,6 +285,9 @@
       <Filter>Engine\Source Files\sceneserialization</Filter>
     </ClCompile>
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\spatialdeserializer.cpp">
+      <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\sceneserialzation\deserializers\animationdeserializer.cpp">
       <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
     </ClCompile>
   </ItemGroup>
