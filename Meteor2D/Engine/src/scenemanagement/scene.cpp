@@ -14,6 +14,9 @@ namespace meteor {
 
 	void Scene::onStart() {
 		//logNoFormat("Loading scene");
+		for (int i = 0; i < rootEntities->size(); i++) {
+			rootEntities->at(i)->onStart();
+		}
 	}
 
 	void Scene::onUpdate(float deltaTime) {
@@ -25,6 +28,9 @@ namespace meteor {
 
 	void Scene::onExit() {
 		//logNoFormat("cleaning scene");
+		for (int i = 0; i < rootEntities->size(); i++) {
+			rootEntities->at(i)->onExit();
+		}
 	}
 
 	void Scene::addToRoot(SpatialEntity* entity) {

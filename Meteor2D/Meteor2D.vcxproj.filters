@@ -88,6 +88,18 @@
     <Filter Include="Engine\Source Files\input">
       <UniqueIdentifier>{660ccc74-85a0-4b89-af5b-d5679a04d8eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Header Files\sceneserialization">
+      <UniqueIdentifier>{dc439b09-e4ad-4a2a-bcff-44f1fd104efc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Header Files\sceneserialization\deserializers">
+      <UniqueIdentifier>{63cf7f18-a989-4d03-bd17-42a89b833aad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files\sceneserialization">
+      <UniqueIdentifier>{8da11f27-313c-4a09-9277-9a1a7bcffe75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files\sceneserialization\deserialization">
+      <UniqueIdentifier>{4f10e5bc-ff47-4e66-a127-3d49edde4491}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\include\application\application.h">
@@ -189,6 +201,18 @@
     <ClInclude Include="Engine\include\input\keycodes.h">
       <Filter>Engine\Header Files\input</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\include\sceneserialization\xmlserializable.h">
+      <Filter>Engine\Header Files\sceneserialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\sceneserialization\scene_entity_type_deserializer.h">
+      <Filter>Engine\Header Files\sceneserialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\sceneserialization\scene_entity_typemap.h">
+      <Filter>Engine\Header Files\sceneserialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\sceneserialization\deserializers\spatialdeserializer.h">
+      <Filter>Engine\Header Files\sceneserialization\deserializers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\src\rendering\renderer.cpp">
@@ -253,6 +277,12 @@
     </ClCompile>
     <ClCompile Include="Engine\src\input\inputmanagement.cpp">
       <Filter>Engine\Source Files\input</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\sceneserialzation\scene_entity_typemap.cpp">
+      <Filter>Engine\Source Files\sceneserialization</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\sceneserialzation\deserializers\spatialdeserializer.cpp">
+      <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

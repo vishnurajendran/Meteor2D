@@ -6,6 +6,7 @@
 namespace meteor {
 	class SceneManager {
 	public:
+		static void initialise();
 		static bool loadEmptyScene();
 		static bool loadScene(std::string path);
 		static bool closeActiveScene();

@@ -1,7 +1,14 @@
+#pragma once
+#include <meteorutils/logging.h>
 #include <scenemanagement/scenemanager.h>
+#include <sceneserialization/scene_entity_typemap.h>
 
 namespace meteor {
 	Scene* SceneManager::activeScene = NULL;
+
+	void SceneManager::initialise() {
+		mWarn("registered size {}", SceneEntityTypeMap::getMapSize());
+	}
 
 	bool SceneManager::closeActiveScene() {
 		if (activeScene == NULL)
@@ -22,6 +29,9 @@ namespace meteor {
 	bool SceneManager::loadScene(std::string path) {
 		if (path.empty())
 			return false;
+
+		pugi::xml_node node;
+		auto res = SceneEntityTypeMap::getDeserializer("animation")->deserialize(node);
 
 		//todo add scene load logic here
 		return loadEmptyScene();

@@ -34,9 +34,9 @@ namespace meteor {
 		void removeChild(SpatialEntity* entity);
 
 		// overrides
-		virtual void onStart() override;
-		virtual void onUpdate(float deltaTime) override;
-		virtual void onExit() override;
+		virtual void onStart();
+		virtual void onUpdate(float deltaTime);
+		virtual void onExit();
 
 	protected:
 		Vector2 localPosition;
@@ -46,11 +46,13 @@ namespace meteor {
 		float localRotation;
 		SpatialEntity* parent = NULL;
 		std::vector<SpatialEntity*>* children = NULL;
+		std::string name;
 
-	private:
-		void setParent(SpatialEntity* entity) { parent = entity; }
 		void updatePositions();
 		void updateRotations();
-		void updateScale() {};
+		void updateScale();
+		void updateChildren(float deltaTime);
+	private:
+		void setParent(SpatialEntity* entity) { parent = entity; };
 	};
 }

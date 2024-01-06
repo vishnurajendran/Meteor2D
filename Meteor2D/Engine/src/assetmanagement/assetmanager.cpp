@@ -6,6 +6,9 @@ namespace meteor {
 	const std::string IMG_PATH = "resS\\img\\";
 	const std::string ANIM_PATH = "resS\\anim\\";
 
+	const std::string PATH_DELIM_WIN = "\\";
+	const std::string PATH_DELIM_OTHER = "/";
+
 	AssetManager* AssetManager::instance = NULL;
 
 	AssetManager* AssetManager::getInstance() {

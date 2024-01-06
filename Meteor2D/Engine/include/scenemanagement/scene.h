@@ -4,6 +4,8 @@
 
 namespace meteor {
 	class Scene : public Entity {
+		//make spatial a friend class to access the protected members
+		friend class Spatial;
 	public:
 		Scene();
 		~Scene();

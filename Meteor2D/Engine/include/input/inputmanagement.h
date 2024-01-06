@@ -6,7 +6,7 @@
 namespace meteor {
     class InputManager {
     public:
-        static void Initialise();
+        static void initialise();
         static void update();
         static bool getKey(KeyCode key);
         static bool getKeyDown(KeyCode key);

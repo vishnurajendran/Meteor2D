@@ -50,6 +50,10 @@
     <ClInclude Include="Engine\include\rendering\renderqueue.h" />
     <ClInclude Include="Engine\include\scenemanagement\scene.h" />
     <ClInclude Include="Engine\include\scenemanagement\scenemanager.h" />
+    <ClInclude Include="Engine\include\sceneserialization\deserializers\spatialdeserializer.h" />
+    <ClInclude Include="Engine\include\sceneserialization\scene_entity_typemap.h" />
+    <ClInclude Include="Engine\include\sceneserialization\scene_entity_type_deserializer.h" />
+    <ClInclude Include="Engine\include\sceneserialization\xmlserializable.h" />
     <ClInclude Include="Engine\include\windowing\window.h" />
     <ClInclude Include="Engine\include\windowing\windowproperties.h" />
   </ItemGroup>
@@ -73,6 +77,8 @@
     <ClCompile Include="Engine\src\scenemanagement\scene.cpp" />
     <ClCompile Include="Engine\src\scenemanagement\scenemanager.cpp" />
     <ClCompile Include="Engine\src\scenemanagement\spatial.cpp" />
+    <ClCompile Include="Engine\src\sceneserialzation\deserializers\spatialdeserializer.cpp" />
+    <ClCompile Include="Engine\src\sceneserialzation\scene_entity_typemap.cpp" />
     <ClCompile Include="Engine\src\time\time.cpp" />
     <ClCompile Include="Engine\src\windowing\window.cpp" />
   </ItemGroup>
@@ -185,7 +191,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;PUGIXML_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>

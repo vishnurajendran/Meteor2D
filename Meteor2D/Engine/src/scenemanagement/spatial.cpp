@@ -25,12 +25,14 @@ namespace meteor {
 	}
 
 	SpatialEntity::SpatialEntity(SpatialEntity* parent) {
+		name = "Spatial";
 		localScale.x = localScale.y = 1;
 		children = new std::vector<SpatialEntity*>();
 		if (parent == NULL)
 			makeRootEntity(this);
 		else
 			parent->setChild(this);
+		onStart();
 	}
 
 	void SpatialEntity::setChild(SpatialEntity* entity) {
@@ -72,17 +74,18 @@ namespace meteor {
 	}
 
 	void SpatialEntity::onStart() {
-		mLog("started spatial {}", getId());
+		mLog("started spatial {} {}", getId(), getName());
 	}
 
 	void SpatialEntity::onUpdate(float deltaTime) {
 		updateRotations();
 		updatePositions();
+		updateScale();
+		updateChildren(deltaTime);
+	}
 
-		//update the children
-		for (int i = 0; i < children->size(); i++) {
-			children->at(i)->onUpdate(deltaTime);
-		}
+	void SpatialEntity::onExit() {
+
 	}
 
 	void SpatialEntity::updatePositions() {
@@ -121,8 +124,19 @@ namespace meteor {
 		rotation = fmod((parentRotDelta + localRotation),360.0f);
 	}
 
-	void SpatialEntity::onExit() {
+	void SpatialEntity::updateScale() {
+		Vector2 parentScale = Vector2::one();
+		if (parent != NULL) {
+			parentScale = parent->localScale;
+		}
 
+		localScale = Vector2::scale(localScale, parentScale);
+	}
+
+	void SpatialEntity::updateChildren(float deltaTime) {
+		for (int i = 0; i < children->size(); i++) {
+			children->at(i)->onUpdate(deltaTime);
+		}
 	}
 }
 

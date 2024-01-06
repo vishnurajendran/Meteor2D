@@ -1,5 +1,6 @@
 #include <meteorcore.h>
 #include <constants.h>
+#include <pugixml/pugixml.hpp>
 
 	extern meteor::Application* getApp();
 
@@ -14,7 +15,8 @@
 		meteor::WindowProperties properties(app->getName(),meteor::BG_COLOR);
 		meteor::Window* window = new meteor::Window(properties);
 		window->setLogicalResolution(meteor::LOGICAL_WIDTH, meteor::LOGICAL_HEIGHT);
-		meteor::InputManager::Initialise();
+		meteor::InputManager::initialise();
+		meteor::SceneManager::initialise();
 		app->onStart();
 		float timer = 0;
 		int targetFrameTime = 1000 / meteor::TARGET_FPS;

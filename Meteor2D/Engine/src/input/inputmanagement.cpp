@@ -7,7 +7,7 @@ namespace meteor {
 	const Uint8* InputManager::keyStates = NULL;
 	Uint8 InputManager::prevKeyStates[SDL_NUM_SCANCODES] = {0};
 
-	void InputManager::Initialise() {
+	void InputManager::initialise() {
 		//init our current key states
 		keyStates = SDL_GetKeyboardState(nullptr);
 
