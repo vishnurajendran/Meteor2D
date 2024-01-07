@@ -43,7 +43,7 @@ Please note that while efforts are made to maintain cross-platform compatibility
 - [ ] Input System.
     - [x] Keyboard Inputs.
     - [ ] Mouse Inputs.
-- [ ] Scene Serialization.
+- [x] Scene Serialization.
 - [ ] Gizmos.
 - [ ] 2D Physics.
 - [ ] Audio.
