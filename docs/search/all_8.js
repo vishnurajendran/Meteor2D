@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['initialise_0',['initialise',['../classmeteor_1_1_input_manager.html#a5d178f0c52f1ac6e3202e244bc6b777f',1,'meteor::InputManager::initialise()'],['../classmeteor_1_1_scene_manager.html#a04266f9f40aad7f9f26631bbf3431f9c',1,'meteor::SceneManager::initialise()']]],
-  ['initialisetextureloader_1',['initialiseTextureLoader',['../classmeteor_1_1_texture.html#a0ba2e7db50f0bd282972c8b9b55b0c26',1,'meteor::Texture']]],
-  ['inputmanager_2',['InputManager',['../classmeteor_1_1_input_manager.html',1,'meteor']]],
-  ['isactive_3',['isActive',['../classmeteor_1_1_camera.html#a40e4a38684e778b396501a3cf6658b67',1,'meteor::Camera']]],
-  ['isinsidebounds_4',['isInsideBounds',['../classmeteor_1_1_camera.html#a2343d276317f30a756b9bf8c4394f66a',1,'meteor::Camera']]],
-  ['isvalid_5',['isValid',['../classmeteor_1_1_tex_render_cmd.html#ae432d86d1a64bd04ab5df26852774c70',1,'meteor::TexRenderCmd']]]
+  ['hasactivecamera_0',['hasActiveCamera',['../classmeteor_1_1_camera_stack.html#a5bd67e849b5882995e99ed47c8bb81b1',1,'meteor::CameraStack']]],
+  ['hasquit_1',['hasQuit',['../classmeteor_1_1_application.html#a4624b89b9e317be25de454ed00693e55',1,'meteor::Application']]]
 ];

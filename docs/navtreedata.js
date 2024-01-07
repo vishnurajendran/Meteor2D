@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Meteor2D", "index.html", [
+    [ "Meteor 2D", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
