@@ -222,6 +222,9 @@
     <ClInclude Include="Engine\include\sceneserialization\deserializers\cameradeserializer.h">
       <Filter>Engine\Header Files\sceneserialization\deserializers</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\include\meteorutils\typehelpers.h">
+      <Filter>Engine\Header Files\meteorutils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\src\rendering\renderer.cpp">

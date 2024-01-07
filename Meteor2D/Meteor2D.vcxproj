@@ -43,6 +43,7 @@
     <ClInclude Include="Engine\include\meteorutils\rect.h" />
     <ClInclude Include="Engine\include\meteorutils\time.h" />
     <ClInclude Include="Engine\include\meteorutils\transformhelper.h" />
+    <ClInclude Include="Engine\include\meteorutils\typehelpers.h" />
     <ClInclude Include="Engine\include\meteorutils\vector2d.h" />
     <ClInclude Include="Engine\include\rendering\rendercommand.h" />
     <ClInclude Include="Engine\include\rendering\renderer.h" />

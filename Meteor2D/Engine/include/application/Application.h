@@ -9,7 +9,11 @@ namespace meteor {
 		virtual void onStart() = 0;
 		virtual void onUpdate(float deltaTime) = 0;
 		virtual void onQuit() = 0;
+		
+		inline bool hasQuit() { return quitApplication; }
+		inline void quit() { this->quitApplication = true; }
 	private:
 		RenderQueue* renderQueue;
+		bool quitApplication;
 	};
 }

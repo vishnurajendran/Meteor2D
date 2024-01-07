@@ -138,30 +138,5 @@ namespace meteor {
 			children->at(i)->onUpdate(deltaTime);
 		}
 	}
-
-	SpatialEntity* SpatialEntity::find(std::string name) {
-		
-		// is this node called 'name'
-		if (this->name == name)
-			return this;
-
-		// if no more children return NULL
-		if (children->size() <= 0)
-			return NULL;
-
-		// check recursively for each child
-		for (auto child : *children) {
-			if (child == NULL)
-				continue;
-			
-			auto res = child->find(name);
-			//if we found it, return
-			if (res != NULL)
-				return res;
-		}
-
-		// if everything fails, return NULL
-		return NULL;
-	}
 }
 

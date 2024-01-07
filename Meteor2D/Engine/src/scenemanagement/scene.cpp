@@ -85,17 +85,4 @@ namespace meteor {
 			recursivelyLoadEntity(&child, entity);
 		}
 	}
-
-	SpatialEntity* Scene::find(std::string name) {
-		if (rootEntities->size() <= 0)
-			return NULL;
-
-		for (auto rootEntity : *rootEntities) {
-			auto res = rootEntity->find(name);
-			if (res != NULL)
-				return res;
-		}
-
-		return NULL;
-	}
 }

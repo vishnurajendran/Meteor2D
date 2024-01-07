@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include<vector>
+#include <meteorutils/typehelpers.h>
 #include<meteorutils/vector2d.h>
 #include<entities/entity.h>
 #include <SDL.h>
@@ -35,7 +36,35 @@ namespace meteor {
 		void removeChild(SpatialEntity* entity);
 
 		// query
-		SpatialEntity* find(std::string name);
+		template<typename T>
+		T* find(std::string name) {
+
+			// is this node called 'name'
+			if (this->name == name)
+				return (T*)this;
+
+			// if no more children return NULL
+			if (children->size() <= 0)
+				return NULL;
+
+			// check recursively for each child
+			for (auto child : *children) {
+				if (child == NULL)
+					continue;
+
+				auto res = child->find<T>(name);
+				if (res == NULL)
+					continue;
+
+				auto isValidInstance = instanceof<T>((T*)res);
+				//if we found it, return
+				if (res != NULL && isValidInstance)
+					return (T*)res;
+			}
+
+			// if everything fails, return NULL
+			return NULL;
+		}
 
 		// overrides
 		virtual void onStart();

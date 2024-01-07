@@ -7,9 +7,9 @@ std::string TestGame::getName() {
 void TestGame::onStart() {
 	meteor::SceneManager::loadScene("test_scene.scml");
 	auto scene = meteor::SceneManager::getActiveScene();
-	gameCamera = (meteor::Camera*)scene->find("gameCamera");
-	scp = scene->find("scp");
-	anim = (meteor::Animation*)scene->find("link_player");
+	gameCamera = scene->find<meteor::Camera>("gameCamera");
+	scp = scene->find<meteor::SpatialEntity>("scp");
+	anim = scene->find<meteor::Animation>("link_player");
 	mLog("Scene contents {}", scene->getRootSize());
 }
 
@@ -19,6 +19,11 @@ void TestGame::onUpdate(float deltaTime) {
 	int x = 0;
 	int y = 0;
 	
+	if (meteor::InputManager::getKeyDown(meteor::KeyCode::KEYCODE_ESCAPE)) {
+		quit();
+		return;
+	}
+
 	if (meteor::InputManager::getKey(meteor::KeyCode::KEYCODE_W)) {
 		y = 1;
 	}

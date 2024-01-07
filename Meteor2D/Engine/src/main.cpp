@@ -20,7 +20,7 @@
 		app->onStart();
 		float timer = 0;
 		int targetFrameTime = 1000 / meteor::TARGET_FPS;
-		while (!window->hasQuit()) {
+		while (!window->hasQuit() && !app->hasQuit()) {
 			window->clear();
 			window->pollEvents();
 			meteor::Time::updateTime();
