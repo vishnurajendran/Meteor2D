@@ -1,0 +1,27 @@
+digraph "D:/Github/Meteor2D/Meteor2D/Engine/include"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_4ac3554e6ba0abe10ee10c851c5fdcc8 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Engine", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_4ac3554e6ba0abe10ee10c851c5fdcc8.html",tooltip=""]
+  subgraph clusterdir_20fad6d70e542fc50c9bc43fa9256bb5 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_20fad6d70e542fc50c9bc43fa9256bb5.html",tooltip=""]
+    dir_20fad6d70e542fc50c9bc43fa9256bb5 [shape=plaintext, label="include"];
+  dir_0db1825970dfaecbe6a2429931290b39 [label="2d", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_0db1825970dfaecbe6a2429931290b39.html",tooltip=""];
+  dir_34306276c49727e609d7688e842c386e [label="application", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_34306276c49727e609d7688e842c386e.html",tooltip=""];
+  dir_916a0175e4cb1ed41c5783f0f85134db [label="assetmanagement", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_916a0175e4cb1ed41c5783f0f85134db.html",tooltip=""];
+  dir_eb45a9663e757350547652f9d7443ee0 [label="camera", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_eb45a9663e757350547652f9d7443ee0.html",tooltip=""];
+  dir_490e3bba0e3d8afb0eb59153bcca2701 [label="entities", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_490e3bba0e3d8afb0eb59153bcca2701.html",tooltip=""];
+  dir_5f5052ac08f61c2be66e76f9f9a5892b [label="global", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_5f5052ac08f61c2be66e76f9f9a5892b.html",tooltip=""];
+  dir_d4687ae661b274bd029336ffce03375c [label="input", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d4687ae661b274bd029336ffce03375c.html",tooltip=""];
+  dir_d49c2a355c450dcf185e4314783f3666 [label="meteorutils", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d49c2a355c450dcf185e4314783f3666.html",tooltip=""];
+  dir_c5ba90b68c0457072ab92bdb5132a4b6 [label="rendering", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_c5ba90b68c0457072ab92bdb5132a4b6.html",tooltip=""];
+  dir_f99e206b47adefc68d26105346dc522b [label="scenemanagement", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_f99e206b47adefc68d26105346dc522b.html",tooltip=""];
+  dir_53aed86aaf902cc14206187e8cc1693d [label="sceneserialization", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_53aed86aaf902cc14206187e8cc1693d.html",tooltip=""];
+  dir_d5589951d4d173b93bd9639630217451 [label="windowing", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d5589951d4d173b93bd9639630217451.html",tooltip=""];
+  }
+  }
+}

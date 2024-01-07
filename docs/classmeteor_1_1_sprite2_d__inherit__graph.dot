@@ -1,0 +1,12 @@
+digraph "meteor::Sprite2D"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="meteor::Sprite2D",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This entity enables sprite rendering in meteor."];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="meteor::SpatialEntity",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classmeteor_1_1_spatial_entity.html",tooltip="Spatial Entity is the base entity for all types present in scene. This entity keeps track of spatial ..."];
+  Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="meteor::Entity",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classmeteor_1_1_entity.html",tooltip="An Entity is the base class for all data and behaviour oriented objects in meteor...."];
+}
