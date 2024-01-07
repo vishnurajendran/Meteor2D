@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::AssetManager Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -100,28 +101,188 @@ $(function(){initNavTree('classmeteor_1_1_asset_manager.html',''); initResizable
   <div class="headertitle"><div class="title">meteor::AssetManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classmeteor_1_1_asset_manager.html" title="AssetManager handles asset loads and cleanup. AssetManager maintains references to loaded asset,...">AssetManager</a> handles asset loads and cleanup. <a class="el" href="classmeteor_1_1_asset_manager.html" title="AssetManager handles asset loads and cleanup. AssetManager maintains references to loaded asset,...">AssetManager</a> maintains references to loaded asset, to avoid duplicate asset loads.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="assetmanager_8h_source.html">assetmanager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a697af9f7ef017cf32a977ccf2b2acd94" id="r_a697af9f7ef017cf32a977ccf2b2acd94"><td class="memItemLeft" align="right" valign="top"><a id="a697af9f7ef017cf32a977ccf2b2acd94" name="a697af9f7ef017cf32a977ccf2b2acd94"></a>
-<a class="el" href="classmeteor_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getTexture</b> (std::string path, bool relative=true)</td></tr>
+<tr class="memitem:a697af9f7ef017cf32a977ccf2b2acd94" id="r_a697af9f7ef017cf32a977ccf2b2acd94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmeteor_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a697af9f7ef017cf32a977ccf2b2acd94">getTexture</a> (std::string path, bool relative=true)</td></tr>
+<tr class="memdesc:a697af9f7ef017cf32a977ccf2b2acd94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a <a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> reference loaded from provided disk path.  <br /></td></tr>
 <tr class="separator:a697af9f7ef017cf32a977ccf2b2acd94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58883b75ce8af49975d2c96dc491cdda" id="r_a58883b75ce8af49975d2c96dc491cdda"><td class="memItemLeft" align="right" valign="top"><a id="a58883b75ce8af49975d2c96dc491cdda" name="a58883b75ce8af49975d2c96dc491cdda"></a>
-<a class="el" href="classmeteor_1_1_animation_map.html">AnimationMap</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getAnimationMap</b> (std::string path, bool relative=true)</td></tr>
+<tr class="memitem:a58883b75ce8af49975d2c96dc491cdda" id="r_a58883b75ce8af49975d2c96dc491cdda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmeteor_1_1_animation_map.html">AnimationMap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58883b75ce8af49975d2c96dc491cdda">getAnimationMap</a> (std::string path, bool relative=true)</td></tr>
+<tr class="memdesc:a58883b75ce8af49975d2c96dc491cdda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a <a class="el" href="classmeteor_1_1_animation_map.html" title="This class holds the relation-ship between SpriteSheets and Animation name. Needs to be created using...">AnimationMap</a> reference loaded from provided disk path.  <br /></td></tr>
 <tr class="separator:a58883b75ce8af49975d2c96dc491cdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64d0a26ffb6ecfe69bd4d602184f2497" id="r_a64d0a26ffb6ecfe69bd4d602184f2497"><td class="memItemLeft" align="right" valign="top"><a id="a64d0a26ffb6ecfe69bd4d602184f2497" name="a64d0a26ffb6ecfe69bd4d602184f2497"></a>
-pugi::xml_document *&#160;</td><td class="memItemRight" valign="bottom"><b>getSceneDefinition</b> (std::string path, bool relative=true)</td></tr>
+<tr class="memitem:a64d0a26ffb6ecfe69bd4d602184f2497" id="r_a64d0a26ffb6ecfe69bd4d602184f2497"><td class="memItemLeft" align="right" valign="top">pugi::xml_document *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64d0a26ffb6ecfe69bd4d602184f2497">getSceneDefinition</a> (std::string path, bool relative=true)</td></tr>
+<tr class="memdesc:a64d0a26ffb6ecfe69bd4d602184f2497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a XmlDocument reference loaded from provided disk path.  <br /></td></tr>
 <tr class="separator:a64d0a26ffb6ecfe69bd4d602184f2497"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad83a3b08524daed60a8c1d1403bc1ee9" id="r_ad83a3b08524daed60a8c1d1403bc1ee9"><td class="memItemLeft" align="right" valign="top"><a id="ad83a3b08524daed60a8c1d1403bc1ee9" name="ad83a3b08524daed60a8c1d1403bc1ee9"></a>
-pugi::xml_document *&#160;</td><td class="memItemRight" valign="bottom"><b>getUIDefinition</b> (std::string path, bool relative=true)</td></tr>
+<tr class="memitem:ad83a3b08524daed60a8c1d1403bc1ee9" id="r_ad83a3b08524daed60a8c1d1403bc1ee9"><td class="memItemLeft" align="right" valign="top">pugi::xml_document *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad83a3b08524daed60a8c1d1403bc1ee9">getUIDefinition</a> (std::string path, bool relative=true)</td></tr>
+<tr class="memdesc:ad83a3b08524daed60a8c1d1403bc1ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a XmlDocument reference loaded from provided disk path.  <br /></td></tr>
 <tr class="separator:ad83a3b08524daed60a8c1d1403bc1ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa49892e72448bc5e9a22da828e7e1615" id="r_aa49892e72448bc5e9a22da828e7e1615"><td class="memItemLeft" align="right" valign="top"><a id="aa49892e72448bc5e9a22da828e7e1615" name="aa49892e72448bc5e9a22da828e7e1615"></a>
-static <a class="el" href="classmeteor_1_1_asset_manager.html">AssetManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="memitem:aa49892e72448bc5e9a22da828e7e1615" id="r_aa49892e72448bc5e9a22da828e7e1615"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmeteor_1_1_asset_manager.html">AssetManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa49892e72448bc5e9a22da828e7e1615">getInstance</a> ()</td></tr>
+<tr class="memdesc:aa49892e72448bc5e9a22da828e7e1615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets singleton instance to <a class="el" href="classmeteor_1_1_asset_manager.html" title="AssetManager handles asset loads and cleanup. AssetManager maintains references to loaded asset,...">AssetManager</a>.  <br /></td></tr>
 <tr class="separator:aa49892e72448bc5e9a22da828e7e1615"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classmeteor_1_1_asset_manager.html" title="AssetManager handles asset loads and cleanup. AssetManager maintains references to loaded asset,...">AssetManager</a> handles asset loads and cleanup. <a class="el" href="classmeteor_1_1_asset_manager.html" title="AssetManager handles asset loads and cleanup. AssetManager maintains references to loaded asset,...">AssetManager</a> maintains references to loaded asset, to avoid duplicate asset loads. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a58883b75ce8af49975d2c96dc491cdda" name="a58883b75ce8af49975d2c96dc491cdda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58883b75ce8af49975d2c96dc491cdda">&#9670;&#160;</a></span>getAnimationMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmeteor_1_1_animation_map.html">AnimationMap</a> * meteor::AssetManager::getAnimationMap </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>path</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>relative</em><span class="paramdefsep"> = </span><span class="paramdefval">true</span></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a <a class="el" href="classmeteor_1_1_animation_map.html" title="This class holds the relation-ship between SpriteSheets and Animation name. Needs to be created using...">AnimationMap</a> reference loaded from provided disk path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to .anim file. </td></tr>
+    <tr><td class="paramname">relative</td><td>true by default, defines if path is relative or absolute </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classmeteor_1_1_animation_map.html" title="This class holds the relation-ship between SpriteSheets and Animation name. Needs to be created using...">AnimationMap</a> reference. </dd></dl>
+
+</div>
+</div>
+<a id="aa49892e72448bc5e9a22da828e7e1615" name="aa49892e72448bc5e9a22da828e7e1615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49892e72448bc5e9a22da828e7e1615">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classmeteor_1_1_asset_manager.html">AssetManager</a> * meteor::AssetManager::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets singleton instance to <a class="el" href="classmeteor_1_1_asset_manager.html" title="AssetManager handles asset loads and cleanup. AssetManager maintains references to loaded asset,...">AssetManager</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classmeteor_1_1_asset_manager.html" title="AssetManager handles asset loads and cleanup. AssetManager maintains references to loaded asset,...">AssetManager</a> refrence. </dd></dl>
+
+</div>
+</div>
+<a id="a64d0a26ffb6ecfe69bd4d602184f2497" name="a64d0a26ffb6ecfe69bd4d602184f2497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d0a26ffb6ecfe69bd4d602184f2497">&#9670;&#160;</a></span>getSceneDefinition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pugi::xml_document * meteor::AssetManager::getSceneDefinition </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>path</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>relative</em><span class="paramdefsep"> = </span><span class="paramdefval">true</span></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a XmlDocument reference loaded from provided disk path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to .scml file. </td></tr>
+    <tr><td class="paramname">relative</td><td>true by default, defines if path is relative or absolute </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>XmlDocument reference. </dd></dl>
+
+</div>
+</div>
+<a id="a697af9f7ef017cf32a977ccf2b2acd94" name="a697af9f7ef017cf32a977ccf2b2acd94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a697af9f7ef017cf32a977ccf2b2acd94">&#9670;&#160;</a></span>getTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmeteor_1_1_texture.html">Texture</a> * meteor::AssetManager::getTexture </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>path</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>relative</em><span class="paramdefsep"> = </span><span class="paramdefval">true</span></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a <a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> reference loaded from provided disk path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to <a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> file. </td></tr>
+    <tr><td class="paramname">relative</td><td>true by default, defines if path is relative or absolute </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> reference. </dd></dl>
+
+</div>
+</div>
+<a id="ad83a3b08524daed60a8c1d1403bc1ee9" name="ad83a3b08524daed60a8c1d1403bc1ee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad83a3b08524daed60a8c1d1403bc1ee9">&#9670;&#160;</a></span>getUIDefinition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pugi::xml_document * meteor::AssetManager::getUIDefinition </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>path</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>relative</em><span class="paramdefsep"> = </span><span class="paramdefval">true</span></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a XmlDocument reference loaded from provided disk path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to .uiml file. </td></tr>
+    <tr><td class="paramname">relative</td><td>true by default, defines if path is relative or absolute </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>XmlDocument reference. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Github/Meteor2D/Meteor2D/Engine/include/assetmanagement/<a class="el" href="assetmanager_8h_source.html">assetmanager.h</a></li>
 </ul>

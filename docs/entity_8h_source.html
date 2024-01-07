@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: D:/Github/Meteor2D/Meteor2D/Engine/include/entities/entity.h Source File</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -105,28 +106,35 @@ $(function(){initNavTree('entity_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span>meteor {</div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classmeteor_1_1_entity.html">    5</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a>();</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <a class="code hl_class" href="classmeteor_1_1_entity.html">~Entity</a>();</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onStart() {};</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onUpdate(<span class="keywordtype">float</span> deltaTime) {};</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onExit() {};</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> equals(<a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a>* other);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getId() { <span class="keywordflow">return</span> id; }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">inline</span> std::string getName() { <span class="keywordflow">return</span> name; }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> setName(std::string name) { this-&gt;name = name; }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">unsigned</span> <span class="keyword">static</span> <span class="keywordtype">int</span> nextId;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> setId();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> id;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        std::string name;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    };</div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classmeteor_1_1_entity.html">    9</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_class" href="classmeteor_1_1_entity.html">~Entity</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classmeteor_1_1_entity.html#a471604ad83e2ba759346168eb81bb47f">   16</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmeteor_1_1_entity.html#a471604ad83e2ba759346168eb81bb47f">onStart</a>() {};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classmeteor_1_1_entity.html#a9671228cdf2a0382d4ecd47d91358651">   21</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmeteor_1_1_entity.html#a9671228cdf2a0382d4ecd47d91358651">onUpdate</a>(<span class="keywordtype">float</span> deltaTime) {};</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmeteor_1_1_entity.html#aae5709b4cde63432352d497506097fd8">   25</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmeteor_1_1_entity.html#aae5709b4cde63432352d497506097fd8">onExit</a>() {};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classmeteor_1_1_entity.html#af87634ce5930b44d19dd4586ada5da65">   30</a></span>        <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmeteor_1_1_entity.html#af87634ce5930b44d19dd4586ada5da65">equals</a>(<a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a>* other);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classmeteor_1_1_entity.html#a152e0845e69c493f0e2c14965ca88a7a">   34</a></span>        <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classmeteor_1_1_entity.html#a152e0845e69c493f0e2c14965ca88a7a">getId</a>() { <span class="keywordflow">return</span> id; }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classmeteor_1_1_entity.html#ac978ceaeb285c3425d8ecb3cf6de074a">   38</a></span>        <span class="keyword">inline</span> std::string <a class="code hl_function" href="classmeteor_1_1_entity.html#ac978ceaeb285c3425d8ecb3cf6de074a">getName</a>() { <span class="keywordflow">return</span> name; }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classmeteor_1_1_entity.html#aeb34fed86ed12e04cf1639ff25b9169c">   42</a></span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmeteor_1_1_entity.html#aeb34fed86ed12e04cf1639ff25b9169c">setName</a>(std::string name) { this-&gt;name = name; }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">unsigned</span> <span class="keyword">static</span> <span class="keywordtype">int</span> nextId;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> setId();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> id;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::string name;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    };</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
-<div class="ttc" id="aclassmeteor_1_1_entity_html"><div class="ttname"><a href="classmeteor_1_1_entity.html">meteor::Entity</a></div><div class="ttdef"><b>Definition</b> entity.h:5</div></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html"><div class="ttname"><a href="classmeteor_1_1_entity.html">meteor::Entity</a></div><div class="ttdoc">An Entity is the base class for all data and behaviour oriented objects in meteor....</div><div class="ttdef"><b>Definition</b> entity.h:9</div></div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html_a152e0845e69c493f0e2c14965ca88a7a"><div class="ttname"><a href="classmeteor_1_1_entity.html#a152e0845e69c493f0e2c14965ca88a7a">meteor::Entity::getId</a></div><div class="ttdeci">unsigned int getId()</div><div class="ttdef"><b>Definition</b> entity.h:34</div></div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html_a471604ad83e2ba759346168eb81bb47f"><div class="ttname"><a href="classmeteor_1_1_entity.html#a471604ad83e2ba759346168eb81bb47f">meteor::Entity::onStart</a></div><div class="ttdeci">virtual void onStart()</div><div class="ttdoc">Invoked when object is instantiated.</div><div class="ttdef"><b>Definition</b> entity.h:16</div></div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html_a9671228cdf2a0382d4ecd47d91358651"><div class="ttname"><a href="classmeteor_1_1_entity.html#a9671228cdf2a0382d4ecd47d91358651">meteor::Entity::onUpdate</a></div><div class="ttdeci">virtual void onUpdate(float deltaTime)</div><div class="ttdoc">Invoked every frame, default behaviour does not invoke this method.</div><div class="ttdef"><b>Definition</b> entity.h:21</div></div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html_aae5709b4cde63432352d497506097fd8"><div class="ttname"><a href="classmeteor_1_1_entity.html#aae5709b4cde63432352d497506097fd8">meteor::Entity::onExit</a></div><div class="ttdeci">virtual void onExit()</div><div class="ttdoc">Invoked when object is destroyed.</div><div class="ttdef"><b>Definition</b> entity.h:25</div></div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html_ac978ceaeb285c3425d8ecb3cf6de074a"><div class="ttname"><a href="classmeteor_1_1_entity.html#ac978ceaeb285c3425d8ecb3cf6de074a">meteor::Entity::getName</a></div><div class="ttdeci">std::string getName()</div><div class="ttdef"><b>Definition</b> entity.h:38</div></div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html_aeb34fed86ed12e04cf1639ff25b9169c"><div class="ttname"><a href="classmeteor_1_1_entity.html#aeb34fed86ed12e04cf1639ff25b9169c">meteor::Entity::setName</a></div><div class="ttdeci">void setName(std::string name)</div><div class="ttdoc">Sets name of entity.</div><div class="ttdef"><b>Definition</b> entity.h:42</div></div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html_af87634ce5930b44d19dd4586ada5da65"><div class="ttname"><a href="classmeteor_1_1_entity.html#af87634ce5930b44d19dd4586ada5da65">meteor::Entity::equals</a></div><div class="ttdeci">virtual bool equals(Entity *other)</div><div class="ttdoc">Checks equality between two entities.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

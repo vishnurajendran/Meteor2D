@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::AnimationMap Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -100,22 +101,110 @@ $(function(){initNavTree('classmeteor_1_1_animation_map.html',''); initResizable
   <div class="headertitle"><div class="title">meteor::AnimationMap Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class holds the relation-ship between SpriteSheets and <a class="el" href="classmeteor_1_1_animation.html" title="Animation entity provides sprite - sheet based animation system to meteor.">Animation</a> name. Needs to be created using the loadMap function.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="animationmap_8h_source.html">animationmap.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a45a73dfc3ff658ad154dcf8c99ca27ea" id="r_a45a73dfc3ff658ad154dcf8c99ca27ea"><td class="memItemLeft" align="right" valign="top"><a id="a45a73dfc3ff658ad154dcf8c99ca27ea" name="a45a73dfc3ff658ad154dcf8c99ca27ea"></a>
-<a class="el" href="classmeteor_1_1_sprite_sheet.html">SpriteSheet</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getAnim</b> (std::string name)</td></tr>
+<tr class="memitem:a45a73dfc3ff658ad154dcf8c99ca27ea" id="r_a45a73dfc3ff658ad154dcf8c99ca27ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmeteor_1_1_sprite_sheet.html">SpriteSheet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45a73dfc3ff658ad154dcf8c99ca27ea">getAnim</a> (std::string name)</td></tr>
+<tr class="memdesc:a45a73dfc3ff658ad154dcf8c99ca27ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the sprite-sheet for animation to play  <br /></td></tr>
 <tr class="separator:a45a73dfc3ff658ad154dcf8c99ca27ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11f938fa3c1c635690458f37e4b64da0" id="r_a11f938fa3c1c635690458f37e4b64da0"><td class="memItemLeft" align="right" valign="top"><a id="a11f938fa3c1c635690458f37e4b64da0" name="a11f938fa3c1c635690458f37e4b64da0"></a>
-<a class="el" href="classmeteor_1_1_sprite_sheet.html">SpriteSheet</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getDefault</b> ()</td></tr>
+<tr class="memitem:a11f938fa3c1c635690458f37e4b64da0" id="r_a11f938fa3c1c635690458f37e4b64da0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmeteor_1_1_sprite_sheet.html">SpriteSheet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11f938fa3c1c635690458f37e4b64da0">getDefault</a> ()</td></tr>
+<tr class="memdesc:a11f938fa3c1c635690458f37e4b64da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the default sprite-sheet for animation  <br /></td></tr>
 <tr class="separator:a11f938fa3c1c635690458f37e4b64da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:afae256c917d23260142166e5d25a17a3" id="r_afae256c917d23260142166e5d25a17a3"><td class="memItemLeft" align="right" valign="top"><a id="afae256c917d23260142166e5d25a17a3" name="afae256c917d23260142166e5d25a17a3"></a>
-static <a class="el" href="classmeteor_1_1_animation_map.html">AnimationMap</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>loadMap</b> (std::string fileName)</td></tr>
+<tr class="memitem:afae256c917d23260142166e5d25a17a3" id="r_afae256c917d23260142166e5d25a17a3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmeteor_1_1_animation_map.html">AnimationMap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afae256c917d23260142166e5d25a17a3">loadMap</a> (std::string fileName)</td></tr>
+<tr class="memdesc:afae256c917d23260142166e5d25a17a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads an <a class="el" href="classmeteor_1_1_animation_map.html" title="This class holds the relation-ship between SpriteSheets and Animation name. Needs to be created using...">AnimationMap</a> from a file.  <br /></td></tr>
 <tr class="separator:afae256c917d23260142166e5d25a17a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class holds the relation-ship between SpriteSheets and <a class="el" href="classmeteor_1_1_animation.html" title="Animation entity provides sprite - sheet based animation system to meteor.">Animation</a> name. Needs to be created using the loadMap function. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a45a73dfc3ff658ad154dcf8c99ca27ea" name="a45a73dfc3ff658ad154dcf8c99ca27ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a73dfc3ff658ad154dcf8c99ca27ea">&#9670;&#160;</a></span>getAnim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmeteor_1_1_sprite_sheet.html">SpriteSheet</a> * meteor::AnimationMap::getAnim </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get the sprite-sheet for animation to play </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td><a class="el" href="classmeteor_1_1_animation.html" title="Animation entity provides sprite - sheet based animation system to meteor.">Animation</a> clip name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Ptr to <a class="el" href="classmeteor_1_1_sprite_sheet.html" title="This class holds the Rects within a texture that form an Animation.">SpriteSheet</a> instance. </dd></dl>
+
+</div>
+</div>
+<a id="a11f938fa3c1c635690458f37e4b64da0" name="a11f938fa3c1c635690458f37e4b64da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11f938fa3c1c635690458f37e4b64da0">&#9670;&#160;</a></span>getDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmeteor_1_1_sprite_sheet.html">SpriteSheet</a> * meteor::AnimationMap::getDefault </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get the default sprite-sheet for animation </p>
+<dl class="section return"><dt>Returns</dt><dd>Ptr to the first <a class="el" href="classmeteor_1_1_sprite_sheet.html" title="This class holds the Rects within a texture that form an Animation.">SpriteSheet</a> instance </dd></dl>
+
+</div>
+</div>
+<a id="afae256c917d23260142166e5d25a17a3" name="afae256c917d23260142166e5d25a17a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afae256c917d23260142166e5d25a17a3">&#9670;&#160;</a></span>loadMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classmeteor_1_1_animation_map.html">AnimationMap</a> * meteor::AnimationMap::loadMap </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads an <a class="el" href="classmeteor_1_1_animation_map.html" title="This class holds the relation-ship between SpriteSheets and Animation name. Needs to be created using...">AnimationMap</a> from a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>relative path to file. evaluated to resS\anim\fileName </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Ptr to <a class="el" href="classmeteor_1_1_animation_map.html" title="This class holds the relation-ship between SpriteSheets and Animation name. Needs to be created using...">AnimationMap</a> instance </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Github/Meteor2D/Meteor2D/Engine/include/2d/<a class="el" href="animationmap_8h_source.html">animationmap.h</a></li>
 </ul>

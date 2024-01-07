@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::Texture Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -100,63 +101,66 @@ $(function(){initNavTree('classmeteor_1_1_texture.html',''); initResizable(); })
   <div class="headertitle"><div class="title">meteor::Texture Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class holds an image that can be rendererd to the screen.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="texture_8h_source.html">texture.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for meteor::Texture:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classmeteor_1_1_texture.png" usemap="#meteor::Texture_map" alt=""/>
   <map id="meteor::Texture_map" name="meteor::Texture_map">
-<area href="classmeteor_1_1_entity.html" alt="meteor::Entity" shape="rect" coords="0,0,98,24"/>
+<area href="classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="meteor::Entity" shape="rect" coords="0,0,98,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0af6d359aef83250cff41f3d5c808e9a" id="r_a0af6d359aef83250cff41f3d5c808e9a"><td class="memItemLeft" align="right" valign="top"><a id="a0af6d359aef83250cff41f3d5c808e9a" name="a0af6d359aef83250cff41f3d5c808e9a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Texture</b> (std::string path)</td></tr>
+<tr class="memitem:a0af6d359aef83250cff41f3d5c808e9a" id="r_a0af6d359aef83250cff41f3d5c808e9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0af6d359aef83250cff41f3d5c808e9a">Texture</a> (std::string path)</td></tr>
+<tr class="memdesc:a0af6d359aef83250cff41f3d5c808e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="separator:a0af6d359aef83250cff41f3d5c808e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc0aa6534038583e8f0e92b0961d5a81" id="r_afc0aa6534038583e8f0e92b0961d5a81"><td class="memItemLeft" align="right" valign="top"><a id="afc0aa6534038583e8f0e92b0961d5a81" name="afc0aa6534038583e8f0e92b0961d5a81"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getSrcPath</b> ()</td></tr>
+<tr class="memitem:afc0aa6534038583e8f0e92b0961d5a81" id="r_afc0aa6534038583e8f0e92b0961d5a81"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc0aa6534038583e8f0e92b0961d5a81">getSrcPath</a> ()</td></tr>
+<tr class="memdesc:afc0aa6534038583e8f0e92b0961d5a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the img source path in disk.  <br /></td></tr>
 <tr class="separator:afc0aa6534038583e8f0e92b0961d5a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa52bc8b255525cd3bfd117e4123d4d38" id="r_aa52bc8b255525cd3bfd117e4123d4d38"><td class="memItemLeft" align="right" valign="top"><a id="aa52bc8b255525cd3bfd117e4123d4d38" name="aa52bc8b255525cd3bfd117e4123d4d38"></a>
-SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><b>getCoreTexture</b> ()</td></tr>
+<tr class="memitem:aa52bc8b255525cd3bfd117e4123d4d38" id="r_aa52bc8b255525cd3bfd117e4123d4d38"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa52bc8b255525cd3bfd117e4123d4d38">getCoreTexture</a> ()</td></tr>
+<tr class="memdesc:aa52bc8b255525cd3bfd117e4123d4d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the internal SDL <a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> implementation  <br /></td></tr>
 <tr class="separator:aa52bc8b255525cd3bfd117e4123d4d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4abb81cc6fb80c6716385f0d6567e658" id="r_a4abb81cc6fb80c6716385f0d6567e658"><td class="memItemLeft" align="right" valign="top"><a id="a4abb81cc6fb80c6716385f0d6567e658" name="a4abb81cc6fb80c6716385f0d6567e658"></a>
-<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> ()</td></tr>
+<tr class="memitem:a4abb81cc6fb80c6716385f0d6567e658" id="r_a4abb81cc6fb80c6716385f0d6567e658"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4abb81cc6fb80c6716385f0d6567e658">getSize</a> ()</td></tr>
+<tr class="memdesc:a4abb81cc6fb80c6716385f0d6567e658"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the size of <a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> in pixel  <br /></td></tr>
 <tr class="separator:a4abb81cc6fb80c6716385f0d6567e658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac853d7a13451eb5b256393c58c1d4b2d" id="r_ac853d7a13451eb5b256393c58c1d4b2d"><td class="memItemLeft" align="right" valign="top"><a id="ac853d7a13451eb5b256393c58c1d4b2d" name="ac853d7a13451eb5b256393c58c1d4b2d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>valid</b> ()</td></tr>
+<tr class="memitem:ac853d7a13451eb5b256393c58c1d4b2d" id="r_ac853d7a13451eb5b256393c58c1d4b2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac853d7a13451eb5b256393c58c1d4b2d">valid</a> ()</td></tr>
 <tr class="separator:ac853d7a13451eb5b256393c58c1d4b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmeteor_1_1_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classmeteor_1_1_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmeteor_1_1_entity.html">meteor::Entity</a></td></tr>
-<tr class="memitem:a471604ad83e2ba759346168eb81bb47f inherit pub_methods_classmeteor_1_1_entity" id="r_a471604ad83e2ba759346168eb81bb47f"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onStart</b> ()</td></tr>
+<tr class="memitem:a471604ad83e2ba759346168eb81bb47f inherit pub_methods_classmeteor_1_1_entity" id="r_a471604ad83e2ba759346168eb81bb47f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#a471604ad83e2ba759346168eb81bb47f">onStart</a> ()</td></tr>
+<tr class="memdesc:a471604ad83e2ba759346168eb81bb47f inherit pub_methods_classmeteor_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when object is instantiated.  <br /></td></tr>
 <tr class="separator:a471604ad83e2ba759346168eb81bb47f inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9671228cdf2a0382d4ecd47d91358651 inherit pub_methods_classmeteor_1_1_entity" id="r_a9671228cdf2a0382d4ecd47d91358651"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onUpdate</b> (float deltaTime)</td></tr>
+<tr class="memitem:a9671228cdf2a0382d4ecd47d91358651 inherit pub_methods_classmeteor_1_1_entity" id="r_a9671228cdf2a0382d4ecd47d91358651"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#a9671228cdf2a0382d4ecd47d91358651">onUpdate</a> (float deltaTime)</td></tr>
+<tr class="memdesc:a9671228cdf2a0382d4ecd47d91358651 inherit pub_methods_classmeteor_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked every frame, default behaviour does not invoke this method.  <br /></td></tr>
 <tr class="separator:a9671228cdf2a0382d4ecd47d91358651 inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae5709b4cde63432352d497506097fd8 inherit pub_methods_classmeteor_1_1_entity" id="r_aae5709b4cde63432352d497506097fd8"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onExit</b> ()</td></tr>
+<tr class="memitem:aae5709b4cde63432352d497506097fd8 inherit pub_methods_classmeteor_1_1_entity" id="r_aae5709b4cde63432352d497506097fd8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#aae5709b4cde63432352d497506097fd8">onExit</a> ()</td></tr>
+<tr class="memdesc:aae5709b4cde63432352d497506097fd8 inherit pub_methods_classmeteor_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when object is destroyed.  <br /></td></tr>
 <tr class="separator:aae5709b4cde63432352d497506097fd8 inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity" id="r_af87634ce5930b44d19dd4586ada5da65"><td class="memItemLeft" align="right" valign="top">
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>equals</b> (<a class="el" href="classmeteor_1_1_entity.html">Entity</a> *other)</td></tr>
+<tr class="memitem:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity" id="r_af87634ce5930b44d19dd4586ada5da65"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#af87634ce5930b44d19dd4586ada5da65">equals</a> (<a class="el" href="classmeteor_1_1_entity.html">Entity</a> *other)</td></tr>
+<tr class="memdesc:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks equality between two entities.  <br /></td></tr>
 <tr class="separator:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a152e0845e69c493f0e2c14965ca88a7a inherit pub_methods_classmeteor_1_1_entity" id="r_a152e0845e69c493f0e2c14965ca88a7a"><td class="memItemLeft" align="right" valign="top">
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> ()</td></tr>
+<tr class="memitem:a152e0845e69c493f0e2c14965ca88a7a inherit pub_methods_classmeteor_1_1_entity" id="r_a152e0845e69c493f0e2c14965ca88a7a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#a152e0845e69c493f0e2c14965ca88a7a">getId</a> ()</td></tr>
 <tr class="separator:a152e0845e69c493f0e2c14965ca88a7a inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac978ceaeb285c3425d8ecb3cf6de074a inherit pub_methods_classmeteor_1_1_entity" id="r_ac978ceaeb285c3425d8ecb3cf6de074a"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
+<tr class="memitem:ac978ceaeb285c3425d8ecb3cf6de074a inherit pub_methods_classmeteor_1_1_entity" id="r_ac978ceaeb285c3425d8ecb3cf6de074a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#ac978ceaeb285c3425d8ecb3cf6de074a">getName</a> ()</td></tr>
 <tr class="separator:ac978ceaeb285c3425d8ecb3cf6de074a inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb34fed86ed12e04cf1639ff25b9169c inherit pub_methods_classmeteor_1_1_entity" id="r_aeb34fed86ed12e04cf1639ff25b9169c"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (std::string name)</td></tr>
+<tr class="memdesc:aeb34fed86ed12e04cf1639ff25b9169c inherit pub_methods_classmeteor_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets name of entity. <br /></td></tr>
 <tr class="separator:aeb34fed86ed12e04cf1639ff25b9169c inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0ba2e7db50f0bd282972c8b9b55b0c26" id="r_a0ba2e7db50f0bd282972c8b9b55b0c26"><td class="memItemLeft" align="right" valign="top"><a id="a0ba2e7db50f0bd282972c8b9b55b0c26" name="a0ba2e7db50f0bd282972c8b9b55b0c26"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>initialiseTextureLoader</b> ()</td></tr>
+<tr class="memitem:a0ba2e7db50f0bd282972c8b9b55b0c26" id="r_a0ba2e7db50f0bd282972c8b9b55b0c26"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ba2e7db50f0bd282972c8b9b55b0c26">initialiseTextureLoader</a> ()</td></tr>
+<tr class="memdesc:a0ba2e7db50f0bd282972c8b9b55b0c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialised the SDL texture loader DO NOT TOUCH or INVOKE!!  <br /></td></tr>
 <tr class="separator:a0ba2e7db50f0bd282972c8b9b55b0c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1dbbff280c230c19500c1937174fd66" id="r_af1dbbff280c230c19500c1937174fd66"><td class="memItemLeft" align="right" valign="top"><a id="af1dbbff280c230c19500c1937174fd66" name="af1dbbff280c230c19500c1937174fd66"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>setGenerationRenderer</b> (<a class="el" href="classmeteor_1_1_renderer.html">Renderer</a> *renderer)</td></tr>
+<tr class="memitem:af1dbbff280c230c19500c1937174fd66" id="r_af1dbbff280c230c19500c1937174fd66"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1dbbff280c230c19500c1937174fd66">setGenerationRenderer</a> (<a class="el" href="classmeteor_1_1_renderer.html">Renderer</a> *renderer)</td></tr>
+<tr class="memdesc:af1dbbff280c230c19500c1937174fd66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the internal renderer used for texture generation. DO NOT TOUCH or INVOKE!!  <br /></td></tr>
 <tr class="separator:af1dbbff280c230c19500c1937174fd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -169,6 +173,206 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:aab779bfd9c9965b39fd4a52ad88a9e9b inherit pro_attribs_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class holds an image that can be rendererd to the screen. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0af6d359aef83250cff41f3d5c808e9a" name="a0af6d359aef83250cff41f3d5c808e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af6d359aef83250cff41f3d5c808e9a">&#9670;&#160;</a></span>Texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">meteor::Texture::Texture </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td><a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> file path </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa52bc8b255525cd3bfd117e4123d4d38" name="aa52bc8b255525cd3bfd117e4123d4d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52bc8b255525cd3bfd117e4123d4d38">&#9670;&#160;</a></span>getCoreTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture * meteor::Texture::getCoreTexture </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get the internal SDL <a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> implementation </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a4abb81cc6fb80c6716385f0d6567e658" name="a4abb81cc6fb80c6716385f0d6567e658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4abb81cc6fb80c6716385f0d6567e658">&#9670;&#160;</a></span>getSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> meteor::Texture::getSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns the size of <a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> in pixel </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmeteor_1_1_vector2.html" title="A structure representing a 2D Vector.">Vector2</a> containing width and height of texture </dd></dl>
+
+</div>
+</div>
+<a id="afc0aa6534038583e8f0e92b0961d5a81" name="afc0aa6534038583e8f0e92b0961d5a81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc0aa6534038583e8f0e92b0961d5a81">&#9670;&#160;</a></span>getSrcPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string meteor::Texture::getSrcPath </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the img source path in disk. </p>
+<dl class="section return"><dt>Returns</dt><dd>Path as string </dd></dl>
+
+</div>
+</div>
+<a id="a0ba2e7db50f0bd282972c8b9b55b0c26" name="a0ba2e7db50f0bd282972c8b9b55b0c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba2e7db50f0bd282972c8b9b55b0c26">&#9670;&#160;</a></span>initialiseTextureLoader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool meteor::Texture::initialiseTextureLoader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialised the SDL texture loader DO NOT TOUCH or INVOKE!! </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="af1dbbff280c230c19500c1937174fd66" name="af1dbbff280c230c19500c1937174fd66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1dbbff280c230c19500c1937174fd66">&#9670;&#160;</a></span>setGenerationRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void meteor::Texture::setGenerationRenderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmeteor_1_1_renderer.html">Renderer</a> *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the internal renderer used for texture generation. DO NOT TOUCH or INVOKE!! </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac853d7a13451eb5b256393c58c1d4b2d" name="ac853d7a13451eb5b256393c58c1d4b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac853d7a13451eb5b256393c58c1d4b2d">&#9670;&#160;</a></span>valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool meteor::Texture::valid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if texture is valid </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Github/Meteor2D/Meteor2D/Engine/include/2d/<a class="el" href="texture_8h_source.html">texture.h</a></li>
 </ul>

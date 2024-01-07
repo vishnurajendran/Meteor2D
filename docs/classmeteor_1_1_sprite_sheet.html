@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::SpriteSheet Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,19 +100,109 @@ $(function(){initNavTree('classmeteor_1_1_sprite_sheet.html',''); initResizable(
   <div class="headertitle"><div class="title">meteor::SpriteSheet Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class holds the Rects within a texture that form an <a class="el" href="classmeteor_1_1_animation.html" title="Animation entity provides sprite - sheet based animation system to meteor.">Animation</a>.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="spritesheet_8h_source.html">spritesheet.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afe7b1ae19243ca90d51bf0a029edcf9c" id="r_afe7b1ae19243ca90d51bf0a029edcf9c"><td class="memItemLeft" align="right" valign="top"><a id="afe7b1ae19243ca90d51bf0a029edcf9c" name="afe7b1ae19243ca90d51bf0a029edcf9c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SpriteSheet</b> (std::string texturePath, std::vector&lt; <a class="el" href="structmeteor_1_1_rect.html">Rect</a> &gt; rects)</td></tr>
+<tr class="memitem:afe7b1ae19243ca90d51bf0a029edcf9c" id="r_afe7b1ae19243ca90d51bf0a029edcf9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe7b1ae19243ca90d51bf0a029edcf9c">SpriteSheet</a> (std::string texturePath, std::vector&lt; <a class="el" href="structmeteor_1_1_rect.html">Rect</a> &gt; rects)</td></tr>
+<tr class="memdesc:afe7b1ae19243ca90d51bf0a029edcf9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="separator:afe7b1ae19243ca90d51bf0a029edcf9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5804a1dae5d7dfd4083fe9e815c8d760" id="r_a5804a1dae5d7dfd4083fe9e815c8d760"><td class="memItemLeft" align="right" valign="top"><a id="a5804a1dae5d7dfd4083fe9e815c8d760" name="a5804a1dae5d7dfd4083fe9e815c8d760"></a>
-<a class="el" href="classmeteor_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getTexture</b> ()</td></tr>
+<tr class="memitem:a5804a1dae5d7dfd4083fe9e815c8d760" id="r_a5804a1dae5d7dfd4083fe9e815c8d760"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmeteor_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5804a1dae5d7dfd4083fe9e815c8d760">getTexture</a> ()</td></tr>
+<tr class="memdesc:a5804a1dae5d7dfd4083fe9e815c8d760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> for this sprite-sheet.  <br /></td></tr>
 <tr class="separator:a5804a1dae5d7dfd4083fe9e815c8d760"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf93bb5e7ef8f0b106c61c9ceb4d6328" id="r_adf93bb5e7ef8f0b106c61c9ceb4d6328"><td class="memItemLeft" align="right" valign="top"><a id="adf93bb5e7ef8f0b106c61c9ceb4d6328" name="adf93bb5e7ef8f0b106c61c9ceb4d6328"></a>
-<a class="el" href="structmeteor_1_1_rect.html">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sample</b> (int &amp;index, bool loop)</td></tr>
+<tr class="memitem:adf93bb5e7ef8f0b106c61c9ceb4d6328" id="r_adf93bb5e7ef8f0b106c61c9ceb4d6328"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmeteor_1_1_rect.html">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf93bb5e7ef8f0b106c61c9ceb4d6328">sample</a> (int &amp;index, bool loop)</td></tr>
+<tr class="memdesc:adf93bb5e7ef8f0b106c61c9ceb4d6328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample the sprite-sheet for a animation frame rect.  <br /></td></tr>
 <tr class="separator:adf93bb5e7ef8f0b106c61c9ceb4d6328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class holds the Rects within a texture that form an <a class="el" href="classmeteor_1_1_animation.html" title="Animation entity provides sprite - sheet based animation system to meteor.">Animation</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afe7b1ae19243ca90d51bf0a029edcf9c" name="afe7b1ae19243ca90d51bf0a029edcf9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe7b1ae19243ca90d51bf0a029edcf9c">&#9670;&#160;</a></span>SpriteSheet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">meteor::SpriteSheet::SpriteSheet </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>texturePath</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structmeteor_1_1_rect.html">Rect</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>rects</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texturePath</td><td>Path to texture. </td></tr>
+    <tr><td class="paramname">rects</td><td>List of rects that form the animation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5804a1dae5d7dfd4083fe9e815c8d760" name="a5804a1dae5d7dfd4083fe9e815c8d760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5804a1dae5d7dfd4083fe9e815c8d760">&#9670;&#160;</a></span>getTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmeteor_1_1_texture.html">Texture</a> * meteor::SpriteSheet::getTexture </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the <a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> for this sprite-sheet. </p>
+<dl class="section return"><dt>Returns</dt><dd>Ptr to <a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> instance </dd></dl>
+
+</div>
+</div>
+<a id="adf93bb5e7ef8f0b106c61c9ceb4d6328" name="adf93bb5e7ef8f0b106c61c9ceb4d6328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf93bb5e7ef8f0b106c61c9ceb4d6328">&#9670;&#160;</a></span>sample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmeteor_1_1_rect.html">Rect</a> meteor::SpriteSheet::sample </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>index</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>loop</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sample the sprite-sheet for a animation frame rect. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>integer directly mapping to frame number. </td></tr>
+    <tr><td class="paramname">loop</td><td>boolean flag to loop over the frames. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmeteor_1_1_rect.html" title="A struct representing rectangle.">Rect</a> for a specific animation frame. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Github/Meteor2D/Meteor2D/Engine/include/2d/<a class="el" href="spritesheet_8h_source.html">spritesheet.h</a></li>
 </ul>

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::InputManager Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,25 +100,137 @@ $(function(){initNavTree('classmeteor_1_1_input_manager.html',''); initResizable
   <div class="headertitle"><div class="title">meteor::InputManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>manages user input events.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="inputmanagement_8h_source.html">inputmanagement.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d178f0c52f1ac6e3202e244bc6b777f" id="r_a5d178f0c52f1ac6e3202e244bc6b777f"><td class="memItemLeft" align="right" valign="top"><a id="a5d178f0c52f1ac6e3202e244bc6b777f" name="a5d178f0c52f1ac6e3202e244bc6b777f"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>initialise</b> ()</td></tr>
+<tr class="memdesc:a5d178f0c52f1ac6e3202e244bc6b777f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the input manager, IMP: DO NOT TOUCH or INVOKE. <br /></td></tr>
 <tr class="separator:a5d178f0c52f1ac6e3202e244bc6b777f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6cf8b89b90e5a0203f230a4c87acaad" id="r_ae6cf8b89b90e5a0203f230a4c87acaad"><td class="memItemLeft" align="right" valign="top"><a id="ae6cf8b89b90e5a0203f230a4c87acaad" name="ae6cf8b89b90e5a0203f230a4c87acaad"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="memdesc:ae6cf8b89b90e5a0203f230a4c87acaad"><td class="mdescLeft">&#160;</td><td class="mdescRight">request <a class="el" href="classmeteor_1_1_input_manager.html" title="manages user input events.">InputManager</a> to refresh its input state. <br /></td></tr>
 <tr class="separator:ae6cf8b89b90e5a0203f230a4c87acaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3290a27467d98a61ad35c1ed48e8a01" id="r_ab3290a27467d98a61ad35c1ed48e8a01"><td class="memItemLeft" align="right" valign="top"><a id="ab3290a27467d98a61ad35c1ed48e8a01" name="ab3290a27467d98a61ad35c1ed48e8a01"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>getKey</b> (KeyCode key)</td></tr>
+<tr class="memitem:ab3290a27467d98a61ad35c1ed48e8a01" id="r_ab3290a27467d98a61ad35c1ed48e8a01"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3290a27467d98a61ad35c1ed48e8a01">getKey</a> (KeyCode key)</td></tr>
+<tr class="memdesc:ab3290a27467d98a61ad35c1ed48e8a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a key if held down, on release returns false.  <br /></td></tr>
 <tr class="separator:ab3290a27467d98a61ad35c1ed48e8a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6a99104194087d67f9c3b2318c74fdf" id="r_af6a99104194087d67f9c3b2318c74fdf"><td class="memItemLeft" align="right" valign="top"><a id="af6a99104194087d67f9c3b2318c74fdf" name="af6a99104194087d67f9c3b2318c74fdf"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyDown</b> (KeyCode key)</td></tr>
+<tr class="memitem:af6a99104194087d67f9c3b2318c74fdf" id="r_af6a99104194087d67f9c3b2318c74fdf"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6a99104194087d67f9c3b2318c74fdf">getKeyDown</a> (KeyCode key)</td></tr>
+<tr class="memdesc:af6a99104194087d67f9c3b2318c74fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a key was pressed and then released.  <br /></td></tr>
 <tr class="separator:af6a99104194087d67f9c3b2318c74fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade1dbadd0a3fdc23c1de3a21f429d74d" id="r_ade1dbadd0a3fdc23c1de3a21f429d74d"><td class="memItemLeft" align="right" valign="top"><a id="ade1dbadd0a3fdc23c1de3a21f429d74d" name="ade1dbadd0a3fdc23c1de3a21f429d74d"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyUp</b> (KeyCode key)</td></tr>
+<tr class="memitem:ade1dbadd0a3fdc23c1de3a21f429d74d" id="r_ade1dbadd0a3fdc23c1de3a21f429d74d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade1dbadd0a3fdc23c1de3a21f429d74d">getKeyUp</a> (KeyCode key)</td></tr>
+<tr class="memdesc:ade1dbadd0a3fdc23c1de3a21f429d74d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a key was released.  <br /></td></tr>
 <tr class="separator:ade1dbadd0a3fdc23c1de3a21f429d74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>manages user input events. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab3290a27467d98a61ad35c1ed48e8a01" name="ab3290a27467d98a61ad35c1ed48e8a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3290a27467d98a61ad35c1ed48e8a01">&#9670;&#160;</a></span>getKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool meteor::InputManager::getKey </td>
+          <td>(</td>
+          <td class="paramtype">KeyCode</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if a key if held down, on release returns false. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>KeyCode to check press status. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if key is pressed down </dd></dl>
+
+</div>
+</div>
+<a id="af6a99104194087d67f9c3b2318c74fdf" name="af6a99104194087d67f9c3b2318c74fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a99104194087d67f9c3b2318c74fdf">&#9670;&#160;</a></span>getKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool meteor::InputManager::getKeyDown </td>
+          <td>(</td>
+          <td class="paramtype">KeyCode</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if a key was pressed and then released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>KeyCode to check press status. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if key is pressed down and released </dd></dl>
+
+</div>
+</div>
+<a id="ade1dbadd0a3fdc23c1de3a21f429d74d" name="ade1dbadd0a3fdc23c1de3a21f429d74d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade1dbadd0a3fdc23c1de3a21f429d74d">&#9670;&#160;</a></span>getKeyUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool meteor::InputManager::getKeyUp </td>
+          <td>(</td>
+          <td class="paramtype">KeyCode</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if a key was released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>KeyCode to check press status. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if a key was released. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Github/Meteor2D/Meteor2D/Engine/include/input/<a class="el" href="inputmanagement_8h_source.html">inputmanagement.h</a></li>
 </ul>

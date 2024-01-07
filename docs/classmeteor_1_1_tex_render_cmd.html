@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::TexRenderCmd Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,43 +100,50 @@ $(function(){initNavTree('classmeteor_1_1_tex_render_cmd.html',''); initResizabl
   <div class="headertitle"><div class="title">meteor::TexRenderCmd Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This a <a class="el" href="classmeteor_1_1_render_command.html" title="RenderCommand are responsible for rendering visuals to the screen.">RenderCommand</a> that draws an image on to the screen.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="texrendercmd_8h_source.html">texrendercmd.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for meteor::TexRenderCmd:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classmeteor_1_1_tex_render_cmd.png" usemap="#meteor::TexRenderCmd_map" alt=""/>
   <map id="meteor::TexRenderCmd_map" name="meteor::TexRenderCmd_map">
-<area href="classmeteor_1_1_render_command.html" alt="meteor::RenderCommand" shape="rect" coords="0,0,152,24"/>
+<area href="classmeteor_1_1_render_command.html" title="RenderCommand are responsible for rendering visuals to the screen." alt="meteor::RenderCommand" shape="rect" coords="0,0,152,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a70829d97010993272a37252d8a31fdf6" id="r_a70829d97010993272a37252d8a31fdf6"><td class="memItemLeft" align="right" valign="top"><a id="a70829d97010993272a37252d8a31fdf6" name="a70829d97010993272a37252d8a31fdf6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TexRenderCmd</b> (RenderLayer layer, uint8_t sortingOrder)</td></tr>
+<tr class="memitem:a70829d97010993272a37252d8a31fdf6" id="r_a70829d97010993272a37252d8a31fdf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70829d97010993272a37252d8a31fdf6">TexRenderCmd</a> (RenderLayer layer, uint8_t sortingOrder)</td></tr>
+<tr class="memdesc:a70829d97010993272a37252d8a31fdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="separator:a70829d97010993272a37252d8a31fdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8db31f3049ff6635e90b2e9515a2540a" id="r_a8db31f3049ff6635e90b2e9515a2540a"><td class="memItemLeft" align="right" valign="top"><a id="a8db31f3049ff6635e90b2e9515a2540a" name="a8db31f3049ff6635e90b2e9515a2540a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>bindTexture</b> (<a class="el" href="classmeteor_1_1_texture.html">Texture</a> *tex)</td></tr>
+<tr class="memitem:a8db31f3049ff6635e90b2e9515a2540a" id="r_a8db31f3049ff6635e90b2e9515a2540a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8db31f3049ff6635e90b2e9515a2540a">bindTexture</a> (<a class="el" href="classmeteor_1_1_texture.html">Texture</a> *tex)</td></tr>
+<tr class="memdesc:a8db31f3049ff6635e90b2e9515a2540a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a texture to draw.  <br /></td></tr>
 <tr class="separator:a8db31f3049ff6635e90b2e9515a2540a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a697399cfb0a9b5bd5043afa29025570a" id="r_a697399cfb0a9b5bd5043afa29025570a"><td class="memItemLeft" align="right" valign="top"><a id="a697399cfb0a9b5bd5043afa29025570a" name="a697399cfb0a9b5bd5043afa29025570a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateRect</b> (<a class="el" href="structmeteor_1_1_rect.html">Rect</a> rect)</td></tr>
+<tr class="memdesc:a697399cfb0a9b5bd5043afa29025570a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the <a class="el" href="structmeteor_1_1_rect.html" title="A struct representing rectangle.">Rect</a> for rendering. <br /></td></tr>
 <tr class="separator:a697399cfb0a9b5bd5043afa29025570a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b6bbbae1aa02e8b67ce0e9841d4c9fa" id="r_a9b6bbbae1aa02e8b67ce0e9841d4c9fa"><td class="memItemLeft" align="right" valign="top"><a id="a9b6bbbae1aa02e8b67ce0e9841d4c9fa" name="a9b6bbbae1aa02e8b67ce0e9841d4c9fa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateSrcRect</b> (<a class="el" href="structmeteor_1_1_rect.html">Rect</a> rect)</td></tr>
+<tr class="memitem:a9b6bbbae1aa02e8b67ce0e9841d4c9fa" id="r_a9b6bbbae1aa02e8b67ce0e9841d4c9fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b6bbbae1aa02e8b67ce0e9841d4c9fa">updateSrcRect</a> (<a class="el" href="structmeteor_1_1_rect.html">Rect</a> rect)</td></tr>
+<tr class="memdesc:a9b6bbbae1aa02e8b67ce0e9841d4c9fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the <a class="el" href="structmeteor_1_1_rect.html" title="A struct representing rectangle.">Rect</a> for image. Src <a class="el" href="structmeteor_1_1_rect.html" title="A struct representing rectangle.">Rect</a> is the rect used for rendering specific parts of the texture.  <br /></td></tr>
 <tr class="separator:a9b6bbbae1aa02e8b67ce0e9841d4c9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37dea6876793050963ee42bd9c3c1833" id="r_a37dea6876793050963ee42bd9c3c1833"><td class="memItemLeft" align="right" valign="top"><a id="a37dea6876793050963ee42bd9c3c1833" name="a37dea6876793050963ee42bd9c3c1833"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateScale</b> (<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> scale)</td></tr>
+<tr class="memitem:a37dea6876793050963ee42bd9c3c1833" id="r_a37dea6876793050963ee42bd9c3c1833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37dea6876793050963ee42bd9c3c1833">updateScale</a> (<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> scale)</td></tr>
+<tr class="memdesc:a37dea6876793050963ee42bd9c3c1833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the scale of image during render.  <br /></td></tr>
 <tr class="separator:a37dea6876793050963ee42bd9c3c1833"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2c5a6b29fe6822148ca9e2fd1a42acb" id="r_ac2c5a6b29fe6822148ca9e2fd1a42acb"><td class="memItemLeft" align="right" valign="top"><a id="ac2c5a6b29fe6822148ca9e2fd1a42acb" name="ac2c5a6b29fe6822148ca9e2fd1a42acb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updatePivot</b> (<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> pivot)</td></tr>
+<tr class="memitem:ac2c5a6b29fe6822148ca9e2fd1a42acb" id="r_ac2c5a6b29fe6822148ca9e2fd1a42acb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2c5a6b29fe6822148ca9e2fd1a42acb">updatePivot</a> (<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> pivot)</td></tr>
+<tr class="memdesc:ac2c5a6b29fe6822148ca9e2fd1a42acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the pivot of image during render.  <br /></td></tr>
 <tr class="separator:ac2c5a6b29fe6822148ca9e2fd1a42acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab02ce3e1b32a8da197e9c5f1502ca7eb" id="r_ab02ce3e1b32a8da197e9c5f1502ca7eb"><td class="memItemLeft" align="right" valign="top"><a id="ab02ce3e1b32a8da197e9c5f1502ca7eb" name="ab02ce3e1b32a8da197e9c5f1502ca7eb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateRotation</b> (float rotation)</td></tr>
+<tr class="memitem:ab02ce3e1b32a8da197e9c5f1502ca7eb" id="r_ab02ce3e1b32a8da197e9c5f1502ca7eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab02ce3e1b32a8da197e9c5f1502ca7eb">updateRotation</a> (float rotation)</td></tr>
+<tr class="memdesc:ab02ce3e1b32a8da197e9c5f1502ca7eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update rotation of the img during render.  <br /></td></tr>
 <tr class="separator:ab02ce3e1b32a8da197e9c5f1502ca7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8f9b012413cc341c60d021b32ab42d4" id="r_ad8f9b012413cc341c60d021b32ab42d4"><td class="memItemLeft" align="right" valign="top"><a id="ad8f9b012413cc341c60d021b32ab42d4" name="ad8f9b012413cc341c60d021b32ab42d4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>useSourceRect</b> (bool useSrcRect)</td></tr>
+<tr class="memitem:ad8f9b012413cc341c60d021b32ab42d4" id="r_ad8f9b012413cc341c60d021b32ab42d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8f9b012413cc341c60d021b32ab42d4">useSourceRect</a> (bool useSrcRect)</td></tr>
+<tr class="memdesc:ad8f9b012413cc341c60d021b32ab42d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to true if a part of the texture needs to be rendererd.  <br /></td></tr>
 <tr class="separator:ad8f9b012413cc341c60d021b32ab42d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aceb24bb8e69661a97250948b3cbbad" id="r_a7aceb24bb8e69661a97250948b3cbbad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7aceb24bb8e69661a97250948b3cbbad">render</a> () override</td></tr>
+<tr class="memdesc:a7aceb24bb8e69661a97250948b3cbbad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the image to screen.  <br /></td></tr>
 <tr class="separator:a7aceb24bb8e69661a97250948b3cbbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae432d86d1a64bd04ab5df26852774c70" id="r_ae432d86d1a64bd04ab5df26852774c70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae432d86d1a64bd04ab5df26852774c70">isValid</a> () override</td></tr>
 <tr class="separator:ae432d86d1a64bd04ab5df26852774c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,7 +168,65 @@ Additional Inherited Members</h2></td></tr>
 SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><b>renderCore</b> = NULL</td></tr>
 <tr class="separator:ad778ac1edf2b98538d03a9b135853f8c inherit pro_attribs_classmeteor_1_1_render_command"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This a <a class="el" href="classmeteor_1_1_render_command.html" title="RenderCommand are responsible for rendering visuals to the screen.">RenderCommand</a> that draws an image on to the screen. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a70829d97010993272a37252d8a31fdf6" name="a70829d97010993272a37252d8a31fdf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70829d97010993272a37252d8a31fdf6">&#9670;&#160;</a></span>TexRenderCmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">meteor::TexRenderCmd::TexRenderCmd </td>
+          <td>(</td>
+          <td class="paramtype">RenderLayer</td>          <td class="paramname"><span class="paramname"><em>layer</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>sortingOrder</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>layer for rendering </td></tr>
+    <tr><td class="paramname">sortingOrder</td><td>sorting order within the layer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8db31f3049ff6635e90b2e9515a2540a" name="a8db31f3049ff6635e90b2e9515a2540a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db31f3049ff6635e90b2e9515a2540a">&#9670;&#160;</a></span>bindTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::TexRenderCmd::bindTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmeteor_1_1_texture.html">Texture</a> *</td>          <td class="paramname"><span class="paramname"><em>tex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bind a texture to draw. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tex</td><td><a class="el" href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen.">Texture</a> reference </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae432d86d1a64bd04ab5df26852774c70" name="ae432d86d1a64bd04ab5df26852774c70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae432d86d1a64bd04ab5df26852774c70">&#9670;&#160;</a></span>isValid()</h2>
 
@@ -183,6 +249,7 @@ SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><b>renderCore<
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if rendercommand is valid. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmeteor_1_1_render_command.html">meteor::RenderCommand</a>.</p>
 
@@ -211,7 +278,174 @@ SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><b>renderCore<
 </table>
 </div><div class="memdoc">
 
+<p>Renders the image to screen. </p>
+
 <p>Reimplemented from <a class="el" href="classmeteor_1_1_render_command.html">meteor::RenderCommand</a>.</p>
+
+</div>
+</div>
+<a id="ac2c5a6b29fe6822148ca9e2fd1a42acb" name="ac2c5a6b29fe6822148ca9e2fd1a42acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2c5a6b29fe6822148ca9e2fd1a42acb">&#9670;&#160;</a></span>updatePivot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::TexRenderCmd::updatePivot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a></td>          <td class="paramname"><span class="paramname"><em>pivot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update the pivot of image during render. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pivot</td><td>Normalized <a class="el" href="structmeteor_1_1_vector2.html" title="A structure representing a 2D Vector.">Vector2</a> defining pivot </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab02ce3e1b32a8da197e9c5f1502ca7eb" name="ab02ce3e1b32a8da197e9c5f1502ca7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab02ce3e1b32a8da197e9c5f1502ca7eb">&#9670;&#160;</a></span>updateRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::TexRenderCmd::updateRotation </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update rotation of the img during render. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotation</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a37dea6876793050963ee42bd9c3c1833" name="a37dea6876793050963ee42bd9c3c1833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37dea6876793050963ee42bd9c3c1833">&#9670;&#160;</a></span>updateScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::TexRenderCmd::updateScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a></td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update the scale of image during render. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td><a class="el" href="structmeteor_1_1_vector2.html" title="A structure representing a 2D Vector.">Vector2</a> defining scale </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b6bbbae1aa02e8b67ce0e9841d4c9fa" name="a9b6bbbae1aa02e8b67ce0e9841d4c9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6bbbae1aa02e8b67ce0e9841d4c9fa">&#9670;&#160;</a></span>updateSrcRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::TexRenderCmd::updateSrcRect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmeteor_1_1_rect.html">Rect</a></td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update the <a class="el" href="structmeteor_1_1_rect.html" title="A struct representing rectangle.">Rect</a> for image. Src <a class="el" href="structmeteor_1_1_rect.html" title="A struct representing rectangle.">Rect</a> is the rect used for rendering specific parts of the texture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>Src <a class="el" href="structmeteor_1_1_rect.html" title="A struct representing rectangle.">Rect</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad8f9b012413cc341c60d021b32ab42d4" name="ad8f9b012413cc341c60d021b32ab42d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f9b012413cc341c60d021b32ab42d4">&#9670;&#160;</a></span>useSourceRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::TexRenderCmd::useSourceRect </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>useSrcRect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set to true if a part of the texture needs to be rendererd. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">useSrcRect</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

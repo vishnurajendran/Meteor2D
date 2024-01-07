@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['r_0',['r',['../structmeteor_1_1_color.html#a849da538aaf9aaa0526e24f5466a3aff',1,'meteor::Color']]],
-  ['rect_1',['Rect',['../structmeteor_1_1_rect.html',1,'meteor']]],
-  ['rendercommand_2',['RenderCommand',['../classmeteor_1_1_render_command.html',1,'meteor']]],
-  ['renderer_3',['Renderer',['../classmeteor_1_1_renderer.html',1,'meteor']]],
-  ['renderqueue_4',['RenderQueue',['../classmeteor_1_1_render_queue.html',1,'meteor']]]
+  ['initialise_0',['initialise',['../classmeteor_1_1_input_manager.html#a5d178f0c52f1ac6e3202e244bc6b777f',1,'meteor::InputManager::initialise()'],['../classmeteor_1_1_scene_manager.html#a04266f9f40aad7f9f26631bbf3431f9c',1,'meteor::SceneManager::initialise()']]],
+  ['initialisetextureloader_1',['initialiseTextureLoader',['../classmeteor_1_1_texture.html#a0ba2e7db50f0bd282972c8b9b55b0c26',1,'meteor::Texture']]],
+  ['inputmanager_2',['InputManager',['../classmeteor_1_1_input_manager.html',1,'meteor']]],
+  ['isactive_3',['isActive',['../classmeteor_1_1_camera.html#a40e4a38684e778b396501a3cf6658b67',1,'meteor::Camera']]],
+  ['isinsidebounds_4',['isInsideBounds',['../classmeteor_1_1_camera.html#a2343d276317f30a756b9bf8c4394f66a',1,'meteor::Camera']]],
+  ['isvalid_5',['isValid',['../classmeteor_1_1_tex_render_cmd.html#ae432d86d1a64bd04ab5df26852774c70',1,'meteor::TexRenderCmd']]]
 ];

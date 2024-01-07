@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::CameraStack Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,22 +100,57 @@ $(function(){initNavTree('classmeteor_1_1_camera_stack.html',''); initResizable(
   <div class="headertitle"><div class="title">meteor::CameraStack Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A Stack maintining all Cameras currently avaialble in scene. <a class="el" href="classmeteor_1_1_camera_stack.html" title="A Stack maintining all Cameras currently avaialble in scene. CameraStack sorts all Cameras in ascendi...">CameraStack</a> sorts all Cameras in ascending order.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="camerastack_8h_source.html">camerastack.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5bd67e849b5882995e99ed47c8bb81b1" id="r_a5bd67e849b5882995e99ed47c8bb81b1"><td class="memItemLeft" align="right" valign="top"><a id="a5bd67e849b5882995e99ed47c8bb81b1" name="a5bd67e849b5882995e99ed47c8bb81b1"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasActiveCamera</b> ()</td></tr>
+<tr class="memitem:a5bd67e849b5882995e99ed47c8bb81b1" id="r_a5bd67e849b5882995e99ed47c8bb81b1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bd67e849b5882995e99ed47c8bb81b1">hasActiveCamera</a> ()</td></tr>
 <tr class="separator:a5bd67e849b5882995e99ed47c8bb81b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d5ee6a008bb071eb5b1a678305f217a" id="r_a0d5ee6a008bb071eb5b1a678305f217a"><td class="memItemLeft" align="right" valign="top"><a id="a0d5ee6a008bb071eb5b1a678305f217a" name="a0d5ee6a008bb071eb5b1a678305f217a"></a>
 static <a class="el" href="classmeteor_1_1_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getActiveCamera</b> ()</td></tr>
 <tr class="separator:a0d5ee6a008bb071eb5b1a678305f217a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7980ffee3e0e472a485f095fd58020a" id="r_ab7980ffee3e0e472a485f095fd58020a"><td class="memItemLeft" align="right" valign="top"><a id="ab7980ffee3e0e472a485f095fd58020a" name="ab7980ffee3e0e472a485f095fd58020a"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>registerToStack</b> (<a class="el" href="classmeteor_1_1_camera.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:ab7980ffee3e0e472a485f095fd58020a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a camera to the stack. <br /></td></tr>
 <tr class="separator:ab7980ffee3e0e472a485f095fd58020a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bcbb57df4452a5cd2cd9d40af76dc2e" id="r_a6bcbb57df4452a5cd2cd9d40af76dc2e"><td class="memItemLeft" align="right" valign="top"><a id="a6bcbb57df4452a5cd2cd9d40af76dc2e" name="a6bcbb57df4452a5cd2cd9d40af76dc2e"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>removeFromStack</b> (<a class="el" href="classmeteor_1_1_camera.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:a6bcbb57df4452a5cd2cd9d40af76dc2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a <a class="el" href="classmeteor_1_1_camera.html" title="Camera entity uses provides camera like functionlity to manage world view.">Camera</a> from the stack. <br /></td></tr>
 <tr class="separator:a6bcbb57df4452a5cd2cd9d40af76dc2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A Stack maintining all Cameras currently avaialble in scene. <a class="el" href="classmeteor_1_1_camera_stack.html" title="A Stack maintining all Cameras currently avaialble in scene. CameraStack sorts all Cameras in ascendi...">CameraStack</a> sorts all Cameras in ascending order. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5bd67e849b5882995e99ed47c8bb81b1" name="a5bd67e849b5882995e99ed47c8bb81b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd67e849b5882995e99ed47c8bb81b1">&#9670;&#160;</a></span>hasActiveCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool meteor::CameraStack::hasActiveCamera </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if atleast one active camera is present </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Github/Meteor2D/Meteor2D/Engine/include/camera/<a class="el" href="camerastack_8h_source.html">camerastack.h</a></li>
 </ul>

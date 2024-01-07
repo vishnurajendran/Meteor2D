@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::Entity Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -100,43 +101,47 @@ $(function(){initNavTree('classmeteor_1_1_entity.html',''); initResizable(); });
   <div class="headertitle"><div class="title">meteor::Entity Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>An <a class="el" href="classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor....">Entity</a> is the base class for all data and behaviour oriented objects in meteor. This class contains properties and function used by meteor for its operation.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="entity_8h_source.html">entity.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for meteor::Entity:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classmeteor_1_1_entity.png" usemap="#meteor::Entity_map" alt=""/>
   <map id="meteor::Entity_map" name="meteor::Entity_map">
-<area href="classmeteor_1_1_scene.html" alt="meteor::Scene" shape="rect" coords="0,56,125,80"/>
-<area href="classmeteor_1_1_spatial_entity.html" alt="meteor::SpatialEntity" shape="rect" coords="135,56,260,80"/>
-<area href="classmeteor_1_1_texture.html" alt="meteor::Texture" shape="rect" coords="270,56,395,80"/>
-<area href="classmeteor_1_1_animation.html" alt="meteor::Animation" shape="rect" coords="0,112,125,136"/>
-<area href="classmeteor_1_1_camera.html" alt="meteor::Camera" shape="rect" coords="135,112,260,136"/>
-<area href="classmeteor_1_1_sprite2_d.html" alt="meteor::Sprite2D" shape="rect" coords="270,112,395,136"/>
+<area href="classmeteor_1_1_scene.html" title="A scene holds a collection of spatial entity for a specific level." alt="meteor::Scene" shape="rect" coords="0,56,125,80"/>
+<area href="classmeteor_1_1_spatial_entity.html" title="Spatial Entity is the base entity for all types present in scene. This entity keeps track of spatial ..." alt="meteor::SpatialEntity" shape="rect" coords="135,56,260,80"/>
+<area href="classmeteor_1_1_texture.html" title="This class holds an image that can be rendererd to the screen." alt="meteor::Texture" shape="rect" coords="270,56,395,80"/>
+<area href="classmeteor_1_1_animation.html" title="Animation entity provides sprite - sheet based animation system to meteor." alt="meteor::Animation" shape="rect" coords="0,112,125,136"/>
+<area href="classmeteor_1_1_camera.html" title="Camera entity uses provides camera like functionlity to manage world view." alt="meteor::Camera" shape="rect" coords="135,112,260,136"/>
+<area href="classmeteor_1_1_sprite2_d.html" title="This entity enables sprite rendering in meteor." alt="meteor::Sprite2D" shape="rect" coords="270,112,395,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a471604ad83e2ba759346168eb81bb47f" id="r_a471604ad83e2ba759346168eb81bb47f"><td class="memItemLeft" align="right" valign="top"><a id="a471604ad83e2ba759346168eb81bb47f" name="a471604ad83e2ba759346168eb81bb47f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onStart</b> ()</td></tr>
+<tr class="memitem:a471604ad83e2ba759346168eb81bb47f" id="r_a471604ad83e2ba759346168eb81bb47f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a471604ad83e2ba759346168eb81bb47f">onStart</a> ()</td></tr>
+<tr class="memdesc:a471604ad83e2ba759346168eb81bb47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when object is instantiated.  <br /></td></tr>
 <tr class="separator:a471604ad83e2ba759346168eb81bb47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9671228cdf2a0382d4ecd47d91358651" id="r_a9671228cdf2a0382d4ecd47d91358651"><td class="memItemLeft" align="right" valign="top"><a id="a9671228cdf2a0382d4ecd47d91358651" name="a9671228cdf2a0382d4ecd47d91358651"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onUpdate</b> (float deltaTime)</td></tr>
+<tr class="memitem:a9671228cdf2a0382d4ecd47d91358651" id="r_a9671228cdf2a0382d4ecd47d91358651"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9671228cdf2a0382d4ecd47d91358651">onUpdate</a> (float deltaTime)</td></tr>
+<tr class="memdesc:a9671228cdf2a0382d4ecd47d91358651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked every frame, default behaviour does not invoke this method.  <br /></td></tr>
 <tr class="separator:a9671228cdf2a0382d4ecd47d91358651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae5709b4cde63432352d497506097fd8" id="r_aae5709b4cde63432352d497506097fd8"><td class="memItemLeft" align="right" valign="top"><a id="aae5709b4cde63432352d497506097fd8" name="aae5709b4cde63432352d497506097fd8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onExit</b> ()</td></tr>
+<tr class="memitem:aae5709b4cde63432352d497506097fd8" id="r_aae5709b4cde63432352d497506097fd8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae5709b4cde63432352d497506097fd8">onExit</a> ()</td></tr>
+<tr class="memdesc:aae5709b4cde63432352d497506097fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when object is destroyed.  <br /></td></tr>
 <tr class="separator:aae5709b4cde63432352d497506097fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af87634ce5930b44d19dd4586ada5da65" id="r_af87634ce5930b44d19dd4586ada5da65"><td class="memItemLeft" align="right" valign="top"><a id="af87634ce5930b44d19dd4586ada5da65" name="af87634ce5930b44d19dd4586ada5da65"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>equals</b> (<a class="el" href="classmeteor_1_1_entity.html">Entity</a> *other)</td></tr>
+<tr class="memitem:af87634ce5930b44d19dd4586ada5da65" id="r_af87634ce5930b44d19dd4586ada5da65"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af87634ce5930b44d19dd4586ada5da65">equals</a> (<a class="el" href="classmeteor_1_1_entity.html">Entity</a> *other)</td></tr>
+<tr class="memdesc:af87634ce5930b44d19dd4586ada5da65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks equality between two entities.  <br /></td></tr>
 <tr class="separator:af87634ce5930b44d19dd4586ada5da65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a152e0845e69c493f0e2c14965ca88a7a" id="r_a152e0845e69c493f0e2c14965ca88a7a"><td class="memItemLeft" align="right" valign="top"><a id="a152e0845e69c493f0e2c14965ca88a7a" name="a152e0845e69c493f0e2c14965ca88a7a"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> ()</td></tr>
+<tr class="memitem:a152e0845e69c493f0e2c14965ca88a7a" id="r_a152e0845e69c493f0e2c14965ca88a7a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a152e0845e69c493f0e2c14965ca88a7a">getId</a> ()</td></tr>
 <tr class="separator:a152e0845e69c493f0e2c14965ca88a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac978ceaeb285c3425d8ecb3cf6de074a" id="r_ac978ceaeb285c3425d8ecb3cf6de074a"><td class="memItemLeft" align="right" valign="top"><a id="ac978ceaeb285c3425d8ecb3cf6de074a" name="ac978ceaeb285c3425d8ecb3cf6de074a"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
+<tr class="memitem:ac978ceaeb285c3425d8ecb3cf6de074a" id="r_ac978ceaeb285c3425d8ecb3cf6de074a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac978ceaeb285c3425d8ecb3cf6de074a">getName</a> ()</td></tr>
 <tr class="separator:ac978ceaeb285c3425d8ecb3cf6de074a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb34fed86ed12e04cf1639ff25b9169c" id="r_aeb34fed86ed12e04cf1639ff25b9169c"><td class="memItemLeft" align="right" valign="top"><a id="aeb34fed86ed12e04cf1639ff25b9169c" name="aeb34fed86ed12e04cf1639ff25b9169c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (std::string name)</td></tr>
+<tr class="memdesc:aeb34fed86ed12e04cf1639ff25b9169c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets name of entity. <br /></td></tr>
 <tr class="separator:aeb34fed86ed12e04cf1639ff25b9169c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -148,6 +153,187 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:aab779bfd9c9965b39fd4a52ad88a9e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An <a class="el" href="classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor....">Entity</a> is the base class for all data and behaviour oriented objects in meteor. This class contains properties and function used by meteor for its operation. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af87634ce5930b44d19dd4586ada5da65" name="af87634ce5930b44d19dd4586ada5da65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af87634ce5930b44d19dd4586ada5da65">&#9670;&#160;</a></span>equals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool meteor::Entity::equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmeteor_1_1_entity.html">Entity</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks equality between two entities. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>entity to check with. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a152e0845e69c493f0e2c14965ca88a7a" name="a152e0845e69c493f0e2c14965ca88a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152e0845e69c493f0e2c14965ca88a7a">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int meteor::Entity::getId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>nstance Id of entiity. </dd></dl>
+
+</div>
+</div>
+<a id="ac978ceaeb285c3425d8ecb3cf6de074a" name="ac978ceaeb285c3425d8ecb3cf6de074a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac978ceaeb285c3425d8ecb3cf6de074a">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string meteor::Entity::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Name of entity </dd></dl>
+
+</div>
+</div>
+<a id="aae5709b4cde63432352d497506097fd8" name="aae5709b4cde63432352d497506097fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5709b4cde63432352d497506097fd8">&#9670;&#160;</a></span>onExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void meteor::Entity::onExit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Invoked when object is destroyed. </p>
+
+<p>Reimplemented in <a class="el" href="classmeteor_1_1_spatial_entity.html#a3739d0dee8be778b40f7839d0d8fd4a7">meteor::SpatialEntity</a>, <a class="el" href="classmeteor_1_1_scene.html#a23d86c244ea18a6dd1de417a4feaf76e">meteor::Scene</a>, and <a class="el" href="classmeteor_1_1_sprite2_d.html#a4b008216b9eb80d94a2a20829c93122c">meteor::Sprite2D</a>.</p>
+
+</div>
+</div>
+<a id="a471604ad83e2ba759346168eb81bb47f" name="a471604ad83e2ba759346168eb81bb47f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a471604ad83e2ba759346168eb81bb47f">&#9670;&#160;</a></span>onStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void meteor::Entity::onStart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Invoked when object is instantiated. </p>
+
+<p>Reimplemented in <a class="el" href="classmeteor_1_1_spatial_entity.html#a9b0ecd203a8f5149217d167e5f1dbede">meteor::SpatialEntity</a>, and <a class="el" href="classmeteor_1_1_scene.html#a420327c9adaeddfb05140c4e7f4e82e4">meteor::Scene</a>.</p>
+
+</div>
+</div>
+<a id="a9671228cdf2a0382d4ecd47d91358651" name="a9671228cdf2a0382d4ecd47d91358651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9671228cdf2a0382d4ecd47d91358651">&#9670;&#160;</a></span>onUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void meteor::Entity::onUpdate </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deltaTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Invoked every frame, default behaviour does not invoke this method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>time difference between last and last-to-last frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classmeteor_1_1_spatial_entity.html#a173604842ff60f4501582caf70356db7">meteor::SpatialEntity</a>, <a class="el" href="classmeteor_1_1_scene.html#a10ca8bff9f3944d9ff210c40d0668308">meteor::Scene</a>, <a class="el" href="classmeteor_1_1_animation.html#a5ce91871665edd558651675c051943d2">meteor::Animation</a>, and <a class="el" href="classmeteor_1_1_sprite2_d.html#a1335c331d1f6951346ce8b446b1d94b1">meteor::Sprite2D</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Github/Meteor2D/Meteor2D/Engine/include/entities/<a class="el" href="entity_8h_source.html">entity.h</a></li>
 </ul>

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::SceneManager Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,29 +100,42 @@ $(function(){initNavTree('classmeteor_1_1_scene_manager.html',''); initResizable
   <div class="headertitle"><div class="title">meteor::SceneManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages <a class="el" href="classmeteor_1_1_scene.html" title="A scene holds a collection of spatial entity for a specific level.">Scene</a> loads and unloads.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="scenemanager_8h_source.html">scenemanager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a04266f9f40aad7f9f26631bbf3431f9c" id="r_a04266f9f40aad7f9f26631bbf3431f9c"><td class="memItemLeft" align="right" valign="top"><a id="a04266f9f40aad7f9f26631bbf3431f9c" name="a04266f9f40aad7f9f26631bbf3431f9c"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>initialise</b> ()</td></tr>
+<tr class="memdesc:a04266f9f40aad7f9f26631bbf3431f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises the <a class="el" href="classmeteor_1_1_scene_manager.html" title="Manages Scene loads and unloads.">SceneManager</a>. <br /></td></tr>
 <tr class="separator:a04266f9f40aad7f9f26631bbf3431f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae73a0a22ea5e9b7c08d15788282f079b" id="r_ae73a0a22ea5e9b7c08d15788282f079b"><td class="memItemLeft" align="right" valign="top"><a id="ae73a0a22ea5e9b7c08d15788282f079b" name="ae73a0a22ea5e9b7c08d15788282f079b"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadEmptyScene</b> ()</td></tr>
+<tr class="memdesc:ae73a0a22ea5e9b7c08d15788282f079b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads an empty scene. <br /></td></tr>
 <tr class="separator:ae73a0a22ea5e9b7c08d15788282f079b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15c91b0e0eed1eb4243be13c42bd90ca" id="r_a15c91b0e0eed1eb4243be13c42bd90ca"><td class="memItemLeft" align="right" valign="top"><a id="a15c91b0e0eed1eb4243be13c42bd90ca" name="a15c91b0e0eed1eb4243be13c42bd90ca"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadScene</b> (std::string path)</td></tr>
+<tr class="memdesc:a15c91b0e0eed1eb4243be13c42bd90ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a scene from an scene definition file. <br /></td></tr>
 <tr class="separator:a15c91b0e0eed1eb4243be13c42bd90ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0c80dc855b3860891d5e8f2e575d4e9" id="r_ae0c80dc855b3860891d5e8f2e575d4e9"><td class="memItemLeft" align="right" valign="top"><a id="ae0c80dc855b3860891d5e8f2e575d4e9" name="ae0c80dc855b3860891d5e8f2e575d4e9"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>closeActiveScene</b> ()</td></tr>
+<tr class="memdesc:ae0c80dc855b3860891d5e8f2e575d4e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the current active scene. <br /></td></tr>
 <tr class="separator:ae0c80dc855b3860891d5e8f2e575d4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa510f8c358a1d4b06f971daea6d80bf" id="r_aaa510f8c358a1d4b06f971daea6d80bf"><td class="memItemLeft" align="right" valign="top"><a id="aaa510f8c358a1d4b06f971daea6d80bf" name="aaa510f8c358a1d4b06f971daea6d80bf"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>updateScene</b> (float deltaTime)</td></tr>
+<tr class="memdesc:aaa510f8c358a1d4b06f971daea6d80bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates current active scene. <br /></td></tr>
 <tr class="separator:aaa510f8c358a1d4b06f971daea6d80bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2575e1baa30ec1e800a7e51aa815bb2d" id="r_a2575e1baa30ec1e800a7e51aa815bb2d"><td class="memItemLeft" align="right" valign="top"><a id="a2575e1baa30ec1e800a7e51aa815bb2d" name="a2575e1baa30ec1e800a7e51aa815bb2d"></a>
 static <a class="el" href="classmeteor_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getActiveScene</b> ()</td></tr>
+<tr class="memdesc:a2575e1baa30ec1e800a7e51aa815bb2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns current active scene. <br /></td></tr>
 <tr class="separator:a2575e1baa30ec1e800a7e51aa815bb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages <a class="el" href="classmeteor_1_1_scene.html" title="A scene holds a collection of spatial entity for a specific level.">Scene</a> loads and unloads. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Github/Meteor2D/Meteor2D/Engine/include/scenemanagement/<a class="el" href="scenemanager_8h_source.html">scenemanager.h</a></li>
 </ul>
 </div><!-- contents -->

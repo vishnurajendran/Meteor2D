@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::Scene Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,52 +102,67 @@ $(function(){initNavTree('classmeteor_1_1_scene.html',''); initResizable(); });
   <div class="headertitle"><div class="title">meteor::Scene Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A scene holds a collection of spatial entity for a specific level.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="scene_8h_source.html">scene.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for meteor::Scene:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classmeteor_1_1_scene.png" usemap="#meteor::Scene_map" alt=""/>
   <map id="meteor::Scene_map" name="meteor::Scene_map">
-<area href="classmeteor_1_1_entity.html" alt="meteor::Entity" shape="rect" coords="0,0,92,24"/>
+<area href="classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="meteor::Entity" shape="rect" coords="0,0,92,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a6476b94b6ae5719cf0bf79d633cdeec6" id="r_a6476b94b6ae5719cf0bf79d633cdeec6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6476b94b6ae5719cf0bf79d633cdeec6">Scene</a> ()</td></tr>
+<tr class="memdesc:a6476b94b6ae5719cf0bf79d633cdeec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:a6476b94b6ae5719cf0bf79d633cdeec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a420327c9adaeddfb05140c4e7f4e82e4" id="r_a420327c9adaeddfb05140c4e7f4e82e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a420327c9adaeddfb05140c4e7f4e82e4">onStart</a> ()</td></tr>
+<tr class="memdesc:a420327c9adaeddfb05140c4e7f4e82e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when scene loads.  <br /></td></tr>
 <tr class="separator:a420327c9adaeddfb05140c4e7f4e82e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10ca8bff9f3944d9ff210c40d0668308" id="r_a10ca8bff9f3944d9ff210c40d0668308"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10ca8bff9f3944d9ff210c40d0668308">onUpdate</a> (float deltaTime)</td></tr>
+<tr class="memdesc:a10ca8bff9f3944d9ff210c40d0668308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked once per frame.  <br /></td></tr>
 <tr class="separator:a10ca8bff9f3944d9ff210c40d0668308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23d86c244ea18a6dd1de417a4feaf76e" id="r_a23d86c244ea18a6dd1de417a4feaf76e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23d86c244ea18a6dd1de417a4feaf76e">onExit</a> ()</td></tr>
+<tr class="memdesc:a23d86c244ea18a6dd1de417a4feaf76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked during scene unload.  <br /></td></tr>
 <tr class="separator:a23d86c244ea18a6dd1de417a4feaf76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ee9b629246f669c733683dd9db9a8b2" id="r_a7ee9b629246f669c733683dd9db9a8b2"><td class="memItemLeft" align="right" valign="top"><a id="a7ee9b629246f669c733683dd9db9a8b2" name="a7ee9b629246f669c733683dd9db9a8b2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addToRoot</b> (<a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *entity)</td></tr>
+<tr class="memdesc:a7ee9b629246f669c733683dd9db9a8b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classmeteor_1_1_spatial_entity.html" title="Spatial Entity is the base entity for all types present in scene. This entity keeps track of spatial ...">SpatialEntity</a> to the scene root. <br /></td></tr>
 <tr class="separator:a7ee9b629246f669c733683dd9db9a8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96d23aa705f9a3b33fac9e2362267bd8" id="r_a96d23aa705f9a3b33fac9e2362267bd8"><td class="memItemLeft" align="right" valign="top"><a id="a96d23aa705f9a3b33fac9e2362267bd8" name="a96d23aa705f9a3b33fac9e2362267bd8"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getRootSize</b> ()</td></tr>
+<tr class="memdesc:a96d23aa705f9a3b33fac9e2362267bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns size of root. <br /></td></tr>
 <tr class="separator:a96d23aa705f9a3b33fac9e2362267bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae60451e4fffa0582c86a5e2520a0296" id="r_aae60451e4fffa0582c86a5e2520a0296"><td class="memItemLeft" align="right" valign="top"><a id="aae60451e4fffa0582c86a5e2520a0296" name="aae60451e4fffa0582c86a5e2520a0296"></a>
 std::vector&lt; <a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>getRootEntities</b> ()</td></tr>
+<tr class="memdesc:aae60451e4fffa0582c86a5e2520a0296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a list of root entities. <br /></td></tr>
 <tr class="separator:aae60451e4fffa0582c86a5e2520a0296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4ce38de75c3a27a6d3bb763d899bb32" id="r_ab4ce38de75c3a27a6d3bb763d899bb32"><td class="memItemLeft" align="right" valign="top"><a id="ab4ce38de75c3a27a6d3bb763d899bb32" name="ab4ce38de75c3a27a6d3bb763d899bb32"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>tryParse</b> (pugi::xml_document *doc)</td></tr>
+<tr class="memdesc:ab4ce38de75c3a27a6d3bb763d899bb32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to parse and load a scene state. <br /></td></tr>
 <tr class="separator:ab4ce38de75c3a27a6d3bb763d899bb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3937fa997dcbe637246a9088496c902c" id="r_a3937fa997dcbe637246a9088496c902c"><td class="memTemplParams" colspan="2"><a id="a3937fa997dcbe637246a9088496c902c" name="a3937fa997dcbe637246a9088496c902c"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a3937fa997dcbe637246a9088496c902c"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>find</b> (std::string name)</td></tr>
+<tr class="memdesc:a3937fa997dcbe637246a9088496c902c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a Spatial <a class="el" href="classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor....">Entity</a> within this scene. <br /></td></tr>
 <tr class="separator:a3937fa997dcbe637246a9088496c902c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmeteor_1_1_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classmeteor_1_1_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmeteor_1_1_entity.html">meteor::Entity</a></td></tr>
-<tr class="memitem:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity" id="r_af87634ce5930b44d19dd4586ada5da65"><td class="memItemLeft" align="right" valign="top">
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>equals</b> (<a class="el" href="classmeteor_1_1_entity.html">Entity</a> *other)</td></tr>
+<tr class="memitem:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity" id="r_af87634ce5930b44d19dd4586ada5da65"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#af87634ce5930b44d19dd4586ada5da65">equals</a> (<a class="el" href="classmeteor_1_1_entity.html">Entity</a> *other)</td></tr>
+<tr class="memdesc:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks equality between two entities.  <br /></td></tr>
 <tr class="separator:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a152e0845e69c493f0e2c14965ca88a7a inherit pub_methods_classmeteor_1_1_entity" id="r_a152e0845e69c493f0e2c14965ca88a7a"><td class="memItemLeft" align="right" valign="top">
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> ()</td></tr>
+<tr class="memitem:a152e0845e69c493f0e2c14965ca88a7a inherit pub_methods_classmeteor_1_1_entity" id="r_a152e0845e69c493f0e2c14965ca88a7a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#a152e0845e69c493f0e2c14965ca88a7a">getId</a> ()</td></tr>
 <tr class="separator:a152e0845e69c493f0e2c14965ca88a7a inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac978ceaeb285c3425d8ecb3cf6de074a inherit pub_methods_classmeteor_1_1_entity" id="r_ac978ceaeb285c3425d8ecb3cf6de074a"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
+<tr class="memitem:ac978ceaeb285c3425d8ecb3cf6de074a inherit pub_methods_classmeteor_1_1_entity" id="r_ac978ceaeb285c3425d8ecb3cf6de074a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#ac978ceaeb285c3425d8ecb3cf6de074a">getName</a> ()</td></tr>
 <tr class="separator:ac978ceaeb285c3425d8ecb3cf6de074a inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb34fed86ed12e04cf1639ff25b9169c inherit pub_methods_classmeteor_1_1_entity" id="r_aeb34fed86ed12e04cf1639ff25b9169c"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (std::string name)</td></tr>
+<tr class="memdesc:aeb34fed86ed12e04cf1639ff25b9169c inherit pub_methods_classmeteor_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets name of entity. <br /></td></tr>
 <tr class="separator:aeb34fed86ed12e04cf1639ff25b9169c inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -171,6 +187,34 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:aab779bfd9c9965b39fd4a52ad88a9e9b inherit pro_attribs_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A scene holds a collection of spatial entity for a specific level. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6476b94b6ae5719cf0bf79d633cdeec6" name="a6476b94b6ae5719cf0bf79d633cdeec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6476b94b6ae5719cf0bf79d633cdeec6">&#9670;&#160;</a></span>Scene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">meteor::Scene::Scene </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a23d86c244ea18a6dd1de417a4feaf76e" name="a23d86c244ea18a6dd1de417a4feaf76e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23d86c244ea18a6dd1de417a4feaf76e">&#9670;&#160;</a></span>onExit()</h2>
@@ -195,7 +239,9 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html">meteor::Entity</a>.</p>
+<p>Invoked during scene unload. </p>
+
+<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html#aae5709b4cde63432352d497506097fd8">meteor::Entity</a>.</p>
 
 </div>
 </div>
@@ -222,7 +268,9 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html">meteor::Entity</a>.</p>
+<p>Invoked when scene loads. </p>
+
+<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html#a471604ad83e2ba759346168eb81bb47f">meteor::Entity</a>.</p>
 
 </div>
 </div>
@@ -249,7 +297,9 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html">meteor::Entity</a>.</p>
+<p>Invoked once per frame. </p>
+
+<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html#a9671228cdf2a0382d4ecd47d91358651">meteor::Entity</a>.</p>
 
 </div>
 </div>

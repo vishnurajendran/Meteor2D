@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::Application Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,30 +100,127 @@ $(function(){initNavTree('classmeteor_1_1_application.html',''); initResizable()
   <div class="headertitle"><div class="title">meteor::Application Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classmeteor_1_1_application.html" title="Application acts as the entry-point to the game.">Application</a> acts as the entry-point to the game.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_application_8h_source.html">Application.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af27504cce8213833f6d403e3a50fc2e4" id="r_af27504cce8213833f6d403e3a50fc2e4"><td class="memItemLeft" align="right" valign="top"><a id="af27504cce8213833f6d403e3a50fc2e4" name="af27504cce8213833f6d403e3a50fc2e4"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()=0</td></tr>
+<tr class="memitem:af27504cce8213833f6d403e3a50fc2e4" id="r_af27504cce8213833f6d403e3a50fc2e4"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af27504cce8213833f6d403e3a50fc2e4">getName</a> ()=0</td></tr>
+<tr class="memdesc:af27504cce8213833f6d403e3a50fc2e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets name of application.  <br /></td></tr>
 <tr class="separator:af27504cce8213833f6d403e3a50fc2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c9736301cae1ba00f1ff2e215d3c6ef" id="r_a9c9736301cae1ba00f1ff2e215d3c6ef"><td class="memItemLeft" align="right" valign="top"><a id="a9c9736301cae1ba00f1ff2e215d3c6ef" name="a9c9736301cae1ba00f1ff2e215d3c6ef"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onStart</b> ()=0</td></tr>
+<tr class="memdesc:a9c9736301cae1ba00f1ff2e215d3c6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when application starts. <br /></td></tr>
 <tr class="separator:a9c9736301cae1ba00f1ff2e215d3c6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91907f7d0b0dab4036c9501cba526435" id="r_a91907f7d0b0dab4036c9501cba526435"><td class="memItemLeft" align="right" valign="top"><a id="a91907f7d0b0dab4036c9501cba526435" name="a91907f7d0b0dab4036c9501cba526435"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onUpdate</b> (float deltaTime)=0</td></tr>
+<tr class="memitem:a91907f7d0b0dab4036c9501cba526435" id="r_a91907f7d0b0dab4036c9501cba526435"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91907f7d0b0dab4036c9501cba526435">onUpdate</a> (float deltaTime)=0</td></tr>
+<tr class="memdesc:a91907f7d0b0dab4036c9501cba526435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked once per frame.  <br /></td></tr>
 <tr class="separator:a91907f7d0b0dab4036c9501cba526435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe598a2cf21ebe3c9b6d15e35cf52b31" id="r_abe598a2cf21ebe3c9b6d15e35cf52b31"><td class="memItemLeft" align="right" valign="top"><a id="abe598a2cf21ebe3c9b6d15e35cf52b31" name="abe598a2cf21ebe3c9b6d15e35cf52b31"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onQuit</b> ()=0</td></tr>
+<tr class="memdesc:abe598a2cf21ebe3c9b6d15e35cf52b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when application quits. <br /></td></tr>
 <tr class="separator:abe598a2cf21ebe3c9b6d15e35cf52b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4624b89b9e317be25de454ed00693e55" id="r_a4624b89b9e317be25de454ed00693e55"><td class="memItemLeft" align="right" valign="top"><a id="a4624b89b9e317be25de454ed00693e55" name="a4624b89b9e317be25de454ed00693e55"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasQuit</b> ()</td></tr>
+<tr class="memitem:a4624b89b9e317be25de454ed00693e55" id="r_a4624b89b9e317be25de454ed00693e55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4624b89b9e317be25de454ed00693e55">hasQuit</a> ()</td></tr>
 <tr class="separator:a4624b89b9e317be25de454ed00693e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21829f8e15a4504361c679be43d5f04f" id="r_a21829f8e15a4504361c679be43d5f04f"><td class="memItemLeft" align="right" valign="top"><a id="a21829f8e15a4504361c679be43d5f04f" name="a21829f8e15a4504361c679be43d5f04f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>quit</b> ()</td></tr>
+<tr class="memdesc:a21829f8e15a4504361c679be43d5f04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quits the application. <br /></td></tr>
 <tr class="separator:a21829f8e15a4504361c679be43d5f04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classmeteor_1_1_application.html" title="Application acts as the entry-point to the game.">Application</a> acts as the entry-point to the game. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af27504cce8213833f6d403e3a50fc2e4" name="af27504cce8213833f6d403e3a50fc2e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af27504cce8213833f6d403e3a50fc2e4">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string meteor::Application::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets name of application. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of application as string. </dd></dl>
+
+</div>
+</div>
+<a id="a4624b89b9e317be25de454ed00693e55" name="a4624b89b9e317be25de454ed00693e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4624b89b9e317be25de454ed00693e55">&#9670;&#160;</a></span>hasQuit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool meteor::Application::hasQuit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if application has exited. </dd></dl>
+
+</div>
+</div>
+<a id="a91907f7d0b0dab4036c9501cba526435" name="a91907f7d0b0dab4036c9501cba526435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91907f7d0b0dab4036c9501cba526435">&#9670;&#160;</a></span>onUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void meteor::Application::onUpdate </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deltaTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Invoked once per frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>time difference last and last-to-last frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>D:/Github/Meteor2D/Meteor2D/Engine/include/application/<a class="el" href="application_8h_source.html">application.h</a></li>
+<li>D:/Github/Meteor2D/Meteor2D/Engine/include/application/<a class="el" href="_application_8h_source.html">Application.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

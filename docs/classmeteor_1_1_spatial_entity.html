@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::SpatialEntity Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,88 +102,92 @@ $(function(){initNavTree('classmeteor_1_1_spatial_entity.html',''); initResizabl
   <div class="headertitle"><div class="title">meteor::SpatialEntity Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Spatial <a class="el" href="classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor....">Entity</a> is the base entity for all types present in scene. This entity keeps track of spatial data within a scene. new instance when not given a parent, will sit at the root of the active scene.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="spatial_8h_source.html">spatial.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for meteor::SpatialEntity:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classmeteor_1_1_spatial_entity.png" usemap="#meteor::SpatialEntity_map" alt=""/>
   <map id="meteor::SpatialEntity_map" name="meteor::SpatialEntity_map">
-<area href="classmeteor_1_1_entity.html" alt="meteor::Entity" shape="rect" coords="135,0,260,24"/>
-<area href="classmeteor_1_1_animation.html" alt="meteor::Animation" shape="rect" coords="0,112,125,136"/>
-<area href="classmeteor_1_1_camera.html" alt="meteor::Camera" shape="rect" coords="135,112,260,136"/>
-<area href="classmeteor_1_1_sprite2_d.html" alt="meteor::Sprite2D" shape="rect" coords="270,112,395,136"/>
+<area href="classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="meteor::Entity" shape="rect" coords="135,0,260,24"/>
+<area href="classmeteor_1_1_animation.html" title="Animation entity provides sprite - sheet based animation system to meteor." alt="meteor::Animation" shape="rect" coords="0,112,125,136"/>
+<area href="classmeteor_1_1_camera.html" title="Camera entity uses provides camera like functionlity to manage world view." alt="meteor::Camera" shape="rect" coords="135,112,260,136"/>
+<area href="classmeteor_1_1_sprite2_d.html" title="This entity enables sprite rendering in meteor." alt="meteor::Sprite2D" shape="rect" coords="270,112,395,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a78f0238eb72a61a5f56de027a4c36f6d" id="r_a78f0238eb72a61a5f56de027a4c36f6d"><td class="memItemLeft" align="right" valign="top"><a id="a78f0238eb72a61a5f56de027a4c36f6d" name="a78f0238eb72a61a5f56de027a4c36f6d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SpatialEntity</b> (<a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *parent)</td></tr>
+<tr class="memitem:a077bd7eaf2c8cf7165bed472dd19f740" id="r_a077bd7eaf2c8cf7165bed472dd19f740"><td class="memItemLeft" align="right" valign="top"><a id="a077bd7eaf2c8cf7165bed472dd19f740" name="a077bd7eaf2c8cf7165bed472dd19f740"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SpatialEntity</b> ()</td></tr>
+<tr class="memdesc:a077bd7eaf2c8cf7165bed472dd19f740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor, instantiates at root level. <br /></td></tr>
+<tr class="separator:a077bd7eaf2c8cf7165bed472dd19f740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f0238eb72a61a5f56de027a4c36f6d" id="r_a78f0238eb72a61a5f56de027a4c36f6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78f0238eb72a61a5f56de027a4c36f6d">SpatialEntity</a> (<a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *parent)</td></tr>
+<tr class="memdesc:a78f0238eb72a61a5f56de027a4c36f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterised constructor.  <br /></td></tr>
 <tr class="separator:a78f0238eb72a61a5f56de027a4c36f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9bf4fe64d8e3acad10b63cc188b1f41" id="r_ad9bf4fe64d8e3acad10b63cc188b1f41"><td class="memItemLeft" align="right" valign="top"><a id="ad9bf4fe64d8e3acad10b63cc188b1f41" name="ad9bf4fe64d8e3acad10b63cc188b1f41"></a>
-<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> ()</td></tr>
+<tr class="memitem:ad9bf4fe64d8e3acad10b63cc188b1f41" id="r_ad9bf4fe64d8e3acad10b63cc188b1f41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9bf4fe64d8e3acad10b63cc188b1f41">getPosition</a> ()</td></tr>
 <tr class="separator:ad9bf4fe64d8e3acad10b63cc188b1f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a162164d122f2321b9715e3f36e61e132" id="r_a162164d122f2321b9715e3f36e61e132"><td class="memItemLeft" align="right" valign="top"><a id="a162164d122f2321b9715e3f36e61e132" name="a162164d122f2321b9715e3f36e61e132"></a>
-<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getLocalPosition</b> ()</td></tr>
+<tr class="memitem:a162164d122f2321b9715e3f36e61e132" id="r_a162164d122f2321b9715e3f36e61e132"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a162164d122f2321b9715e3f36e61e132">getLocalPosition</a> ()</td></tr>
 <tr class="separator:a162164d122f2321b9715e3f36e61e132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab68ff4115b0aad022b35a1eac6e42a09" id="r_ab68ff4115b0aad022b35a1eac6e42a09"><td class="memItemLeft" align="right" valign="top"><a id="ab68ff4115b0aad022b35a1eac6e42a09" name="ab68ff4115b0aad022b35a1eac6e42a09"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLocalPosition</b> (float x, float y)</td></tr>
+<tr class="memitem:ab68ff4115b0aad022b35a1eac6e42a09" id="r_ab68ff4115b0aad022b35a1eac6e42a09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab68ff4115b0aad022b35a1eac6e42a09">setLocalPosition</a> (float x, float y)</td></tr>
+<tr class="memdesc:ab68ff4115b0aad022b35a1eac6e42a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets local position of the entity.  <br /></td></tr>
 <tr class="separator:ab68ff4115b0aad022b35a1eac6e42a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7956d84a06fdf1e0edf318a4d66bb039" id="r_a7956d84a06fdf1e0edf318a4d66bb039"><td class="memItemLeft" align="right" valign="top"><a id="a7956d84a06fdf1e0edf318a4d66bb039" name="a7956d84a06fdf1e0edf318a4d66bb039"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLocalPosition</b> (<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> pos)</td></tr>
+<tr class="memitem:a7956d84a06fdf1e0edf318a4d66bb039" id="r_a7956d84a06fdf1e0edf318a4d66bb039"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7956d84a06fdf1e0edf318a4d66bb039">setLocalPosition</a> (<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> pos)</td></tr>
+<tr class="memdesc:a7956d84a06fdf1e0edf318a4d66bb039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets local position of the entity.  <br /></td></tr>
 <tr class="separator:a7956d84a06fdf1e0edf318a4d66bb039"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf13b565646ae8c323dbbdb6992c662d" id="r_adf13b565646ae8c323dbbdb6992c662d"><td class="memItemLeft" align="right" valign="top"><a id="adf13b565646ae8c323dbbdb6992c662d" name="adf13b565646ae8c323dbbdb6992c662d"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getRotation</b> ()</td></tr>
+<tr class="memitem:adf13b565646ae8c323dbbdb6992c662d" id="r_adf13b565646ae8c323dbbdb6992c662d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf13b565646ae8c323dbbdb6992c662d">getRotation</a> ()</td></tr>
 <tr class="separator:adf13b565646ae8c323dbbdb6992c662d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67e1209789f4281d3f721cddee32a661" id="r_a67e1209789f4281d3f721cddee32a661"><td class="memItemLeft" align="right" valign="top"><a id="a67e1209789f4281d3f721cddee32a661" name="a67e1209789f4281d3f721cddee32a661"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getLocalRotation</b> ()</td></tr>
+<tr class="memitem:a67e1209789f4281d3f721cddee32a661" id="r_a67e1209789f4281d3f721cddee32a661"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67e1209789f4281d3f721cddee32a661">getLocalRotation</a> ()</td></tr>
 <tr class="separator:a67e1209789f4281d3f721cddee32a661"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a545472254874e882d6d65e1f8b8e415f" id="r_a545472254874e882d6d65e1f8b8e415f"><td class="memItemLeft" align="right" valign="top"><a id="a545472254874e882d6d65e1f8b8e415f" name="a545472254874e882d6d65e1f8b8e415f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLocalRotation</b> (float localRotation)</td></tr>
+<tr class="memitem:a545472254874e882d6d65e1f8b8e415f" id="r_a545472254874e882d6d65e1f8b8e415f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a545472254874e882d6d65e1f8b8e415f">setLocalRotation</a> (float localRotation)</td></tr>
+<tr class="memdesc:a545472254874e882d6d65e1f8b8e415f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets local rotation of the entity in x-axis.  <br /></td></tr>
 <tr class="separator:a545472254874e882d6d65e1f8b8e415f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3fd604805b06a7df4b2ef7fe06a385e" id="r_ad3fd604805b06a7df4b2ef7fe06a385e"><td class="memItemLeft" align="right" valign="top"><a id="ad3fd604805b06a7df4b2ef7fe06a385e" name="ad3fd604805b06a7df4b2ef7fe06a385e"></a>
-<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getLocalScale</b> ()</td></tr>
+<tr class="memitem:ad3fd604805b06a7df4b2ef7fe06a385e" id="r_ad3fd604805b06a7df4b2ef7fe06a385e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3fd604805b06a7df4b2ef7fe06a385e">getLocalScale</a> ()</td></tr>
 <tr class="separator:ad3fd604805b06a7df4b2ef7fe06a385e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39f441f1e3e541cd926070c53bcaec01" id="r_a39f441f1e3e541cd926070c53bcaec01"><td class="memItemLeft" align="right" valign="top"><a id="a39f441f1e3e541cd926070c53bcaec01" name="a39f441f1e3e541cd926070c53bcaec01"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLocalScale</b> (float x, float y)</td></tr>
+<tr class="memitem:a39f441f1e3e541cd926070c53bcaec01" id="r_a39f441f1e3e541cd926070c53bcaec01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39f441f1e3e541cd926070c53bcaec01">setLocalScale</a> (float x, float y)</td></tr>
+<tr class="memdesc:a39f441f1e3e541cd926070c53bcaec01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets local scale.  <br /></td></tr>
 <tr class="separator:a39f441f1e3e541cd926070c53bcaec01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89e05e6d31daac1a1a498000b0074cde" id="r_a89e05e6d31daac1a1a498000b0074cde"><td class="memItemLeft" align="right" valign="top"><a id="a89e05e6d31daac1a1a498000b0074cde" name="a89e05e6d31daac1a1a498000b0074cde"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLocalScale</b> (<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> scale)</td></tr>
+<tr class="memitem:a89e05e6d31daac1a1a498000b0074cde" id="r_a89e05e6d31daac1a1a498000b0074cde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89e05e6d31daac1a1a498000b0074cde">setLocalScale</a> (<a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> scale)</td></tr>
+<tr class="memdesc:a89e05e6d31daac1a1a498000b0074cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Sets local scale  <br /></td></tr>
 <tr class="separator:a89e05e6d31daac1a1a498000b0074cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab496541fbd25fd6abac40c40623a931c" id="r_ab496541fbd25fd6abac40c40623a931c"><td class="memItemLeft" align="right" valign="top"><a id="ab496541fbd25fd6abac40c40623a931c" name="ab496541fbd25fd6abac40c40623a931c"></a>
-<a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getParent</b> ()</td></tr>
+<tr class="memitem:ab496541fbd25fd6abac40c40623a931c" id="r_ab496541fbd25fd6abac40c40623a931c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab496541fbd25fd6abac40c40623a931c">getParent</a> ()</td></tr>
 <tr class="separator:ab496541fbd25fd6abac40c40623a931c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0dc3787932dd1ac2b954b79dd032aa6" id="r_af0dc3787932dd1ac2b954b79dd032aa6"><td class="memItemLeft" align="right" valign="top"><a id="af0dc3787932dd1ac2b954b79dd032aa6" name="af0dc3787932dd1ac2b954b79dd032aa6"></a>
-std::vector&lt; <a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>getChildren</b> ()</td></tr>
+<tr class="memitem:af0dc3787932dd1ac2b954b79dd032aa6" id="r_af0dc3787932dd1ac2b954b79dd032aa6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0dc3787932dd1ac2b954b79dd032aa6">getChildren</a> ()</td></tr>
 <tr class="separator:af0dc3787932dd1ac2b954b79dd032aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a991b1424d875093d2f5e062380c8c228" id="r_a991b1424d875093d2f5e062380c8c228"><td class="memItemLeft" align="right" valign="top"><a id="a991b1424d875093d2f5e062380c8c228" name="a991b1424d875093d2f5e062380c8c228"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setChild</b> (<a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *entity)</td></tr>
-<tr class="separator:a991b1424d875093d2f5e062380c8c228"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3809813a6d605bef2f2837483d51e2f" id="r_ab3809813a6d605bef2f2837483d51e2f"><td class="memItemLeft" align="right" valign="top"><a id="ab3809813a6d605bef2f2837483d51e2f" name="ab3809813a6d605bef2f2837483d51e2f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removeChild</b> (<a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *entity)</td></tr>
+<tr class="memitem:a7c3bf662ab71664ce102baed9016d695" id="r_a7c3bf662ab71664ce102baed9016d695"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c3bf662ab71664ce102baed9016d695">addChild</a> (<a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *entity)</td></tr>
+<tr class="memdesc:a7c3bf662ab71664ce102baed9016d695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a child to this entity.  <br /></td></tr>
+<tr class="separator:a7c3bf662ab71664ce102baed9016d695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3809813a6d605bef2f2837483d51e2f" id="r_ab3809813a6d605bef2f2837483d51e2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3809813a6d605bef2f2837483d51e2f">removeChild</a> (<a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *entity)</td></tr>
+<tr class="memdesc:ab3809813a6d605bef2f2837483d51e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a child from this entity.  <br /></td></tr>
 <tr class="separator:ab3809813a6d605bef2f2837483d51e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acca66f0735fe67d465f3f9ce8370cddd" id="r_acca66f0735fe67d465f3f9ce8370cddd"><td class="memTemplParams" colspan="2"><a id="acca66f0735fe67d465f3f9ce8370cddd" name="acca66f0735fe67d465f3f9ce8370cddd"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:acca66f0735fe67d465f3f9ce8370cddd"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>find</b> (std::string name)</td></tr>
+<tr class="memitem:acca66f0735fe67d465f3f9ce8370cddd" id="r_acca66f0735fe67d465f3f9ce8370cddd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acca66f0735fe67d465f3f9ce8370cddd"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acca66f0735fe67d465f3f9ce8370cddd">find</a> (std::string name)</td></tr>
+<tr class="memdesc:acca66f0735fe67d465f3f9ce8370cddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively searches for a <a class="el" href="classmeteor_1_1_spatial_entity.html" title="Spatial Entity is the base entity for all types present in scene. This entity keeps track of spatial ...">SpatialEntity</a> within this sub-tree.  <br /></td></tr>
 <tr class="separator:acca66f0735fe67d465f3f9ce8370cddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b0ecd203a8f5149217d167e5f1dbede" id="r_a9b0ecd203a8f5149217d167e5f1dbede"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b0ecd203a8f5149217d167e5f1dbede">onStart</a> ()</td></tr>
+<tr class="memdesc:a9b0ecd203a8f5149217d167e5f1dbede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when object is instantiated.  <br /></td></tr>
 <tr class="separator:a9b0ecd203a8f5149217d167e5f1dbede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a173604842ff60f4501582caf70356db7" id="r_a173604842ff60f4501582caf70356db7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a173604842ff60f4501582caf70356db7">onUpdate</a> (float deltaTime)</td></tr>
+<tr class="memdesc:a173604842ff60f4501582caf70356db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked every frame, default behaviour does not invoke this method.  <br /></td></tr>
 <tr class="separator:a173604842ff60f4501582caf70356db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3739d0dee8be778b40f7839d0d8fd4a7" id="r_a3739d0dee8be778b40f7839d0d8fd4a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3739d0dee8be778b40f7839d0d8fd4a7">onExit</a> ()</td></tr>
+<tr class="memdesc:a3739d0dee8be778b40f7839d0d8fd4a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when object is destroyed.  <br /></td></tr>
 <tr class="separator:a3739d0dee8be778b40f7839d0d8fd4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmeteor_1_1_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classmeteor_1_1_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmeteor_1_1_entity.html">meteor::Entity</a></td></tr>
-<tr class="memitem:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity" id="r_af87634ce5930b44d19dd4586ada5da65"><td class="memItemLeft" align="right" valign="top">
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>equals</b> (<a class="el" href="classmeteor_1_1_entity.html">Entity</a> *other)</td></tr>
+<tr class="memitem:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity" id="r_af87634ce5930b44d19dd4586ada5da65"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#af87634ce5930b44d19dd4586ada5da65">equals</a> (<a class="el" href="classmeteor_1_1_entity.html">Entity</a> *other)</td></tr>
+<tr class="memdesc:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks equality between two entities.  <br /></td></tr>
 <tr class="separator:af87634ce5930b44d19dd4586ada5da65 inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a152e0845e69c493f0e2c14965ca88a7a inherit pub_methods_classmeteor_1_1_entity" id="r_a152e0845e69c493f0e2c14965ca88a7a"><td class="memItemLeft" align="right" valign="top">
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> ()</td></tr>
+<tr class="memitem:a152e0845e69c493f0e2c14965ca88a7a inherit pub_methods_classmeteor_1_1_entity" id="r_a152e0845e69c493f0e2c14965ca88a7a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#a152e0845e69c493f0e2c14965ca88a7a">getId</a> ()</td></tr>
 <tr class="separator:a152e0845e69c493f0e2c14965ca88a7a inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac978ceaeb285c3425d8ecb3cf6de074a inherit pub_methods_classmeteor_1_1_entity" id="r_ac978ceaeb285c3425d8ecb3cf6de074a"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
+<tr class="memitem:ac978ceaeb285c3425d8ecb3cf6de074a inherit pub_methods_classmeteor_1_1_entity" id="r_ac978ceaeb285c3425d8ecb3cf6de074a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmeteor_1_1_entity.html#ac978ceaeb285c3425d8ecb3cf6de074a">getName</a> ()</td></tr>
 <tr class="separator:ac978ceaeb285c3425d8ecb3cf6de074a inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb34fed86ed12e04cf1639ff25b9169c inherit pub_methods_classmeteor_1_1_entity" id="r_aeb34fed86ed12e04cf1639ff25b9169c"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (std::string name)</td></tr>
+<tr class="memdesc:aeb34fed86ed12e04cf1639ff25b9169c inherit pub_methods_classmeteor_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets name of entity. <br /></td></tr>
 <tr class="separator:aeb34fed86ed12e04cf1639ff25b9169c inherit pub_methods_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -231,7 +236,284 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:aab779bfd9c9965b39fd4a52ad88a9e9b inherit pro_attribs_classmeteor_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Spatial <a class="el" href="classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor....">Entity</a> is the base entity for all types present in scene. This entity keeps track of spatial data within a scene. new instance when not given a parent, will sit at the root of the active scene. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a78f0238eb72a61a5f56de027a4c36f6d" name="a78f0238eb72a61a5f56de027a4c36f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78f0238eb72a61a5f56de027a4c36f6d">&#9670;&#160;</a></span>SpatialEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">meteor::SpatialEntity::SpatialEntity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parameterised constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Parent entity for this child. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7c3bf662ab71664ce102baed9016d695" name="a7c3bf662ab71664ce102baed9016d695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c3bf662ab71664ce102baed9016d695">&#9670;&#160;</a></span>addChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::SpatialEntity::addChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *</td>          <td class="paramname"><span class="paramname"><em>entity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a child to this entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>Child to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acca66f0735fe67d465f3f9ce8370cddd" name="acca66f0735fe67d465f3f9ce8370cddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acca66f0735fe67d465f3f9ce8370cddd">&#9670;&#160;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * meteor::SpatialEntity::find </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Recursively searches for a <a class="el" href="classmeteor_1_1_spatial_entity.html" title="Spatial Entity is the base entity for all types present in scene. This entity keeps track of spatial ...">SpatialEntity</a> within this sub-tree. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>type of <a class="el" href="classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor....">Entity</a> to return, needs to be child of <a class="el" href="classmeteor_1_1_spatial_entity.html" title="Spatial Entity is the base entity for all types present in scene. This entity keeps track of spatial ...">SpatialEntity</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of entity to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to <a class="el" href="classmeteor_1_1_spatial_entity.html" title="Spatial Entity is the base entity for all types present in scene. This entity keeps track of spatial ...">SpatialEntity</a>. </dd></dl>
+
+</div>
+</div>
+<a id="af0dc3787932dd1ac2b954b79dd032aa6" name="af0dc3787932dd1ac2b954b79dd032aa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0dc3787932dd1ac2b954b79dd032aa6">&#9670;&#160;</a></span>getChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> * &gt; * meteor::SpatialEntity::getChildren </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>List of children of the entity. </dd></dl>
+
+</div>
+</div>
+<a id="a162164d122f2321b9715e3f36e61e132" name="a162164d122f2321b9715e3f36e61e132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a162164d122f2321b9715e3f36e61e132">&#9670;&#160;</a></span>getLocalPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> meteor::SpatialEntity::getLocalPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Local position of this entity. </dd></dl>
+
+</div>
+</div>
+<a id="a67e1209789f4281d3f721cddee32a661" name="a67e1209789f4281d3f721cddee32a661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e1209789f4281d3f721cddee32a661">&#9670;&#160;</a></span>getLocalRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float meteor::SpatialEntity::getLocalRotation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Local rotation of this entity in x-axis </dd></dl>
+
+</div>
+</div>
+<a id="ad3fd604805b06a7df4b2ef7fe06a385e" name="ad3fd604805b06a7df4b2ef7fe06a385e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3fd604805b06a7df4b2ef7fe06a385e">&#9670;&#160;</a></span>getLocalScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> meteor::SpatialEntity::getLocalScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Local scale of this entity </dd></dl>
+
+</div>
+</div>
+<a id="ab496541fbd25fd6abac40c40623a931c" name="ab496541fbd25fd6abac40c40623a931c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab496541fbd25fd6abac40c40623a931c">&#9670;&#160;</a></span>getParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> * meteor::SpatialEntity::getParent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Immediate parent of this entity </dd></dl>
+
+</div>
+</div>
+<a id="ad9bf4fe64d8e3acad10b63cc188b1f41" name="ad9bf4fe64d8e3acad10b63cc188b1f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9bf4fe64d8e3acad10b63cc188b1f41">&#9670;&#160;</a></span>getPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a> meteor::SpatialEntity::getPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>World position of this entity </dd></dl>
+
+</div>
+</div>
+<a id="adf13b565646ae8c323dbbdb6992c662d" name="adf13b565646ae8c323dbbdb6992c662d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf13b565646ae8c323dbbdb6992c662d">&#9670;&#160;</a></span>getRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float meteor::SpatialEntity::getRotation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>World rotation of this entity in x-axis </dd></dl>
+
+</div>
+</div>
 <a id="a3739d0dee8be778b40f7839d0d8fd4a7" name="a3739d0dee8be778b40f7839d0d8fd4a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3739d0dee8be778b40f7839d0d8fd4a7">&#9670;&#160;</a></span>onExit()</h2>
 
@@ -255,7 +537,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html">meteor::Entity</a>.</p>
+<p>Invoked when object is destroyed. </p>
+
+<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html#aae5709b4cde63432352d497506097fd8">meteor::Entity</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classmeteor_1_1_sprite2_d.html#a4b008216b9eb80d94a2a20829c93122c">meteor::Sprite2D</a>.</p>
 
 </div>
 </div>
@@ -282,7 +568,9 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html">meteor::Entity</a>.</p>
+<p>Invoked when object is instantiated. </p>
+
+<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html#a471604ad83e2ba759346168eb81bb47f">meteor::Entity</a>.</p>
 
 </div>
 </div>
@@ -309,7 +597,217 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html">meteor::Entity</a>.</p>
+<p>Invoked every frame, default behaviour does not invoke this method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>time difference between last and last-to-last frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classmeteor_1_1_entity.html#a9671228cdf2a0382d4ecd47d91358651">meteor::Entity</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classmeteor_1_1_animation.html#a5ce91871665edd558651675c051943d2">meteor::Animation</a>, and <a class="el" href="classmeteor_1_1_sprite2_d.html#a1335c331d1f6951346ce8b446b1d94b1">meteor::Sprite2D</a>.</p>
+
+</div>
+</div>
+<a id="ab3809813a6d605bef2f2837483d51e2f" name="ab3809813a6d605bef2f2837483d51e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3809813a6d605bef2f2837483d51e2f">&#9670;&#160;</a></span>removeChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::SpatialEntity::removeChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmeteor_1_1_spatial_entity.html">SpatialEntity</a> *</td>          <td class="paramname"><span class="paramname"><em>entity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a child from this entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>Child to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab68ff4115b0aad022b35a1eac6e42a09" name="ab68ff4115b0aad022b35a1eac6e42a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab68ff4115b0aad022b35a1eac6e42a09">&#9670;&#160;</a></span>setLocalPosition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::SpatialEntity::setLocalPosition </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets local position of the entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-component of the position </td></tr>
+    <tr><td class="paramname">y</td><td>y-component of the position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7956d84a06fdf1e0edf318a4d66bb039" name="a7956d84a06fdf1e0edf318a4d66bb039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7956d84a06fdf1e0edf318a4d66bb039">&#9670;&#160;</a></span>setLocalPosition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::SpatialEntity::setLocalPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a></td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets local position of the entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>position as a <a class="el" href="structmeteor_1_1_vector2.html" title="A structure representing a 2D Vector.">Vector2</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a545472254874e882d6d65e1f8b8e415f" name="a545472254874e882d6d65e1f8b8e415f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545472254874e882d6d65e1f8b8e415f">&#9670;&#160;</a></span>setLocalRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::SpatialEntity::setLocalRotation </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>localRotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets local rotation of the entity in x-axis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">localRotation</td><td>rotation in x-axis (0-360); </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a39f441f1e3e541cd926070c53bcaec01" name="a39f441f1e3e541cd926070c53bcaec01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f441f1e3e541cd926070c53bcaec01">&#9670;&#160;</a></span>setLocalScale() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::SpatialEntity::setLocalScale </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets local scale. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-component of the scale </td></tr>
+    <tr><td class="paramname">y</td><td>y-component of the scale </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a89e05e6d31daac1a1a498000b0074cde" name="a89e05e6d31daac1a1a498000b0074cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e05e6d31daac1a1a498000b0074cde">&#9670;&#160;</a></span>setLocalScale() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void meteor::SpatialEntity::setLocalScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmeteor_1_1_vector2.html">Vector2</a></td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>brief Sets local scale </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>Scale as a <a class="el" href="structmeteor_1_1_vector2.html" title="A structure representing a 2D Vector.">Vector2</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

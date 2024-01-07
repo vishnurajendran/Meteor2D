@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Meteor2D: meteor::RenderCommand Class Reference</title>
+<link rel="icon" href="meteor64.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -100,13 +101,18 @@ $(function(){initNavTree('classmeteor_1_1_render_command.html',''); initResizabl
   <div class="headertitle"><div class="title">meteor::RenderCommand Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classmeteor_1_1_render_command.html" title="RenderCommand are responsible for rendering visuals to the screen.">RenderCommand</a> are responsible for rendering visuals to the screen.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="rendercommand_8h_source.html">rendercommand.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for meteor::RenderCommand:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classmeteor_1_1_render_command.png" usemap="#meteor::RenderCommand_map" alt=""/>
   <map id="meteor::RenderCommand_map" name="meteor::RenderCommand_map">
-<area href="classmeteor_1_1_tex_render_cmd.html" alt="meteor::TexRenderCmd" shape="rect" coords="0,56,152,80"/>
+<area href="classmeteor_1_1_tex_render_cmd.html" title="This a RenderCommand that draws an image on to the screen." alt="meteor::TexRenderCmd" shape="rect" coords="0,56,152,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -124,11 +130,9 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>getSortingOrder</b
 <tr class="memitem:a4f93ad93d58c6ce4580c83e5b1265bd9" id="r_a4f93ad93d58c6ce4580c83e5b1265bd9"><td class="memItemLeft" align="right" valign="top"><a id="a4f93ad93d58c6ce4580c83e5b1265bd9" name="a4f93ad93d58c6ce4580c83e5b1265bd9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setRenderCore</b> (SDL_Renderer *rendererCore)</td></tr>
 <tr class="separator:a4f93ad93d58c6ce4580c83e5b1265bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2556a82a072e245911cc2d8d15091bf" id="r_ae2556a82a072e245911cc2d8d15091bf"><td class="memItemLeft" align="right" valign="top"><a id="ae2556a82a072e245911cc2d8d15091bf" name="ae2556a82a072e245911cc2d8d15091bf"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> ()</td></tr>
+<tr class="memitem:ae2556a82a072e245911cc2d8d15091bf" id="r_ae2556a82a072e245911cc2d8d15091bf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2556a82a072e245911cc2d8d15091bf">render</a> ()</td></tr>
 <tr class="separator:ae2556a82a072e245911cc2d8d15091bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe98b7199333e231d7a6a6048008aa21" id="r_afe98b7199333e231d7a6a6048008aa21"><td class="memItemLeft" align="right" valign="top"><a id="afe98b7199333e231d7a6a6048008aa21" name="afe98b7199333e231d7a6a6048008aa21"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> ()</td></tr>
+<tr class="memitem:afe98b7199333e231d7a6a6048008aa21" id="r_afe98b7199333e231d7a6a6048008aa21"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe98b7199333e231d7a6a6048008aa21">isValid</a> ()</td></tr>
 <tr class="separator:afe98b7199333e231d7a6a6048008aa21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -137,6 +141,63 @@ Protected Attributes</h2></td></tr>
 SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><b>renderCore</b> = NULL</td></tr>
 <tr class="separator:ad778ac1edf2b98538d03a9b135853f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classmeteor_1_1_render_command.html" title="RenderCommand are responsible for rendering visuals to the screen.">RenderCommand</a> are responsible for rendering visuals to the screen. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afe98b7199333e231d7a6a6048008aa21" name="afe98b7199333e231d7a6a6048008aa21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe98b7199333e231d7a6a6048008aa21">&#9670;&#160;</a></span>isValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool meteor::RenderCommand::isValid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classmeteor_1_1_tex_render_cmd.html#ae432d86d1a64bd04ab5df26852774c70">meteor::TexRenderCmd</a>.</p>
+
+</div>
+</div>
+<a id="ae2556a82a072e245911cc2d8d15091bf" name="ae2556a82a072e245911cc2d8d15091bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2556a82a072e245911cc2d8d15091bf">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void meteor::RenderCommand::render </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classmeteor_1_1_tex_render_cmd.html#a7aceb24bb8e69661a97250948b3cbbad">meteor::TexRenderCmd</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Github/Meteor2D/Meteor2D/Engine/include/rendering/<a class="el" href="rendercommand_8h_source.html">rendercommand.h</a></li>
 </ul>
