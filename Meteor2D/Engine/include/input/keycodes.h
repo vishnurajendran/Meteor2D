@@ -148,7 +148,7 @@ namespace meteor {
         KEYCODE_KP_EQUALSAS400 = 134,
 
         KEYCODE_INTERNATIONAL1 = 135,
-                                                                                                                                                                                                                                                                         footnotes in USB doc */
+
         KEYCODE_INTERNATIONAL2 = 136,
         KEYCODE_INTERNATIONAL3 = 137,
         KEYCODE_INTERNATIONAL4 = 138,
@@ -260,7 +260,7 @@ namespace meteor {
         KEYCODE_BRIGHTNESSDOWN = 275,
         KEYCODE_BRIGHTNESSUP = 276,
         KEYCODE_DISPLAYSWITCH = 277,
-                                                                                                                                                                                                                                                                                                                                               switch, video mode switch */
+
         KEYCODE_KBDILLUMTOGGLE = 278,
         KEYCODE_KBDILLUMDOWN = 279,
         KEYCODE_KBDILLUMUP = 280,

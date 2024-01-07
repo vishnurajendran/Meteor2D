@@ -32,11 +32,11 @@ namespace meteor {
 		if (parent == NULL)
 			makeRootEntity(this);
 		else
-			parent->setChild(this);
+			parent->addChild(this);
 		onStart();
 	}
 
-	void SpatialEntity::setChild(SpatialEntity* entity) {
+	void SpatialEntity::addChild(SpatialEntity* entity) {
 		std::vector<SpatialEntity*>::iterator it = std::find(children->begin(), children->end(), entity);
 		if (it != children->end())
 			return;
