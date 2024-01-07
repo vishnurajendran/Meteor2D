@@ -6,6 +6,9 @@
 #include <sceneserialization/scene_entity_type_deserializer.h>
 
 namespace meteor {
+	/**
+	 * @brief A Class that maintains mapping between Xml node types and their respective Deserializers.
+	*/
 	class SceneEntityTypeMap {
 	public:
 		static void registerDeserializer(std::string type, SceneEntityTypeDeserializer* deserializer);

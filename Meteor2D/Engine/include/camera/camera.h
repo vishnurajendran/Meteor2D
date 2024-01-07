@@ -3,14 +3,40 @@
 #include <entities/spatial.h>
 
 namespace meteor {
+	/**
+	 * @brief Camera entity uses provides camera like functionlity to
+	 * manage world view.
+	*/
 	class Camera : public SpatialEntity {
 	public:
+		
 		~Camera();
+		/**
+		 * @brief default Constructor
+		*/
 		Camera() : Camera(Vector2::make(0, 0), 0) {};
+		/**
+		 * @brief Constructor
+		 * @param position Position of Camera at position
+		 * @param sortingOrder sorting Order of Camera within the CameraStack
+		*/
 		Camera(Vector2 position, uint8_t sortingOrder);
+		/**
+		 * @brief Sets the Camera active status
+		*/
 		inline void setActive(bool active) { active = active; }
+		/**
+		 * @brief Checks if a provided position within camera bounds.
+		 * @return 
+		*/
 		bool isInsideBounds(Vector2 position);
+		/**
+		 * @return true if Camera is active
+		*/
 		inline bool isActive() { return active; }
+		/**
+		 * @return Sorting order of Camera inside the CameraStack. 
+		*/
 		inline uint8_t getSortingOrder() { return sortingOrder; }
 	private:
 		Vector2 boundsCentre;

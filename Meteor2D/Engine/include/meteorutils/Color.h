@@ -2,23 +2,26 @@
 #include <iostream>
 
 namespace meteor {
+	/**
+	 * @brief A struct representing a color
+	*/
 	struct Color {
 	public:
-		/// <summary>
-		/// red channel
-		/// </summary>
+		/**
+		 * @brief Red
+		*/
 		uint8_t r;
-		/// <summary>
-		/// green channel
-		/// </summary>
+		/**
+		 * @brief Green
+		*/
 		uint8_t g;
-		/// <summary>
-		/// blue channel
-		/// </summary>
+		/**
+		 * @brief Blue
+		*/
 		uint8_t b;
-		/// <summary>
-		/// alpha channel
-		/// </summary>
+		/**
+		 * @brief Alpha
+		*/
 		uint8_t a;
 
 		inline Color() {

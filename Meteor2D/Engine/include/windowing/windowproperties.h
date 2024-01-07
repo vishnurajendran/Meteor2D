@@ -4,6 +4,9 @@
 #include <meteorutils/color.h>
 
 namespace meteor {
+	/**
+	 * @brief A encapsulate properties window creation
+	*/
 	struct WindowProperties {
 	public:
 		std::string name = "Meteor2D";

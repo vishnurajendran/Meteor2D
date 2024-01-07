@@ -14,8 +14,10 @@ namespace meteor {
 
 	Entity::Entity() {
 		setId();
+		onStart();
 	}
 
 	Entity::~Entity() {
+		onExit();
 	}
 }

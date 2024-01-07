@@ -2,6 +2,9 @@
 #include <meteorutils/vector2d.h>
 
 namespace meteor {
+	/**
+	 * @brief A struct representing rectangle
+	*/
 	struct Rect {
 	public:
 		Rect() {

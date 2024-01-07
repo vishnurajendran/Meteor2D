@@ -4,7 +4,9 @@
 #include <string>
 
 namespace meteor {
-
+	/**
+	 * @brief Base class for Scene Enity Derserializers
+	*/
 	class SceneEntityTypeDeserializer {
 	public:
 		SceneEntityTypeDeserializer() {};

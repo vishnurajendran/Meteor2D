@@ -2,6 +2,9 @@
 #include <SDL.h>
 
 namespace meteor {
+	/**
+	 * @brief Global references to meteor core instances.
+	*/
 	class SdlCores {
 	public:
 		static void setScreenCentre(SDL_Point point);
