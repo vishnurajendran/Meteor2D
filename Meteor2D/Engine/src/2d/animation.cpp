@@ -45,11 +45,12 @@ namespace meteor {
 			return;
 
 		changeRequested = false;
-		index = 0;
-		animTime = 0;
 		currAnimSheet = animationMap->getAnim(currAnim);
 		cmd->bindTexture(currAnimSheet == NULL ? NULL : currAnimSheet->getTexture());
 		isPlaying = true;
+		index = 0;
+		animTime = 0;
+		spriteSrcRect = currAnimSheet->sample(index, isLooping);
 	}
 
 	void Animation::onUpdate(float deltaTime) {
@@ -59,8 +60,6 @@ namespace meteor {
 		cmd->updateRotation(rotation);
 		cmd->updateScale(localScale);
 		cmd->updatePivot(pivot);
-
-
 		updateAnimation(deltaTime);
 	}
 
@@ -96,8 +95,7 @@ namespace meteor {
 	void Animation::updateRect() {
 		Rect myRect;
 		myRect.position = position;
-		myRect.size.x = spriteSrcRect.size.x;
-		myRect.size.y = spriteSrcRect.size.y;
+		myRect.size = Vector2(spriteSrcRect.size.x, spriteSrcRect.size.y);
 		cmd->updateSrcRect(spriteSrcRect);
 		cmd->updateRect(myRect);
 	}
