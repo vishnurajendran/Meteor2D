@@ -27,12 +27,19 @@ namespace meteor {
 	}
 
 	bool SceneManager::loadScene(std::string path) {
-		if (path.empty())
+		if (path.empty()) {
+			loadEmptyScene();
 			return false;
+		}
 
 		loadEmptyScene();
 		pugi::xml_document* doc = AssetManager::getInstance()->getSceneDefinition(path);
-		return activeScene->tryParse(doc);
+		if (activeScene->tryParse(doc))
+			return true;
+
+		mError("Failed loading scene from {}, loading empty scene as fallback", path);
+		loadEmptyScene();
+		return false;
 	}
 
 	void SceneManager::updateScene(float deltaTime) {

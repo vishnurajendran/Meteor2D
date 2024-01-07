@@ -97,7 +97,7 @@
     <Filter Include="Engine\Source Files\sceneserialization">
       <UniqueIdentifier>{8da11f27-313c-4a09-9277-9a1a7bcffe75}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Source Files\sceneserialization\deserialization">
+    <Filter Include="Engine\Source Files\sceneserialization\deserializers">
       <UniqueIdentifier>{4f10e5bc-ff47-4e66-a127-3d49edde4491}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -291,10 +291,10 @@
       <Filter>Engine\Source Files\sceneserialization</Filter>
     </ClCompile>
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\spatialdeserializer.cpp">
-      <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
+      <Filter>Engine\Source Files\sceneserialization\deserializers</Filter>
     </ClCompile>
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\animationdeserializer.cpp">
-      <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
+      <Filter>Engine\Source Files\sceneserialization\deserializers</Filter>
     </ClCompile>
     <ClCompile Include="Engine\include\meteorutils\str_extensions.h">
       <Filter>Engine\Header Files\meteorutils</Filter>
@@ -303,10 +303,10 @@
       <Filter>Engine\Source Files\sceneserialization</Filter>
     </ClCompile>
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\spritedeserializer.cpp">
-      <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
+      <Filter>Engine\Source Files\sceneserialization\deserializers</Filter>
     </ClCompile>
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\cameradeserializer.cpp">
-      <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
+      <Filter>Engine\Source Files\sceneserialization\deserializers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

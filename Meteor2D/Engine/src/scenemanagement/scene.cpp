@@ -49,11 +49,14 @@ namespace meteor {
 	bool Scene::tryParse(pugi::xml_document* doc) {
 		if (doc == NULL)
 			return false;
+
 		if (!doc->child(VALID_SCENE_FILE_XML_TAG.c_str()))
 			return false;
+
 		for (auto& child : doc->child(VALID_SCENE_FILE_XML_TAG.c_str()).children()) {
 			recursivelyLoadEntity(&child, NULL);
 		}
+
 		mLog("scene loaded from Xml!");
 		return true;
 	}
