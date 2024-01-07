@@ -79,7 +79,7 @@ namespace meteor {
 		}
 
 		if (parent != NULL)
-			parent->setChild(entity);
+			parent->addChild(entity);
 
 		for (auto& child : currNode->children()) {
 			recursivelyLoadEntity(&child, entity);
