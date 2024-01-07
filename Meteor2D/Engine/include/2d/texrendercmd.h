@@ -8,7 +8,7 @@ namespace meteor {
 	class TexRenderCmd : public RenderCommand {
 	public:
 		TexRenderCmd(RenderLayer layer, uint8_t sortingOrder);
-		inline void bindTexture(Texture* tex) { this->texture = tex; }
+		void bindTexture(Texture* tex);
 		inline void updateRect(Rect rect) { targetRect = rect; }
 		inline void updateSrcRect(Rect rect) { this->srcRect = rect; }
 		inline void updateScale(Vector2 scale) { this->scale = scale; }
@@ -18,6 +18,7 @@ namespace meteor {
 		void render() override;
 		bool isValid() override;
 	private:
+		Texture* textureTempBuffer = NULL;
 		Texture* texture;
 		Rect targetRect;
 		Rect srcRect;
@@ -25,5 +26,8 @@ namespace meteor {
 		Vector2 pivot;
 		float rotation;
 		bool useSrcRect;
+		bool lockedForRender;
+
+		void swap();
 	};
 }

@@ -34,29 +34,40 @@ namespace meteor {
 		if (currAnim == name)
 			return;
 
+		this->currAnim = name;
 		this->isLooping = looped;
-		//reset animation rect index.
-		index = 0;
+		this->isPlaying = true;
+		changeRequested = true;
+	}
 
-		currAnimSheet = animationMap->getAnim(name);
+	void Animation::tryChangeAnimParams() {
+		if (!changeRequested)
+			return;
+
+		changeRequested = false;
+		index = 0;
+		animTime = 0;
+		currAnimSheet = animationMap->getAnim(currAnim);
 		cmd->bindTexture(currAnimSheet == NULL ? NULL : currAnimSheet->getTexture());
 		isPlaying = true;
-		currAnim = name;
 	}
 
 	void Animation::onUpdate(float deltaTime) {
+		//animation changes has a 1-frame delay, to avoid animation flickering.
+		tryChangeAnimParams();
 		SpatialEntity::onUpdate(deltaTime);
+		cmd->updateRotation(rotation);
+		cmd->updateScale(localScale);
+		cmd->updatePivot(pivot);
+
+
 		updateAnimation(deltaTime);
 	}
 
 	void Animation::updateAnimation(float deltaTime) {
-		
-		cmd->updateRotation(rotation);
-		cmd->updateScale(localScale);
-		cmd->updatePivot(pivot);
-		
-		if (currAnimSheet == NULL)
+		if (currAnimSheet == NULL) {
 			return;
+		}
 
 		if (!isPlaying && renderOnce) {
 			renderOnce = false;
@@ -66,17 +77,13 @@ namespace meteor {
 		}
 
 		// update animations
-		animTime += deltaTime;
-		if (animTime < (1.0f / fps)) {
-			submitFrameRenderRequest();
-			return;
+		if (isPlaying) {
+			animTime += deltaTime;
+			if (animTime > (1.0f / fps)) {
+				animTime = 0;
+				spriteSrcRect = currAnimSheet->sample(index, isLooping);
+			}
 		}
-		
-		//reset timer
-		animTime = 0;
-
-		if (isPlaying)
-			spriteSrcRect = currAnimSheet->sample(index, isLooping);
 
 		submitFrameRenderRequest();
 	}

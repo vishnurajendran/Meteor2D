@@ -216,6 +216,12 @@
     <ClInclude Include="Engine\include\sceneserialization\deserializers\animationdeserializer.h">
       <Filter>Engine\Header Files\sceneserialization\deserializers</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\include\sceneserialization\deserializers\spritedeserializer.h">
+      <Filter>Engine\Header Files\sceneserialization\deserializers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\sceneserialization\deserializers\cameradeserializer.h">
+      <Filter>Engine\Header Files\sceneserialization\deserializers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\src\rendering\renderer.cpp">
@@ -288,6 +294,18 @@
       <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
     </ClCompile>
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\animationdeserializer.cpp">
+      <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\include\meteorutils\str_extensions.h">
+      <Filter>Engine\Header Files\meteorutils</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\sceneserialzation\scene_entity_type_deserializer.cpp">
+      <Filter>Engine\Source Files\sceneserialization</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\sceneserialzation\deserializers\spritedeserializer.cpp">
+      <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\sceneserialzation\deserializers\cameradeserializer.cpp">
       <Filter>Engine\Source Files\sceneserialization\deserialization</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,5 +1,6 @@
 #pragma once
 #include <meteorutils/logging.h>
+#include <assetmanagement/assetmanager.h>
 #include <scenemanagement/scenemanager.h>
 #include <sceneserialization/scene_entity_typemap.h>
 
@@ -7,7 +8,6 @@ namespace meteor {
 	Scene* SceneManager::activeScene = NULL;
 
 	void SceneManager::initialise() {
-		mWarn("registered size {}", SceneEntityTypeMap::getMapSize());
 	}
 
 	bool SceneManager::closeActiveScene() {
@@ -30,11 +30,9 @@ namespace meteor {
 		if (path.empty())
 			return false;
 
-		pugi::xml_node node;
-		auto res = SceneEntityTypeMap::getDeserializer("animation")->deserialize(node);
-
-		//todo add scene load logic here
-		return loadEmptyScene();
+		loadEmptyScene();
+		pugi::xml_document* doc = AssetManager::getInstance()->getSceneDefinition(path);
+		return activeScene->tryParse(doc);
 	}
 
 	void SceneManager::updateScene(float deltaTime) {

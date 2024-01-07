@@ -41,6 +41,7 @@ namespace meteor {
 	}
 
 	void RenderQueue::prepare() {
+		
 		if (!worldQueue.empty())
 			std::sort(worldQueue.begin(), worldQueue.end(), [](RenderCommand* a, RenderCommand* b) { return a->getSortingOrder() < b->getSortingOrder(); });
 

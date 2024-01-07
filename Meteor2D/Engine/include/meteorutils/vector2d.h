@@ -1,4 +1,8 @@
 #pragma once
+#include <meteorutils/str_extensions.h>
+#include <string>
+#include <meteorutils/logging.h>
+
 
 namespace meteor {
 	struct Vector2 {
@@ -62,6 +66,11 @@ namespace meteor {
 			return nVector;
 		}
 
+
+		std::string toString() {
+			return "(" + std::to_string(x) + "," + std::to_string(y) + ")";
+		}
+
 		/************ UTILS ******************/
 
 		/// <summary>
@@ -104,5 +113,36 @@ namespace meteor {
 			return sqrt(pow((v1.x - v2.x), 2) + pow((v1.y - v2.y), 2));
 		}
 
+		static bool parse(std::string str, Vector2& out) {
+			if (str[0] != '(') {
+				mError("vector parse failed, reason: {}", "expected ( at the begining.");
+				return false;
+			}
+			if (str[str.length() - 1] != ')') {
+				mError("vector parse failed, reason: {}", "expected ) at the end.");
+				return false;
+			}
+			
+			str = string_utils::replace<std::string>(str,"(","");
+			str = string_utils::replace<std::string>(str, ")", "");
+
+			if (string_utils::numberOfOccurence<std::string>(str,",") != 1) {
+				mError("vector parse failed, reason: {}", "too many or too few components");
+				return false;
+			}
+			auto split = string_utils::split<std::string, std::string>(str, ",");
+			if (!(string_utils::isInt(split[0]) || string_utils::isFloat(split[0]))) {
+				mError("vector parse failed, reason: {} : x component is not a number", split[0]);
+				return false;
+			}
+			if (!(string_utils::isInt(split[1]) || string_utils::isFloat(split[1]))) {
+				mError("vector parse failed, reason: {} : y component is not a number", split[1]);
+				return false;
+			}
+
+			out.x = std::stof(split[0]);
+			out.y = std::stof(split[1]);
+			return true;
+		}
 	};
 }

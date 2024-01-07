@@ -80,7 +80,6 @@ namespace meteor {
 	}
 
 	void Window::update() {
-		clear();
 		render();
 	}
 

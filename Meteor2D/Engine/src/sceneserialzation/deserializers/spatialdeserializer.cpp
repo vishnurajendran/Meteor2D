@@ -7,7 +7,10 @@ namespace meteor {
 		return true;
 	}();
 
-	SpatialEntity* SpatialDeserializer::deserialize(pugi::xml_node node) {
-		return NULL;
+	SpatialEntity* SpatialDeserializer::deserialize(pugi::xml_node* node) {
+		SpatialEntity* entity = new SpatialEntity();
+		parseSpatialData(node, entity);
+		return entity;
 	}
+
 }

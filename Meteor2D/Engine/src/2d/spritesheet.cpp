@@ -15,6 +15,7 @@ namespace meteor {
 	}
 
 	Rect SpriteSheet::sample(int& index, bool looping) {
+		index = std::clamp(index,0, (int)spriteRects.size() - 1);
 		Rect rectToUse = spriteRects[index];
 		if (looping) {
 			index = (index + 1) % spriteRects.size();

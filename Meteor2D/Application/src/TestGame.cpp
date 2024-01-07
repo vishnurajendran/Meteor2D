@@ -5,17 +5,11 @@ std::string TestGame::getName() {
 }
 
 void TestGame::onStart() {
-	meteor::SceneManager::loadEmptyScene();
-	gameCamera = new meteor::Camera();
-	scp = new meteor::SpatialEntity();
-	scp->setLocalPosition(meteor::Vector2(960, 540));
-
-	auto bg = new meteor::Sprite2D("bg\\test.png", meteor::RenderLayer::World, 0);
-	bg->setLocalScale(3, 3);
-
-	anim = new meteor::Animation("link.anim", 12,meteor::RenderLayer::World, 1);
-	scp->setChild(anim);
+	meteor::SceneManager::loadScene("test_scene.scml");
 	auto scene = meteor::SceneManager::getActiveScene();
+	gameCamera = (meteor::Camera*)scene->find("gameCamera");
+	scp = scene->find("scp");
+	anim = (meteor::Animation*)scene->find("link_player");
 	mLog("Scene contents {}", scene->getRootSize());
 }
 

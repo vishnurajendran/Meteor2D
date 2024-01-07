@@ -51,7 +51,9 @@
     <ClInclude Include="Engine\include\scenemanagement\scene.h" />
     <ClInclude Include="Engine\include\scenemanagement\scenemanager.h" />
     <ClInclude Include="Engine\include\sceneserialization\deserializers\animationdeserializer.h" />
+    <ClInclude Include="Engine\include\sceneserialization\deserializers\cameradeserializer.h" />
     <ClInclude Include="Engine\include\sceneserialization\deserializers\spatialdeserializer.h" />
+    <ClInclude Include="Engine\include\sceneserialization\deserializers\spritedeserializer.h" />
     <ClInclude Include="Engine\include\sceneserialization\scene_entity_typemap.h" />
     <ClInclude Include="Engine\include\sceneserialization\scene_entity_type_deserializer.h" />
     <ClInclude Include="Engine\include\sceneserialization\xmlserializable.h" />
@@ -60,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application\src\TestGame.cpp" />
+    <ClCompile Include="Engine\include\meteorutils\str_extensions.h" />
     <ClCompile Include="Engine\src\2d\animation.cpp" />
     <ClCompile Include="Engine\src\2d\animationmap.cpp" />
     <ClCompile Include="Engine\src\2d\sprite2d.cpp" />
@@ -79,8 +82,11 @@
     <ClCompile Include="Engine\src\scenemanagement\scenemanager.cpp" />
     <ClCompile Include="Engine\src\scenemanagement\spatial.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\animationdeserializer.cpp" />
+    <ClCompile Include="Engine\src\sceneserialzation\deserializers\cameradeserializer.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\spatialdeserializer.cpp" />
+    <ClCompile Include="Engine\src\sceneserialzation\deserializers\spritedeserializer.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\scene_entity_typemap.cpp" />
+    <ClCompile Include="Engine\src\sceneserialzation\scene_entity_type_deserializer.cpp" />
     <ClCompile Include="Engine\src\time\time.cpp" />
     <ClCompile Include="Engine\src\windowing\window.cpp" />
   </ItemGroup>

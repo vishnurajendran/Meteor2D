@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include<vector>
 #include<meteorutils/vector2d.h>
 #include<entities/entity.h>
@@ -33,6 +34,9 @@ namespace meteor {
 		void setChild(SpatialEntity* entity);
 		void removeChild(SpatialEntity* entity);
 
+		// query
+		SpatialEntity* find(std::string name);
+
 		// overrides
 		virtual void onStart();
 		virtual void onUpdate(float deltaTime);
@@ -46,11 +50,11 @@ namespace meteor {
 		float localRotation;
 		SpatialEntity* parent = NULL;
 		std::vector<SpatialEntity*>* children = NULL;
-		std::string name;
 
 		void updatePositions();
 		void updateRotations();
 		void updateScale();
+
 		void updateChildren(float deltaTime);
 	private:
 		void setParent(SpatialEntity* entity) { parent = entity; };

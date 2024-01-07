@@ -20,6 +20,7 @@ namespace meteor {
 		bool isPlaying = false;
 		bool isLooping = false;
 		bool renderOnce = true;
+		bool changeRequested=false;
 		int fps=30;
 		float animTime;
 		AnimationMap* animationMap;
@@ -27,6 +28,7 @@ namespace meteor {
 		TexRenderCmd* cmd;
 		Vector2 pivot;
 		Rect spriteSrcRect;
+		void tryChangeAnimParams();
 		void updateAnimation(float deltaTime);
 		void submitFrameRenderRequest();
 		void updateRect();

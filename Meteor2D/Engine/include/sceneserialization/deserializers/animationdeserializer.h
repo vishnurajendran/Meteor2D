@@ -1,13 +1,15 @@
 #pragma once
-#pragma once
-#include <sceneserialization/scene_entity_type_deserializer.h>
-#include <sceneserialization/scene_entity_typemap.h>
+#include <sceneserialization/deserializers/spatialdeserializer.h>
 
 namespace meteor {
 	class AnimationDeserializer : SceneEntityTypeDeserializer {
 	public:
-		SpatialEntity* deserialize(pugi::xml_node node) override;
+		SpatialEntity* deserialize(pugi::xml_node* node) override;
 	private:
+		const std::string ANIM_SRC = "src";
+		const std::string FPS_SRC = "fps";
+		const std::string LAYER_SRC = "layer";
+		const std::string SORTINGORDER_SRC = "sortingOrder";
 		static const bool registered;
 	};
 }

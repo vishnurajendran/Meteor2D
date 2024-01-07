@@ -10,6 +10,13 @@ namespace meteor {
 		texture = NULL;
 	}
 
+	void TexRenderCmd::bindTexture(Texture* tex) {
+		if (lockedForRender)
+			this->textureTempBuffer = tex;
+		else
+			this->texture = tex;
+	}
+
 	void TexRenderCmd::render() {
 		
 		if (!CameraStack::hasActiveCamera())
@@ -18,6 +25,7 @@ namespace meteor {
 		if (!isValid())
 			return;
 
+		lockedForRender = true;
 		Camera* cam = CameraStack::getActiveCamera();
 		SDL_FRect tRect;
 		SDL_Rect src;
@@ -36,19 +44,24 @@ namespace meteor {
 		tRect.h = (targetRect.size.y * scale.y);
 		transformRectInternalToScreen(tRect);
 
-
-		//mWarn("final Rect: {} {} {} {}", tRect.x, tRect.y, tRect.w, tRect.h);
-
 		if (useSrcRect) {
 			src.x = srcRect.position.x;
 			src.y = srcRect.position.y;
 			src.w = srcRect.size.x;
 			src.h = srcRect.size.y;
-
 			SDL_RenderCopyExF(renderCore, texture->getCoreTexture(), &src, &tRect, rotation, &sdlPivot, SDL_FLIP_NONE);
 		}
 		else
 			SDL_RenderCopyExF(renderCore, texture->getCoreTexture(), NULL, &tRect, rotation, &sdlPivot, SDL_FLIP_NONE);
+		lockedForRender = false;
+		swap();
+	}
+
+	void TexRenderCmd::swap() {
+		if (textureTempBuffer != NULL) {
+			texture = textureTempBuffer;
+			textureTempBuffer = NULL;
+		}
 	}
 
 	bool TexRenderCmd::isValid() {
@@ -64,4 +77,5 @@ namespace meteor {
 
 		return true;
 	}
+
 }

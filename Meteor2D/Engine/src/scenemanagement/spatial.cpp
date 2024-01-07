@@ -1,3 +1,4 @@
+#pragma once
 #include <meteorutils/logging.h>
 #include <entities/spatial.h>
 #include <scenemanagement/scenemanager.h>
@@ -74,7 +75,6 @@ namespace meteor {
 	}
 
 	void SpatialEntity::onStart() {
-		mLog("started spatial {} {}", getId(), getName());
 	}
 
 	void SpatialEntity::onUpdate(float deltaTime) {
@@ -137,6 +137,31 @@ namespace meteor {
 		for (int i = 0; i < children->size(); i++) {
 			children->at(i)->onUpdate(deltaTime);
 		}
+	}
+
+	SpatialEntity* SpatialEntity::find(std::string name) {
+		
+		// is this node called 'name'
+		if (this->name == name)
+			return this;
+
+		// if no more children return NULL
+		if (children->size() <= 0)
+			return NULL;
+
+		// check recursively for each child
+		for (auto child : *children) {
+			if (child == NULL)
+				continue;
+			
+			auto res = child->find(name);
+			//if we found it, return
+			if (res != NULL)
+				return res;
+		}
+
+		// if everything fails, return NULL
+		return NULL;
 	}
 }
 
