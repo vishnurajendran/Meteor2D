@@ -8,6 +8,10 @@
 #include <windowing/windowproperties.h>
 
 namespace meteor {
+	/**
+	 * @brief This class is responsible for opening a Window target for
+	 * rendering
+	*/
 	class Window {
 	public:
 		Window(WindowProperties properties);

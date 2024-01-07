@@ -4,6 +4,9 @@
 #include <sceneserialization/scene_entity_typemap.h>
 
 namespace meteor {
+	/**
+	 * @brief Deserializer for Camera
+	*/
 	class CameraDerserializer : SceneEntityTypeDeserializer {
 	public:
 		virtual SpatialEntity* deserialize(pugi::xml_node* node) override;

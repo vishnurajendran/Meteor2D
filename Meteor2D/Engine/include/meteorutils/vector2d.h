@@ -5,6 +5,9 @@
 
 
 namespace meteor {
+	/**
+	 * @brief A structure representing a 2D Vector.
+	*/
 	struct Vector2 {
 	public:
 		float x = 0;
@@ -73,46 +76,57 @@ namespace meteor {
 
 		/************ UTILS ******************/
 
-		/// <summary>
-		/// returns a vector2 using x and y. (similar to Vector(x,y) constructor)
-		/// </summary>
-		/// <param name="x">value in x-axis</param>
-		/// <param name="y">value in y-axis</param>
-		/// <returns>vector2 containing (x,y)</returns>
+		/**
+		 * @brief returns a vector2 using x and y. (similar to Vector(x,y) constructor)
+		 * @param x value in x-axis
+		 * @param y value in y-axis
+		 * @return vector2 containing (x,y)
+		*/
 		static Vector2 make(float x, float y) {
 			return Vector2(x,y);
 		}
 
-		// returns (1,1)
+		/**
+		 * @return (1,1)
+		*/
 		static Vector2 one() {
 			return Vector2(1,1);
 		}
 
-		// returns (0,0)
+		/**
+		 * @return (0,0) 
+		*/
 		static Vector2 zero() {
 			return Vector2(1, 1);
 		}
 
-		/// <summary>
-		/// multiplies each component of v1 with their respective parts in v2
-		/// </summary>
-		/// <param name="v1">vector 1</param>
-		/// <param name="v2">vector 2</param>
-		/// <returns>scaled vector</returns>
+		/**
+		 * @brief Multiplies each component of v1 with their respective parts in v2
+		 * @param v1 vector 1
+		 * @param v2 vector 2
+		 * @return scaled vector
+		*/
 		static Vector2 scale(Vector2 v1, Vector2 v2) {
 			return Vector2(v1.x * v2.x, v1.y * v2.y);
 		}
 
-		/// <summary>
-		/// computes the euclidian distance
-		/// </summary>
-		/// <param name="v1"> vector 1 </param>
-		/// <param name="v2"> vector 2 </param>
-		/// <returns>distance between the two given vectors</returns>
+		/**
+		 * @brief Computes the euclidian distance
+		 * @param v1 vector 1
+		 * @param v2 vector 2
+		 * @return euclidian distance between the two vectors
+		*/
 		static float dist(Vector2 v1, Vector2 v2) {
 			return sqrt(pow((v1.x - v2.x), 2) + pow((v1.y - v2.y), 2));
 		}
 
+		/**
+		 * @brief Parses a string to a vector, serialized vector to be
+		 * in the form '(x,y)'
+		 * @param str serialised string containg vector2 data
+		 * @param out Vector2 struct reference to update values.
+		 * @return true is de-serialization was successful.
+		*/
 		static bool parse(std::string str, Vector2& out) {
 			if (str[0] != '(') {
 				mError("vector parse failed, reason: {}", "expected ( at the begining.");

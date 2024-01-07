@@ -2,6 +2,9 @@
 #include <sceneserialization/deserializers/spatialdeserializer.h>
 
 namespace meteor {
+	/**
+	 * @brief Deserializer for Aniamtion
+	*/
 	class AnimationDeserializer : SceneEntityTypeDeserializer {
 	public:
 		SpatialEntity* deserialize(pugi::xml_node* node) override;

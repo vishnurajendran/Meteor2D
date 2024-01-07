@@ -5,12 +5,44 @@
 #include <map>
  
 namespace meteor {
+	/**
+	 * @brief AssetManager handles asset loads and cleanup. AssetManager
+	 * maintains references to loaded asset, to avoid duplicate asset loads.
+	*/
 	class AssetManager {
 	public:
+		/**
+		 * @brief Gets a Texture reference loaded from provided disk path.
+		 * @param path Path to Texture file.
+		 * @param relative true by default, defines if path is relative or absolute
+		 * @return Texture reference.
+		*/
 		Texture* getTexture(std::string path, bool relative = true);
+		/**
+		 * @brief Gets a AnimationMap reference loaded from provided disk path.
+		 * @param path Path to .anim file.
+		 * @param relative true by default, defines if path is relative or absolute
+		 * @return AnimationMap reference.
+		*/
 		AnimationMap* getAnimationMap(std::string path, bool relative = true);
+		/**
+		 * @brief Gets a XmlDocument reference loaded from provided disk path.
+		 * @param path Path to .scml file.
+		 * @param relative true by default, defines if path is relative or absolute
+		 * @return XmlDocument reference.
+		*/
 		pugi::xml_document* getSceneDefinition(std::string path, bool relative = true);
+		/**
+		 * @brief Gets a XmlDocument reference loaded from provided disk path.
+		 * @param path Path to .uiml file.
+		 * @param relative true by default, defines if path is relative or absolute
+		 * @return XmlDocument reference.
+		*/
 		pugi::xml_document* getUIDefinition(std::string path, bool relative = true);
+		/**
+		 * @brief Gets singleton instance to AssetManager. 
+		 * @return AssetManager refrence.
+		*/
 		static AssetManager* getInstance();
 	private:
 		std::map<std::string, Texture*> texMap;

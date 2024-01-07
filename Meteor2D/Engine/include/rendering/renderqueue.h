@@ -4,6 +4,9 @@
 #include<rendering/rendercommand.h>
 
 namespace meteor {
+	/**
+	 * @brief Maintains a sorted queue of all render commands submitted for rendering.
+	*/
 	class RenderQueue {
 	public:
 		RenderQueue() : worldQueue{}, uiQueue{}, debugQueue{} {}

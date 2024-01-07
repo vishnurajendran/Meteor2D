@@ -4,6 +4,9 @@
 #include <sceneserialization/scene_entity_typemap.h>
 
 namespace meteor {
+	/**
+	 * @brief Desrializer for Sprite2D
+	*/
 	class SpriteDeserializer : SceneEntityTypeDeserializer {
 	public:
 		virtual SpatialEntity* deserialize(pugi::xml_node* node) override;

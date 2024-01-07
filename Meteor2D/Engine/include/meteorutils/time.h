@@ -2,19 +2,19 @@
 #include <SDL.h>
 
 namespace meteor {
-
+	/**
+	 * @brief This class handles time function.
+	*/
 	class Time {
 	public:
-		/// <summary>
-		/// updates the internal time keeper.
-		/// </summary>
+		/**
+		 * @brief updates internal timer
+		*/
 		static void updateTime();
 
-		/// <summary>
-		/// returns the time between this frame and the frame before.
-		/// in seconds
-		/// </summary>
-		/// <returns></returns>
+		/**
+		 * @brief returns the time between last and last-to-last frame.
+		*/
 		static double getDeltaTime() { return deltaTime; }
 
 		static int getFrameTime() {
