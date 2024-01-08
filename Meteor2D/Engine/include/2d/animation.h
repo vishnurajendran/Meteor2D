@@ -13,7 +13,7 @@ namespace meteor {
 	public:
 		/**
 		 * @brief Constructor for Animation
-		 * @param mapFile relative path to the .anim file, will evaluate to resS\anim\<mapFile>
+		 * @param mapFile relative path to the .anim file, will evaluate to resS\\anim\\<mapFile>
 		 * @param fps the frame-rate of the animation playback.
 		 * @param layer layer for rendering
 		 * @param sortingOrder sorting order in render layer.
