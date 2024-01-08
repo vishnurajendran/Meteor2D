@@ -1,4 +1,5 @@
 #pragma once
+#include <entities/entity.h>
 #include <rendering/renderlayer.h>
 #include<SDL.h>
 
@@ -6,7 +7,7 @@ namespace meteor {
 	/**
 	 * @brief RenderCommand are responsible for rendering visuals to the screen.
 	*/
-	class RenderCommand {
+	class RenderCommand : public Entity {
 	protected:
 		SDL_Renderer* renderCore = NULL;
 	public:

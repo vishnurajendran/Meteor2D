@@ -9,7 +9,7 @@ namespace meteor {
 	 * @brief AssetManager handles asset loads and cleanup. AssetManager
 	 * maintains references to loaded asset, to avoid duplicate asset loads.
 	*/
-	class AssetManager {
+	class AssetManager : public Entity {
 	public:
 		/**
 		 * @brief Gets a Texture reference loaded from provided disk path.

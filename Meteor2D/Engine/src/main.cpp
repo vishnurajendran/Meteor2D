@@ -26,7 +26,7 @@
 			meteor::Time::updateTime();
 			float deltaTime = meteor::Time::getDeltaTime();
 			int frameTime = meteor::Time::getFrameTime();
-			meteor::SceneManager::updateScene(deltaTime);
+			meteor::SceneManager::update(deltaTime);
 			app->onUpdate(deltaTime);
 			if (!meteor::CameraStack::hasActiveCamera())
 				mWarn("No active camera found!, Entities may not be correctly rendererd to the screen");

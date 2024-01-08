@@ -10,27 +10,28 @@ namespace meteor {
 
 	Scene::Scene() {
 		rootEntities = new std::vector<SpatialEntity*>();
+		startScene();
 	}
 
 	Scene::~Scene() {
 		delete rootEntities;
 	}
 
-	void Scene::onStart() {
+	void Scene::startScene() {
 		//logNoFormat("Loading scene");
 		for (int i = 0; i < rootEntities->size(); i++) {
 			rootEntities->at(i)->onStart();
 		}
 	}
 
-	void Scene::onUpdate(float deltaTime) {
+	void Scene::update(float deltaTime) {
 		//logNoFormat("updating scene");
 		for (int i = 0; i < rootEntities->size(); i++) {
 			rootEntities->at(i)->onUpdate(deltaTime);
 		}
 	}
 
-	void Scene::onExit() {
+	void Scene::onClose() {
 		//logNoFormat("cleaning scene");
 		for (int i = 0; i < rootEntities->size(); i++) {
 			rootEntities->at(i)->onExit();
@@ -58,6 +59,7 @@ namespace meteor {
 		}
 
 		mLog("scene loaded from Xml!");
+		startScene();
 		return true;
 	}
 

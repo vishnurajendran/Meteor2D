@@ -6,7 +6,7 @@ namespace meteor {
 	 * @brief A Stack maintining all Cameras currently avaialble in scene.
 	 * CameraStack sorts all Cameras in ascending order.
 	*/
-	class CameraStack {
+	class CameraStack : public Entity {
 	public:
 		/**
 		 * @return true if atleast one active camera is present 

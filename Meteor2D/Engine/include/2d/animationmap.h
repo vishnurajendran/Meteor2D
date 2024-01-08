@@ -7,7 +7,7 @@ namespace meteor {
 	 * @brief This class holds the relation-ship between SpriteSheets and Animation name.
 	 * Needs to be created using the loadMap function
 	*/
-	class AnimationMap {
+	class AnimationMap : public Entity {
 	public:
 		/**
 		 * @brief get the sprite-sheet for animation to play

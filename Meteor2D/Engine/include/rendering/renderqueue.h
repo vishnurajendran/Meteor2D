@@ -1,13 +1,14 @@
 #pragma once
 #include<iostream>
 #include<vector>
+#include <entities/entity.h>
 #include<rendering/rendercommand.h>
 
 namespace meteor {
 	/**
 	 * @brief Maintains a sorted queue of all render commands submitted for rendering.
 	*/
-	class RenderQueue {
+	class RenderQueue : public Entity {
 	public:
 		RenderQueue() : worldQueue{}, uiQueue{}, debugQueue{} {}
 		~RenderQueue();

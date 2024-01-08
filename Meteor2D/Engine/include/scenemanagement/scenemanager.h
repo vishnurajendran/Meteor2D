@@ -7,7 +7,7 @@ namespace meteor {
 	/**
 	 * @brief Manages Scene loads and unloads.
 	*/
-	class SceneManager {
+	class SceneManager : public Entity {
 	public:
 		/**
 		 * @brief Initialises the SceneManager.
@@ -28,7 +28,7 @@ namespace meteor {
 		/**
 		 * @brief Updates current active scene.
 		*/
-		static void updateScene(float deltaTime);
+		static void update(float deltaTime);
 		/**
 		 * @brief Returns current active scene. 
 		*/

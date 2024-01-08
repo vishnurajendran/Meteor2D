@@ -1,23 +1,15 @@
 #include<entities/entity.h>
 
 namespace meteor {
-	unsigned int Entity::nextId = 0;
-	void Entity::setId() {
-		this->id = nextId++;
-	}
 
 	bool Entity::equals(Entity* other) {
 		if (other == NULL)
 			return false;
-		return this->id == other->id;
+		//address compare
+		return this == other;
 	}
 
-	Entity::Entity() {
-		setId();
-		onStart();
-	}
-
-	Entity::~Entity() {
-		onExit();
+	std::string Entity::toString() {
+		return name + "@" + std::to_string((int)this);
 	}
 }

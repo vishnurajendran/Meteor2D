@@ -6,7 +6,7 @@ namespace meteor {
 	/**
 	 * @brief This class holds the Rects within a texture that form an Animation
 	*/
-	class SpriteSheet {
+	class SpriteSheet : public Entity {
 	public:
 		/**
 		 * @brief Constructor
