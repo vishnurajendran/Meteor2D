@@ -20,15 +20,15 @@ namespace meteor {
 		/**
 		 * @brief Invoked when scene loads.
 		*/
-		void onStart();
+		void startScene();
 		/**
 		 * @brief Invoked once per frame.
 		*/
-		void onUpdate(float deltaTime);
+		void update(float deltaTime);
 		/**
 		 * @brief Invoked during scene unload.
 		*/
-		void onExit();
+		void onClose();
 		
 		/**
 		 * @brief Adds a SpatialEntity to the scene root.

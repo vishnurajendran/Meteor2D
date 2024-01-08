@@ -1,8 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <meteorutils/color.h>
 #include <SDL.h>
+#include <entities/entity.h>
+#include <meteorutils/color.h>
 #include <rendering/renderqueue.h>
 #include <rendering/renderer.h>
 #include <windowing/windowproperties.h>
@@ -12,7 +13,7 @@ namespace meteor {
 	 * @brief This class is responsible for opening a Window target for
 	 * rendering
 	*/
-	class Window {
+	class Window : public Entity {
 	public:
 		Window(WindowProperties properties);
 		void update();

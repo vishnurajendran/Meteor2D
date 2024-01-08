@@ -14,7 +14,7 @@ namespace meteor {
 		if (activeScene == NULL)
 			return false;
 
-		activeScene->onExit();
+		activeScene->onClose();
 		activeScene = NULL;
 		return true;
 	}
@@ -42,10 +42,10 @@ namespace meteor {
 		return false;
 	}
 
-	void SceneManager::updateScene(float deltaTime) {
+	void SceneManager::update(float deltaTime) {
 		if (activeScene == NULL)
 			return;
 
-		activeScene->onUpdate(deltaTime);
+		activeScene->update(deltaTime);
 	}
 }

@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream>
+#include <string>
 
 namespace meteor {
 	/**
@@ -8,30 +8,11 @@ namespace meteor {
 	*/
 	class Entity {
 	public:
-		Entity();
-		~Entity();
-		/**
-		 * @brief Invoked when object is instantiated
-		*/
-		virtual void onStart() {};
-		/**
-		 * @brief Invoked every frame, default behaviour does not invoke this method.
-		 * @param deltaTime time difference between last and last-to-last frame.
-		*/
-		virtual void onUpdate(float deltaTime) {};
-		/**
-		 * @brief Invoked when object is destroyed
-		*/
-		virtual void onExit() {};
 		/**
 		 * @brief Checks equality between two entities.
 		 * @param other entity to check with.
 		*/
-		virtual inline bool equals(Entity* other);
-		/**
-		 * @return nstance Id of entiity.
-		*/
-		inline unsigned int getId() { return id; }
+		virtual bool equals(Entity* other);
 		/**
 		 * @return Name of entity
 		*/
@@ -40,11 +21,13 @@ namespace meteor {
 		 * @brief Sets name of entity
 		*/
 		inline void setName(std::string name) { this->name = name; }
-	private:
-		unsigned static int nextId;
-		inline void setId();
+
+		/**
+		 * @brief Get this object as a string
+		 * @return A string representing this object
+		*/
+		std::string toString();
 	protected:
-		unsigned int id;
 		std::string name;
 	};
 }

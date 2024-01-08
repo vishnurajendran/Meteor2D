@@ -1,11 +1,12 @@
 #pragma once
+#include <entities/entity.h>
 #include <SDL.h>
 
 namespace meteor {
 	/**
 	 * @brief This class handles time function.
 	*/
-	class Time {
+	class Time : public Entity {
 	public:
 		/**
 		 * @brief updates internal timer

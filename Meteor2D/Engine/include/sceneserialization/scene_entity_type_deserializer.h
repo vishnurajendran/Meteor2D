@@ -7,7 +7,7 @@ namespace meteor {
 	/**
 	 * @brief Base class for Scene Enity Derserializers
 	*/
-	class SceneEntityTypeDeserializer {
+	class SceneEntityTypeDeserializer : public Entity {
 	public:
 		SceneEntityTypeDeserializer() {};
 		virtual SpatialEntity* deserialize(pugi::xml_node* node) = 0;

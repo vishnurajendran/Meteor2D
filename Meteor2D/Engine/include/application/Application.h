@@ -1,12 +1,13 @@
 #pragma once
 #include <string>
+#include <entities/entity.h>
 #include <rendering/renderqueue.h>
 
 namespace meteor {
 	/**
 	 * @brief Application acts as the entry-point to the game.
 	*/
-	class Application {
+	class Application : public Entity {
 	public:
 		/**
 		 * @brief Gets name of application.

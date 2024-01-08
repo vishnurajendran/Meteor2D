@@ -1,13 +1,14 @@
 #pragma once
 #include <SDL.h>
 #include <unordered_map>
+#include <entities/entity.h>
 #include <input/keycodes.h>
 
 namespace meteor {
     /**
      * @brief manages user input events.
     */
-    class InputManager {
+    class InputManager : public Entity {
     public:
         /**
          * @brief Initialise the input manager, IMP: DO NOT TOUCH or INVOKE.
