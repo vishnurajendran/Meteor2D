@@ -1,5 +1,0 @@
-<map id="meteor::Application" name="meteor::Application">
-<area shape="rect" id="Node000001" title="Application acts as the entry&#45;point to the game." alt="" coords="5,80,139,107"/>
-<area shape="rect" id="Node000002" href="$classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="20,5,124,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,48,75,80,69,80,69,48"/>
-</map>

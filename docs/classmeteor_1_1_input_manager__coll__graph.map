@@ -1,5 +1,0 @@
-<map id="meteor::InputManager" name="meteor::InputManager">
-<area shape="rect" id="Node000001" title="manages user input events." alt="" coords="5,80,153,107"/>
-<area shape="rect" id="Node000002" href="$classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="27,5,131,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,48,82,80,76,80,76,48"/>
-</map>

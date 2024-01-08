@@ -1,5 +1,0 @@
-<map id="meteor::RenderCommand" name="meteor::RenderCommand">
-<area shape="rect" id="Node000001" title="RenderCommand are responsible for rendering visuals to the screen." alt="" coords="5,80,175,107"/>
-<area shape="rect" id="Node000002" href="$classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="38,5,142,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,48,93,80,87,80,87,48"/>
-</map>
