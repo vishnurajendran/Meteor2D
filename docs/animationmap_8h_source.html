@@ -58,6 +58,7 @@
   <td id="projectlogo"><img alt="Logo" src="meteor64.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Meteor2D
+   &#160;<span id="projectnumber">dev internal</span>
    </div>
    <div id="projectbrief">Meteor is a lightweight 2D game engine.</div>
   </td>
@@ -136,7 +137,7 @@ $(function(){initNavTree('animationmap_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span>meteor {</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    </div>
 <div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classmeteor_1_1_animation_map.html">   10</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_animation_map.html">AnimationMap</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classmeteor_1_1_animation_map.html">   10</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_animation_map.html">AnimationMap</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classmeteor_1_1_animation_map.html#a45a73dfc3ff658ad154dcf8c99ca27ea">   17</a></span>        <a class="code hl_class" href="classmeteor_1_1_sprite_sheet.html">SpriteSheet</a>* <a class="code hl_function" href="classmeteor_1_1_animation_map.html#a45a73dfc3ff658ad154dcf8c99ca27ea">getAnim</a>(std::string name);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classmeteor_1_1_animation_map.html#a11f938fa3c1c635690458f37e4b64da0">   22</a></span>        <a class="code hl_class" href="classmeteor_1_1_sprite_sheet.html">SpriteSheet</a>* <a class="code hl_function" href="classmeteor_1_1_animation_map.html#a11f938fa3c1c635690458f37e4b64da0">getDefault</a>();</div>
@@ -147,10 +148,11 @@ $(function(){initNavTree('animationmap_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    };</div>
 </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
-<div class="ttc" id="aclassmeteor_1_1_animation_map_html"><div class="ttname"><a href="classmeteor_1_1_animation_map.html">meteor::AnimationMap</a></div><div class="ttdoc">This class holds the relation-ship between SpriteSheets and Animation name. Needs to be created using...</div><div class="ttdef"><b>Definition</b> animationmap.h:10</div></div>
-<div class="ttc" id="aclassmeteor_1_1_animation_map_html_a11f938fa3c1c635690458f37e4b64da0"><div class="ttname"><a href="classmeteor_1_1_animation_map.html#a11f938fa3c1c635690458f37e4b64da0">meteor::AnimationMap::getDefault</a></div><div class="ttdeci">SpriteSheet * getDefault()</div><div class="ttdoc">get the default sprite-sheet for animation</div></div>
+<div class="ttc" id="aclassmeteor_1_1_animation_map_html"><div class="ttname"><a href="classmeteor_1_1_animation_map.html">meteor::AnimationMap</a></div><div class="ttdoc">This class holds the relationship between SpriteSheets and Animation name. Needs to be created using ...</div><div class="ttdef"><b>Definition</b> animationmap.h:10</div></div>
+<div class="ttc" id="aclassmeteor_1_1_animation_map_html_a11f938fa3c1c635690458f37e4b64da0"><div class="ttname"><a href="classmeteor_1_1_animation_map.html#a11f938fa3c1c635690458f37e4b64da0">meteor::AnimationMap::getDefault</a></div><div class="ttdeci">SpriteSheet * getDefault()</div><div class="ttdoc">get the default spritesheet for animation</div></div>
 <div class="ttc" id="aclassmeteor_1_1_animation_map_html_a45a73dfc3ff658ad154dcf8c99ca27ea"><div class="ttname"><a href="classmeteor_1_1_animation_map.html#a45a73dfc3ff658ad154dcf8c99ca27ea">meteor::AnimationMap::getAnim</a></div><div class="ttdeci">SpriteSheet * getAnim(std::string name)</div><div class="ttdoc">get the sprite-sheet for animation to play</div></div>
 <div class="ttc" id="aclassmeteor_1_1_animation_map_html_afae256c917d23260142166e5d25a17a3"><div class="ttname"><a href="classmeteor_1_1_animation_map.html#afae256c917d23260142166e5d25a17a3">meteor::AnimationMap::loadMap</a></div><div class="ttdeci">static AnimationMap * loadMap(std::string fileName)</div><div class="ttdoc">Loads an AnimationMap from a file.</div></div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html"><div class="ttname"><a href="classmeteor_1_1_entity.html">meteor::Entity</a></div><div class="ttdoc">An Entity is the base class for all data and behaviour oriented objects in meteor....</div><div class="ttdef"><b>Definition</b> entity.h:9</div></div>
 <div class="ttc" id="aclassmeteor_1_1_sprite_sheet_html"><div class="ttname"><a href="classmeteor_1_1_sprite_sheet.html">meteor::SpriteSheet</a></div><div class="ttdoc">This class holds the Rects within a texture that form an Animation.</div><div class="ttdef"><b>Definition</b> spritesheet.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

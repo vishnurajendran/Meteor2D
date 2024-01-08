@@ -58,6 +58,7 @@
   <td id="projectlogo"><img alt="Logo" src="meteor64.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Meteor2D
+   &#160;<span id="projectnumber">dev internal</span>
    </div>
    <div id="projectbrief">Meteor is a lightweight 2D game engine.</div>
   </td>
@@ -135,7 +136,7 @@ $(function(){initNavTree('camerastack_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;camera/camera.h&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span>meteor {</div>
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classmeteor_1_1_camera_stack.html">    9</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_camera_stack.html">CameraStack</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classmeteor_1_1_camera_stack.html">    9</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_camera_stack.html">CameraStack</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a> {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classmeteor_1_1_camera_stack.html#a5bd67e849b5882995e99ed47c8bb81b1">   14</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmeteor_1_1_camera_stack.html#a5bd67e849b5882995e99ed47c8bb81b1">hasActiveCamera</a>();</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="comment">/*</span></div>
@@ -157,6 +158,7 @@ $(function(){initNavTree('camerastack_8h_source.html',''); initResizable(); });
 <div class="ttc" id="aclassmeteor_1_1_camera_stack_html_a5bd67e849b5882995e99ed47c8bb81b1"><div class="ttname"><a href="classmeteor_1_1_camera_stack.html#a5bd67e849b5882995e99ed47c8bb81b1">meteor::CameraStack::hasActiveCamera</a></div><div class="ttdeci">static bool hasActiveCamera()</div></div>
 <div class="ttc" id="aclassmeteor_1_1_camera_stack_html_a6bcbb57df4452a5cd2cd9d40af76dc2e"><div class="ttname"><a href="classmeteor_1_1_camera_stack.html#a6bcbb57df4452a5cd2cd9d40af76dc2e">meteor::CameraStack::removeFromStack</a></div><div class="ttdeci">static void removeFromStack(Camera *camera)</div><div class="ttdoc">Remove a Camera from the stack.</div></div>
 <div class="ttc" id="aclassmeteor_1_1_camera_stack_html_ab7980ffee3e0e472a485f095fd58020a"><div class="ttname"><a href="classmeteor_1_1_camera_stack.html#ab7980ffee3e0e472a485f095fd58020a">meteor::CameraStack::registerToStack</a></div><div class="ttdeci">static void registerToStack(Camera *camera)</div><div class="ttdoc">Register a camera to the stack.</div></div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html"><div class="ttname"><a href="classmeteor_1_1_entity.html">meteor::Entity</a></div><div class="ttdoc">An Entity is the base class for all data and behaviour oriented objects in meteor....</div><div class="ttdef"><b>Definition</b> entity.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

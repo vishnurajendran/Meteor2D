@@ -22,5 +22,6 @@ var searchData=
   ['spritedeserializer_19',['SpriteDeserializer',['../classmeteor_1_1_sprite_deserializer.html',1,'meteor']]],
   ['spritesheet_20',['SpriteSheet',['../classmeteor_1_1_sprite_sheet.html',1,'meteor::SpriteSheet'],['../classmeteor_1_1_sprite_sheet.html#afe7b1ae19243ca90d51bf0a029edcf9c',1,'meteor::SpriteSheet::SpriteSheet()']]],
   ['started_21',['Getting Started',['../index.html#autotoc_md2',1,'']]],
-  ['stop_22',['stop',['../classmeteor_1_1_animation.html#aa8a644e59610d460f2071f99ea450b87',1,'meteor::Animation']]]
+  ['startscene_22',['startScene',['../classmeteor_1_1_scene.html#a0b7e881f1dc4f252bfd0e8c746ad7984',1,'meteor::Scene']]],
+  ['stop_23',['stop',['../classmeteor_1_1_animation.html#aa8a644e59610d460f2071f99ea450b87',1,'meteor::Animation']]]
 ];

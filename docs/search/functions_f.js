@@ -15,5 +15,6 @@ var searchData=
   ['spatialentity_12',['SpatialEntity',['../classmeteor_1_1_spatial_entity.html#a077bd7eaf2c8cf7165bed472dd19f740',1,'meteor::SpatialEntity::SpatialEntity()'],['../classmeteor_1_1_spatial_entity.html#a78f0238eb72a61a5f56de027a4c36f6d',1,'meteor::SpatialEntity::SpatialEntity(SpatialEntity *parent)']]],
   ['sprite2d_13',['Sprite2D',['../classmeteor_1_1_sprite2_d.html#abc32153d0d21af6bd1f6b9873395a736',1,'meteor::Sprite2D::Sprite2D(std::string texPath, RenderLayer layer, uint8_t sortingOrder)'],['../classmeteor_1_1_sprite2_d.html#a13cd9498e7116e47ad70233e0ef47d27',1,'meteor::Sprite2D::Sprite2D(Texture *texture, RenderLayer layer, uint8_t sortingOrder)']]],
   ['spritesheet_14',['SpriteSheet',['../classmeteor_1_1_sprite_sheet.html#afe7b1ae19243ca90d51bf0a029edcf9c',1,'meteor::SpriteSheet']]],
-  ['stop_15',['stop',['../classmeteor_1_1_animation.html#aa8a644e59610d460f2071f99ea450b87',1,'meteor::Animation']]]
+  ['startscene_15',['startScene',['../classmeteor_1_1_scene.html#a0b7e881f1dc4f252bfd0e8c746ad7984',1,'meteor::Scene']]],
+  ['stop_16',['stop',['../classmeteor_1_1_animation.html#aa8a644e59610d460f2071f99ea450b87',1,'meteor::Animation']]]
 ];

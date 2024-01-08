@@ -58,6 +58,7 @@
   <td id="projectlogo"><img alt="Logo" src="meteor64.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Meteor2D
+   &#160;<span id="projectnumber">dev internal</span>
    </div>
    <div id="projectbrief">Meteor is a lightweight 2D game engine.</div>
   </td>
@@ -133,24 +134,26 @@ $(function(){initNavTree('inputmanagement_8h_source.html',''); initResizable(); 
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;input/keycodes.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>meteor {</div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html">   10</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_input_manager.html">InputManager</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html#a5d178f0c52f1ac6e3202e244bc6b777f">   15</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmeteor_1_1_input_manager.html#a5d178f0c52f1ac6e3202e244bc6b777f">initialise</a>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html#ae6cf8b89b90e5a0203f230a4c87acaad">   19</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmeteor_1_1_input_manager.html#ae6cf8b89b90e5a0203f230a4c87acaad">update</a>();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html#ab3290a27467d98a61ad35c1ed48e8a01">   25</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmeteor_1_1_input_manager.html#ab3290a27467d98a61ad35c1ed48e8a01">getKey</a>(KeyCode key);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html#af6a99104194087d67f9c3b2318c74fdf">   31</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmeteor_1_1_input_manager.html#af6a99104194087d67f9c3b2318c74fdf">getKeyDown</a>(KeyCode key);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html#ade1dbadd0a3fdc23c1de3a21f429d74d">   37</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmeteor_1_1_input_manager.html#ade1dbadd0a3fdc23c1de3a21f429d74d">getKeyUp</a>(KeyCode key);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">static</span> <span class="keyword">const</span> Uint8* keyStates;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">static</span> Uint8 prevKeyStates[SDL_NUM_SCANCODES];</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;entities/entity.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;input/keycodes.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>meteor {</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_input_manager.html">InputManager</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html#a5d178f0c52f1ac6e3202e244bc6b777f">   16</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmeteor_1_1_input_manager.html#a5d178f0c52f1ac6e3202e244bc6b777f">initialise</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html#ae6cf8b89b90e5a0203f230a4c87acaad">   20</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmeteor_1_1_input_manager.html#ae6cf8b89b90e5a0203f230a4c87acaad">update</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html#ab3290a27467d98a61ad35c1ed48e8a01">   26</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmeteor_1_1_input_manager.html#ab3290a27467d98a61ad35c1ed48e8a01">getKey</a>(KeyCode key);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html#af6a99104194087d67f9c3b2318c74fdf">   32</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmeteor_1_1_input_manager.html#af6a99104194087d67f9c3b2318c74fdf">getKeyDown</a>(KeyCode key);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classmeteor_1_1_input_manager.html#ade1dbadd0a3fdc23c1de3a21f429d74d">   38</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmeteor_1_1_input_manager.html#ade1dbadd0a3fdc23c1de3a21f429d74d">getKeyUp</a>(KeyCode key);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">static</span> <span class="keyword">const</span> Uint8* keyStates;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">static</span> Uint8 prevKeyStates[SDL_NUM_SCANCODES];</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    };</div>
 </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
-<div class="ttc" id="aclassmeteor_1_1_input_manager_html"><div class="ttname"><a href="classmeteor_1_1_input_manager.html">meteor::InputManager</a></div><div class="ttdoc">manages user input events.</div><div class="ttdef"><b>Definition</b> inputmanagement.h:10</div></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html"><div class="ttname"><a href="classmeteor_1_1_entity.html">meteor::Entity</a></div><div class="ttdoc">An Entity is the base class for all data and behaviour oriented objects in meteor....</div><div class="ttdef"><b>Definition</b> entity.h:9</div></div>
+<div class="ttc" id="aclassmeteor_1_1_input_manager_html"><div class="ttname"><a href="classmeteor_1_1_input_manager.html">meteor::InputManager</a></div><div class="ttdoc">manages user input events.</div><div class="ttdef"><b>Definition</b> inputmanagement.h:11</div></div>
 <div class="ttc" id="aclassmeteor_1_1_input_manager_html_a5d178f0c52f1ac6e3202e244bc6b777f"><div class="ttname"><a href="classmeteor_1_1_input_manager.html#a5d178f0c52f1ac6e3202e244bc6b777f">meteor::InputManager::initialise</a></div><div class="ttdeci">static void initialise()</div><div class="ttdoc">Initialise the input manager, IMP: DO NOT TOUCH or INVOKE.</div></div>
 <div class="ttc" id="aclassmeteor_1_1_input_manager_html_ab3290a27467d98a61ad35c1ed48e8a01"><div class="ttname"><a href="classmeteor_1_1_input_manager.html#ab3290a27467d98a61ad35c1ed48e8a01">meteor::InputManager::getKey</a></div><div class="ttdeci">static bool getKey(KeyCode key)</div><div class="ttdoc">Returns true if a key if held down, on release returns false.</div></div>
 <div class="ttc" id="aclassmeteor_1_1_input_manager_html_ade1dbadd0a3fdc23c1de3a21f429d74d"><div class="ttname"><a href="classmeteor_1_1_input_manager.html#ade1dbadd0a3fdc23c1de3a21f429d74d">meteor::InputManager::getKeyUp</a></div><div class="ttdeci">static bool getKeyUp(KeyCode key)</div><div class="ttdoc">Returns true if a key was released.</div></div>

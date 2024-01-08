@@ -1,0 +1,5 @@
+<map id="meteor::Renderer" name="meteor::Renderer">
+<area shape="rect" id="Node000001" title="Renderer handles all render related tasks in meteor. Renderer uses the render&#45;queue to render each co..." alt="" coords="5,80,127,107"/>
+<area shape="rect" id="Node000002" href="$classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="14,5,118,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,48,69,80,63,80,63,48"/>
+</map>

@@ -5,8 +5,8 @@ var classmeteor_1_1_scene =
     [ "find", "classmeteor_1_1_scene.html#a3937fa997dcbe637246a9088496c902c", null ],
     [ "getRootEntities", "classmeteor_1_1_scene.html#aae60451e4fffa0582c86a5e2520a0296", null ],
     [ "getRootSize", "classmeteor_1_1_scene.html#a96d23aa705f9a3b33fac9e2362267bd8", null ],
-    [ "onExit", "classmeteor_1_1_scene.html#a23d86c244ea18a6dd1de417a4feaf76e", null ],
-    [ "onStart", "classmeteor_1_1_scene.html#a420327c9adaeddfb05140c4e7f4e82e4", null ],
-    [ "onUpdate", "classmeteor_1_1_scene.html#a10ca8bff9f3944d9ff210c40d0668308", null ],
-    [ "tryParse", "classmeteor_1_1_scene.html#ab4ce38de75c3a27a6d3bb763d899bb32", null ]
+    [ "onClose", "classmeteor_1_1_scene.html#a485c0d059d90fc3c2c795954b136c28b", null ],
+    [ "startScene", "classmeteor_1_1_scene.html#a0b7e881f1dc4f252bfd0e8c746ad7984", null ],
+    [ "tryParse", "classmeteor_1_1_scene.html#ab4ce38de75c3a27a6d3bb763d899bb32", null ],
+    [ "update", "classmeteor_1_1_scene.html#aabe44d02874c5dc4ab1c441370cf8c06", null ]
 ];

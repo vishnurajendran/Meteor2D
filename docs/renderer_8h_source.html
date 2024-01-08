@@ -58,6 +58,7 @@
   <td id="projectlogo"><img alt="Logo" src="meteor64.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Meteor2D
+   &#160;<span id="projectnumber">dev internal</span>
    </div>
    <div id="projectbrief">Meteor is a lightweight 2D game engine.</div>
   </td>
@@ -131,26 +132,28 @@ $(function(){initNavTree('renderer_8h_source.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include&lt;rendering/renderqueue.h&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include&lt;SDL.h&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>meteor {</div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classmeteor_1_1_renderer.html">   10</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_renderer.html">Renderer</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_class" href="classmeteor_1_1_renderer.html">Renderer</a>(<a class="code hl_class" href="classmeteor_1_1_render_queue.html">RenderQueue</a>* queue, SDL_Renderer* rendererCore);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordtype">void</span> setLogicalSize(<span class="keywordtype">size_t</span> width, <span class="keywordtype">size_t</span> height);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">void</span> renderAll();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">void</span> render(<a class="code hl_class" href="classmeteor_1_1_render_command.html">RenderCommand</a>* cmd);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        SDL_Renderer* renderCore;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_class" href="classmeteor_1_1_render_queue.html">RenderQueue</a>* queue;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    };</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;entities/entity.h&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include&lt;rendering/renderqueue.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include&lt;SDL.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>meteor {</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classmeteor_1_1_renderer.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_renderer.html">Renderer</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <a class="code hl_class" href="classmeteor_1_1_renderer.html">Renderer</a>(<a class="code hl_class" href="classmeteor_1_1_render_queue.html">RenderQueue</a>* queue, SDL_Renderer* rendererCore);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">void</span> setLogicalSize(<span class="keywordtype">size_t</span> width, <span class="keywordtype">size_t</span> height);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordtype">void</span> renderAll();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> render(<a class="code hl_class" href="classmeteor_1_1_render_command.html">RenderCommand</a>* cmd);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        SDL_Renderer* renderCore;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_class" href="classmeteor_1_1_render_queue.html">RenderQueue</a>* queue;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    };</div>
 </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
-<div class="ttc" id="aclassmeteor_1_1_render_command_html"><div class="ttname"><a href="classmeteor_1_1_render_command.html">meteor::RenderCommand</a></div><div class="ttdoc">RenderCommand are responsible for rendering visuals to the screen.</div><div class="ttdef"><b>Definition</b> rendercommand.h:9</div></div>
-<div class="ttc" id="aclassmeteor_1_1_render_queue_html"><div class="ttname"><a href="classmeteor_1_1_render_queue.html">meteor::RenderQueue</a></div><div class="ttdoc">Maintains a sorted queue of all render commands submitted for rendering.</div><div class="ttdef"><b>Definition</b> renderqueue.h:10</div></div>
-<div class="ttc" id="aclassmeteor_1_1_renderer_html"><div class="ttname"><a href="classmeteor_1_1_renderer.html">meteor::Renderer</a></div><div class="ttdoc">Renderer handles all render related tasks in meteor. Renderer uses the render-queue to render each co...</div><div class="ttdef"><b>Definition</b> renderer.h:10</div></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html"><div class="ttname"><a href="classmeteor_1_1_entity.html">meteor::Entity</a></div><div class="ttdoc">An Entity is the base class for all data and behaviour oriented objects in meteor....</div><div class="ttdef"><b>Definition</b> entity.h:9</div></div>
+<div class="ttc" id="aclassmeteor_1_1_render_command_html"><div class="ttname"><a href="classmeteor_1_1_render_command.html">meteor::RenderCommand</a></div><div class="ttdoc">RenderCommand are responsible for rendering visuals to the screen.</div><div class="ttdef"><b>Definition</b> rendercommand.h:10</div></div>
+<div class="ttc" id="aclassmeteor_1_1_render_queue_html"><div class="ttname"><a href="classmeteor_1_1_render_queue.html">meteor::RenderQueue</a></div><div class="ttdoc">Maintains a sorted queue of all render commands submitted for rendering.</div><div class="ttdef"><b>Definition</b> renderqueue.h:11</div></div>
+<div class="ttc" id="aclassmeteor_1_1_renderer_html"><div class="ttname"><a href="classmeteor_1_1_renderer.html">meteor::Renderer</a></div><div class="ttdoc">Renderer handles all render related tasks in meteor. Renderer uses the render-queue to render each co...</div><div class="ttdef"><b>Definition</b> renderer.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

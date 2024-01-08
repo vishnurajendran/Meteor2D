@@ -58,6 +58,7 @@
   <td id="projectlogo"><img alt="Logo" src="meteor64.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Meteor2D
+   &#160;<span id="projectnumber">dev internal</span>
    </div>
    <div id="projectbrief">Meteor is a lightweight 2D game engine.</div>
   </td>
@@ -139,7 +140,7 @@ $(function(){initNavTree('scene__entity__typemap_8h_source.html',''); initResiza
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>meteor {</div>
 <div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classmeteor_1_1_scene_entity_type_map.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_scene_entity_type_map.html">SceneEntityTypeMap</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classmeteor_1_1_scene_entity_type_map.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmeteor_1_1_scene_entity_type_map.html">SceneEntityTypeMap</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmeteor_1_1_entity.html">Entity</a> {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> registerDeserializer(std::string type, <a class="code hl_class" href="classmeteor_1_1_scene_entity_type_deserializer.html">SceneEntityTypeDeserializer</a>* deserializer);</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">static</span> <a class="code hl_class" href="classmeteor_1_1_scene_entity_type_deserializer.html">SceneEntityTypeDeserializer</a>* getDeserializer(std::string type);</div>
@@ -149,6 +150,7 @@ $(function(){initNavTree('scene__entity__typemap_8h_source.html',''); initResiza
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    };</div>
 </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="ttc" id="aclassmeteor_1_1_entity_html"><div class="ttname"><a href="classmeteor_1_1_entity.html">meteor::Entity</a></div><div class="ttdoc">An Entity is the base class for all data and behaviour oriented objects in meteor....</div><div class="ttdef"><b>Definition</b> entity.h:9</div></div>
 <div class="ttc" id="aclassmeteor_1_1_scene_entity_type_deserializer_html"><div class="ttname"><a href="classmeteor_1_1_scene_entity_type_deserializer.html">meteor::SceneEntityTypeDeserializer</a></div><div class="ttdoc">Base class for Scene Enity Derserializers.</div><div class="ttdef"><b>Definition</b> scene_entity_type_deserializer.h:10</div></div>
 <div class="ttc" id="aclassmeteor_1_1_scene_entity_type_map_html"><div class="ttname"><a href="classmeteor_1_1_scene_entity_type_map.html">meteor::SceneEntityTypeMap</a></div><div class="ttdoc">A Class that maintains mapping between Xml node types and their respective Deserializers.</div><div class="ttdef"><b>Definition</b> scene_entity_typemap.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
