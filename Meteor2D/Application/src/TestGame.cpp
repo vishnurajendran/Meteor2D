@@ -4,12 +4,14 @@ std::string TestGame::getName() {
 	return "Test Game";
 }
 
+meteor::AudioSource* src;
 void TestGame::onStart() {
 	meteor::SceneManager::loadScene("test_scene.scml");
 	auto scene = meteor::SceneManager::getActiveScene();
 	gameCamera = scene->find<meteor::Camera>("gameCamera");
 	scp = scene->find<meteor::SpatialEntity>("scp");
 	anim = scene->find<meteor::Animation>("link_player");
+	src = new meteor::AudioSource("letsgo.mp3", true, true);
 	mLog("Scene contents {}", scene->getRootSize());
 }
 
@@ -21,6 +23,14 @@ void TestGame::onUpdate(float deltaTime) {
 	
 	if (meteor::InputManager::getKeyDown(meteor::KeyCode::KEYCODE_ESCAPE)) {
 		quit();
+		return;
+	}
+
+	if (meteor::InputManager::getKeyDown(meteor::KeyCode::KEYCODE_SPACE)) {
+		if (src->isPaused())
+			src->play();
+		else
+			src->pause();
 		return;
 	}
 

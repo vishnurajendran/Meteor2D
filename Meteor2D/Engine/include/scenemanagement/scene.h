@@ -48,6 +48,11 @@ namespace meteor {
 		bool tryParse(pugi::xml_document* doc);
 		
 		/**
+		 * @return true when a scene is closing 
+		*/
+		inline bool isClosing() { return sceneClosing; }
+
+		/**
 		 * @brief Finds a Spatial Entity within this scene.
 		*/
 		template<typename T>
@@ -67,6 +72,7 @@ namespace meteor {
 	private:
 		std::vector<SpatialEntity*>* rootEntities;
 		void recursivelyLoadEntity(pugi::xml_node* currNode, SpatialEntity* parent);
+		bool sceneClosing = false;
 	public:
 		static const std::string VALID_SCENE_FILE_XML_TAG;
 	};

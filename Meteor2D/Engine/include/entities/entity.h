@@ -26,7 +26,7 @@ namespace meteor {
 		 * @brief Get this object as a string
 		 * @return A string representing this object
 		*/
-		std::string toString();
+		virtual std::string toString();
 	protected:
 		std::string name;
 	};

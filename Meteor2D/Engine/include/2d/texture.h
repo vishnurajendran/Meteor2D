@@ -16,6 +16,7 @@ namespace meteor {
 		 * @param path Texture file path
 		*/
 		Texture(std::string path);
+		~Texture();
 		/**
 		 * @brief Gets the img source path in disk
 		 * @return Path as string

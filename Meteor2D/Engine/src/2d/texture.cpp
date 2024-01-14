@@ -34,4 +34,9 @@ namespace meteor {
         size.y = sizeY;
         isValid = true;
     }
+
+    Texture::~Texture() {
+        if(coreTexture != NULL)
+            SDL_DestroyTexture(coreTexture);
+    }
 }

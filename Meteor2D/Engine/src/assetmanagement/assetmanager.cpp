@@ -1,5 +1,6 @@
 #pragma once
 #include <assetmanagement/assetmanager.h>
+#include <audio/audioengine.h>
 #include <meteorutils/logging.h>
 
 namespace meteor {
@@ -7,6 +8,7 @@ namespace meteor {
 	const std::string ANIM_PATH = "resS\\anim\\";
 	const std::string SCENE_PATH = "resS\\scene\\";
 	const std::string UI_PATH = "resS\\ui\\";
+	const std::string AUDIO_PATH = "resS\\audio\\";
 
 	const std::string PATH_DELIM_WIN = "\\";
 	const std::string PATH_DELIM_OTHER = "/";
@@ -43,10 +45,10 @@ namespace meteor {
 		}
 
 		mLog("loading animation: {}", assetPath);
-		auto map = AnimationMap::loadMap(assetPath);
-		if (map != NULL) {
-			animMap[assetPath] = map;
-			return map;
+		auto aniMap = AnimationMap::loadMap(assetPath);
+		if (aniMap != NULL) {
+			animMap[assetPath] = aniMap;
+			return aniMap;
 		}
 
 		return NULL;
@@ -85,5 +87,48 @@ namespace meteor {
 		}
 		mError("Failed xml document load, reason: {}.", res.description());
 		return NULL;
+	}
+
+	AudioClip* AssetManager::getAudioClip(std::string path, bool relative) {
+		auto assetPath = relative ? AUDIO_PATH + path : path;
+		if (animMap.contains(assetPath)) {
+			return audioMap.at(assetPath);
+		}
+
+		mLog("loading audio clip: {}", assetPath);
+		auto clip = AudioEngine::getClip(assetPath);
+		if (clip != NULL) {
+			audioMap[assetPath] = clip;
+			return clip;
+		}
+
+		return NULL;
+	}
+
+	void AssetManager::cleanup() {
+		
+		mLog("Cleaning Animations References");
+		for (auto i = animMap.begin(); i != animMap.end(); i++)
+		{
+			delete i->second;
+		}
+
+		mLog("Cleaning Textures References");
+		for (auto i = texMap.begin(); i != texMap.end(); i++)
+		{
+			delete i->second;
+		}
+
+		mLog("Cleaning XMLDefinitions References");
+		for (auto i = xmlMap.begin(); i != xmlMap.end(); i++)
+		{
+			delete i->second;
+		}
+
+		mLog("Cleaning Audio References");
+		for (auto i = audioMap.begin(); i != audioMap.end(); i++)
+		{
+			delete i->second;
+		}
 	}
 }

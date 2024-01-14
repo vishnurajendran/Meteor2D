@@ -33,6 +33,7 @@ namespace meteor {
 
 	void Scene::onClose() {
 		//logNoFormat("cleaning scene");
+		sceneClosing = true;
 		for (int i = 0; i < rootEntities->size(); i++) {
 			rootEntities->at(i)->onExit();
 		}
