@@ -47,10 +47,10 @@ Please note that while efforts are made to maintain cross-platform compatibility
     - [x] Keyboard Inputs.
     - [ ] Mouse Inputs (Parked until UI implementation).
 - [x] Scene Serialization.
-- [ ] Gizmos.
-- [ ] 2D Physics.
 - [ ] Audio.
 - [ ] UI System.
+- [ ] Gizmos.
+- [ ] 2D Physics.
 
 ### QoL 
 - [ ] Create a sample game using Meteor.
