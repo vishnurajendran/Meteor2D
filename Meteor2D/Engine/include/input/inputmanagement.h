@@ -1,6 +1,6 @@
 #pragma once
 #include <SDL.h>
-#include <unordered_map>
+#include <set>
 #include <entities/entity.h>
 #include <input/keycodes.h>
 
@@ -39,5 +39,6 @@ namespace meteor {
     private:
         static const Uint8* keyStates;
         static Uint8 prevKeyStates[SDL_NUM_SCANCODES];
+        static std::set<KeyCode> keyMemory;
     };
 }

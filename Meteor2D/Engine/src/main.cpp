@@ -8,6 +8,12 @@ extern meteor::Application* getApp();
 
 int main(int argc, char* argv[]) {
 	mLog("booting up meteor");
+	
+	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+		mError("Could not initialise SDL! SDL Error: {}", SDL_GetError());
+		return 0;
+	}
+
 	if (!meteor::Texture::initialiseTextureLoader()) {
 		mError("un-recoverable error, closing meteor instance");
 		return 0;
@@ -25,17 +31,29 @@ int main(int argc, char* argv[]) {
 	float timer = 0;
 	int targetFrameTime = 1000 / meteor::TARGET_FPS;
 	while (!window->hasQuit() && !app->hasQuit()) {
+
+		// update events
+		meteor::InputManager::update();
+
+		// clear window
 		window->clear();
 		window->pollEvents();
+
+		//update time
 		meteor::Time::updateTime();
 		float deltaTime = meteor::Time::getDeltaTime();
 		int frameTime = meteor::Time::getFrameTime();
+
+		//update scene
 		meteor::SceneManager::update(deltaTime);
+
+		//update app
 		app->onUpdate(deltaTime);
 		if (!meteor::CameraStack::hasActiveCamera())
 			mWarn("No active camera found!, Entities may not be correctly rendererd to the screen");
 		window->update();
 		
+		//delay frame to reach target framerate
 		if (frameTime < targetFrameTime) {
 			window->delay(targetFrameTime - frameTime);
 		}
