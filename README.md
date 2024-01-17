@@ -49,6 +49,9 @@ Please note that while efforts are made to maintain cross-platform compatibility
 - [x] Scene Serialization.
 - [x] Audio.
 - [ ] UI System.
+    - [ ] UI Elements.
+    - [ ] UI Events.
+    - [ ] UI serialisation.
 - [ ] Gizmos.
 - [ ] 2D Physics.
 
