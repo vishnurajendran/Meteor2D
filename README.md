@@ -47,8 +47,11 @@ Please note that while efforts are made to maintain cross-platform compatibility
     - [x] Keyboard Inputs.
     - [ ] Mouse Inputs (Parked until UI implementation).
 - [x] Scene Serialization.
-- [ ] Audio.
+- [x] Audio.
 - [ ] UI System.
+    - [ ] UI Elements.
+    - [ ] UI Events.
+    - [ ] UI serialisation.
 - [ ] Gizmos.
 - [ ] 2D Physics.
 
