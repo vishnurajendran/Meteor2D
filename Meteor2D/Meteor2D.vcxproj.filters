@@ -100,6 +100,12 @@
     <Filter Include="Engine\Source Files\sceneserialization\deserializers">
       <UniqueIdentifier>{4f10e5bc-ff47-4e66-a127-3d49edde4491}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Source Files\audio">
+      <UniqueIdentifier>{c56c7002-7287-4a75-817c-3559905ecb01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Header Files\audio">
+      <UniqueIdentifier>{472eab38-0979-47b6-b048-1c71bee5e6b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\include\application\application.h">
@@ -225,6 +231,21 @@
     <ClInclude Include="Engine\include\meteorutils\typehelpers.h">
       <Filter>Engine\Header Files\meteorutils</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\include\audio\audioengine.h">
+      <Filter>Engine\Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\audio\audioclip.h">
+      <Filter>Engine\Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\audio\audioplayable.h">
+      <Filter>Engine\Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\audio\audioplaystate.h">
+      <Filter>Engine\Header Files\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\audio\audiosource.h">
+      <Filter>Engine\Header Files\audio</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\src\rendering\renderer.cpp">
@@ -310,6 +331,18 @@
     </ClCompile>
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\cameradeserializer.cpp">
       <Filter>Engine\Source Files\sceneserialization\deserializers</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\audio\audioengine.cpp">
+      <Filter>Engine\Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\audio\audioclip.cpp">
+      <Filter>Engine\Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\audioplayable.cpp">
+      <Filter>Engine\Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\audio\audiosource.cpp">
+      <Filter>Engine\Source Files\audio</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

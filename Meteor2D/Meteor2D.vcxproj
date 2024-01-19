@@ -28,6 +28,11 @@
     <ClInclude Include="Engine\include\2d\texture.h" />
     <ClInclude Include="Engine\include\application\application.h" />
     <ClInclude Include="Engine\include\assetmanagement\assetmanager.h" />
+    <ClInclude Include="Engine\include\audio\audioclip.h" />
+    <ClInclude Include="Engine\include\audio\audioengine.h" />
+    <ClInclude Include="Engine\include\audio\audioplayable.h" />
+    <ClInclude Include="Engine\include\audio\audioplaystate.h" />
+    <ClInclude Include="Engine\include\audio\audiosource.h" />
     <ClInclude Include="Engine\include\camera\camera.h" />
     <ClInclude Include="Engine\include\camera\camerastack.h" />
     <ClInclude Include="Engine\include\constants.h" />
@@ -71,6 +76,10 @@
     <ClCompile Include="Engine\src\2d\texrendercmd.cpp" />
     <ClCompile Include="Engine\src\2d\texture.cpp" />
     <ClCompile Include="Engine\src\assetmanagement\assetmanager.cpp" />
+    <ClCompile Include="Engine\src\audioplayable.cpp" />
+    <ClCompile Include="Engine\src\audio\audioclip.cpp" />
+    <ClCompile Include="Engine\src\audio\audioengine.cpp" />
+    <ClCompile Include="Engine\src\audio\audiosource.cpp" />
     <ClCompile Include="Engine\src\camera\camera.cpp" />
     <ClCompile Include="Engine\src\camera\camerastack.cpp" />
     <ClCompile Include="Engine\src\entities\entity.cpp" />
@@ -154,8 +163,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Engine\external\SDL2\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\external\Utils;$(SolutionDir)Application\include;D:\Github\Meteor2D\Meteor2D\Engine\external\SDL2_Image\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Engine\external\SDL2\x64;$(SolutionDir)Engine\external\SDL2_image\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Engine\external\SDL2\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\external\Utils;$(SolutionDir)Application\include;$(SolutionDir)Engine\external\Irrklang\include;$(SolutionDir)Engine\external\SDL2_Image\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Engine\external\Irrklang\x64;$(SolutionDir)Engine\external\SDL2\x64;$(SolutionDir)Engine\external\SDL2_image\x64;$(LibraryPath)</LibraryPath>
     <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -207,7 +216,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(SolutionDir)SDL2.dll" "$(TargetDir)SDL2.dll"

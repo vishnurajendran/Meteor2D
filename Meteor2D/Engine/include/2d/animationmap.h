@@ -9,6 +9,7 @@ namespace meteor {
 	*/
 	class AnimationMap : public Entity {
 	public:
+		~AnimationMap();
 		/**
 		 * @brief get the sprite-sheet for animation to play
 		 * @param name Animation clip name.

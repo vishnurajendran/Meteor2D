@@ -14,6 +14,7 @@ namespace meteor {
 		if (activeScene == NULL)
 			return false;
 
+
 		activeScene->onClose();
 		activeScene = NULL;
 		return true;

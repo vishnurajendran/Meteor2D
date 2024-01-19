@@ -11,11 +11,6 @@ namespace meteor {
 
 		backgroundColor = properties.backgroundColor;
 		auto windowFlag = properties.fullscreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN;
-		mLog("Initialising SDL");
-		if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-			mError("Could not initialise SDL! SDL Error: {}", SDL_GetError());
-			return;
-		}
 
 		mLog("Creating Window");
 		window = SDL_CreateWindow(properties.name.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, properties.width, properties.height, windowFlag);
