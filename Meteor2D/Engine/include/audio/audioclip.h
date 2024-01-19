@@ -8,13 +8,32 @@ namespace meteor {
 #ifndef AUDIOCLIP_H
 #define AUDIOCLIP_H
 	class AudioPlayable;
+	/**
+	 * @brief AudioClip is the instance of a audio clip file, this class holds.
+	 * This class holds basic information of the clip, and has methods to create playable
+	 * instances.
+	*/
 	class AudioClip : Entity {
 	public:
+		/**
+		 * @brief Constructor
+		 * @param engine core audio engine instance.
+		 * @param clipPath path to the clip in disk.
+		*/
 		AudioClip(irrklang::ISoundEngine* engine, std::string clipPath);
 		~AudioClip();
+		/**
+		 * @brief Creates a playable instance of this clip, which can be used to
+		 * play audio.
+		 * @return AudioPlayable instance.
+		*/
 		AudioPlayable* createPlayableInstance();
 		std::string toString() override;
 	private:
+		/**
+		 * @brief Creates a unique id for each playable instance.
+		 * @return Id as a string.
+		*/
 		std::string getPlayableInstanceId();
 
 		irrklang::ISoundEngine* engine = NULL;
