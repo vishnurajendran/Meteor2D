@@ -68,13 +68,13 @@ namespace meteor {
 		if (!soundSrc)
 			return;
 		volume = (volume < 0 ? 0 : ((volume > 1) ? 1 : volume));
-		soundSrc->setDefaultVolume(volume);
+		playableRef->setVolume(volume);
 	}
 
 	float AudioPlayable::getVolume() {
 		if (!soundSrc)
 			return -1;
-		return soundSrc->getDefaultVolume();
+		return playableRef->getVolume();
 	}
 
 	long AudioPlayable::getLength() {

@@ -91,7 +91,7 @@ namespace meteor {
 
 	AudioClip* AssetManager::getAudioClip(std::string path, bool relative) {
 		auto assetPath = relative ? AUDIO_PATH + path : path;
-		if (animMap.contains(assetPath)) {
+		if (audioMap.contains(assetPath)) {
 			return audioMap.at(assetPath);
 		}
 
