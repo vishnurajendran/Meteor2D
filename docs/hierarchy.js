@@ -5,6 +5,9 @@ var hierarchy =
       [ "meteor::AnimationMap", "classmeteor_1_1_animation_map.html", null ],
       [ "meteor::Application", "classmeteor_1_1_application.html", null ],
       [ "meteor::AssetManager", "classmeteor_1_1_asset_manager.html", null ],
+      [ "meteor::AudioClip", "classmeteor_1_1_audio_clip.html", null ],
+      [ "meteor::AudioEngine", "classmeteor_1_1_audio_engine.html", null ],
+      [ "meteor::AudioPlayable", "classmeteor_1_1_audio_playable.html", null ],
       [ "meteor::CameraStack", "classmeteor_1_1_camera_stack.html", null ],
       [ "meteor::InputManager", "classmeteor_1_1_input_manager.html", null ],
       [ "meteor::RenderCommand", "classmeteor_1_1_render_command.html", [
@@ -23,6 +26,7 @@ var hierarchy =
       [ "meteor::SceneManager", "classmeteor_1_1_scene_manager.html", null ],
       [ "meteor::SpatialEntity", "classmeteor_1_1_spatial_entity.html", [
         [ "meteor::Animation", "classmeteor_1_1_animation.html", null ],
+        [ "meteor::AudioSource", "classmeteor_1_1_audio_source.html", null ],
         [ "meteor::Camera", "classmeteor_1_1_camera.html", null ],
         [ "meteor::Sprite2D", "classmeteor_1_1_sprite2_d.html", null ]
       ] ],

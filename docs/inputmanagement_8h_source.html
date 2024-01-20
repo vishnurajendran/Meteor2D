@@ -133,7 +133,7 @@ $(function(){initNavTree('inputmanagement_8h_source.html',''); initResizable(); 
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;set&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;entities/entity.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;input/keycodes.h&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
@@ -149,9 +149,10 @@ $(function(){initNavTree('inputmanagement_8h_source.html',''); initResizable(); 
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">static</span> <span class="keyword">const</span> Uint8* keyStates;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">static</span> Uint8 prevKeyStates[SDL_NUM_SCANCODES];</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    };</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">static</span> std::set&lt;KeyCode&gt; keyMemory;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
 <div class="ttc" id="aclassmeteor_1_1_entity_html"><div class="ttname"><a href="classmeteor_1_1_entity.html">meteor::Entity</a></div><div class="ttdoc">An Entity is the base class for all data and behaviour oriented objects in meteor....</div><div class="ttdef"><b>Definition</b> entity.h:9</div></div>
 <div class="ttc" id="aclassmeteor_1_1_input_manager_html"><div class="ttname"><a href="classmeteor_1_1_input_manager.html">meteor::InputManager</a></div><div class="ttdoc">manages user input events.</div><div class="ttdef"><b>Definition</b> inputmanagement.h:11</div></div>
 <div class="ttc" id="aclassmeteor_1_1_input_manager_html_a5d178f0c52f1ac6e3202e244bc6b777f"><div class="ttname"><a href="classmeteor_1_1_input_manager.html#a5d178f0c52f1ac6e3202e244bc6b777f">meteor::InputManager::initialise</a></div><div class="ttdeci">static void initialise()</div><div class="ttdoc">Initialise the input manager, IMP: DO NOT TOUCH or INVOKE.</div></div>

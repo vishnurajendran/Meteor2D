@@ -1,6 +1,9 @@
 
 # Meteor 2D
-Meteor is a lightweight 2D game engine.
+
+Meteor is a lightweight 2D game engine designed for simplicity and flexibility in C++. Built on top of SDL (Simple DirectMedia Layer), it provides a clean and intuitive API for game development.
+
+![Meteor wip](https://github.com/vishnurajendran/Meteor2D/blob/main/meteor_in_action.png)
 
 ## Features
 
@@ -19,6 +22,7 @@ Meteor is a lightweight 2D game engine.
 2. Include the Meteor header in your C++ project.
 
 3. Implement your application class by inheriting from `meteor::Application` and defining the necessary methods.
+
 
 ## Disclaimer
 
@@ -41,10 +45,13 @@ Please note that while efforts are made to maintain cross-platform compatibility
     - [x] Keyboard Inputs.
     - [ ] Mouse Inputs (Parked until UI implementation).
 - [x] Scene Serialization.
+- [x] Audio.
+- [ ] UI System.
+    - [ ] UI Elements.
+    - [ ] UI Events.
+    - [ ] UI serialisation.
 - [ ] Gizmos.
 - [ ] 2D Physics.
-- [ ] Audio.
-- [ ] UI System.
 
 ### QoL 
 - [ ] Create a sample game using Meteor.

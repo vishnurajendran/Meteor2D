@@ -9,5 +9,6 @@ var searchData=
   ['rendercommand_6',['RenderCommand',['../classmeteor_1_1_render_command.html',1,'meteor']]],
   ['renderer_7',['Renderer',['../classmeteor_1_1_renderer.html',1,'meteor']]],
   ['renderqueue_8',['RenderQueue',['../classmeteor_1_1_render_queue.html',1,'meteor']]],
-  ['resume_9',['resume',['../classmeteor_1_1_animation.html#a9f61964b29fa92a5835dfe50d145574e',1,'meteor::Animation']]]
+  ['reset_9',['reset',['../classmeteor_1_1_audio_playable.html#a341b2e82e551aba84ce93b1e7af12590',1,'meteor::AudioPlayable']]],
+  ['resume_10',['resume',['../classmeteor_1_1_animation.html#a9f61964b29fa92a5835dfe50d145574e',1,'meteor::Animation']]]
 ];
