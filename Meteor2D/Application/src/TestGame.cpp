@@ -11,7 +11,7 @@ void TestGame::onStart() {
 	gameCamera = scene->find<meteor::Camera>("gameCamera");
 	scp = scene->find<meteor::SpatialEntity>("scp");
 	anim = scene->find<meteor::Animation>("link_player");
-	src = new meteor::AudioSource("letsgo.mp3", true, true);
+	src = scene->find<meteor::AudioSource>("bg");
 	mLog("Scene contents {}", scene->getRootSize());
 }
 
@@ -27,7 +27,8 @@ void TestGame::onUpdate(float deltaTime) {
 	}
 
 	if (meteor::InputManager::getKeyDown(meteor::KeyCode::KEYCODE_SPACE)) {
-		if (src->isPaused())
+		bool paused = src->isPaused();
+		if (paused)
 			src->play();
 		else
 			src->pause();

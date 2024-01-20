@@ -57,6 +57,7 @@
     <ClInclude Include="Engine\include\scenemanagement\scene.h" />
     <ClInclude Include="Engine\include\scenemanagement\scenemanager.h" />
     <ClInclude Include="Engine\include\sceneserialization\deserializers\animationdeserializer.h" />
+    <ClInclude Include="Engine\include\sceneserialization\deserializers\audiosourcedeserializer.h" />
     <ClInclude Include="Engine\include\sceneserialization\deserializers\cameradeserializer.h" />
     <ClInclude Include="Engine\include\sceneserialization\deserializers\spatialdeserializer.h" />
     <ClInclude Include="Engine\include\sceneserialization\deserializers\spritedeserializer.h" />
@@ -92,6 +93,7 @@
     <ClCompile Include="Engine\src\scenemanagement\scenemanager.cpp" />
     <ClCompile Include="Engine\src\scenemanagement\spatial.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\animationdeserializer.cpp" />
+    <ClCompile Include="Engine\src\sceneserialzation\deserializers\audiosourcedeserializer.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\cameradeserializer.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\spatialdeserializer.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\spritedeserializer.cpp" />
