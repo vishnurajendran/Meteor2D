@@ -3,7 +3,7 @@ namespace meteor {
 	/**
 	 * @brief This enum represents the AudioPlayable instance states.
 	*/
-	enum AudioPlayableState {
+	enum EAudioPlayableState {
 		/**
 		 * @brief Initialised
 		*/

@@ -6,13 +6,13 @@ namespace meteor {
 	 * @brief An Entity is the base class for all data and behaviour oriented objects in meteor.
 	 * This class contains properties and function used by meteor for its operation.
 	*/
-	class Entity {
+	class MEntity {
 	public:
 		/**
 		 * @brief Checks equality between two entities.
 		 * @param other entity to check with.
 		*/
-		virtual bool equals(Entity* other);
+		virtual bool equals(MEntity* other);
 		/**
 		 * @return Name of entity
 		*/

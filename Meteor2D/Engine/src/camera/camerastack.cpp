@@ -4,16 +4,16 @@
 
 namespace meteor {
 
-	std::vector<Camera*> CameraStack::cameraStack;
-	Camera* CameraStack::activeCamera;
+	std::vector<MCamera*> MCameraStack::cameraStack;
+	MCamera* MCameraStack::activeCamera;
 
-	std::vector<Camera*>::iterator contains(std::vector<Camera*>& stack, Camera* cam);
+	std::vector<MCamera*>::iterator contains(std::vector<MCamera*>& stack, MCamera* cam);
 
-	bool CameraStack::hasActiveCamera() {
+	bool MCameraStack::hasActiveCamera() {
 		return getActiveCamera() != NULL;
 	}
 
-	Camera* CameraStack::getActiveCamera() {
+	MCamera* MCameraStack::getActiveCamera() {
 		if (cameraStack.size() <= 0)
 			return NULL;
 
@@ -23,7 +23,7 @@ namespace meteor {
 		return activeCamera;
 	}
 
-	void CameraStack::registerToStack(Camera* camera) {
+	void MCameraStack::registerToStack(MCamera* camera) {
 		auto pos = contains(cameraStack, camera);
 		if (pos != cameraStack.end())
 			return;
@@ -32,7 +32,7 @@ namespace meteor {
 		updateStack();
 	}
 
-	void CameraStack::removeFromStack(Camera* camera) {
+	void MCameraStack::removeFromStack(MCamera* camera) {
 		auto pos = contains(cameraStack, camera);
 		if (pos == cameraStack.end())
 			return;
@@ -41,13 +41,13 @@ namespace meteor {
 		updateStack();
 	}
 
-	void CameraStack::updateStack() {
+	void MCameraStack::updateStack() {
 		if (cameraStack.size() <= 0){
 			activeCamera = NULL;
 			return;
 		}
 
-		std::sort(cameraStack.begin(), cameraStack.end(), [](Camera* a, Camera* b) {return a->getSortingOrder() < b->getSortingOrder(); });
+		std::sort(cameraStack.begin(), cameraStack.end(), [](MCamera* a, MCamera* b) {return a->getSortingOrder() < b->getSortingOrder(); });
 		int i = 0;
 		activeCamera = NULL;
 		while (i < cameraStack.size()) {
@@ -58,7 +58,7 @@ namespace meteor {
 		}
 	}
 
-	std::vector<Camera*>::iterator contains(std::vector<Camera*>& stack, Camera* cam) {
+	std::vector<MCamera*>::iterator contains(std::vector<MCamera*>& stack, MCamera* cam) {
 		if (stack.size() <= 0)
 			return stack.end();
 

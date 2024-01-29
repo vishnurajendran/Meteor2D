@@ -5,18 +5,18 @@
 
 namespace meteor {
 
-	SpriteSheet::SpriteSheet(std::string tex, std::vector<Rect> rects) {
-		this->spriteTex = AssetManager::getInstance()->getTexture(tex);
+	MSpriteSheet::MSpriteSheet(std::string tex, std::vector<SRect> rects) {
+		this->spriteTex = MAssetManager::getInstance()->getTexture(tex);
 		this->spriteRects = rects;
 	}
 
-	Texture* SpriteSheet::getTexture() {
+	MTexture* MSpriteSheet::getTexture() {
 		return spriteTex;
 	}
 
-	Rect SpriteSheet::sample(int& index, bool looping) {
+	SRect MSpriteSheet::sample(int& index, bool looping) {
 		index = std::clamp(index,0, (int)spriteRects.size() - 1);
-		Rect rectToUse = spriteRects[index];
+		SRect rectToUse = spriteRects[index];
 		if (looping) {
 			index = (index + 1) % spriteRects.size();
 		}

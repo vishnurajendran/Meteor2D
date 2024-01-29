@@ -7,9 +7,9 @@ namespace meteor {
 	/**
 	 * @brief Deserializer for Camera
 	*/
-	class CameraDerserializer : SceneEntityTypeDeserializer {
+	class MCameraDerserializer : MSceneEntityTypeDeserializer {
 	public:
-		virtual SpatialEntity* deserialize(pugi::xml_node* node) override;
+		virtual MSpatialEntity* deserialize(pugi::xml_node* node) override;
 	private:
 		static const bool registered;
 	};

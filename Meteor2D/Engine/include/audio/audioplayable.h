@@ -6,14 +6,14 @@
 namespace meteor {
 #ifndef AUDIOPLAYABLE_H
 #define AUDIOPLAYABLE_H
-	class AudioClip;
+	class MAudioClip;
 	/**
 	 * @brief This class is the Playable instance of AudioClip.
 	 * Provides various playback functions.
 	*/
-	class AudioPlayable : Entity {
+	class MAudioPlayable : MEntity {
 	public:
-		~AudioPlayable();
+		~MAudioPlayable();
 		/**
 		 * @brief Get length of the clip in milliseconds.
 		 * @return long representing the length of the clip.
@@ -72,14 +72,14 @@ namespace meteor {
 		 * @param engine core audio engine.
 		 * @param soundSrc core audio source.
 		*/
-		AudioPlayable(irrklang::ISoundEngine* engine, irrklang::ISoundSource* soundSrc);
+		MAudioPlayable(irrklang::ISoundEngine* engine, irrklang::ISoundSource* soundSrc);
 		
 		irrklang::ISound* playableRef=NULL;
 		irrklang::ISoundSource* soundSrc=NULL;
 		irrklang::ISoundEngine* engine=NULL;
-		AudioPlayableState currState = AudioPlayableState::PLAYABLE_INIT;
+		EAudioPlayableState currState = EAudioPlayableState::PLAYABLE_INIT;
 
-		friend class AudioClip;
+		friend class MAudioClip;
 	};
 #endif
 }

@@ -8,19 +8,19 @@ namespace meteor {
 	/**
 	 * @brief Maintains a sorted queue of all render commands submitted for rendering.
 	*/
-	class RenderQueue : public Entity {
+	class MRenderQueue : public MEntity {
 	public:
-		RenderQueue() : worldQueue{}, uiQueue{}, debugQueue{} {}
-		~RenderQueue();
-		void submit(RenderCommand* cmd);
-		bool hasNext(RenderLayer layer);
+		MRenderQueue() : worldQueue{}, uiQueue{}, debugQueue{} {}
+		~MRenderQueue();
+		void submit(MRenderCommand* cmd);
+		bool hasNext(ERenderLayer layer);
 		void prepare();
-		RenderCommand* next(RenderLayer layer);
-		static RenderQueue* getQueue();
+		MRenderCommand* next(ERenderLayer layer);
+		static MRenderQueue* getQueue();
 	private:
-		std::vector<RenderCommand*> worldQueue;
-		std::vector<RenderCommand*> uiQueue;
-		std::vector<RenderCommand*> debugQueue;
-		static RenderQueue* activeQueue;
+		std::vector<MRenderCommand*> worldQueue;
+		std::vector<MRenderCommand*> uiQueue;
+		std::vector<MRenderCommand*> debugQueue;
+		static MRenderQueue* activeQueue;
 	};
 }

@@ -4,13 +4,13 @@
 
 namespace meteor {
 
-	const bool CameraDerserializer::registered = []() {
-		SceneEntityTypeMap::registerDeserializer("camera", new CameraDerserializer());
+	const bool MCameraDerserializer::registered = []() {
+		MSceneEntityTypeMap::registerDeserializer("mcamera", new MCameraDerserializer());
 		return true;
 	}();
 
-	SpatialEntity* CameraDerserializer::deserialize(pugi::xml_node* node) {
-		SpatialEntity* entity = new Camera();
+	MSpatialEntity* MCameraDerserializer::deserialize(pugi::xml_node* node) {
+		MSpatialEntity* entity = new MCamera();
 		parseSpatialData(node, entity);
 		return entity;
 	}

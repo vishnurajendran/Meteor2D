@@ -4,12 +4,12 @@
 
 namespace meteor {
 
-	const bool SpriteDeserializer::registered = []() {
-		SceneEntityTypeMap::registerDeserializer("sprite", new SpriteDeserializer());
+	const bool MSpriteDeserializer::registered = []() {
+		MSceneEntityTypeMap::registerDeserializer("msprite", new MSpriteDeserializer());
 		return true;
 	}();
 
-	SpatialEntity* SpriteDeserializer::deserialize(pugi::xml_node* node) {
+	MSpatialEntity* MSpriteDeserializer::deserialize(pugi::xml_node* node) {
 
 		if (!node->attribute(SPRITE_SRC.c_str())) {
 			return NULL;
@@ -26,7 +26,7 @@ namespace meteor {
 		}
 
 		auto src = node->attribute(SPRITE_SRC.c_str()).value();
-		auto sprite = new Sprite2D(src, (RenderLayer)layer, sortingOrder);
+		auto sprite = new MSprite2D(src, (ERenderLayer)layer, sortingOrder);
 		if (sprite == NULL)
 			return NULL;
 

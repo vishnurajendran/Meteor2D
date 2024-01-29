@@ -222,7 +222,12 @@
     </Link>
     <PostBuildEvent>
       <Command>copy "$(SolutionDir)SDL2.dll" "$(TargetDir)SDL2.dll"
-copy "$(SolutionDir)SDL2_image.dll" "$(TargetDir)SDL2_image.dll"</Command>
+copy "$(SolutionDir)SDL2_image.dll" "$(TargetDir)SDL2_image.dll"
+copy "$(SolutionDir)irrKlang.dll" "$(TargetDir)irrKlang.dll"
+copy "$(SolutionDir)ikpFlac.dll" "$(TargetDir)ikpFlac.dll"
+copy "$(SolutionDir)ikpMP3.dll" "$(TargetDir)ikpMP3.dll"
+xcopy "$(ProjectDir)resS\*.*" "$(TargetDir)\resS" /Y /I /E</Command>
+      <Message>Copy dependencies to build directory.</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

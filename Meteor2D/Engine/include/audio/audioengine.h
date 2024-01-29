@@ -8,7 +8,7 @@ namespace meteor {
 	 * @brief AudioEngine wraps the core audio-engine.
 	 * Contains helper method to load AudioClip from instance.
 	*/
-	class AudioEngine : public Entity {
+	class MAudioEngine : public MEntity {
 	public:
 		/**
 		 * @brief Initialise the engine.
@@ -20,7 +20,7 @@ namespace meteor {
 		 * @param clipPath path in disk to audio clip file.
 		 * @return AudioClip instance.
 		*/
-		static AudioClip* getClip(std::string clipPath);
+		static MAudioClip* getClip(std::string clipPath);
 		/**
 		 * @brief Performs cleanup of the audio engine.
 		*/

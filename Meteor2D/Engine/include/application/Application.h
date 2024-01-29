@@ -7,7 +7,7 @@ namespace meteor {
 	/**
 	 * @brief Application acts as the entry-point to the game.
 	*/
-	class Application : public Entity {
+	class MApplication : public MEntity {
 	public:
 		/**
 		 * @brief Gets name of application.
@@ -36,7 +36,7 @@ namespace meteor {
 		*/
 		inline void quit() { this->quitApplication = true; }
 	private:
-		RenderQueue* renderQueue;
+		MRenderQueue* renderQueue;
 		bool quitApplication;
 	};
 }

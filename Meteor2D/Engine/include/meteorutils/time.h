@@ -6,7 +6,7 @@ namespace meteor {
 	/**
 	 * @brief This class handles time function.
 	*/
-	class Time : public Entity {
+	class MTime : public MEntity {
 	public:
 		/**
 		 * @brief updates internal timer

@@ -6,7 +6,7 @@ namespace meteor {
 	/**
 	 * @brief This class represents an audio source in the game world.
 	*/
-	class AudioSource : public SpatialEntity {
+	class MAudioSource : public MSpatialEntity {
 	public:
 		/**
 		 * @brief Construnctor
@@ -14,7 +14,7 @@ namespace meteor {
 		 * @param loop loop status of the clip
 		 * @param autoStart start playing automatically
 		*/
-		AudioSource(std::string clipPath, bool loop,bool autoStart);
+		MAudioSource(std::string clipPath, bool loop,bool autoStart);
 		void onExit() override;
 		/**
 		 * @brief Plays audio clip
@@ -60,6 +60,6 @@ namespace meteor {
 		*/
 		void setPlaybackSpeed(float playbackSpeed);
 	private:
-		AudioPlayable* playable = NULL;
+		MAudioPlayable* playable = NULL;
 	};
 }

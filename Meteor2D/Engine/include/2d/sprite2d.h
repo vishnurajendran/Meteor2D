@@ -8,7 +8,7 @@ namespace meteor {
 	/**
 	 * @brief This entity enables sprite rendering in meteor
 	*/
-	class Sprite2D : public SpatialEntity {
+	class MSprite2D : public MSpatialEntity {
 	public:
 		/**
 		 * @brief constructor
@@ -16,30 +16,30 @@ namespace meteor {
 		 * @param layer Rendering layer
 		 * @param sortingOrder Sorting order within the layer
 		*/
-		Sprite2D(std::string texPath, RenderLayer layer, uint8_t sortingOrder);
+		MSprite2D(std::string texPath, ERenderLayer layer, uint8_t sortingOrder);
 		/**
 		 * @brief constructor
 		 * @param texture Texture reference for sprite
 		 * @param layer Rendering layer
 		 * @param sortingOrder Sorting order within the layer
 		*/
-		Sprite2D(Texture* texture, RenderLayer layer, uint8_t sortingOrder);
+		MSprite2D(MTexture* texture, ERenderLayer layer, uint8_t sortingOrder);
 		void onUpdate(float deltaTime) override;
 		void onExit() override;
 		/**
 		 * @brief Set the pivot of the sprite
 		 * @param normVal Normalised vector2
 		*/
-		void setPivot(Vector2 normVal) { pivot = normVal; };
+		void setPivot(SVector2 normVal) { pivot = normVal; };
 		/**
 		 * @brief Get the pivot of the sprite
 		 * @return Normalised Vector2
 		*/
-		inline Vector2 getPivot() { return pivot; }
+		inline SVector2 getPivot() { return pivot; }
 	private:
-		Vector2 texSize;
-		Vector2 pivot;
-		Texture* texture = NULL;
-		TexRenderCmd* cmd = NULL;
+		SVector2 texSize;
+		SVector2 pivot;
+		MTexture* texture = NULL;
+		MTexRenderCmd* cmd = NULL;
 	};
 }

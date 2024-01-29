@@ -4,12 +4,12 @@
 
 namespace meteor {
 
-	const bool AnimationDeserializer::registered = []() {
-		SceneEntityTypeMap::registerDeserializer("animation", new AnimationDeserializer());
+	const bool MAnimationDeserializer::registered = []() {
+		MSceneEntityTypeMap::registerDeserializer("manimation", new MAnimationDeserializer());
 		return true;
 	}();
 
-	SpatialEntity* AnimationDeserializer::deserialize(pugi::xml_node* node) {
+	MSpatialEntity* MAnimationDeserializer::deserialize(pugi::xml_node* node) {
 		
 		if (!node->attribute(ANIM_SRC.c_str())) {
 			return NULL;
@@ -31,7 +31,7 @@ namespace meteor {
 		}
 
 		auto src = node->attribute(ANIM_SRC.c_str()).value();
-		auto anim = new Animation(src, fps, (RenderLayer)layer, sortingOrder);
+		auto anim = new MAnimation(src, fps, (ERenderLayer)layer, sortingOrder);
 		if (anim == NULL)
 			return NULL;
 

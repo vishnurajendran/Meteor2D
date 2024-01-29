@@ -3,30 +3,30 @@
 #include <rendering/renderer.h>
 
 namespace meteor {
-	Renderer::Renderer(RenderQueue* queue, SDL_Renderer* renderCore) {
+	MRenderer::MRenderer(MRenderQueue* queue, SDL_Renderer* renderCore) {
 		this->queue = queue;
 		this->renderCore = renderCore;
 	}
 
-	void Renderer::renderAll() {
+	void MRenderer::renderAll() {
 		queue->prepare();
-		while (queue->hasNext(RenderLayer::World)) {
-			render(queue->next(RenderLayer::World));
+		while (queue->hasNext(ERenderLayer::World)) {
+			render(queue->next(ERenderLayer::World));
 		}
-		while (queue->hasNext(RenderLayer::UI)) {
-			render(queue->next(RenderLayer::UI));
+		while (queue->hasNext(ERenderLayer::UI)) {
+			render(queue->next(ERenderLayer::UI));
 		}
-		while (queue->hasNext(RenderLayer::Debug)) {
-			render(queue->next(RenderLayer::Debug));
+		while (queue->hasNext(ERenderLayer::Debug)) {
+			render(queue->next(ERenderLayer::Debug));
 		}
 	}
 
-	void Renderer::render(RenderCommand* cmd) {
+	void MRenderer::render(MRenderCommand* cmd) {
 		cmd->setRenderCore(renderCore);
 		cmd->render();
 	}
 
-	void Renderer::setLogicalSize(size_t width, size_t height) {
+	void MRenderer::setLogicalSize(size_t width, size_t height) {
 		SDL_RenderSetLogicalSize(renderCore, width, height);
 	}
 }

@@ -5,8 +5,8 @@
 
 namespace meteor {
 
-	const bool AudioSourceDeserializer::registered = []() {
-		SceneEntityTypeMap::registerDeserializer("audiosource", new AudioSourceDeserializer());
+	const bool MAudioSourceDeserializer::registered = []() {
+		MSceneEntityTypeMap::registerDeserializer("maudiosource", new MAudioSourceDeserializer());
 		return true;
 	}();
 
@@ -16,7 +16,7 @@ namespace meteor {
 		return s;
 	}
 
-	SpatialEntity* AudioSourceDeserializer::deserialize(pugi::xml_node* node) {
+	MSpatialEntity* MAudioSourceDeserializer::deserialize(pugi::xml_node* node) {
 
 		if (!node->attribute(AUDIO_SRC.c_str())) {
 			return NULL;
@@ -45,7 +45,7 @@ namespace meteor {
 		}
 
 		auto src = node->attribute(AUDIO_SRC.c_str()).value();
-		auto audioSource = new AudioSource(src, loop, autoPlay);
+		auto audioSource = new MAudioSource(src, loop, autoPlay);
 		audioSource->setIsLooped(loop);
 		audioSource->setPlaybackSpeed(playbackSpeed);
 		audioSource->setVolume(volume);

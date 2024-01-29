@@ -9,7 +9,7 @@ namespace {
 			  implement in classes where xml serialization is needed, then during serialzation, this
 			  function can be called for serializing that class.
 	*/
-	class IXmlSerializable {
+	class IMXmlSerializable {
 	public:
 		virtual pugi::xml_document* serializeToXml()=0;
 	};

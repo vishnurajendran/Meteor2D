@@ -5,33 +5,33 @@
 
 namespace meteor {
 
-	const std::string Scene::VALID_SCENE_FILE_XML_TAG = "scene";
-	void updateSpatialEntitiesRecursive(SpatialEntity* entity, float deltaTime);
+	const std::string MScene::VALID_SCENE_FILE_XML_TAG = "mscene";
+	void updateSpatialEntitiesRecursive(MSpatialEntity* entity, float deltaTime);
 
-	Scene::Scene() {
-		rootEntities = new std::vector<SpatialEntity*>();
+	MScene::MScene() {
+		rootEntities = new std::vector<MSpatialEntity*>();
 		startScene();
 	}
 
-	Scene::~Scene() {
+	MScene::~MScene() {
 		delete rootEntities;
 	}
 
-	void Scene::startScene() {
+	void MScene::startScene() {
 		//logNoFormat("Loading scene");
 		for (int i = 0; i < rootEntities->size(); i++) {
 			rootEntities->at(i)->onStart();
 		}
 	}
 
-	void Scene::update(float deltaTime) {
+	void MScene::update(float deltaTime) {
 		//logNoFormat("updating scene");
 		for (int i = 0; i < rootEntities->size(); i++) {
 			rootEntities->at(i)->onUpdate(deltaTime);
 		}
 	}
 
-	void Scene::onClose() {
+	void MScene::onClose() {
 		//logNoFormat("cleaning scene");
 		sceneClosing = true;
 		for (int i = 0; i < rootEntities->size(); i++) {
@@ -39,7 +39,7 @@ namespace meteor {
 		}
 	}
 
-	void Scene::addToRoot(SpatialEntity* entity) {
+	void MScene::addToRoot(MSpatialEntity* entity) {
 		if (entity->getParent() != NULL)
 			return;
 		auto it = std::find(rootEntities->begin(), rootEntities->end(), entity);
@@ -48,7 +48,7 @@ namespace meteor {
 		rootEntities->push_back(entity);
 	}
 
-	bool Scene::tryParse(pugi::xml_document* doc) {
+	bool MScene::tryParse(pugi::xml_document* doc) {
 		if (doc == NULL)
 			return false;
 
@@ -64,17 +64,17 @@ namespace meteor {
 		return true;
 	}
 
-	void Scene::recursivelyLoadEntity(pugi::xml_node* currNode, SpatialEntity* parent) {
+	void MScene::recursivelyLoadEntity(pugi::xml_node* currNode, MSpatialEntity* parent) {
 		if (currNode == NULL)
 			return;
 		auto type = currNode->name();
-		auto deserializer = SceneEntityTypeMap::getDeserializer(type);
+		auto deserializer = MSceneEntityTypeMap::getDeserializer(type);
 		//stop this tree serializaion, we can't deserialize this..
 		if (deserializer == NULL) {
 			mWarn("cannot find deserializer for {}, skipping this branch.", type);
 			return;
 		}
-		SpatialEntity* entity = deserializer->deserialize(currNode);
+		MSpatialEntity* entity = deserializer->deserialize(currNode);
 		if (entity == NULL)
 		{
 			mWarn("deserialized entity for {} is NULL, skipping this branch.", type);

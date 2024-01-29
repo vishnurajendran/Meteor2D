@@ -5,8 +5,8 @@
 #include <audio/audiosource.h>
 
 namespace meteor {
-	AudioSource::AudioSource(std::string clipPath, bool loop = false, bool autoStart = true) {
-		auto clip = AssetManager::getInstance()->getAudioClip(clipPath);
+	MAudioSource::MAudioSource(std::string clipPath, bool loop = false, bool autoStart = true) {
+		auto clip = MAssetManager::getInstance()->getAudioClip(clipPath);
 		if (clip == NULL)
 		{
 			mError("Audio source could not resolve, {} to a clip", clipPath);
@@ -19,7 +19,7 @@ namespace meteor {
 			play();
 	}
 
-	void AudioSource::onExit() {
+	void MAudioSource::onExit() {
 		if (playable == NULL) {
 			return;
 		}
@@ -27,62 +27,62 @@ namespace meteor {
 		delete playable;
 	}
 
-	void AudioSource::play() {
+	void MAudioSource::play() {
 		if (playable == NULL)
 			return;
 		playable->play();
 	}
 
-	void AudioSource::pause() {
+	void MAudioSource::pause() {
 		if (playable == NULL)
 			return;
 		playable->pause();
 	}
 
-	void AudioSource::stop() {
+	void MAudioSource::stop() {
 		if (playable == NULL)
 			return;
 		playable->pause();
 		playable->reset();
 	}
 
-	bool AudioSource::isPaused() {
+	bool MAudioSource::isPaused() {
 		if (playable == NULL)
 			return false;
 		return playable->isPaused();
 	}
 
-	bool AudioSource::isLooped() {
+	bool MAudioSource::isLooped() {
 		if (playable == NULL)
 			return false;
 		return playable->isLooped();
 	}
 
-	void AudioSource::setIsLooped(bool loop) {
+	void MAudioSource::setIsLooped(bool loop) {
 		if (playable == NULL)
 			return;
 		playable->setIsLooped(loop);
 	}
 
-	float AudioSource::getVolume() {
+	float MAudioSource::getVolume() {
 		if (playable == NULL)
 			return -1;
 		return playable->getVolume();
 	}
 
-	void AudioSource::setVolume(float volume) {
+	void MAudioSource::setVolume(float volume) {
 		if (playable == NULL)
 			return;
 		playable->setVolume(volume);
 	}
 
-	float AudioSource::getPlaybackSpeed() {
+	float MAudioSource::getPlaybackSpeed() {
 		if (playable == NULL)
 			return 0;
 		return playable->getPlaybackSpeed();
 	}
 
-	void AudioSource::setPlaybackSpeed(float playbackSpeed) {
+	void MAudioSource::setPlaybackSpeed(float playbackSpeed) {
 		if (playable == NULL)
 			return;
 		playable->setPlaybackSpeed(playbackSpeed);

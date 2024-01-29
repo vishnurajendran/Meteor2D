@@ -4,22 +4,22 @@
 
 namespace meteor {
 
-	const Uint8* InputManager::keyStates = NULL;
-	Uint8 InputManager::prevKeyStates[SDL_NUM_SCANCODES] = {0};
-	std::set<KeyCode> InputManager::keyMemory;
+	const Uint8* MInputManager::keyStates = NULL;
+	Uint8 MInputManager::prevKeyStates[SDL_NUM_SCANCODES] = {0};
+	std::set<EKeyCode> MInputManager::keyMemory;
 
-	void InputManager::initialise() {
+	void MInputManager::initialise() {
 		//init our current key states
 		keyStates = SDL_GetKeyboardState(nullptr);
 
 		mLog("Input Manager Ready");
 	}
 
-	void InputManager::update() {
+	void MInputManager::update() {
 		std::memcpy(prevKeyStates, keyStates, SDL_NUM_SCANCODES);
 		SDL_PumpEvents();
 
-		std::vector<KeyCode> codesToRemove;
+		std::vector<EKeyCode> codesToRemove;
 		for (auto key : keyMemory) {
 			if (getKeyUp(key))
 				codesToRemove.push_back(key);
@@ -31,11 +31,11 @@ namespace meteor {
 		}
 	}
 
-	bool InputManager::getKey(KeyCode key) {
+	bool MInputManager::getKey(EKeyCode key) {
 		return keyStates[key] != 0;
 	}
 
-	bool InputManager::getKeyDown(KeyCode key) {
+	bool MInputManager::getKeyDown(EKeyCode key) {
 		bool res =  keyStates[key] != 0 && prevKeyStates[key] == 0 && !keyMemory.contains(key);
 		if (res) {
 			keyMemory.insert(key);
@@ -43,7 +43,7 @@ namespace meteor {
 		return res;
 	}
 
-	bool InputManager::getKeyUp(KeyCode key) {
+	bool MInputManager::getKeyUp(EKeyCode key) {
 		return keyStates[key] == 0 && prevKeyStates[key] != 0;
 	}
 }

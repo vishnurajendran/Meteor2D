@@ -2,17 +2,17 @@
 
 namespace meteor {
 
-	std::map<std::string, SceneEntityTypeDeserializer*>& SceneEntityTypeMap::getMapping() {
-		static std::map<std::string, SceneEntityTypeDeserializer*> mapping;
+	std::map<std::string, MSceneEntityTypeDeserializer*>& MSceneEntityTypeMap::getMapping() {
+		static std::map<std::string, MSceneEntityTypeDeserializer*> mapping;
 		return mapping;
 	}
 
-	void SceneEntityTypeMap::registerDeserializer(std::string type, SceneEntityTypeDeserializer* deserializer) {
+	void MSceneEntityTypeMap::registerDeserializer(std::string type, MSceneEntityTypeDeserializer* deserializer) {
 		auto& mapping = getMapping();
 		mapping[type] = deserializer;
 	}
 
-	SceneEntityTypeDeserializer* SceneEntityTypeMap::getDeserializer(std::string type) {
+	MSceneEntityTypeDeserializer* MSceneEntityTypeMap::getDeserializer(std::string type) {
 		auto& mapping = getMapping();
 		if (mapping.contains(type)) {	
 			return mapping[type];

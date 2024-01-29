@@ -4,12 +4,12 @@
 
 namespace meteor {
 
-	AudioPlayable::AudioPlayable(irrklang::ISoundEngine* engine, irrklang::ISoundSource* soundSrc) {
+	MAudioPlayable::MAudioPlayable(irrklang::ISoundEngine* engine, irrklang::ISoundSource* soundSrc) {
 		this->soundSrc = soundSrc;
 		this->engine = engine;
 	}
 
-	AudioPlayable::~AudioPlayable() {
+	MAudioPlayable::~MAudioPlayable() {
 		if (playableRef) {
 			pause();
 			playableRef->drop();
@@ -19,84 +19,84 @@ namespace meteor {
 			soundSrc->drop();
 	}
 
-	void AudioPlayable::prepare() {
+	void MAudioPlayable::prepare() {
 		playableRef = engine->play2D(soundSrc, false, true, true, false);
 		if (!playableRef) {
 			mError("Preparing playable failed!");
-			currState = AudioPlayableState::PLAYABLE_ERR;
+			currState = EAudioPlayableState::PLAYABLE_ERR;
 			return;
 		}
 
-		currState = AudioPlayableState::PLAYABLE_STOPPED;
+		currState = EAudioPlayableState::PLAYABLE_STOPPED;
 	}
 
-	void AudioPlayable::play() {
+	void MAudioPlayable::play() {
 		if (!playableRef)
 			return;
 
-		currState = AudioPlayableState::PLAYABLE_PLAYING;
+		currState = EAudioPlayableState::PLAYABLE_PLAYING;
 		playableRef->setIsPaused(false);
 	}
 
-	void AudioPlayable::pause() {
+	void MAudioPlayable::pause() {
 		if (!playableRef)
 			return;
 
-		currState = AudioPlayableState::PLAYABLE_STOPPED;
+		currState = EAudioPlayableState::PLAYABLE_STOPPED;
 		playableRef->setIsPaused(true);
 	}
 
-	void AudioPlayable::reset() {
+	void MAudioPlayable::reset() {
 		if (!playableRef)
 			return;
 		playableRef->setPlayPosition(0);
 	}
 
-	bool AudioPlayable::isLooped() {
+	bool MAudioPlayable::isLooped() {
 		if (!playableRef)
 			return false;
 		return playableRef->isLooped();
 	}
 
-	void AudioPlayable::setIsLooped(bool loop) {
+	void MAudioPlayable::setIsLooped(bool loop) {
 		if (!playableRef)
 			return;
 		playableRef->setIsLooped(loop);
 	}
 
-	void AudioPlayable::setVolume(float volume) {
+	void MAudioPlayable::setVolume(float volume) {
 		if (!soundSrc)
 			return;
 		volume = (volume < 0 ? 0 : ((volume > 1) ? 1 : volume));
 		playableRef->setVolume(volume);
 	}
 
-	float AudioPlayable::getVolume() {
+	float MAudioPlayable::getVolume() {
 		if (!soundSrc)
 			return -1;
 		return playableRef->getVolume();
 	}
 
-	long AudioPlayable::getLength() {
+	long MAudioPlayable::getLength() {
 		if (!soundSrc)
 			return -1;
 		return soundSrc->getPlayLength();
 	}
 
-	bool AudioPlayable::isPaused() {
+	bool MAudioPlayable::isPaused() {
 		if (!playableRef)
 			return false;
 		playableRef->getIsPaused();
 	}
 
-	float AudioPlayable::getPlaybackSpeed() {
+	float MAudioPlayable::getPlaybackSpeed() {
 		if (!playableRef)
 			return 0;
 		
 		return playableRef->getPlaybackSpeed();
 	}
 
-	void AudioPlayable::setPlaybackSpeed(float playbackSpeed) {
+	void MAudioPlayable::setPlaybackSpeed(float playbackSpeed) {
 		if (!playableRef)
 			return;
 		playableRef->setPlaybackSpeed(playbackSpeed);
