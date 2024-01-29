@@ -1,11 +1,11 @@
 #include <TestGame.h>
 
-std::string TestGame::getName() {
+std::string ATestGame::getName() {
 	return "Test Game";
 }
 
 meteor::MAudioSource* src;
-void TestGame::onStart() {
+void ATestGame::onStart() {
 	meteor::MSceneManager::loadScene("test_scene.scml");
 	auto scene = meteor::MSceneManager::getActiveScene();
 	gameCamera = scene->find<meteor::MCamera>("gameCamera");
@@ -15,7 +15,7 @@ void TestGame::onStart() {
 	mLog("Scene contents {}", scene->getRootSize());
 }
 
-void TestGame::onUpdate(float deltaTime) {
+void ATestGame::onUpdate(float deltaTime) {
 	auto rot = scp->getLocalRotation();
 	rot += 100 * deltaTime;
 	int x = 0;
@@ -65,10 +65,10 @@ void TestGame::onUpdate(float deltaTime) {
 	scp->setLocalPosition(pos);
 }
 
-void TestGame::onQuit() {
+void ATestGame::onQuit() {
 	meteor::MSceneManager::closeActiveScene();
 }
 
 meteor::MApplication* getApp() {
-	return new TestGame();
+	return new ATestGame();
 }
