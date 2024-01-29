@@ -1,10 +1,8 @@
 #pragma once
-#pragma once
 #include <sceneserialization/deserializers/spatialdeserializer.h>
 
 namespace meteor {
 	/**
-	*     <audiosource name="bg" localPosition="(0,0)", localScale="(1,1)", localRotation="0", src="letsgo.mp3" volume="1" playbackSpeed="1" loop="true" autoPlay="true">
 	 * @brief Deserializer for AudioSource
 	*/
 	class MAudioSourceDeserializer : MSceneEntityTypeDeserializer {
