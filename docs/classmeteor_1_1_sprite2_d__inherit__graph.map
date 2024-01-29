@@ -1,7 +1,0 @@
-<map id="meteor::Sprite2D" name="meteor::Sprite2D">
-<area shape="rect" id="Node000001" title="This entity enables sprite rendering in meteor." alt="" coords="17,155,137,181"/>
-<area shape="rect" id="Node000002" href="$classmeteor_1_1_spatial_entity.html" title="Spatial Entity is the base entity for all types present in scene. This entity keeps track of spatial ..." alt="" coords="5,80,149,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,122,80,154,74,154,74,122"/>
-<area shape="rect" id="Node000003" href="$classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="25,5,129,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="80,48,80,80,74,80,74,48"/>
-</map>

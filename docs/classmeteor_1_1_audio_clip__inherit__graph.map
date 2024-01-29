@@ -1,5 +1,0 @@
-<map id="meteor::AudioClip" name="meteor::AudioClip">
-<area shape="rect" id="Node000001" title="AudioClip is the instance of a audio clip file, this class holds. This class holds basic information ..." alt="" coords="5,80,130,107"/>
-<area shape="rect" id="Node000002" href="$classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="16,5,119,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,48,70,80,65,80,65,48"/>
-</map>

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['camera_0',['Camera',['../classmeteor_1_1_camera.html',1,'meteor']]],
-  ['cameraderserializer_1',['CameraDerserializer',['../classmeteor_1_1_camera_derserializer.html',1,'meteor']]],
-  ['camerastack_2',['CameraStack',['../classmeteor_1_1_camera_stack.html',1,'meteor']]],
-  ['color_3',['Color',['../structmeteor_1_1_color.html',1,'meteor']]]
+  ['scolor_0',['SColor',['../structmeteor_1_1_s_color.html',1,'meteor']]],
+  ['srect_1',['SRect',['../structmeteor_1_1_s_rect.html',1,'meteor']]],
+  ['svector2_2',['SVector2',['../structmeteor_1_1_s_vector2.html',1,'meteor']]],
+  ['swindowproperties_3',['SWindowProperties',['../structmeteor_1_1_s_window_properties.html',1,'meteor']]]
 ];

@@ -1,0 +1,7 @@
+<map id="meteor::MSpriteDeserializer" name="meteor::MSpriteDeserializer">
+<area shape="rect" id="Node000001" title="Desrializer for Sprite2D." alt="" coords="5,171,188,197"/>
+<area shape="rect" id="Node000002" href="$classmeteor_1_1_m_scene_entity_type_deserializer.html" title="Base class for Scene Enity Derserializers." alt="" coords="7,80,186,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,139,99,170,94,170,94,139"/>
+<area shape="rect" id="Node000003" href="$classmeteor_1_1_m_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="39,5,154,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="99,48,99,80,94,80,94,48"/>
+</map>

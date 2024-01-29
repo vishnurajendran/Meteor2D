@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['qol_0',['QoL',['../index.html#autotoc_md6',1,'']]],
-  ['quit_1',['quit',['../classmeteor_1_1_application.html#a21829f8e15a4504361c679be43d5f04f',1,'meteor::Application']]]
+  ['qol_0',['QoL',['../index.html#qol',1,'']]],
+  ['quit_1',['quit',['../classmeteor_1_1_m_application.html#a001f580baef5e96a2d6270ac6bcc8d34',1,'meteor::MApplication']]]
 ];

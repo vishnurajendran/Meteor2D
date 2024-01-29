@@ -1,0 +1,13 @@
+<map id="meteor::MSpatialEntity" name="meteor::MSpatialEntity">
+<area shape="rect" id="Node000001" title="Spatial Entity is the base entity for all types present in scene. This entity keeps track of spatial ..." alt="" coords="249,80,404,107"/>
+<area shape="rect" id="Node000003" href="$classmeteor_1_1_m_animation.html" title="Animation entity provides sprite &#45; sheet based animation system to meteor." alt="" coords="5,155,144,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="269,114,119,157,118,151,267,109"/>
+<area shape="rect" id="Node000004" href="$classmeteor_1_1_m_audio_source.html" title="This class represents an audio source in the game world." alt="" coords="168,155,322,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="303,119,261,156,257,152,299,115"/>
+<area shape="rect" id="Node000005" href="$classmeteor_1_1_m_camera.html" title="Camera entity uses provides camera like functionlity to manage world view." alt="" coords="347,155,472,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="354,115,397,152,393,156,351,119"/>
+<area shape="rect" id="Node000006" href="$classmeteor_1_1_m_sprite2_d.html" title="This entity enables sprite rendering in meteor." alt="" coords="496,155,626,181"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="382,109,521,151,519,157,381,114"/>
+<area shape="rect" id="Node000002" href="$classmeteor_1_1_m_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="269,5,384,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="329,48,329,80,324,80,324,48"/>
+</map>

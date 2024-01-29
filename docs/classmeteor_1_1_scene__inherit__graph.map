@@ -1,5 +1,0 @@
-<map id="meteor::Scene" name="meteor::Scene">
-<area shape="rect" id="Node000001" title="A scene holds a collection of spatial entity for a specific level." alt="" coords="5,80,112,107"/>
-<area shape="rect" id="Node000002" href="$classmeteor_1_1_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="7,5,110,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,48,61,80,56,80,56,48"/>
-</map>

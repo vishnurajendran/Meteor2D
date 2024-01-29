@@ -1,0 +1,7 @@
+<map id="meteor::MCameraDerserializer" name="meteor::MCameraDerserializer">
+<area shape="rect" id="Node000001" title="Deserializer for Camera." alt="" coords="5,171,203,197"/>
+<area shape="rect" id="Node000002" href="$classmeteor_1_1_m_scene_entity_type_deserializer.html" title="Base class for Scene Enity Derserializers." alt="" coords="14,80,194,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,139,107,170,101,170,101,139"/>
+<area shape="rect" id="Node000003" href="$classmeteor_1_1_m_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="47,5,161,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,48,107,80,101,80,101,48"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="meteor::MAnimation" name="meteor::MAnimation">
+<area shape="rect" id="Node000001" title="Animation entity provides sprite &#45; sheet based animation system to meteor." alt="" coords="13,155,152,181"/>
+<area shape="rect" id="Node000002" href="$classmeteor_1_1_m_spatial_entity.html" title="Spatial Entity is the base entity for all types present in scene. This entity keeps track of spatial ..." alt="" coords="5,80,160,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,122,85,154,80,154,80,122"/>
+<area shape="rect" id="Node000003" href="$classmeteor_1_1_m_entity.html" title="An Entity is the base class for all data and behaviour oriented objects in meteor...." alt="" coords="25,5,140,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,48,85,80,80,80,80,48"/>
+</map>

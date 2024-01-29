@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_0',['b',['../structmeteor_1_1_color.html#abbaeeabc7e8010efcebbf1c33ba9972b',1,'meteor::Color']]]
+  ['b_0',['b',['../structmeteor_1_1_s_color.html#adb4b28f70f2154b63f2fb07834bfe1a1',1,'meteor::SColor']]]
 ];

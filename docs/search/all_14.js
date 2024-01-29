@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['window_0',['Window',['../classmeteor_1_1_window.html',1,'meteor']]],
-  ['windowproperties_1',['WindowProperties',['../structmeteor_1_1_window_properties.html',1,'meteor']]]
+  ['zero_0',['zero',['../structmeteor_1_1_s_vector2.html#a82dfcfd793d111e0bd331f761a76c48f',1,'meteor::SVector2']]]
 ];

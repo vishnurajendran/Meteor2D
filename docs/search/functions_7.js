@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hasactivecamera_0',['hasActiveCamera',['../classmeteor_1_1_camera_stack.html#a5bd67e849b5882995e99ed47c8bb81b1',1,'meteor::CameraStack']]],
-  ['hasquit_1',['hasQuit',['../classmeteor_1_1_application.html#a4624b89b9e317be25de454ed00693e55',1,'meteor::Application']]]
+  ['hasactivecamera_0',['hasActiveCamera',['../classmeteor_1_1_m_camera_stack.html#a7d9c349e21335ab19903849c475e9459',1,'meteor::MCameraStack']]],
+  ['hasquit_1',['hasQuit',['../classmeteor_1_1_m_application.html#acab883b891acebed4746c2632974ebcc',1,'meteor::MApplication']]]
 ];
