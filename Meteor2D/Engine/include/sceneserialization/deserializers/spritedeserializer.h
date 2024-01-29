@@ -7,9 +7,9 @@ namespace meteor {
 	/**
 	 * @brief Desrializer for Sprite2D
 	*/
-	class SpriteDeserializer : SceneEntityTypeDeserializer {
+	class MSpriteDeserializer : MSceneEntityTypeDeserializer {
 	public:
-		virtual SpatialEntity* deserialize(pugi::xml_node* node) override;
+		virtual MSpatialEntity* deserialize(pugi::xml_node* node) override;
 	private:
 		const std::string SPRITE_SRC = "src";
 		const std::string LAYER_SRC = "layer";

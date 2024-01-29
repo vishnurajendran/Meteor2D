@@ -9,7 +9,7 @@ namespace meteor {
 	/**
 	 * @brief Animation entity provides sprite - sheet based animation system to meteor
 	*/
-	class Animation : public SpatialEntity {
+	class MAnimation : public MSpatialEntity {
 	public:
 		/**
 		 * @brief Constructor for Animation
@@ -18,7 +18,7 @@ namespace meteor {
 		 * @param layer layer for rendering
 		 * @param sortingOrder sorting order in render layer.
 		*/
-		Animation(std::string mapFile, int fps, RenderLayer layer, uint8_t sortingOrder);
+		MAnimation(std::string mapFile, int fps, ERenderLayer layer, uint8_t sortingOrder);
 		void onUpdate(float deltaTime) override;
 
 		/**
@@ -49,11 +49,11 @@ namespace meteor {
 		bool changeRequested=false;
 		int fps=30;
 		float animTime;
-		AnimationMap* animationMap;
-		SpriteSheet* currAnimSheet;
-		TexRenderCmd* cmd;
-		Vector2 pivot;
-		Rect spriteSrcRect;
+		MAnimationMap* animationMap;
+		MSpriteSheet* currAnimSheet;
+		MTexRenderCmd* cmd;
+		SVector2 pivot;
+		SRect spriteSrcRect;
 		void tryChangeAnimParams();
 		void updateAnimation(float deltaTime);
 		void submitFrameRenderRequest();

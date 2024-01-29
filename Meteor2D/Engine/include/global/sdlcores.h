@@ -5,7 +5,7 @@ namespace meteor {
 	/**
 	 * @brief Global references to meteor core instances.
 	*/
-	class SdlCores {
+	class MSdlCores {
 	public:
 		static void setScreenCentre(SDL_Point point);
 		static void setActiveRenderer(SDL_Renderer* renderer);

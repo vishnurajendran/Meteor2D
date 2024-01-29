@@ -5,12 +5,12 @@
 #include <sceneserialization/scene_entity_typemap.h>
 
 namespace meteor {
-	Scene* SceneManager::activeScene = NULL;
+	MScene* MSceneManager::activeScene = NULL;
 
-	void SceneManager::initialise() {
+	void MSceneManager::initialise() {
 	}
 
-	bool SceneManager::closeActiveScene() {
+	bool MSceneManager::closeActiveScene() {
 		if (activeScene == NULL)
 			return false;
 
@@ -20,21 +20,21 @@ namespace meteor {
 		return true;
 	}
 
-	bool SceneManager::loadEmptyScene() {
+	bool MSceneManager::loadEmptyScene() {
 		if (activeScene != NULL)
 			closeActiveScene();
-		activeScene = new Scene();
+		activeScene = new MScene();
 		return true;
 	}
 
-	bool SceneManager::loadScene(std::string path) {
+	bool MSceneManager::loadScene(std::string path) {
 		if (path.empty()) {
 			loadEmptyScene();
 			return false;
 		}
 
 		loadEmptyScene();
-		pugi::xml_document* doc = AssetManager::getInstance()->getSceneDefinition(path);
+		pugi::xml_document* doc = MAssetManager::getInstance()->getSceneDefinition(path);
 		if (activeScene->tryParse(doc))
 			return true;
 
@@ -43,7 +43,7 @@ namespace meteor {
 		return false;
 	}
 
-	void SceneManager::update(float deltaTime) {
+	void MSceneManager::update(float deltaTime) {
 		if (activeScene == NULL)
 			return;
 

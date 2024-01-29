@@ -13,24 +13,24 @@ namespace meteor {
 	 * @brief This class is responsible for opening a Window target for
 	 * rendering
 	*/
-	class Window : public Entity {
+	class MWindow : public MEntity {
 	public:
-		Window(WindowProperties properties);
+		MWindow(SWindowProperties properties);
 		void update();
 		void pollEvents();
 		void clear();
 		bool hasQuit();
 		void close();
 		void setLogicalResolution(size_t width, size_t height);
-		RenderQueue* getRenderQueue();
+		MRenderQueue* getRenderQueue();
 		void delay(int delay);
 	private:
 		SDL_Window* window;
 		SDL_Renderer* sdlRenderer;
 		SDL_Event windowEvent;
-		Color backgroundColor;
-		RenderQueue* renderQueue;
-		Renderer* renderer;
+		SColor backgroundColor;
+		MRenderQueue* renderQueue;
+		MRenderer* renderer;
 		bool quit;
 		void render();
 	};

@@ -9,12 +9,12 @@ namespace meteor {
 	/**
 	 * @brief A Class that maintains mapping between Xml node types and their respective Deserializers.
 	*/
-	class SceneEntityTypeMap : public Entity {
+	class MSceneEntityTypeMap : public MEntity {
 	public:
-		static void registerDeserializer(std::string type, SceneEntityTypeDeserializer* deserializer);
-		static SceneEntityTypeDeserializer* getDeserializer(std::string type);
+		static void registerDeserializer(std::string type, MSceneEntityTypeDeserializer* deserializer);
+		static MSceneEntityTypeDeserializer* getDeserializer(std::string type);
 		static size_t getMapSize() { return getMapping().size(); }
 	private:
-		static std::map<std::string, SceneEntityTypeDeserializer*>& getMapping();
+		static std::map<std::string, MSceneEntityTypeDeserializer*>& getMapping();
 	};
 }

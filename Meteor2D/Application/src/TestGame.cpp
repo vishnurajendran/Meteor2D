@@ -4,14 +4,14 @@ std::string TestGame::getName() {
 	return "Test Game";
 }
 
-meteor::AudioSource* src;
+meteor::MAudioSource* src;
 void TestGame::onStart() {
-	meteor::SceneManager::loadScene("test_scene.scml");
-	auto scene = meteor::SceneManager::getActiveScene();
-	gameCamera = scene->find<meteor::Camera>("gameCamera");
-	scp = scene->find<meteor::SpatialEntity>("scp");
-	anim = scene->find<meteor::Animation>("link_player");
-	src = new meteor::AudioSource("letsgo.mp3", true, true);
+	meteor::MSceneManager::loadScene("test_scene.scml");
+	auto scene = meteor::MSceneManager::getActiveScene();
+	gameCamera = scene->find<meteor::MCamera>("gameCamera");
+	scp = scene->find<meteor::MSpatialEntity>("scp");
+	anim = scene->find<meteor::MAnimation>("link_player");
+	src = scene->find<meteor::MAudioSource>("bg");
 	mLog("Scene contents {}", scene->getRootSize());
 }
 
@@ -21,32 +21,33 @@ void TestGame::onUpdate(float deltaTime) {
 	int x = 0;
 	int y = 0;
 	
-	if (meteor::InputManager::getKeyDown(meteor::KeyCode::KEYCODE_ESCAPE)) {
+	if (meteor::MInputManager::getKeyDown(meteor::EKeyCode::KEYCODE_ESCAPE)) {
 		quit();
 		return;
 	}
 
-	if (meteor::InputManager::getKeyDown(meteor::KeyCode::KEYCODE_SPACE)) {
-		if (src->isPaused())
+	if (meteor::MInputManager::getKeyDown(meteor::EKeyCode::KEYCODE_SPACE)) {
+		bool paused = src->isPaused();
+		if (paused)
 			src->play();
 		else
 			src->pause();
 		return;
 	}
 
-	if (meteor::InputManager::getKey(meteor::KeyCode::KEYCODE_W)) {
+	if (meteor::MInputManager::getKey(meteor::EKeyCode::KEYCODE_W)) {
 		y = 1;
 	}
-	else if (meteor::InputManager::getKey(meteor::KeyCode::KEYCODE_S)) {
+	else if (meteor::MInputManager::getKey(meteor::EKeyCode::KEYCODE_S)) {
 		y = -1;
 	}
 	else
 		y = 0;
 
-	if (meteor::InputManager::getKey(meteor::KeyCode::KEYCODE_A)) {
+	if (meteor::MInputManager::getKey(meteor::EKeyCode::KEYCODE_A)) {
 		x = -1;
 	}
-	else if (meteor::InputManager::getKey(meteor::KeyCode::KEYCODE_D)) {
+	else if (meteor::MInputManager::getKey(meteor::EKeyCode::KEYCODE_D)) {
 		x = 1;
 	}
 	else
@@ -60,14 +61,14 @@ void TestGame::onUpdate(float deltaTime) {
 	}
 
 	auto pos = scp->getLocalPosition();
-	pos += meteor::Vector2::make(x, y) * 150 * deltaTime;
+	pos += meteor::SVector2::make(x, y) * 150 * deltaTime;
 	scp->setLocalPosition(pos);
 }
 
 void TestGame::onQuit() {
-	meteor::SceneManager::closeActiveScene();
+	meteor::MSceneManager::closeActiveScene();
 }
 
-meteor::Application* getApp() {
+meteor::MApplication* getApp() {
 	return new TestGame();
 }

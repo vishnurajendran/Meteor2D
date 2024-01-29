@@ -15,7 +15,7 @@ namespace meteor {
 	const bool FULLSCREEN = false;
 	const bool USE_VSYNC = true;
 
-	const Color BG_COLOR = Color::black();
+	const SColor BG_COLOR = SColor::black();
 
 	const int TARGET_FPS = 144;
 }

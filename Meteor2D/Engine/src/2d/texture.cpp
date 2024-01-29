@@ -4,7 +4,7 @@
 #include <SDL_image.h>
 
 namespace meteor {
-    bool Texture::initialiseTextureLoader() {
+    bool MTexture::initialiseTextureLoader() {
         int imgFlags = IMG_INIT_PNG;
         if (!(IMG_Init(imgFlags) & imgFlags))
         {
@@ -14,19 +14,19 @@ namespace meteor {
         return true;
     }
 
-    Texture::Texture(std::string path) {
+    MTexture::MTexture(std::string path) {
         SDL_Surface* tempSurface = IMG_Load(path.c_str());
         if (tempSurface == NULL) {
             mError("Unable to load image {}!, Error {}", path, IMG_GetError());
             isValid = false;
             return;
         }
-        if (SdlCores::getActiveRenderer() == NULL) {
+        if (MSdlCores::getActiveRenderer() == NULL) {
             mError("SDL renderer core missing, cannot generate texture");
             isValid = false;
             return;
         }
-        coreTexture = SDL_CreateTextureFromSurface(SdlCores::getActiveRenderer(), tempSurface);
+        coreTexture = SDL_CreateTextureFromSurface(MSdlCores::getActiveRenderer(), tempSurface);
         SDL_FreeSurface(tempSurface);
         int sizeX, sizeY = 1;
         SDL_QueryTexture(coreTexture, NULL, NULL, &sizeX, &sizeY);
@@ -35,7 +35,7 @@ namespace meteor {
         isValid = true;
     }
 
-    Texture::~Texture() {
+    MTexture::~MTexture() {
         if(coreTexture != NULL)
             SDL_DestroyTexture(coreTexture);
     }

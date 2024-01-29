@@ -12,27 +12,27 @@ namespace meteor {
 	 * keeps track of spatial data within a scene. new instance when not given a parent, will
 	 * sit at the root of the active scene.
 	*/
-	class SpatialEntity : public Entity {
+	class MSpatialEntity : public MEntity {
 	public:
 		/**
 		 * @brief Default constructor, instantiates at root level.
 		*/
-		inline SpatialEntity() : SpatialEntity(NULL) {};
+		inline MSpatialEntity() : MSpatialEntity(NULL) {};
 		/**
 		 * @brief Parameterised constructor.
 		 * @param parent Parent entity for this child.
 		*/
-		SpatialEntity(SpatialEntity* parent);
-		~SpatialEntity();
+		MSpatialEntity(MSpatialEntity* parent);
+		~MSpatialEntity();
 
 		/**
 		 * @return World position of this entity 
 		*/
-		inline Vector2 getPosition() { return position; }
+		inline SVector2 getPosition() { return position; }
 		/**
 		 * @return Local position of this entity.
 		*/
-		inline Vector2 getLocalPosition() { return localPosition; }
+		inline SVector2 getLocalPosition() { return localPosition; }
 		/**
 		 * @brief Sets local position of the entity
 		 * @param x x-component of the position
@@ -43,7 +43,7 @@ namespace meteor {
 		 * @brief Sets local position of the entity
 		 * @param pos position as a Vector2
 		 */
-		inline void setLocalPosition(Vector2 pos) { localPosition.x = pos.x; localPosition.y = pos.y; updatePositions(); }
+		inline void setLocalPosition(SVector2 pos) { localPosition.x = pos.x; localPosition.y = pos.y; updatePositions(); }
 
 		/**
 		 * @return World rotation of this entity in x-axis
@@ -61,7 +61,7 @@ namespace meteor {
 		/**
 		 * @return Local scale of this entity
 		*/
-		Vector2 getLocalScale() { return localScale; };
+		SVector2 getLocalScale() { return localScale; };
 		/**
 		 * @brief Sets local scale
 		 * @param x  x-component of the scale
@@ -72,27 +72,27 @@ namespace meteor {
 		 * @brief brief Sets local scale
 		 * @param scale Scale as a Vector2
 		*/
-		inline void setLocalScale(Vector2 scale) { localScale.x = scale.x; localScale.y = scale.y; }
+		inline void setLocalScale(SVector2 scale) { localScale.x = scale.x; localScale.y = scale.y; }
 
 		/**
 		 * @return Immediate parent of this entity
 		*/
-		inline SpatialEntity* getParent() { return parent; }
+		inline MSpatialEntity* getParent() { return parent; }
 		/**
 		 * @return List of children of the entity. 
 		*/
-		inline std::vector<SpatialEntity*>* getChildren() { return children; }
+		inline std::vector<MSpatialEntity*>* getChildren() { return children; }
 
 		/**
 		 * @brief Adds a child to this entity
 		 * @param entity Child to add.
 		*/
-		void addChild(SpatialEntity* entity);
+		void addChild(MSpatialEntity* entity);
 		/**
 		 * @brief Remove a child from this entity
 		 * @param entity Child to remove.
 		*/
-		void removeChild(SpatialEntity* entity);
+		void removeChild(MSpatialEntity* entity);
 
 		/**
 		 * @brief Recursively searches for a SpatialEntity within this sub-tree
@@ -135,13 +135,13 @@ namespace meteor {
 		virtual void onExit();
 
 	protected:
-		Vector2 localPosition;
-		Vector2 localScale;
-		Vector2 position;
+		SVector2 localPosition;
+		SVector2 localScale;
+		SVector2 position;
 		float rotation;
 		float localRotation;
-		SpatialEntity* parent = NULL;
-		std::vector<SpatialEntity*>* children = NULL;
+		MSpatialEntity* parent = NULL;
+		std::vector<MSpatialEntity*>* children = NULL;
 
 		void updatePositions();
 		void updateRotations();
@@ -149,6 +149,6 @@ namespace meteor {
 
 		void updateChildren(float deltaTime);
 	private:
-		void setParent(SpatialEntity* entity) { parent = entity; };
+		void setParent(MSpatialEntity* entity) { parent = entity; };
 	};
 }

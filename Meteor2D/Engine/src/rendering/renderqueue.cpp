@@ -5,16 +5,16 @@
 #include <algorithm>
 
 namespace meteor {
-	RenderQueue* RenderQueue::activeQueue = NULL;
+	MRenderQueue* MRenderQueue::activeQueue = NULL;
 
-	RenderQueue* RenderQueue::getQueue() {
+	MRenderQueue* MRenderQueue::getQueue() {
 		if (activeQueue == NULL)
-			activeQueue = new RenderQueue();
+			activeQueue = new MRenderQueue();
 
 		return activeQueue;
 	}
 
-	RenderQueue::~RenderQueue() {
+	MRenderQueue::~MRenderQueue() {
 		for (auto cmd : worldQueue) {
 			delete cmd;
 		}
@@ -26,52 +26,52 @@ namespace meteor {
 		}
 	}
 
-	void RenderQueue::submit(RenderCommand* cmd) {
+	void MRenderQueue::submit(MRenderCommand* cmd) {
 		switch (cmd->getLayer()) {
-		case RenderLayer::World:
+		case ERenderLayer::World:
 			worldQueue.push_back(cmd);
 			break;
-		case RenderLayer::UI:
+		case ERenderLayer::UI:
 			uiQueue.push_back(cmd);
 			break;
-		case RenderLayer::Debug:
+		case ERenderLayer::Debug:
 			debugQueue.push_back(cmd);
 			break;
 		}
 	}
 
-	void RenderQueue::prepare() {
+	void MRenderQueue::prepare() {
 		
 		if (!worldQueue.empty())
-			std::sort(worldQueue.begin(), worldQueue.end(), [](RenderCommand* a, RenderCommand* b) { return a->getSortingOrder() < b->getSortingOrder(); });
+			std::sort(worldQueue.begin(), worldQueue.end(), [](MRenderCommand* a, MRenderCommand* b) { return a->getSortingOrder() < b->getSortingOrder(); });
 
 		if (!uiQueue.empty())
-			std::sort(uiQueue.begin(), uiQueue.end(), [](RenderCommand* a, RenderCommand* b) { return a->getSortingOrder() < b->getSortingOrder(); });
+			std::sort(uiQueue.begin(), uiQueue.end(), [](MRenderCommand* a, MRenderCommand* b) { return a->getSortingOrder() < b->getSortingOrder(); });
 
 		if (!debugQueue.empty())
-			std::sort(debugQueue.begin(), debugQueue.end(), [](RenderCommand* a, RenderCommand* b) { return a->getSortingOrder() < b->getSortingOrder(); });
+			std::sort(debugQueue.begin(), debugQueue.end(), [](MRenderCommand* a, MRenderCommand* b) { return a->getSortingOrder() < b->getSortingOrder(); });
 	}
 
-	bool RenderQueue::hasNext(RenderLayer layer) {
+	bool MRenderQueue::hasNext(ERenderLayer layer) {
 		switch (layer) {
-		case RenderLayer::Debug: return !debugQueue.empty();
-		case RenderLayer::UI: return !uiQueue.empty();
-		case RenderLayer::World: return !worldQueue.empty();
+		case ERenderLayer::Debug: return !debugQueue.empty();
+		case ERenderLayer::UI: return !uiQueue.empty();
+		case ERenderLayer::World: return !worldQueue.empty();
 		}
 	}
 
-	RenderCommand* RenderQueue::next(RenderLayer layer) {
-		std::vector<RenderCommand*>* queueToUse = NULL;
+	MRenderCommand* MRenderQueue::next(ERenderLayer layer) {
+		std::vector<MRenderCommand*>* queueToUse = NULL;
 		switch (layer) {
-		case RenderLayer::World: queueToUse = &worldQueue;
+		case ERenderLayer::World: queueToUse = &worldQueue;
 			break;
-		case RenderLayer::UI: queueToUse = &uiQueue;
+		case ERenderLayer::UI: queueToUse = &uiQueue;
 			break;
-		case RenderLayer::Debug: queueToUse = &debugQueue;
+		case ERenderLayer::Debug: queueToUse = &debugQueue;
 			break;
 		}
 
-		RenderCommand* cmd = queueToUse->front();
+		MRenderCommand* cmd = queueToUse->front();
 		queueToUse->erase(queueToUse->begin());
 		return cmd;
 	}

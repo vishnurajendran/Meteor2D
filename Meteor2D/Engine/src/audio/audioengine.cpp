@@ -4,9 +4,9 @@
 
 namespace meteor {
 
-	irrklang::ISoundEngine* AudioEngine::engine = NULL;
+	irrklang::ISoundEngine* MAudioEngine::engine = NULL;
 
-	bool AudioEngine::Initialise() {
+	bool MAudioEngine::Initialise() {
 		if (engine != NULL)
 		{
 			mWarn("Audio Core is already intialised");
@@ -24,14 +24,16 @@ namespace meteor {
 		return true;
 	}
 
-	void AudioEngine::cleanup() {
+	void MAudioEngine::cleanup() {
 		if(engine)
 			engine->drop();
 		engine = NULL;
 	}
 
-	AudioClip* AudioEngine::getClip(std::string clipPath) {
-		AudioClip* clip = new AudioClip(engine, clipPath);
+	MAudioClip* MAudioEngine::getClip(std::string clipPath) {
+		if (engine == NULL)
+			return NULL;
+		MAudioClip* clip = new MAudioClip(engine, clipPath);
 		return clip;
 	}
 }

@@ -16,16 +16,16 @@ namespace meteor {
 	const std::string ANIM_JSON_RECT_SIZEW = "w";
 	const std::string ANIM_JSON_RECT_SIZEH = "h";
 
-	SpriteSheet* parseSpriteSheet(nlohmann::json);
+	MSpriteSheet* parseSpriteSheet(nlohmann::json);
 
-	AnimationMap::~AnimationMap() {
+	MAnimationMap::~MAnimationMap() {
 		for (auto i = animMapping.begin(); i != animMapping.end(); i++)
 		{
 			delete i->second;
 		}
 	}
 
-	SpriteSheet* AnimationMap::getAnim(std::string name){
+	MSpriteSheet* MAnimationMap::getAnim(std::string name){
 
 		if (animMapping.empty())
 			return NULL;
@@ -36,18 +36,18 @@ namespace meteor {
 		return NULL;
 	}
 
-	SpriteSheet* AnimationMap::getDefault() {
+	MSpriteSheet* MAnimationMap::getDefault() {
 		if (animMapping.empty())
 			return NULL;
 		return animMapping.begin()->second;
 	}
 
-	AnimationMap* AnimationMap::loadMap(std::string filename) {
+	MAnimationMap* MAnimationMap::loadMap(std::string filename) {
 		std::ifstream file(filename, std::ios::in);
 		if(!file.is_open())
 			return NULL;
 		
-		AnimationMap* mapping = new AnimationMap();
+		MAnimationMap* mapping = new MAnimationMap();
 		nlohmann::json js;
 		file >> js;
 		for (auto ssItm : js) {
@@ -59,18 +59,18 @@ namespace meteor {
 		return mapping;
 	}
 
-	SpriteSheet* parseSpriteSheet(nlohmann::json jsNode) {
+	MSpriteSheet* parseSpriteSheet(nlohmann::json jsNode) {
 		auto ss = jsNode[ANIM_JSON_SPRITESHEET_CONTAINER];
 		std::string tex = ss[ANIM_JSON_TEXTURE];
-		std::vector<Rect> rects;
+		std::vector<SRect> rects;
 		for (auto rectDat : ss[ANIM_JSON_RECT_CONTAINER]) {
-			Rect rect;
+			SRect rect;
 			rect.position.x = rectDat[ANIM_JSON_RECT_POSX];
 			rect.position.y = rectDat[ANIM_JSON_RECT_POSY];
 			rect.size.x = rectDat[ANIM_JSON_RECT_SIZEW];
 			rect.size.y = rectDat[ANIM_JSON_RECT_SIZEH];
 			rects.push_back(rect);
 		}
-		return new SpriteSheet(tex, rects);
+		return new MSpriteSheet(tex, rects);
 	}
 }

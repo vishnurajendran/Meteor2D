@@ -6,7 +6,7 @@ namespace meteor {
 	 * batch render commands. the order of render is as follows
 	 * World -> UI -> Debug.
 	*/
-	enum RenderLayer {
+	enum ERenderLayer {
 		World,
 		UI,
 		Debug

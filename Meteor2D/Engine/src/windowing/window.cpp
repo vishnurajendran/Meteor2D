@@ -4,7 +4,7 @@
 #include <global/sdlcores.h>
 
 namespace meteor {
-	Window::Window(WindowProperties properties) {
+	MWindow::MWindow(SWindowProperties properties) {
 		SDL_Point screenCentre;
 		screenCentre.x = properties.width / 2;
 		screenCentre.y = properties.height / 2;
@@ -28,8 +28,8 @@ namespace meteor {
 
 		sdlRenderer = SDL_CreateRenderer(window, -1, rendererFlags);
 
-		SdlCores::setActiveRenderer(sdlRenderer);
-		SdlCores::setScreenCentre(screenCentre);
+		MSdlCores::setActiveRenderer(sdlRenderer);
+		MSdlCores::setScreenCentre(screenCentre);
 
 		SDL_SetRenderDrawColor(sdlRenderer, backgroundColor.r, backgroundColor.g, backgroundColor.b, backgroundColor.a);
 		if (sdlRenderer == NULL)
@@ -37,23 +37,23 @@ namespace meteor {
 			mError("Renderer could not be created! SDL Error: {}", SDL_GetError());
 			return;
 		}
-		renderQueue = RenderQueue::getQueue();
-		renderer = new Renderer(renderQueue, sdlRenderer);
+		renderQueue = MRenderQueue::getQueue();
+		renderer = new MRenderer(renderQueue, sdlRenderer);
 		mLog("Meteor Window ready");
 	}
 
-	RenderQueue* Window::getRenderQueue() {
+	MRenderQueue* MWindow::getRenderQueue() {
 		return renderQueue;
 	}
 
-	bool Window::hasQuit() {
+	bool MWindow::hasQuit() {
 		return quit;
 	}
 
-	void Window::close() {
+	void MWindow::close() {
 
-		if (SdlCores::getActiveRenderer() == sdlRenderer)
-			SdlCores::setActiveRenderer(NULL);
+		if (MSdlCores::getActiveRenderer() == sdlRenderer)
+			MSdlCores::setActiveRenderer(NULL);
 
 		delete renderer;
 		delete renderQueue;
@@ -62,11 +62,11 @@ namespace meteor {
 		SDL_Quit();
 	}
 
-	void Window::clear() {
+	void MWindow::clear() {
 		SDL_RenderClear(sdlRenderer);
 	}
 
-	void Window::pollEvents() {
+	void MWindow::pollEvents() {
 		if (SDL_PollEvent(&windowEvent)) {
 			if (windowEvent.type == SDL_QUIT) {
 				quit = true;
@@ -74,20 +74,20 @@ namespace meteor {
 		}
 	}
 
-	void Window::update() {
+	void MWindow::update() {
 		render();
 	}
 
-	void Window::render() {
+	void MWindow::render() {
 		renderer->renderAll();
 		SDL_RenderPresent(sdlRenderer);
 	}
 
-	void Window::setLogicalResolution(size_t width, size_t height) {
+	void MWindow::setLogicalResolution(size_t width, size_t height) {
 		renderer->setLogicalSize(width, height);
 	}
 
-	void Window::delay(int delay) {
+	void MWindow::delay(int delay) {
 		SDL_Delay(delay);
 	}
 }

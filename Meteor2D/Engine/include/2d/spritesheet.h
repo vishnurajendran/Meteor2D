@@ -6,28 +6,28 @@ namespace meteor {
 	/**
 	 * @brief This class holds the Rects within a texture that form an Animation
 	*/
-	class SpriteSheet : public Entity {
+	class MSpriteSheet : public MEntity {
 	public:
 		/**
 		 * @brief Constructor
 		 * @param texturePath Path to texture.
 		 * @param rects List of rects that form the animation.
 		*/
-		SpriteSheet(std::string texturePath, std::vector<Rect> rects);
+		MSpriteSheet(std::string texturePath, std::vector<SRect> rects);
 		/**
 		 * @brief Gets the Texture for this sprite-sheet.
 		 * @return Ptr to Texture instance
 		*/
-		Texture* getTexture();
+		MTexture* getTexture();
 		/**
 		 * @brief Sample the sprite-sheet for a animation frame rect
 		 * @param index integer directly mapping to frame number.
 		 * @param loop boolean flag to loop over the frames.
 		 * @return Rect for a specific animation frame.
 		*/
-		Rect sample(int& index, bool loop);
+		SRect sample(int& index, bool loop);
 	private:
-		Texture* spriteTex;
-		std::vector<Rect> spriteRects;
+		MTexture* spriteTex;
+		std::vector<SRect> spriteRects;
 	};
 }

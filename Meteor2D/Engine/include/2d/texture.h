@@ -9,14 +9,14 @@ namespace meteor {
 	/**
 	 * @brief This class holds an image that can be rendererd to the screen.
 	*/
-	class Texture : public Entity {
+	class MTexture : public MEntity {
 	public:
 		/**
 		 * @brief Constructor
 		 * @param path Texture file path
 		*/
-		Texture(std::string path);
-		~Texture();
+		MTexture(std::string path);
+		~MTexture();
 		/**
 		 * @brief Gets the img source path in disk
 		 * @return Path as string
@@ -31,7 +31,7 @@ namespace meteor {
 		 * @brief returns the size of Texture in pixel
 		 * @return Vector2 containing width and height of texture
 		*/
-		inline Vector2 getSize() { return size; }
+		inline SVector2 getSize() { return size; }
 		/**
 		 * @return true if texture is valid 
 		*/
@@ -47,12 +47,12 @@ namespace meteor {
 		 * DO NOT TOUCH or INVOKE!!
 		 * @param renderer 
 		*/
-		static void setGenerationRenderer(Renderer* renderer) { texGenRenderer = renderer; }
+		static void setGenerationRenderer(MRenderer* renderer) { texGenRenderer = renderer; }
 	private:
-		Vector2 size;
+		SVector2 size;
 		std::string srcPath;
 		SDL_Texture* coreTexture;
-		static Renderer* texGenRenderer;
+		static MRenderer* texGenRenderer;
 		bool isValid;
 	};
 }

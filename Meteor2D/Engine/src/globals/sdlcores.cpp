@@ -1,22 +1,22 @@
 #include<global/sdlcores.h>
 
 namespace meteor {
-	SDL_Renderer* SdlCores::activeRenderer = NULL;
-	SDL_Point SdlCores::screenCentre;
+	SDL_Renderer* MSdlCores::activeRenderer = NULL;
+	SDL_Point MSdlCores::screenCentre;
 
-	void SdlCores::setActiveRenderer(SDL_Renderer* renderer) {
+	void MSdlCores::setActiveRenderer(SDL_Renderer* renderer) {
 		activeRenderer = renderer;
 	}
 
-	void SdlCores::setScreenCentre(SDL_Point point) {
+	void MSdlCores::setScreenCentre(SDL_Point point) {
 		screenCentre = point;
 	}
 
-	SDL_Renderer* SdlCores::getActiveRenderer() {
+	SDL_Renderer* MSdlCores::getActiveRenderer() {
 		return activeRenderer;
 	}
 
-	SDL_Point SdlCores::getScreenCentre() {
+	SDL_Point MSdlCores::getScreenCentre() {
 		return screenCentre;
 	}
 }

@@ -7,20 +7,20 @@ namespace meteor {
 	 * @brief Camera entity uses provides camera like functionlity to
 	 * manage world view.
 	*/
-	class Camera : public SpatialEntity {
+	class MCamera : public MSpatialEntity {
 	public:
 		
-		~Camera();
+		~MCamera();
 		/**
 		 * @brief default Constructor
 		*/
-		Camera() : Camera(Vector2::make(0, 0), 0) {};
+		MCamera() : MCamera(SVector2::make(0, 0), 0) {};
 		/**
 		 * @brief Constructor
 		 * @param position Position of Camera at position
 		 * @param sortingOrder sorting Order of Camera within the CameraStack
 		*/
-		Camera(Vector2 position, uint8_t sortingOrder);
+		MCamera(SVector2 position, uint8_t sortingOrder);
 		/**
 		 * @brief Sets the Camera active status
 		*/
@@ -29,7 +29,7 @@ namespace meteor {
 		 * @brief Checks if a provided position within camera bounds.
 		 * @return 
 		*/
-		bool isInsideBounds(Vector2 position);
+		bool isInsideBounds(SVector2 position);
 		/**
 		 * @return true if Camera is active
 		*/
@@ -39,7 +39,7 @@ namespace meteor {
 		*/
 		inline uint8_t getSortingOrder() { return sortingOrder; }
 	private:
-		Vector2 boundsCentre;
+		SVector2 boundsCentre;
 		uint8_t sortingOrder;
 		bool active;
 	};

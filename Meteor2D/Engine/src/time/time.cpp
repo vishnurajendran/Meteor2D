@@ -1,13 +1,13 @@
 #include<meteorutils/time.h>
 
 namespace meteor {
-	uint64_t Time::timeNow = SDL_GetPerformanceCounter();
-	uint64_t Time::currFrameTime = 0;
-	uint64_t Time::timeLast = 0;
-	double Time::deltaTime = 0;
-	float Time::timeScale = 1;
+	uint64_t MTime::timeNow = SDL_GetPerformanceCounter();
+	uint64_t MTime::currFrameTime = 0;
+	uint64_t MTime::timeLast = 0;
+	double MTime::deltaTime = 0;
+	float MTime::timeScale = 1;
 
-	void Time::updateTime() {
+	void MTime::updateTime() {
 		currFrameTime = SDL_GetTicks();
 		timeLast = timeNow;
 		timeNow = SDL_GetPerformanceCounter();

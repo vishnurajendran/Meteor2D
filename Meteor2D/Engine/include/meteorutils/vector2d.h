@@ -8,7 +8,7 @@ namespace meteor {
 	/**
 	 * @brief A structure representing a 2D Vector.
 	*/
-	struct Vector2 {
+	struct SVector2 {
 	public:
 		float x = 0;
 		float y = 0;
@@ -16,54 +16,54 @@ namespace meteor {
 		/************* VECTOR ARITHM*******/
 
 
-		void operator+=(Vector2 const& other) {
+		void operator+=(SVector2 const& other) {
 			x += other.x;
 			y += other.y;
 		}
 
-		void operator-=(Vector2 const& other) {
+		void operator-=(SVector2 const& other) {
 			x += other.x;
 			y += other.y;
 		}
 
-		Vector2 operator+(Vector2 const& other) {
-			Vector2 nVector;
+		SVector2 operator+(SVector2 const& other) {
+			SVector2 nVector;
 			nVector.x = x + other.x;
 			nVector.y = y + other.y;
 			return nVector;
 		}
 
-		Vector2 operator-(Vector2 const& other) {
-			Vector2 nVector;
+		SVector2 operator-(SVector2 const& other) {
+			SVector2 nVector;
 			nVector.x = x - other.x;
 			nVector.y = y - other.y;
 			return nVector;
 		}
 
 		/************ SCALAR******************/
-		Vector2 operator*(int const& scalar) {
-			Vector2 nVector;
+		SVector2 operator*(int const& scalar) {
+			SVector2 nVector;
 			nVector.x = x * scalar;
 			nVector.y = y * scalar;
 			return nVector;
 		}
 
-		Vector2 operator/(int const& scalar) {
-			Vector2 nVector;
+		SVector2 operator/(int const& scalar) {
+			SVector2 nVector;
 			nVector.x = x / scalar;
 			nVector.y = y / scalar;
 			return nVector;
 		}
 		
-		Vector2 operator*(float const& scalar) {
-			Vector2 nVector;
+		SVector2 operator*(float const& scalar) {
+			SVector2 nVector;
 			nVector.x = x * scalar;
 			nVector.y = y * scalar;
 			return nVector;
 		}
 
-		Vector2 operator/(float const& scalar) {
-			Vector2 nVector;
+		SVector2 operator/(float const& scalar) {
+			SVector2 nVector;
 			nVector.x = x /  scalar;
 			nVector.y = y / scalar;
 			return nVector;
@@ -82,22 +82,22 @@ namespace meteor {
 		 * @param y value in y-axis
 		 * @return vector2 containing (x,y)
 		*/
-		static Vector2 make(float x, float y) {
-			return Vector2(x,y);
+		static SVector2 make(float x, float y) {
+			return SVector2(x,y);
 		}
 
 		/**
 		 * @return (1,1)
 		*/
-		static Vector2 one() {
-			return Vector2(1,1);
+		static SVector2 one() {
+			return SVector2(1,1);
 		}
 
 		/**
 		 * @return (0,0) 
 		*/
-		static Vector2 zero() {
-			return Vector2(1, 1);
+		static SVector2 zero() {
+			return SVector2(1, 1);
 		}
 
 		/**
@@ -106,8 +106,8 @@ namespace meteor {
 		 * @param v2 vector 2
 		 * @return scaled vector
 		*/
-		static Vector2 scale(Vector2 v1, Vector2 v2) {
-			return Vector2(v1.x * v2.x, v1.y * v2.y);
+		static SVector2 scale(SVector2 v1, SVector2 v2) {
+			return SVector2(v1.x * v2.x, v1.y * v2.y);
 		}
 
 		/**
@@ -116,7 +116,7 @@ namespace meteor {
 		 * @param v2 vector 2
 		 * @return euclidian distance between the two vectors
 		*/
-		static float dist(Vector2 v1, Vector2 v2) {
+		static float dist(SVector2 v1, SVector2 v2) {
 			return sqrt(pow((v1.x - v2.x), 2) + pow((v1.y - v2.y), 2));
 		}
 
@@ -127,7 +127,7 @@ namespace meteor {
 		 * @param out Vector2 struct reference to update values.
 		 * @return true is de-serialization was successful.
 		*/
-		static bool parse(std::string str, Vector2& out) {
+		static bool parse(std::string str, SVector2& out) {
 			if (str[0] != '(') {
 				mError("vector parse failed, reason: {}", "expected ( at the begining.");
 				return false;

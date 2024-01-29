@@ -9,15 +9,15 @@ namespace meteor {
 	const float PI = 3.1515926535898f;
 	const float DEG_TO_RAD = PI / 180.0f;
 
-	void makeRootEntity(SpatialEntity* entity) {
+	void makeRootEntity(MSpatialEntity* entity) {
 		if (entity->getParent() != NULL)
 			return;
-		SceneManager::getActiveScene()->addToRoot(entity);
+		MSceneManager::getActiveScene()->addToRoot(entity);
 	}
 
-	void removeFromRoot(SpatialEntity* entity, Scene* scene) {
+	void removeFromRoot(MSpatialEntity* entity, MScene* scene) {
 		auto rootEntities = scene->getRootEntities();
-		std::vector<SpatialEntity*>::iterator it = std::find(rootEntities->begin(), rootEntities->end(), entity);
+		std::vector<MSpatialEntity*>::iterator it = std::find(rootEntities->begin(), rootEntities->end(), entity);
 		if (it == rootEntities->end())
 			return;
 
@@ -25,10 +25,10 @@ namespace meteor {
 		rootEntities->erase(rootEntities->begin() + diff);
 	}
 
-	SpatialEntity::SpatialEntity(SpatialEntity* parent) {
+	MSpatialEntity::MSpatialEntity(MSpatialEntity* parent) {
 		name = "Spatial";
 		localScale.x = localScale.y = 1;
-		children = new std::vector<SpatialEntity*>();
+		children = new std::vector<MSpatialEntity*>();
 		if (parent == NULL)
 			makeRootEntity(this);
 		else
@@ -36,8 +36,8 @@ namespace meteor {
 		onStart();
 	}
 
-	void SpatialEntity::addChild(SpatialEntity* entity) {
-		std::vector<SpatialEntity*>::iterator it = std::find(children->begin(), children->end(), entity);
+	void MSpatialEntity::addChild(MSpatialEntity* entity) {
+		std::vector<MSpatialEntity*>::iterator it = std::find(children->begin(), children->end(), entity);
 		if (it != children->end())
 			return;
 
@@ -51,11 +51,11 @@ namespace meteor {
 		// this is a by-product of un-parenting an entity using removeChild.
 		// since the entity becomes a independant, it will be considered as a root entity
 		// and appended to the scene root list.
-		removeFromRoot(entity, SceneManager::getActiveScene());
+		removeFromRoot(entity, MSceneManager::getActiveScene());
 	}
 
-	void SpatialEntity::removeChild(SpatialEntity* entity) {
-		std::vector<SpatialEntity*>::iterator it = std::find(children->begin(), children->end(), entity);
+	void MSpatialEntity::removeChild(MSpatialEntity* entity) {
+		std::vector<MSpatialEntity*>::iterator it = std::find(children->begin(), children->end(), entity);
 		if (it == children->end())
 			return;
 
@@ -65,7 +65,7 @@ namespace meteor {
 		makeRootEntity(entity);
 	}
 
-	SpatialEntity::~SpatialEntity() {
+	MSpatialEntity::~MSpatialEntity() {
 		if (children == NULL)
 			return;
 
@@ -74,22 +74,22 @@ namespace meteor {
 		}
 	}
 
-	void SpatialEntity::onStart() {
+	void MSpatialEntity::onStart() {
 	}
 
-	void SpatialEntity::onUpdate(float deltaTime) {
+	void MSpatialEntity::onUpdate(float deltaTime) {
 		updateRotations();
 		updatePositions();
 		updateScale();
 		updateChildren(deltaTime);
 	}
 
-	void SpatialEntity::onExit() {
+	void MSpatialEntity::onExit() {
 
 	}
 
-	void SpatialEntity::updatePositions() {
-		Vector2 fixedPoint;
+	void MSpatialEntity::updatePositions() {
+		SVector2 fixedPoint;
 		float parentRot=0;
 		
 		if (parent == NULL) {
@@ -102,20 +102,20 @@ namespace meteor {
 		fixedPoint = parent->position;
 		parentRot = parent->rotation;
 		// compute position without rotation
-		Vector2 posWitoutRot;
+		SVector2 posWitoutRot;
 		posWitoutRot.x = fixedPoint.x + localPosition.x;
 		posWitoutRot.y = fixedPoint.y + localPosition.y;
 
-		float dist = Vector2::dist(posWitoutRot, fixedPoint);
-		Vector2 posDelta = Vector2::make(sin(parentRot* DEG_TO_RAD), cos(parentRot* DEG_TO_RAD));
-		Vector2 deltaWithRFactored = posDelta * dist;
+		float dist = SVector2::dist(posWitoutRot, fixedPoint);
+		SVector2 posDelta = SVector2::make(sin(parentRot* DEG_TO_RAD), cos(parentRot* DEG_TO_RAD));
+		SVector2 deltaWithRFactored = posDelta * dist;
 		
 		// set final position
 		position = fixedPoint + deltaWithRFactored;
 		//rotation = 
 	}
 
-	void SpatialEntity::updateRotations() {
+	void MSpatialEntity::updateRotations() {
 		float parentRotDelta=0;
 		if (parent != NULL) {
 			parentRotDelta = parent->rotation;
@@ -124,16 +124,16 @@ namespace meteor {
 		rotation = fmod((parentRotDelta + localRotation),360.0f);
 	}
 
-	void SpatialEntity::updateScale() {
-		Vector2 parentScale = Vector2::one();
+	void MSpatialEntity::updateScale() {
+		SVector2 parentScale = SVector2::one();
 		if (parent != NULL) {
 			parentScale = parent->localScale;
 		}
 
-		localScale = Vector2::scale(localScale, parentScale);
+		localScale = SVector2::scale(localScale, parentScale);
 	}
 
-	void SpatialEntity::updateChildren(float deltaTime) {
+	void MSpatialEntity::updateChildren(float deltaTime) {
 		for (int i = 0; i < children->size(); i++) {
 			children->at(i)->onUpdate(deltaTime);
 		}

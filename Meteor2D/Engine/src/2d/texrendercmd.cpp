@@ -6,31 +6,31 @@
 #include <camera/camera.h>
 
 namespace meteor {
-	TexRenderCmd::TexRenderCmd(RenderLayer layer, uint8_t sortingOrder) : RenderCommand(layer, sortingOrder) {
+	MTexRenderCmd::MTexRenderCmd(ERenderLayer layer, uint8_t sortingOrder) : MRenderCommand(layer, sortingOrder) {
 		texture = NULL;
 	}
 
-	void TexRenderCmd::bindTexture(Texture* tex) {
+	void MTexRenderCmd::bindTexture(MTexture* tex) {
 		if (lockedForRender)
 			this->textureTempBuffer = tex;
 		else
 			this->texture = tex;
 	}
 
-	void TexRenderCmd::render() {
+	void MTexRenderCmd::render() {
 		
-		if (!CameraStack::hasActiveCamera())
+		if (!MCameraStack::hasActiveCamera())
 			return;
 		
 		if (!isValid())
 			return;
 
 		lockedForRender = true;
-		Camera* cam = CameraStack::getActiveCamera();
+		MCamera* cam = MCameraStack::getActiveCamera();
 		SDL_FRect tRect;
 		SDL_Rect src;
 		//subtract the positions, by half of x and y, to center the sprite.
-		Vector2 size = targetRect.size;
+		SVector2 size = targetRect.size;
 		size.x *= scale.x;
 		size.y *= scale.y;
 
@@ -57,14 +57,14 @@ namespace meteor {
 		swap();
 	}
 
-	void TexRenderCmd::swap() {
+	void MTexRenderCmd::swap() {
 		if (textureTempBuffer != NULL) {
 			texture = textureTempBuffer;
 			textureTempBuffer = NULL;
 		}
 	}
 
-	bool TexRenderCmd::isValid() {
+	bool MTexRenderCmd::isValid() {
 		if (renderCore == NULL) {
 			mError("Renderer Core not available, this request will not be fullfilled");
 			return false;

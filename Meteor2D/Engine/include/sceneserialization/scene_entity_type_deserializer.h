@@ -7,12 +7,12 @@ namespace meteor {
 	/**
 	 * @brief Base class for Scene Enity Derserializers
 	*/
-	class SceneEntityTypeDeserializer : public Entity {
+	class MSceneEntityTypeDeserializer : public MEntity {
 	public:
-		SceneEntityTypeDeserializer() {};
-		virtual SpatialEntity* deserialize(pugi::xml_node* node) = 0;
+		MSceneEntityTypeDeserializer() {};
+		virtual MSpatialEntity* deserialize(pugi::xml_node* node) = 0;
 	protected:
-		void parseSpatialData(pugi::xml_node* node, SpatialEntity* entity);
+		void parseSpatialData(pugi::xml_node* node, MSpatialEntity* entity);
 	private:
 		const std::string LOCAL_POS_ATTRIB = "localPosition";
 		const std::string LOCAL_ROT_ATTRIB = "localRotation";

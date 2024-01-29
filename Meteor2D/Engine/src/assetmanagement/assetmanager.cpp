@@ -13,23 +13,23 @@ namespace meteor {
 	const std::string PATH_DELIM_WIN = "\\";
 	const std::string PATH_DELIM_OTHER = "/";
 
-	AssetManager* AssetManager::instance = NULL;
+	MAssetManager* MAssetManager::instance = NULL;
 
-	AssetManager* AssetManager::getInstance() {
+	MAssetManager* MAssetManager::getInstance() {
 		if (instance == NULL)
-			instance = new AssetManager();
+			instance = new MAssetManager();
 
 		return instance;
 	}
 
-	Texture* AssetManager::getTexture(std::string path, bool relative) {
+	MTexture* MAssetManager::getTexture(std::string path, bool relative) {
 		auto assetPath = relative ? IMG_PATH + path : path;
 		if (texMap.contains(assetPath)) {
 			return texMap.at(assetPath);
 		}
 
 		mLog("loading texture: {}", assetPath);
-		auto tex = new Texture(assetPath);
+		auto tex = new MTexture(assetPath);
 		if (tex->valid()) {
 			texMap[assetPath] = tex;
 			return tex;
@@ -38,14 +38,14 @@ namespace meteor {
 		return NULL;
 	}
 
-	AnimationMap* AssetManager::getAnimationMap(std::string path, bool relative) {
+	MAnimationMap* MAssetManager::getAnimationMap(std::string path, bool relative) {
 		auto assetPath = relative ? ANIM_PATH + path : path;
 		if (animMap.contains(assetPath)) {
 			return animMap.at(assetPath);
 		}
 
 		mLog("loading animation: {}", assetPath);
-		auto aniMap = AnimationMap::loadMap(assetPath);
+		auto aniMap = MAnimationMap::loadMap(assetPath);
 		if (aniMap != NULL) {
 			animMap[assetPath] = aniMap;
 			return aniMap;
@@ -54,7 +54,7 @@ namespace meteor {
 		return NULL;
 	}
 
-	pugi::xml_document* AssetManager::getSceneDefinition(std::string path, bool relative) {
+	pugi::xml_document* MAssetManager::getSceneDefinition(std::string path, bool relative) {
 		auto assetPath = relative ? SCENE_PATH + path : path;
 		auto xmlDoc = getXmlDocument(assetPath);
 		if (xmlDoc == NULL)
@@ -63,7 +63,7 @@ namespace meteor {
 		return xmlDoc;
 	}
 
-	pugi::xml_document* AssetManager::getUIDefinition(std::string path, bool relative) {
+	pugi::xml_document* MAssetManager::getUIDefinition(std::string path, bool relative) {
 		auto assetPath = relative ? SCENE_PATH + path : path;
 		auto xmlDoc = getXmlDocument(assetPath);
 		if (xmlDoc == NULL)
@@ -73,7 +73,7 @@ namespace meteor {
 	}
 
 	//TODO: wrap this XML library with our own implementation, I really don't want to expose the library :p.
-	pugi::xml_document* AssetManager::getXmlDocument(std::string assetPath) {
+	pugi::xml_document* MAssetManager::getXmlDocument(std::string assetPath) {
 		if (xmlMap.contains(assetPath)) {
 			return xmlMap.at(assetPath);
 		}
@@ -89,14 +89,14 @@ namespace meteor {
 		return NULL;
 	}
 
-	AudioClip* AssetManager::getAudioClip(std::string path, bool relative) {
+	MAudioClip* MAssetManager::getAudioClip(std::string path, bool relative) {
 		auto assetPath = relative ? AUDIO_PATH + path : path;
 		if (audioMap.contains(assetPath)) {
 			return audioMap.at(assetPath);
 		}
 
 		mLog("loading audio clip: {}", assetPath);
-		auto clip = AudioEngine::getClip(assetPath);
+		auto clip = MAudioEngine::getClip(assetPath);
 		if (clip != NULL) {
 			audioMap[assetPath] = clip;
 			return clip;
@@ -105,7 +105,7 @@ namespace meteor {
 		return NULL;
 	}
 
-	void AssetManager::cleanup() {
+	void MAssetManager::cleanup() {
 		
 		mLog("Cleaning Animations References");
 		for (auto i = animMap.begin(); i != animMap.end(); i++)

@@ -7,7 +7,7 @@ namespace meteor {
 	/**
 	 * @brief A scene holds a collection of spatial entity for a specific level.
 	*/
-	class Scene : public Entity {
+	class MScene : public MEntity {
 		friend class Spatial;
 	public:
 		
@@ -15,8 +15,8 @@ namespace meteor {
 		 * @brief Constructor
 		 * @param deltaTime 
 		*/
-		Scene();
-		~Scene();
+		MScene();
+		~MScene();
 		/**
 		 * @brief Invoked when scene loads.
 		*/
@@ -33,7 +33,7 @@ namespace meteor {
 		/**
 		 * @brief Adds a SpatialEntity to the scene root.
 		*/
-		void addToRoot(SpatialEntity* entity);
+		void addToRoot(MSpatialEntity* entity);
 		/**
 		 * @brief Returns size of root.
 		*/
@@ -41,7 +41,7 @@ namespace meteor {
 		/**
 		 * @brief Return a list of root entities
 		*/
-		inline std::vector<SpatialEntity*>* getRootEntities() { return rootEntities; };
+		inline std::vector<MSpatialEntity*>* getRootEntities() { return rootEntities; };
 		/**
 		 * @brief Tries to parse and load a scene state.
 		*/
@@ -70,8 +70,8 @@ namespace meteor {
 		}
 
 	private:
-		std::vector<SpatialEntity*>* rootEntities;
-		void recursivelyLoadEntity(pugi::xml_node* currNode, SpatialEntity* parent);
+		std::vector<MSpatialEntity*>* rootEntities;
+		void recursivelyLoadEntity(pugi::xml_node* currNode, MSpatialEntity* parent);
 		bool sceneClosing = false;
 	public:
 		static const std::string VALID_SCENE_FILE_XML_TAG;

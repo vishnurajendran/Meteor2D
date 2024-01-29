@@ -4,12 +4,12 @@
 
 namespace meteor {
 
-	Animation::Animation(std::string mapFile, int fps, RenderLayer layer, uint8_t sortingOrder) {
-		this->animationMap = AssetManager::getInstance()->getAnimationMap(mapFile);
+	MAnimation::MAnimation(std::string mapFile, int fps, ERenderLayer layer, uint8_t sortingOrder) {
+		this->animationMap = MAssetManager::getInstance()->getAnimationMap(mapFile);
 		this->currAnimSheet = animationMap->getDefault();
 		this->fps = fps;
-		pivot = Vector2::make(0.5f, 0.5f);
-		cmd = new TexRenderCmd(layer, sortingOrder);
+		pivot = SVector2::make(0.5f, 0.5f);
+		cmd = new MTexRenderCmd(layer, sortingOrder);
 		cmd->useSourceRect(true);
 
 		//bind default texture
@@ -17,19 +17,19 @@ namespace meteor {
 			cmd->bindTexture(currAnimSheet == NULL ? NULL : currAnimSheet->getTexture());
 	}
 
-	void Animation::setFPS(int fps) {
+	void MAnimation::setFPS(int fps) {
 		this->fps = fps;
 	}
 
-	void Animation::stop() {
+	void MAnimation::stop() {
 		isPlaying = false;
 	}
 
-	void Animation::resume() {
+	void MAnimation::resume() {
 		isPlaying = true;
 	}
 
-	void Animation::play(std::string name, bool looped=true) {
+	void MAnimation::play(std::string name, bool looped=true) {
 		//if in same anim, we ignore
 		if (currAnim == name)
 			return;
@@ -40,7 +40,7 @@ namespace meteor {
 		changeRequested = true;
 	}
 
-	void Animation::tryChangeAnimParams() {
+	void MAnimation::tryChangeAnimParams() {
 		if (!changeRequested)
 			return;
 
@@ -53,17 +53,17 @@ namespace meteor {
 		spriteSrcRect = currAnimSheet->sample(index, isLooping);
 	}
 
-	void Animation::onUpdate(float deltaTime) {
+	void MAnimation::onUpdate(float deltaTime) {
 		//animation changes has a 1-frame delay, to avoid animation flickering.
 		tryChangeAnimParams();
-		SpatialEntity::onUpdate(deltaTime);
+		MSpatialEntity::onUpdate(deltaTime);
 		cmd->updateRotation(rotation);
 		cmd->updateScale(localScale);
 		cmd->updatePivot(pivot);
 		updateAnimation(deltaTime);
 	}
 
-	void Animation::updateAnimation(float deltaTime) {
+	void MAnimation::updateAnimation(float deltaTime) {
 		if (currAnimSheet == NULL) {
 			return;
 		}
@@ -87,15 +87,15 @@ namespace meteor {
 		submitFrameRenderRequest();
 	}
 
-	void Animation::submitFrameRenderRequest() {
+	void MAnimation::submitFrameRenderRequest() {
 		updateRect();
-		RenderQueue::getQueue()->submit(cmd);
+		MRenderQueue::getQueue()->submit(cmd);
 	}
 
-	void Animation::updateRect() {
-		Rect myRect;
+	void MAnimation::updateRect() {
+		SRect myRect;
 		myRect.position = position;
-		myRect.size = Vector2(spriteSrcRect.size.x, spriteSrcRect.size.y);
+		myRect.size = SVector2(spriteSrcRect.size.x, spriteSrcRect.size.y);
 		cmd->updateSrcRect(spriteSrcRect);
 		cmd->updateRect(myRect);
 	}

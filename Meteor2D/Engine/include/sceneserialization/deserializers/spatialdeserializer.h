@@ -6,9 +6,9 @@ namespace meteor {
 	/**
 	 * @brief Deserializer for SpatialEntity
 	*/
-	class SpatialDeserializer : SceneEntityTypeDeserializer {
+	class MSpatialDeserializer : MSceneEntityTypeDeserializer {
 	public:
-		virtual SpatialEntity* deserialize(pugi::xml_node* node) override;
+		virtual MSpatialEntity* deserialize(pugi::xml_node* node) override;
 	private:
 		static const bool registered;
 	};

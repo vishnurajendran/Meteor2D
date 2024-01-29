@@ -7,18 +7,18 @@ namespace meteor {
 	/**
 	 * @brief A encapsulate properties window creation
 	*/
-	struct WindowProperties {
+	struct SWindowProperties {
 	public:
 		std::string name = "Meteor2D";
 		size_t width = SCREEN_WIDTH;
 		size_t height = SCREEN_HEIGHT;
 		bool fullscreen = FULLSCREEN;
 		bool vsync = USE_VSYNC;
-		Color backgroundColor;
+		SColor backgroundColor;
 
-		WindowProperties() {};
+		SWindowProperties() {};
 
-		WindowProperties(std::string name, Color backgroundColor) {
+		SWindowProperties(std::string name, SColor backgroundColor) {
 			this->name = name;
 			this->backgroundColor = backgroundColor;
 		}

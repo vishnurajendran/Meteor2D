@@ -2,13 +2,13 @@
 
 namespace meteor {
 
-	const bool SpatialDeserializer::registered = []() {
-		SceneEntityTypeMap::registerDeserializer("spatial", new SpatialDeserializer()); 
+	const bool MSpatialDeserializer::registered = []() {
+		MSceneEntityTypeMap::registerDeserializer("mspatial", new MSpatialDeserializer()); 
 		return true;
 	}();
 
-	SpatialEntity* SpatialDeserializer::deserialize(pugi::xml_node* node) {
-		SpatialEntity* entity = new SpatialEntity();
+	MSpatialEntity* MSpatialDeserializer::deserialize(pugi::xml_node* node) {
+		MSpatialEntity* entity = new MSpatialEntity();
 		parseSpatialData(node, entity);
 		return entity;
 	}

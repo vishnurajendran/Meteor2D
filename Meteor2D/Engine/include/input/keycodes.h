@@ -3,7 +3,7 @@ namespace meteor {
     /**
      * @brief KeyCodes available for input checks.
     */
-    enum KeyCode {
+    enum EKeyCode {
         KEYCODE_UNKNOWN = 0,
         KEYCODE_A = 4,
         KEYCODE_B = 5,

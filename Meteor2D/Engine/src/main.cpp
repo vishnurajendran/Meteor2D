@@ -4,7 +4,7 @@
 
 #include <irrKlang.h>
 
-extern meteor::Application* getApp();
+extern meteor::MApplication* getApp();
 
 int main(int argc, char* argv[]) {
 	mLog("booting up meteor");
@@ -14,18 +14,18 @@ int main(int argc, char* argv[]) {
 		return 0;
 	}
 
-	if (!meteor::Texture::initialiseTextureLoader()) {
+	if (!meteor::MTexture::initialiseTextureLoader()) {
 		mError("un-recoverable error, closing meteor instance");
 		return 0;
 	}
 
-	meteor::Application* app = getApp();
-	meteor::WindowProperties properties(app->getName(),meteor::BG_COLOR);
-	meteor::Window* window = new meteor::Window(properties);
+	meteor::MApplication* app = getApp();
+	meteor::SWindowProperties properties(app->getName(),meteor::BG_COLOR);
+	meteor::MWindow* window = new meteor::MWindow(properties);
 	window->setLogicalResolution(meteor::LOGICAL_WIDTH, meteor::LOGICAL_HEIGHT);
-	meteor::InputManager::initialise();
-	meteor::SceneManager::initialise();
-	meteor::AudioEngine::Initialise();
+	meteor::MInputManager::initialise();
+	meteor::MSceneManager::initialise();
+	meteor::MAudioEngine::Initialise();
 
 	app->onStart();
 	float timer = 0;
@@ -33,23 +33,23 @@ int main(int argc, char* argv[]) {
 	while (!window->hasQuit() && !app->hasQuit()) {
 
 		// update events
-		meteor::InputManager::update();
+		meteor::MInputManager::update();
 
 		// clear window
 		window->clear();
 		window->pollEvents();
 
 		//update time
-		meteor::Time::updateTime();
-		float deltaTime = meteor::Time::getDeltaTime();
-		int frameTime = meteor::Time::getFrameTime();
+		meteor::MTime::updateTime();
+		float deltaTime = meteor::MTime::getDeltaTime();
+		int frameTime = meteor::MTime::getFrameTime();
 
 		//update scene
-		meteor::SceneManager::update(deltaTime);
+		meteor::MSceneManager::update(deltaTime);
 
 		//update app
 		app->onUpdate(deltaTime);
-		if (!meteor::CameraStack::hasActiveCamera())
+		if (!meteor::MCameraStack::hasActiveCamera())
 			mWarn("No active camera found!, Entities may not be correctly rendererd to the screen");
 		window->update();
 		
@@ -64,10 +64,10 @@ int main(int argc, char* argv[]) {
 	delete app;
 
 	mLog("Cleaning Asset References");
-	meteor::AssetManager::getInstance()->cleanup();
+	meteor::MAssetManager::getInstance()->cleanup();
 
 	mLog("Closing Audio Engine");
-	meteor::AudioEngine::cleanup();
+	meteor::MAudioEngine::cleanup();
 	
 	mLog("Closing Window..");
 	window->close();

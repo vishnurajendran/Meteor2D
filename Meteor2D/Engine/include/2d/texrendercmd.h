@@ -8,39 +8,39 @@ namespace meteor {
 	/**
 	 * @brief This a RenderCommand that draws an image on to the screen
 	*/
-	class TexRenderCmd : public RenderCommand {
+	class MTexRenderCmd : public MRenderCommand {
 	public:
 		/**
 		 * @brief Constructor.
 		 * @param layer layer for rendering
 		 * @param sortingOrder sorting order within the layer
 		*/
-		TexRenderCmd(RenderLayer layer, uint8_t sortingOrder);
+		MTexRenderCmd(ERenderLayer layer, uint8_t sortingOrder);
 		/**
 		 * @brief Bind a texture to draw.
 		 * @param tex Texture reference
 		*/
-		void bindTexture(Texture* tex);
+		void bindTexture(MTexture* tex);
 		/**
 		 * @brief Update the Rect for rendering.
 		*/
-		inline void updateRect(Rect rect) { targetRect = rect; }
+		inline void updateRect(SRect rect) { targetRect = rect; }
 		/**
 		 * @brief Update the Rect for image. 
 			Src Rect is the rect used for rendering specific parts of the texture
 		 * @param rect Src Rect.
 		*/
-		inline void updateSrcRect(Rect rect) { this->srcRect = rect; }
+		inline void updateSrcRect(SRect rect) { this->srcRect = rect; }
 		/**
 		 * @brief Update the scale of image during render
 		 * @param scale Vector2 defining scale
 		*/
-		inline void updateScale(Vector2 scale) { this->scale = scale; }
+		inline void updateScale(SVector2 scale) { this->scale = scale; }
 		/**
 		 * @brief Update the pivot of image during render
 		 * @param pivot Normalized Vector2 defining pivot
 		*/
-		inline void updatePivot(Vector2 pivot) { this->pivot = pivot; }
+		inline void updatePivot(SVector2 pivot) { this->pivot = pivot; }
 		/**
 		 * @brief Update rotation of the img during render
 		 * @param rotation 
@@ -60,12 +60,12 @@ namespace meteor {
 		*/
 		bool isValid() override;
 	private:
-		Texture* textureTempBuffer = NULL;
-		Texture* texture;
-		Rect targetRect;
-		Rect srcRect;
-		Vector2 scale;
-		Vector2 pivot;
+		MTexture* textureTempBuffer = NULL;
+		MTexture* texture;
+		SRect targetRect;
+		SRect srcRect;
+		SVector2 scale;
+		SVector2 pivot;
 		float rotation;
 		bool useSrcRect;
 		bool lockedForRender;

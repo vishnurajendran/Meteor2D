@@ -8,7 +8,7 @@ namespace meteor {
     /**
      * @brief manages user input events.
     */
-    class InputManager : public Entity {
+    class MInputManager : public MEntity {
     public:
         /**
          * @brief Initialise the input manager, IMP: DO NOT TOUCH or INVOKE.
@@ -23,22 +23,22 @@ namespace meteor {
          * @param key KeyCode to check press status.
          * @return true if key is pressed down
         */
-        static bool getKey(KeyCode key);
+        static bool getKey(EKeyCode key);
         /**
          * @brief Returns true if a key was pressed and then released.
          * @param key KeyCode to check press status.
          * @return  true if key is pressed down and released
         */
-        static bool getKeyDown(KeyCode key);
+        static bool getKeyDown(EKeyCode key);
         /**
          * @brief Returns true if a key was released.
          * @param key KeyCode to check press status.
          * @return true if a key was released.
         */
-        static bool getKeyUp(KeyCode key);
+        static bool getKeyUp(EKeyCode key);
     private:
         static const Uint8* keyStates;
         static Uint8 prevKeyStates[SDL_NUM_SCANCODES];
-        static std::set<KeyCode> keyMemory;
+        static std::set<EKeyCode> keyMemory;
     };
 }

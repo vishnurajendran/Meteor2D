@@ -7,7 +7,7 @@ namespace meteor {
 	/**
 	 * @brief Manages Scene loads and unloads.
 	*/
-	class SceneManager : public Entity {
+	class MSceneManager : public MEntity {
 	public:
 		/**
 		 * @brief Initialises the SceneManager.
@@ -32,8 +32,8 @@ namespace meteor {
 		/**
 		 * @brief Returns current active scene. 
 		*/
-		inline static Scene* getActiveScene() { return activeScene; }
+		inline static MScene* getActiveScene() { return activeScene; }
 	private:
-		static Scene* activeScene;
+		static MScene* activeScene;
 	};
 }

@@ -57,6 +57,7 @@
     <ClInclude Include="Engine\include\scenemanagement\scene.h" />
     <ClInclude Include="Engine\include\scenemanagement\scenemanager.h" />
     <ClInclude Include="Engine\include\sceneserialization\deserializers\animationdeserializer.h" />
+    <ClInclude Include="Engine\include\sceneserialization\deserializers\audiosourcedeserializer.h" />
     <ClInclude Include="Engine\include\sceneserialization\deserializers\cameradeserializer.h" />
     <ClInclude Include="Engine\include\sceneserialization\deserializers\spatialdeserializer.h" />
     <ClInclude Include="Engine\include\sceneserialization\deserializers\spritedeserializer.h" />
@@ -92,6 +93,7 @@
     <ClCompile Include="Engine\src\scenemanagement\scenemanager.cpp" />
     <ClCompile Include="Engine\src\scenemanagement\spatial.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\animationdeserializer.cpp" />
+    <ClCompile Include="Engine\src\sceneserialzation\deserializers\audiosourcedeserializer.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\cameradeserializer.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\spatialdeserializer.cpp" />
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\spritedeserializer.cpp" />
@@ -220,7 +222,12 @@
     </Link>
     <PostBuildEvent>
       <Command>copy "$(SolutionDir)SDL2.dll" "$(TargetDir)SDL2.dll"
-copy "$(SolutionDir)SDL2_image.dll" "$(TargetDir)SDL2_image.dll"</Command>
+copy "$(SolutionDir)SDL2_image.dll" "$(TargetDir)SDL2_image.dll"
+copy "$(SolutionDir)irrKlang.dll" "$(TargetDir)irrKlang.dll"
+copy "$(SolutionDir)ikpFlac.dll" "$(TargetDir)ikpFlac.dll"
+copy "$(SolutionDir)ikpMP3.dll" "$(TargetDir)ikpMP3.dll"
+xcopy "$(ProjectDir)resS\*.*" "$(TargetDir)\resS" /Y /I /E</Command>
+      <Message>Copy dependencies to build directory.</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

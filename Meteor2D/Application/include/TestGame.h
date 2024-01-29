@@ -1,7 +1,7 @@
 #pragma once
 #include <meteor.h>
 
-class TestGame : public meteor::Application {
+class ATestGame : public meteor::MApplication {
 public:
 	std::string getName() override;
 	void onStart() override;
@@ -9,8 +9,8 @@ public:
 	void onQuit() override;
 private:
 	float myTime=0;
-	meteor::SpatialEntity* scp;
-	meteor::Sprite2D* sprite;
-	meteor::Animation* anim;
-	meteor::Camera* gameCamera;
+	meteor::MSpatialEntity* scp;
+	meteor::MSprite2D* sprite;
+	meteor::MAnimation* anim;
+	meteor::MCamera* gameCamera;
 };

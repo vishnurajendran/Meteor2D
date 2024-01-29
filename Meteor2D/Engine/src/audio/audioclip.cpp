@@ -4,11 +4,11 @@
 
 namespace meteor {
 
-	std::string AudioClip::toString() {
+	std::string MAudioClip::toString() {
 		return "AudioClip ( " + clipPath + " )";
 	}
 
-	AudioClip::AudioClip(irrklang::ISoundEngine* engine, std::string clipPath) {
+	MAudioClip::MAudioClip(irrklang::ISoundEngine* engine, std::string clipPath) {
 		this->clipPath = clipPath;
 		this->engine = engine;
 		this->baseSrc = engine->addSoundSourceFromFile(clipPath.c_str());
@@ -19,7 +19,7 @@ namespace meteor {
 		isReady = true;
 	}
 
-	AudioClip::~AudioClip() {
+	MAudioClip::~MAudioClip() {
 		if (!isReady)
 			return;
 		if(baseSrc)
@@ -29,7 +29,7 @@ namespace meteor {
 		engine = NULL;
 	}
 
-	AudioPlayable* AudioClip::createPlayableInstance() {
+	MAudioPlayable* MAudioClip::createPlayableInstance() {
 		if (!isReady)
 			return NULL;
 		
@@ -38,11 +38,11 @@ namespace meteor {
 			mError("Could not create a playable for AudioClip {}", clipPath);
 			return NULL;
 		}
-		AudioPlayable* playable = new AudioPlayable(engine, srcAlias);
+		MAudioPlayable* playable = new MAudioPlayable(engine, srcAlias);
 		return playable;
 	}
 
-	std::string AudioClip::getPlayableInstanceId() {
+	std::string MAudioClip::getPlayableInstanceId() {
 		return  "Playable_" + std::to_string((int)baseSrc) + "_" + std::to_string(instanceIdCounter++);
 	}
 }
