@@ -102,7 +102,7 @@ namespace meteor {
 		*/
 		template<typename T>
 		T* find(std::string name) {
-
+			static_assert(std::is_base_of<MSpatialEntity, T>::value, "T must inherit from MSpatialEntity");
 			// is this node called 'name'
 			if (this->name == name)
 				return (T*)this;
