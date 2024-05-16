@@ -1,4 +1,5 @@
 #pragma once
+#include <math.h>
 #include <meteorutils/str_extensions.h>
 #include <string>
 #include <meteorutils/logging.h>
@@ -13,6 +14,13 @@ namespace meteor {
 		float x = 0;
 		float y = 0;
 		
+		//default constructor
+		SVector2(){x = 0;y=0;}
+
+		SVector2(float xVal, float yVal){
+			x = xVal;
+			y = yVal;
+		}
 		/************* VECTOR ARITHM*******/
 
 
@@ -76,6 +84,18 @@ namespace meteor {
 
 		/************ UTILS ******************/
 
+		float getMaginitude() const {
+			return sqrt(pow(x,2) + pow(y, 2));
+		}
+
+		SVector2 getNormailzed() const {
+			auto magnitude = getMaginitude();
+			auto xNorm = x / magnitude;
+			auto yNorm = y / magnitude;
+			return SVector2::make(xNorm, yNorm);
+		}
+
+
 		/**
 		 * @brief returns a vector2 using x and y. (similar to Vector(x,y) constructor)
 		 * @param x value in x-axis
@@ -128,17 +148,17 @@ namespace meteor {
 		 * @return true is de-serialization was successful.
 		*/
 		static bool parse(std::string str, SVector2& out) {
-			if (str[0] != '(') {
+			if (str[0] != '[') {
 				mError("vector parse failed, reason: {}", "expected ( at the begining.");
 				return false;
 			}
-			if (str[str.length() - 1] != ')') {
+			if (str[str.length() - 1] != ']') {
 				mError("vector parse failed, reason: {}", "expected ) at the end.");
 				return false;
 			}
 			
-			str = string_utils::replace<std::string>(str,"(","");
-			str = string_utils::replace<std::string>(str, ")", "");
+			str = string_utils::replace<std::string>(str,"[","");
+			str = string_utils::replace<std::string>(str, "]", "");
 
 			if (string_utils::numberOfOccurence<std::string>(str,",") != 1) {
 				mError("vector parse failed, reason: {}", "too many or too few components");
