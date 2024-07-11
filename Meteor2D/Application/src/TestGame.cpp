@@ -8,6 +8,7 @@ meteor::MAudioSource* src;
 void ATestGame::onStart() {
 	meteor::MSceneManager::loadScene("test_scene.scml");
 	auto scene = meteor::MSceneManager::getActiveScene();
+	auto canvas = new meteor::MUICanvas();
 	gameCamera = scene->find<meteor::MCamera>("gameCamera");
 	scp = scene->find<meteor::MSpatialEntity>("scp");
 	anim = scene->find<meteor::MAnimation>("link_player");

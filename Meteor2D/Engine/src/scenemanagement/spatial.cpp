@@ -33,7 +33,6 @@ namespace meteor {
 			makeRootEntity(this);
 		else
 			parent->addChild(this);
-		onStart();
 	}
 
 	void MSpatialEntity::addChild(MSpatialEntity* entity) {
@@ -46,7 +45,6 @@ namespace meteor {
 
 		this->children->push_back(entity);
 		entity->setParent(this);
-
 		// remove from root
 		// this is a by-product of un-parenting an entity using removeChild.
 		// since the entity becomes a independant, it will be considered as a root entity

@@ -1,7 +1,7 @@
 #include <meteorcore.h>
 #include <constants.h>
-#include <pugixml/pugixml.hpp>
 
+#include <pugixml/pugixml.hpp>
 #include <irrKlang.h>
 
 extern meteor::MApplication* getApp();
@@ -26,6 +26,7 @@ int main(int argc, char* argv[]) {
 	meteor::MInputManager::initialise();
 	meteor::MSceneManager::initialise();
 	meteor::MAudioEngine::Initialise();
+	meteor::MGlobals::intialise(window->getLogicalResolution());
 
 	app->onStart();
 	float timer = 0;

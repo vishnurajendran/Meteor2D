@@ -13,3 +13,4 @@
 #include <2d/animation.h>
 #include <input/inputmanagement.h>
 #include <audio/audiosource.h>
+#include <ui/muicanvas.h>

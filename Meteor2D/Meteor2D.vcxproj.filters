@@ -106,6 +106,12 @@
     <Filter Include="Engine\Header Files\audio">
       <UniqueIdentifier>{472eab38-0979-47b6-b048-1c71bee5e6b6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Header Files\ui">
+      <UniqueIdentifier>{9430bf62-6538-4ce6-946f-e34210686e4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files\ui">
+      <UniqueIdentifier>{efad6706-15cb-44a0-ab5f-6d5d1e7e7ae3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\include\application\application.h">
@@ -249,6 +255,27 @@
     <ClInclude Include="Engine\include\sceneserialization\deserializers\audiosourcedeserializer.h">
       <Filter>Engine\Header Files\sceneserialization\deserializers</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\include\meteorutils\suirect.h">
+      <Filter>Engine\Header Files\meteorutils</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\ui\muibutton.h">
+      <Filter>Engine\Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\ui\muicanvas.h">
+      <Filter>Engine\Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\ui\muielement.h">
+      <Filter>Engine\Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\ui\muitext.h">
+      <Filter>Engine\Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="muiimage.h">
+      <Filter>Engine\Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\include\global\meteorglobals.h">
+      <Filter>Engine\Header Files\global</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\src\rendering\renderer.cpp">
@@ -349,6 +376,12 @@
     </ClCompile>
     <ClCompile Include="Engine\src\sceneserialzation\deserializers\audiosourcedeserializer.cpp">
       <Filter>Engine\Source Files\sceneserialization\deserializers</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\ui\muicanvas.cpp">
+      <Filter>Engine\Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\src\globals\meteorglobals.cpp">
+      <Filter>Engine\Source Files\global</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

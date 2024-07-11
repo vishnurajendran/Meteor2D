@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include <entities/entity.h>
 #include <meteorutils/color.h>
+#include <meteorutils/vector2d.h>
 #include <rendering/renderqueue.h>
 #include <rendering/renderer.h>
 #include <windowing/windowproperties.h>
@@ -22,9 +23,12 @@ namespace meteor {
 		bool hasQuit();
 		void close();
 		void setLogicalResolution(size_t width, size_t height);
+		inline SVector2 getLogicalResolution() { return resolution; }
 		MRenderQueue* getRenderQueue();
 		void delay(int delay);
 	private:
+		SVector2 resolution;
+		SWindowProperties properties;
 		SDL_Window* window;
 		SDL_Renderer* sdlRenderer;
 		SDL_Event windowEvent;

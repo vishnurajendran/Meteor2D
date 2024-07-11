@@ -24,6 +24,7 @@ namespace meteor {
 		if (activeScene != NULL)
 			closeActiveScene();
 		activeScene = new MScene();
+		mLog("Loading Empty Scene");
 		return true;
 	}
 

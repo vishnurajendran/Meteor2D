@@ -117,7 +117,7 @@ namespace meteor {
 		 * @return (0,0) 
 		*/
 		static SVector2 zero() {
-			return SVector2(1, 1);
+			return SVector2(0, 0);
 		}
 
 		/**
@@ -148,17 +148,17 @@ namespace meteor {
 		 * @return true is de-serialization was successful.
 		*/
 		static bool parse(std::string str, SVector2& out) {
-			if (str[0] != '[') {
+			if (str[0] != '(') {
 				mError("vector parse failed, reason: {}", "expected ( at the begining.");
 				return false;
 			}
-			if (str[str.length() - 1] != ']') {
+			if (str[str.length() - 1] != ')') {
 				mError("vector parse failed, reason: {}", "expected ) at the end.");
 				return false;
 			}
 			
-			str = string_utils::replace<std::string>(str,"[","");
-			str = string_utils::replace<std::string>(str, "]", "");
+			str = string_utils::replace<std::string>(str,"(","");
+			str = string_utils::replace<std::string>(str, ")", "");
 
 			if (string_utils::numberOfOccurence<std::string>(str,",") != 1) {
 				mError("vector parse failed, reason: {}", "too many or too few components");

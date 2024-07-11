@@ -10,6 +10,7 @@ namespace meteor {
 		screenCentre.y = properties.height / 2;
 
 		backgroundColor = properties.backgroundColor;
+		resolution = SVector2(properties.width, properties.height);
 		auto windowFlag = properties.fullscreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN;
 
 		mLog("Creating Window");
@@ -85,6 +86,7 @@ namespace meteor {
 
 	void MWindow::setLogicalResolution(size_t width, size_t height) {
 		renderer->setLogicalSize(width, height);
+		resolution = SVector2(width, height);
 	}
 
 	void MWindow::delay(int delay) {

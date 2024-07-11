@@ -5,3 +5,4 @@
 #include <application/application.h>
 #include <2d/texture.h>
 #include <audio/audioengine.h>
+#include <global/meteorglobals.h>
